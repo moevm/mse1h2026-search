@@ -1,0 +1,1616 @@
+{
+    "title": "Information queries",
+    "items": [
+        {
+            "type": "document",
+            "id": 4022,
+            "url": "https://etu.ru/en/university",
+            "requests": [
+                "about us",
+                "general information",
+                "university overview",
+                "institution details",
+                "about the institution",
+                "history",
+                "facts and figures"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4036,
+            "url": "https://etu.ru/en/university/news",
+            "requests": [
+                "latest news",
+                "university updates",
+                "announcements",
+                "recent events",
+                "news articles",
+                "campus news",
+                "official news"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4024,
+            "url": "https://etu.ru/en/study",
+            "requests": [
+                "study programs",
+                "educational opportunities",
+                "academic programs",
+                "faculties and programs",
+                "degrees offered",
+                "study options",
+                "education information"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4097,
+            "url": "https://etu.ru/en/study/masters-degree",
+            "requests": [
+                "master's degree",
+                "graduate degree",
+                "master degree options",
+                "postgraduate studies",
+                "master's level education",
+                "advanced degrees",
+                "master's information"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12117,
+            "url": "https://etu.ru/en/study/masters-degree/master-s-degree-programs",
+            "requests": [
+                "master's degree programs",
+                "available master's degrees",
+                "graduate programs",
+                "master's specializations",
+                "programs for master's",
+                "postgraduate programs list",
+                "master's curriculum",
+                "degree programs master"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4096,
+            "url": "https://etu.ru/en/study/bachelors-degree",
+            "requests": [
+                "bachelor's degree",
+                "undergraduate degree",
+                "bachelor degree options",
+                "study bachelor's",
+                "first degree",
+                "bachelor's level education",
+                "undergraduate studies",
+                "bachelor's information"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4025,
+            "url": "https://etu.ru/en/research",
+            "requests": [
+                "university research",
+                "science activities",
+                "research projects",
+                "scientific research",
+                "research opportunities",
+                "innovation research",
+                "research and development",
+                "science at university"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21114,
+            "url": "https://etu.ru/en/university/international-competition-open-doors-russian-scholarship-project",
+            "requests": [
+                "Open Doors competition",
+                "Russian Scholarship Project",
+                "scholarship for international students",
+                "early admission program",
+                "tuition-free study Russia",
+                "international student scholarships",
+                "study in Russia competition"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4085,
+            "url": "https://etu.ru/en/international/preparation-year",
+            "requests": [
+                "Preparatory Department",
+                "Russian language courses",
+                "language preparation",
+                "basic training program",
+                "preparatory year",
+                "international student preparation",
+                "study preparation",
+                "preparatory courses"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6881,
+            "url": "https://etu.ru/en/university/conferences",
+            "requests": [
+                "conferences",
+                "scientific conferences",
+                "upcoming conferences",
+                "academic events",
+                "university conferences",
+                "research conferences",
+                "events schedule"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 27264,
+            "url": "https://etu.ru/en/study/masters-degree/automation-and-mechatronics",
+            "requests": [
+                "Automation and Mechatronics",
+                "mechatronics master",
+                "automation degree",
+                "robotics masters",
+                "industrial automation program",
+                "automatic control theory",
+                "master programs engineering",
+                "mechatronics study"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4187,
+            "url": "https://etu.ru/en/study/faculties/faculty-of-computing-technologies-and-informatics",
+            "requests": [
+                "Faculty of Computer Science",
+                "Computer Science Faculty",
+                "IT faculty",
+                "Computer Technology faculty",
+                "informatics faculty",
+                "information technology department",
+                "computing technologies",
+                "CS faculty"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 55486,
+            "url": "https://etu.ru/en/study/faculties/faculty-of-electrical-engineering-and-automatics/department-of-electrical-technology-and-converter-engineering",
+            "requests": [
+                "Electrical Technology Department",
+                "Converter Engineering Department",
+                "electrical technology",
+                "converter engineering",
+                "department of electrical",
+                "engineering departments",
+                "electrical power department",
+                "electrothermal installations"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 25394,
+            "url": "https://etu.ru/en/international/programs/full-time-programs/academic-grading-system-in-russia",
+            "requests": [
+                "academic grading system",
+                "grading system Russia",
+                "Russian grading",
+                "how grades work Russia",
+                "student grades Russia",
+                "grading scale",
+                "academic assessment Russia",
+                "grade conversion"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4026,
+            "url": "https://etu.ru/en/student-life",
+            "requests": [
+                "campus life",
+                "student life",
+                "student activities",
+                "university community",
+                "student events",
+                "what to do students",
+                "extracurricular activities",
+                "student experience",
+                "campus environment"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 27208,
+            "url": "https://etu.ru/en/study/masters-degree/bioengineering-systems-and-technologies-for-rehabilitation-and-prosthetics",
+            "requests": [
+                "Bioengineering Systems master",
+                "Rehabilitation and Prosthetics program",
+                "Master Bioengineering",
+                "Prosthetics technologies",
+                "Medical rehabilitation master",
+                "Bioengineering M.Sc.",
+                "Rehabilitation systems design",
+                "Prosthetic engineering",
+                "Bioengineering and prosthetics",
+                "Master's rehabilitation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4041,
+            "url": "https://etu.ru/en/university/about/cultural-capital",
+            "requests": [
+                "Cultural capital",
+                "Saint Petersburg location",
+                "University location",
+                "About Saint Petersburg",
+                "City information",
+                "Historic center",
+                "Neva River",
+                "St. Petersburg culture",
+                "University city context",
+                "About the city"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4029,
+            "url": "https://etu.ru/en/university/our-history",
+            "requests": [
+                "university history",
+                "history of the university",
+                "founding date",
+                "establishment year",
+                "college history",
+                "engineering college founding",
+                "our past",
+                "university origins"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42582,
+            "url": "https://etu.ru/en/university/about/honorary-titles-and-signs",
+            "requests": [
+                "honorary titles",
+                "honorary signs",
+                "titles and signs",
+                "university awards",
+                "distinctions and honors",
+                "awards and recognition",
+                "outstanding scientists titles",
+                "university distinctions"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6591,
+            "url": "https://etu.ru/en/university/our-history/eminent-scientists",
+            "requests": [
+                "eminent scientists",
+                "famous scientists",
+                "notable researchers",
+                "outstanding scientists",
+                "university scientists",
+                "historical figures",
+                "great scientists",
+                "prominent scientists",
+                "scientists history"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26502,
+            "url": "https://etu.ru/en/study/choose-etu",
+            "requests": [
+                "choose university",
+                "why choose",
+                "reasons to study",
+                "benefits of studying",
+                "admissions advantages",
+                "study benefits",
+                "why study here",
+                "choose to study"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4190,
+            "url": "https://etu.ru/en/study/faculties/faculty-of-economics-and-management",
+            "requests": [
+                "Institute of Innovative Design",
+                "Technological Entrepreneurship",
+                "INPROTECH institute",
+                "Economics and Management faculty",
+                "innovative design",
+                "entrepreneurship education",
+                "quality management skills",
+                "economics studies"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17437,
+            "url": "https://etu.ru/en/top-100-program",
+            "requests": [
+                "5-100 program",
+                "top 100 universities",
+                "project 5-100",
+                "university ranking program",
+                "Ministry of Education competition",
+                "global university rankings",
+                "top universities initiative",
+                "Russian universities program"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 55441,
+            "url": "https://etu.ru/en/study/faculties/faculty-of-electrical-engineering-and-automatics/department-of-marine-control-systems",
+            "requests": [
+                "Department of Marine Control Systems",
+                "marine control systems",
+                "shipboard control systems",
+                "electrical engineering department",
+                "automatics department",
+                "control systems marine",
+                "marine engineering department",
+                "ship control systems"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6903,
+            "url": "https://etu.ru/en/university/mission-of-the-university",
+            "requests": [
+                "university mission",
+                "mission statement",
+                "goals of university",
+                "university values",
+                "strategic goals",
+                "radio-electronic systems",
+                "information management systems",
+                "university vision"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6728,
+            "url": "https://etu.ru/en/international/etu-in-foreign-media",
+            "requests": [
+                "international media",
+                "media mentions",
+                "foreign press",
+                "university in news",
+                "global media coverage",
+                "international recognition",
+                "press coverage",
+                "media publications"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20925,
+            "url": "https://etu.ru/en/study/international-winter-schools",
+            "requests": [
+                "International Winter Schools",
+                "winter schools",
+                "international schools",
+                "study in winter",
+                "St. Petersburg winter programs",
+                "short-term winter courses",
+                "winter education abroad",
+                "winter study programs"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6599,
+            "url": "https://etu.ru/en/university/about/university-today",
+            "requests": [
+                "university today",
+                "about university",
+                "current university status",
+                "university overview",
+                "history and present",
+                "electrical engineering institution",
+                "first electrical engineering university",
+                "current information"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 6607,
+            "url": "https://etu.ru/en/university/academic-periodicals/electric-newspaper",
+            "requests": [
+                "Electric newspaper",
+                "university newspaper",
+                "corporate edition",
+                "periodicals newspaper",
+                "campus newspaper",
+                "student newspaper",
+                "newspaper history",
+                "The Electrician"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 8747,
+            "url": "https://etu.ru/en/international/dean-s-office/arriving-to-etu-leti",
+            "requests": [
+                "arriving international students",
+                "arrival information",
+                "dean's office arrival",
+                "first steps international",
+                "what to do upon arrival",
+                "international student arrival guide",
+                "arrival instructions"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4049,
+            "url": "https://etu.ru/en/student-life/accommodation",
+            "requests": [
+                "accommodation",
+                "dormitories",
+                "housing for students",
+                "international student housing",
+                "student accommodation",
+                "dormitory information",
+                "university housing",
+                "student residence"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10555,
+            "url": "https://etu.ru/en/university/academic-periodicals/proceedings-of-the-russian-universities-radioelectronics",
+            "requests": [
+                "Journal Radioelectronics",
+                "Radioelectronics journal",
+                "academic journal",
+                "university journal",
+                "periodicals radioelectronics",
+                "research journal",
+                "russian universities radioelectronics",
+                "journal for PhD students"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42374,
+            "url": "https://etu.ru/en/admission/why-us",
+            "requests": [
+                "why choose us",
+                "our reputation",
+                "benefits of studying",
+                "why study here",
+                "advantages",
+                "university reputation",
+                "oldest electrotechnical university",
+                "choose university"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21250,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools",
+            "requests": [
+                "winter schools",
+                "summer schools",
+                "international schools",
+                "short term programs",
+                "study abroad schools",
+                "St Petersburg schools",
+                "winter summer programs",
+                "seasonal schools"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 27266,
+            "url": "https://etu.ru/en/study/masters-degree/technology-innovation-management",
+            "requests": [
+                "Technology innovation management master",
+                "Master's in innovation management",
+                "Innovation management program",
+                "Technology and business master",
+                "Graduate program innovation",
+                "Science and business master's",
+                "Manage company research innovation",
+                "Innovative product development degree",
+                "Master's degree technology management",
+                "Study innovation management"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12156,
+            "url": "https://etu.ru/en/study/masters-degree/automation-and-mechatronics-old",
+            "requests": [
+                "Automation mechatronics master",
+                "Master's automation mechatronics",
+                "Automation and mechatronics program",
+                "Study automation mechatronics",
+                "Mechatronics degree",
+                "Graduate automation",
+                "Master's degree mechatronics",
+                "Automation master program",
+                "Mechatronics study",
+                "Master's automation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4043,
+            "url": "https://etu.ru/en/study/academic-year",
+            "requests": [
+                "Academic year structure",
+                "Study formats",
+                "Tuition types",
+                "Bachelor's degree duration",
+                "Master's degree length",
+                "Specialist's degree",
+                "Full-time study",
+                "Part-time tuition",
+                "External studies information",
+                "Degrees and years"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11409,
+            "url": "https://etu.ru/en/university/academic-periodicals/discourse",
+            "requests": [
+                "DISCOURSE journal",
+                "Journal DISCOURSE",
+                "Academic journal DISCOURSE",
+                "Philosophical sciences journal",
+                "Economics research journal",
+                "Sociological research journal",
+                "Publish research DISCOURSE",
+                "Academic periodicals",
+                "Journal for postgraduates",
+                "Doctor's degree research journal"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 27330,
+            "url": "https://etu.ru/en/study/masters-degree/efficient-electric-power-industry",
+            "requests": [
+                "Efficient electric power industry master",
+                "Master's electric power industry",
+                "Electric power industry program",
+                "Energy resources efficiency master",
+                "Power industry degree",
+                "Graduate electric power",
+                "Master's energy efficiency",
+                "Electric power enterprises study",
+                "Energy resources management master",
+                "Study electric power"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11961,
+            "url": "https://etu.ru/en/international/programs/internship-of-foreign-citizens1",
+            "requests": [
+                "Internship foreign citizens",
+                "Foreign citizen internship",
+                "International student internship",
+                "Internship programs for foreigners",
+                "Internships for international students",
+                "Overseas internships",
+                "Internship opportunities foreign",
+                "Foreigners internship program",
+                "International internships",
+                "Internship abroad programs"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20645,
+            "url": "https://etu.ru/en/study/bachelors-degree/information-systems-and-technologies",
+            "requests": [
+                "information systems bachelor",
+                "bachelor information technology",
+                "09.03.02 program",
+                "study information systems",
+                "mathematical models program",
+                "software development bachelor",
+                "IT bachelor degree",
+                "undergraduate information systems",
+                "technology programs"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 46426,
+            "url": "https://etu.ru/en/university/conferences/scm2023",
+            "requests": [
+                "SCM 2023 conference",
+                "soft computing conference",
+                "measurement conference",
+                "IEEE conference 2023",
+                "XXVI International Conference",
+                "SCM 2023 details",
+                "conference May 2023",
+                "soft computing measurement",
+                "upcoming conferences"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4173,
+            "url": "https://etu.ru/en/student-life/campus",
+            "requests": [
+                "campus information",
+                "university campus",
+                "student campus life",
+                "Aptekarsky Island campus",
+                "Petrogradskaya metro campus",
+                "campus location",
+                "student life facilities",
+                "university grounds",
+                "campus description"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 43203,
+            "url": "https://etu.ru/en/university/conferences/scm2022",
+            "requests": [
+                "SCM 2022 conference",
+                "soft computing 2022",
+                "measurement conference 2022",
+                "IEEE conference 2022",
+                "XXV International Conference",
+                "SCM 2022 details",
+                "conference May 2022",
+                "past conferences",
+                "archive SCM"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4086,
+            "url": "https://etu.ru/en/student-life/library",
+            "requests": [
+                "library information",
+                "university library",
+                "student library",
+                "library resources",
+                "library collection",
+                "library services",
+                "main library",
+                "academic library",
+                "library history"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21904,
+            "url": "https://etu.ru/en/study/masters-degree/bioengineering-systems-and-technologies",
+            "requests": [
+                "bioengineering masters",
+                "master bioengineering systems",
+                "12.04.04 program",
+                "study bioengineering",
+                "medical rehabilitation technologies",
+                "biomedical information processing",
+                "masters programs engineering",
+                "graduate bioengineering",
+                "biotech masters"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7943,
+            "url": "https://etu.ru/en/study/professional-and-public-accreditation",
+            "requests": [
+                "professional accreditation",
+                "public accreditation",
+                "accreditation information",
+                "study accreditation",
+                "program accreditation",
+                "academic accreditation",
+                "university accreditation status",
+                "professional recognition",
+                "public quality assessment"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22034,
+            "url": "https://etu.ru/en/study/masters-degree/information-systems-and-technologies",
+            "requests": [
+                "Information Systems and Technologies master",
+                "master's program 09.04.02",
+                "IST master's degree",
+                "distributed information systems",
+                "data mining program",
+                "masters in IT",
+                "information technology studies",
+                "graduate program IST"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4040,
+            "url": "https://etu.ru/en/university/about/achievements",
+            "requests": [
+                "achievements",
+                "university successes",
+                "awards and recognition",
+                "strategic development program",
+                "nanotechnological network",
+                "our accomplishments",
+                "university progress"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 21778,
+            "url": "https://etu.ru/en/study/masters-degree/efficient-electric-power-industry-old",
+            "requests": [
+                "Efficient Electric Power Industry",
+                "electric power master",
+                "power industry program",
+                "master's degree electricity",
+                "electrical power studies",
+                "energy efficiency program",
+                "power engineering masters"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7773,
+            "url": "https://etu.ru/en/international/dean-s-office/visa-insurance-registration",
+            "requests": [
+                "visa information",
+                "insurance for students",
+                "student registration",
+                "international student documents",
+                "migration support",
+                "foreign student services",
+                "visa process",
+                "registration for international students"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20892,
+            "url": "https://etu.ru/en/study/bachelors-degree/technosphere-safety",
+            "requests": [
+                "technosphere safety program",
+                "bachelor technosphere",
+                "environmental protection studies",
+                "ecological inspection training",
+                "safety bachelor degree",
+                "20.03.01 program",
+                "study environmental safety"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4047,
+            "url": "https://etu.ru/en/student-life/activities/sport",
+            "requests": [
+                "student sports",
+                "sports activities",
+                "physical education",
+                "recreational opportunities",
+                "athletics for students",
+                "department of sports",
+                "campus sports",
+                "student recreation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11124,
+            "url": "https://etu.ru/en/foreign-graduates/list-of-foreign-graduated-students",
+            "requests": [
+                "foreign graduates list",
+                "international alumni list",
+                "graduated foreign students",
+                "list of international graduates",
+                "alumni foreign students",
+                "past international students",
+                "foreign student alumni"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 26782,
+            "url": "https://etu.ru/en/study/masters-degree/technology-innovation-management-old",
+            "requests": [
+                "technology innovation management master",
+                "master innovation management",
+                "innovation management program",
+                "technology management studies",
+                "masters degree innovation",
+                "study innovation management",
+                "management of technology innovation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4039,
+            "url": "https://etu.ru/en/university/our-history/key-facts-figures",
+            "requests": [
+                "key facts",
+                "university figures",
+                "facts and figures",
+                "statistics about university",
+                "important facts",
+                "university data",
+                "overview figures"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17438,
+            "url": "https://etu.ru/en/top-100-program/participation-in-rankings",
+            "requests": [
+                "university rankings",
+                "global rankings",
+                "national rankings",
+                "ranking participation",
+                "higher education rankings",
+                "university performance rankings",
+                "rankings overview"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7774,
+            "url": "https://etu.ru/en/international/dean-s-office/before-the-arrival",
+            "requests": [
+                "before arrival international",
+                "pre-arrival information",
+                "international student arrival",
+                "what to do before arrival",
+                "arrival guide",
+                "international student preparation",
+                "preparing for arrival"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20097,
+            "url": "https://etu.ru/en/study/bachelors-degree/applied-mathematics-and-informatics",
+            "requests": [
+                "Applied Mathematics and Informatics",
+                "bachelor applied math",
+                "informatics bachelor program",
+                "math and IT degree",
+                "applied mathematics study",
+                "01.03.02 program",
+                "mathematical models computer systems"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20820,
+            "url": "https://etu.ru/en/study/bachelors-degree/electroenergetics-and-electrical-engineering",
+            "requests": [
+                "Electroenergetics and Electrical Engineering",
+                "electrical engineering bachelor",
+                "electroenergetics program",
+                "power industry degree",
+                "13.03.02 program",
+                "electrical engineering study",
+                "energy industry careers"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22353,
+            "url": "https://etu.ru/en/foreign-graduates/alumni-reviews",
+            "requests": [
+                "Alumni Reviews",
+                "graduate reviews",
+                "student testimonials",
+                "former student opinions",
+                "reviews from graduates",
+                "what do alumni say",
+                "graduate feedback"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20667,
+            "url": "https://etu.ru/en/study/bachelors-degree/control-in-technical-systems",
+            "requests": [
+                "Control in Technical Systems",
+                "technical systems control bachelor",
+                "control theory program",
+                "information technologies control",
+                "27.03.04 program",
+                "study control systems",
+                "distributed control systems",
+                "programming control systems"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22018,
+            "url": "https://etu.ru/en/study/post-graduate-study/optical-and-optoelectronic-devices-and-systems",
+            "requests": [
+                "Optical and Optoelectronic Devices and Systems",
+                "optoelectronic PhD program",
+                "photonics PhD",
+                "informational optics study",
+                "post graduate optoelectronics",
+                "PhD in optical systems",
+                "english taught PhD optoelectronics",
+                "bioengineering systems PhD"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42583,
+            "url": "https://etu.ru/en/university/about/honorary-titles-and-signs/pochetnyy-inzhener-elektrik",
+            "requests": [
+                "Honorary Electrical Engineer",
+                "electrical engineer title",
+                "honorary titles",
+                "engineer awards",
+                "university honors",
+                "famous engineers",
+                "what is honorary engineer",
+                "engineer merits"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20664,
+            "url": "https://etu.ru/en/study/bachelors-degree/software-engineering",
+            "requests": [
+                "Software Engineering",
+                "software engineering bachelor",
+                "programming degree",
+                "study software development",
+                "09.03.04 program",
+                "bachelor software engineering",
+                "programming techniques technologies",
+                "software industry training"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20412,
+            "url": "https://etu.ru/en/study/bachelors-degree/computer-systems-engineering-and-informatics",
+            "requests": [
+                "Computer Systems Engineering and Informatics",
+                "computer systems bachelor",
+                "informatics engineering degree",
+                "computational systems program",
+                "09.03.01 program",
+                "computer aided design study",
+                "information systems development",
+                "bachelor computer informatics"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21182,
+            "url": "https://etu.ru/en/study/masters-degree/radio-engineering",
+            "requests": [
+                "Radio Engineering master",
+                "masters radio engineering",
+                "11.04.01 program",
+                "master's degree radio engineering",
+                "radio engineering program details",
+                "study radio engineering",
+                "electrical engineering master",
+                "broadcasting master program"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21573,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools/biomedical-engineering",
+            "requests": [
+                "Biomedical Engineering summer school",
+                "Biomedical Engineering winter school",
+                "biomedical systems and technologies",
+                "study biomedical engineering",
+                "medical data processing program",
+                "biomedical systems design",
+                "engineering summer program"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7775,
+            "url": "https://etu.ru/en/international/dean-s-office/upon-arrival-registration-of-the-foreign-citizen-in-federal-migration-service",
+            "requests": [
+                "foreign citizen registration",
+                "migration service registration",
+                "upon arrival registration",
+                "FMS registration",
+                "international student registration",
+                "federal migration service",
+                "registration for foreigners",
+                "arrival documents for foreigners"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12010,
+            "url": "https://etu.ru/en/study/international-summer-schools/faq",
+            "requests": [
+                "summer schools FAQ",
+                "international summer schools questions",
+                "FAQ international summer",
+                "frequently asked questions summer schools",
+                "summer school info",
+                "questions about international summer schools",
+                "admissions summer schools FAQ"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21431,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools/mechatronics-and-robotics",
+            "requests": [
+                "mechatronics program",
+                "robotics program",
+                "summer school mechatronics",
+                "winter school robotics",
+                "mechatronics and robotics course",
+                "engineering programs",
+                "technical sciences study",
+                "programming electrical engineering"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20665,
+            "url": "https://etu.ru/en/study/bachelors-degree/computer-security",
+            "requests": [
+                "computer security degree",
+                "information security program",
+                "bachelor computer security",
+                "10.05.01 program",
+                "security specialist training",
+                "study information security",
+                "cyber security degree",
+                "computer security curriculum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19130,
+            "url": "https://etu.ru/en/study/bachelors-degree/electronics-and-nanoelectronics",
+            "requests": [
+                "electronics and nanoelectronics",
+                "bachelor nanoelectronics",
+                "11.03.04 program",
+                "nanotechnology study",
+                "micro nanosystem technology",
+                "microwave electronics program",
+                "optical quantum electronics",
+                "electronic devices degree"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42614,
+            "url": "https://etu.ru/en/university/about/honorary-titles-and-signs/pochetnyy-professor-leti",
+            "requests": [
+                "honorary professor title",
+                "academic council awards",
+                "university honorary titles",
+                "professor honors",
+                "distinguished professors",
+                "honorary academic awards",
+                "professor recognition",
+                "academic distinctions"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7778,
+            "url": "https://etu.ru/en/international/dean-s-office/before-departure-from-stpetersburg-temporary-departure",
+            "requests": [
+                "temporary departure St Petersburg",
+                "leaving St Petersburg",
+                "international student departure",
+                "report departure office",
+                "student travel rules",
+                "international students office",
+                "leaving city rules",
+                "temporary leave",
+                "student travel advice"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17526,
+            "url": "https://etu.ru/en/top-100-program/international-recognition",
+            "requests": [
+                "international recognition",
+                "university recognition",
+                "global standing",
+                "international awards",
+                "university reputation",
+                "international rankings",
+                "recognition abroad",
+                "global achievements",
+                "international status"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 7779,
+            "url": "https://etu.ru/en/international/dean-s-office/upon-graduation",
+            "requests": [
+                "upon graduation",
+                "graduation procedures",
+                "international student graduation",
+                "dean's office graduation",
+                "what to do after graduation",
+                "graduation requirements",
+                "student departure graduation",
+                "post graduation information",
+                "graduation next steps"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26148,
+            "url": "https://etu.ru/en/university/coronavirus-alert/latest-information",
+            "requests": [
+                "latest information",
+                "coronavirus alert",
+                "covid updates",
+                "university news",
+                "health information",
+                "current alerts",
+                "important announcements",
+                "virus information",
+                "public health updates"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42650,
+            "url": "https://etu.ru/en/university/about/honorary-titles-and-signs/pochetnyy-rabotnik-spbgetu-leti",
+            "requests": [
+                "Honorary Worker",
+                "honorary title",
+                "worker award",
+                "employee recognition",
+                "distinguished staff",
+                "university awards",
+                "staff honors"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21180,
+            "url": "https://etu.ru/en/study/masters-degree/applied-mathematics-and-informatics",
+            "requests": [
+                "Applied Mathematics and Informatics",
+                "masters applied math",
+                "informatics master's program",
+                "01.04.02 master",
+                "software development masters",
+                "IT masters degree",
+                "computer systems masters"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 29188,
+            "url": "https://etu.ru/en/university/magical-electrotechnical-135",
+            "requests": [
+                "Magical Electrotechnical 135",
+                "135th anniversary",
+                "university birthday",
+                "celebration 135",
+                "electrotechnical celebration",
+                "135 years"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26149,
+            "url": "https://etu.ru/en/university/coronavirus-alert/frequently-asked-questions",
+            "requests": [
+                "frequently asked questions",
+                "FAQ coronavirus",
+                "COVID questions",
+                "coronavirus answers",
+                "pandemic questions",
+                "student questions COVID",
+                "employee questions COVID"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20900,
+            "url": "https://etu.ru/en/study/bachelors-degree/linguistics",
+            "requests": [
+                "Linguistics bachelor",
+                "45.03.02 program",
+                "bachelor linguistics",
+                "intercultural communication degree",
+                "language studies bachelor",
+                "communication specialists training"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21213,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools/intercultural-communication-in-business",
+            "requests": [
+                "Intercultural Communication in Business",
+                "business communication course",
+                "intercultural skills",
+                "summer school communication",
+                "winter school communication",
+                "international business course",
+                "cross-cultural awareness"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20898,
+            "url": "https://etu.ru/en/study/bachelors-degree/public-relations",
+            "requests": [
+                "Public Relations bachelor",
+                "PR degree",
+                "42.03.01 program",
+                "business communication education",
+                "bachelor of PR",
+                "public relations department"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 4077,
+            "url": "https://etu.ru/en/university/coronavirus-alert",
+            "requests": [
+                "Coronavirus Alert",
+                "COVID-19 information",
+                "coronavirus updates",
+                "pandemic alert",
+                "safety measures",
+                "health alert",
+                "COVID news"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21187,
+            "url": "https://etu.ru/en/study/masters-degree/system-analysis-and-control",
+            "requests": [
+                "System Analysis and Control master",
+                "Master System Analysis",
+                "System control program",
+                "27.04.03 master",
+                "Ergonomic research",
+                "Psychological trainings",
+                "Information technologies master",
+                "Software systems master",
+                "Master's degree control systems",
+                "Complex systems analysis"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21178,
+            "url": "https://etu.ru/en/study/masters-degree/control-in-technical-systems",
+            "requests": [
+                "Control in Technical Systems master",
+                "Technical Systems Control",
+                "Master 27.04.04",
+                "Automation and Control Production Complexes",
+                "Portable Objects control",
+                "Marine Transport Automated Systems",
+                "High-tech industry automation",
+                "Control systems development",
+                "Masters control engineering",
+                "Technical systems programs"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21179,
+            "url": "https://etu.ru/en/study/masters-degree/electronics-and-nanoelectronics",
+            "requests": [
+                "Electronics and Nanoelectronics master",
+                "Master Nanoelectronics",
+                "11.04.04 master",
+                "Natural sciences electronics",
+                "Nobel laureate faculty",
+                "Engineers and scientists training",
+                "Master's degree electronics",
+                "Nanoelectronics program",
+                "Creative abilities students",
+                "High-tech equipment study"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21420,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools/laser-and-optical-measurements",
+            "requests": [
+                "Laser and Optical Measurements",
+                "Optical Measurements school",
+                "Laser measurements course",
+                "Metrology optical methods",
+                "Winter school measurements",
+                "Summer school optical",
+                "Physical sciences measurements",
+                "Optical measurement technology",
+                "Laser metrology",
+                "Measurement techniques optical"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22784,
+            "url": "https://etu.ru/en/study/international-summer-schools/summer-schools-of-russian-language/intensive-course-of-russian-for-beginners-level-a1",
+            "requests": [
+                "Intensive Russian course",
+                "Russian for Beginners",
+                "Beginners Russian A1",
+                "Summer school Russian language",
+                "Foreign language course Russian",
+                "Learn Russian intensive",
+                "International summer schools",
+                "Russian language for foreigners",
+                "Level A1 Russian",
+                "Beginner Russian course"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 29191,
+            "url": "https://etu.ru/en/university/magical-electrotechnical-135/academic-spaces-of-future-universities",
+            "requests": [
+                "Academic Spaces Future Universities",
+                "Discussion Academic Spaces",
+                "Future Universities discussion",
+                "Learning spaces universities",
+                "International educators discussion",
+                "Public spaces university",
+                "Preserve vs remove dilemma",
+                "University spaces",
+                "Academic discussion",
+                "Electrotechnical 135 discussion"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19126,
+            "url": "https://etu.ru/en/study/bachelors-degree/nanotechnologies-and-microelectronics",
+            "requests": [
+                "nanotechnologies bachelors",
+                "microelectronics program",
+                "bachelor nanotech",
+                "nanotechnology study",
+                "microsystem equipment",
+                "nanotechnological ranking",
+                "bachelor programs",
+                "study nanotechnology"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21165,
+            "url": "https://etu.ru/en/study/masters-degree/computer-systems-engineering-and-informatics",
+            "requests": [
+                "computer systems engineering masters",
+                "informatics master degree",
+                "master computer systems",
+                "distributed computing program",
+                "cloud computing studies",
+                "grid computing master",
+                "intelligent systems master",
+                "databases master program",
+                "masters programs ICT"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21184,
+            "url": "https://etu.ru/en/study/masters-degree/designing-and-technology-of-electronic-facilities",
+            "requests": [
+                "design electronic facilities master",
+                "technology electronic facilities",
+                "master electronic devices",
+                "electrical devices program",
+                "microwave devices study",
+                "radiolocation systems master",
+                "telecommunication systems design",
+                "railroad control technology"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26193,
+            "url": "https://etu.ru/en/university/coronavirus-alert/rules-and-recommendations",
+            "requests": [
+                "coronavirus rules",
+                "covid recommendations",
+                "safety precautions",
+                "coronavirus alert",
+                "health guidelines",
+                "covid rules",
+                "university coronavirus policy",
+                "pandemic recommendations"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20889,
+            "url": "https://etu.ru/en/study/bachelors-degree/instrumentation-technology",
+            "requests": [
+                "instrumentation technology bachelors",
+                "bachelor instrumentation",
+                "information measurement systems",
+                "navigation devices program",
+                "laser technology study",
+                "acoustics devices bachelor",
+                "bachelor programs engineering",
+                "device design technology"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42382,
+            "url": "https://etu.ru/en/university/leti-corporate-identity",
+            "requests": [
+                "corporate identity",
+                "brand guidelines",
+                "university identity",
+                "logo usage",
+                "brand assets",
+                "corporate style",
+                "visual identity",
+                "brand information",
+                "identity files"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26150,
+            "url": "https://etu.ru/en/university/coronavirus-alert/distance-learning",
+            "requests": [
+                "Distance learning",
+                "Online study",
+                "Remote education",
+                "Learning remotely",
+                "Online courses information",
+                "Distance education policy",
+                "Study from home"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19839,
+            "url": "https://etu.ru/en/university/news/radio-day",
+            "requests": [
+                "Radio Day",
+                "May 7th celebration",
+                "Radio holiday",
+                "Celebrations Russia",
+                "Radio history event",
+                "News radio day",
+                "Annual radio event"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23124,
+            "url": "https://etu.ru/en/study/winter-and-summer-schools/green-economy-and-sustanable-development",
+            "requests": [
+                "green economy",
+                "sustainable development",
+                "winter school",
+                "summer school",
+                "economy development",
+                "schools green economy",
+                "study sustainable development",
+                "green economy program",
+                "development school"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42763,
+            "url": "https://etu.ru/en/university/magical-electrotechnical-135/big-city-university",
+            "requests": [
+                "big city university",
+                "urban integration",
+                "university urban fabric",
+                "education business authorities",
+                "city integration",
+                "dialogue education business",
+                "university in city",
+                "magical electrotechnical",
+                "big city project",
+                "urban university"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21186,
+            "url": "https://etu.ru/en/study/masters-degree/quality-management",
+            "requests": [
+                "quality management masters",
+                "masters degree quality",
+                "27.04.02",
+                "quality management program",
+                "master quality management",
+                "management systems",
+                "international standards",
+                "study quality management",
+                "graduate quality management",
+                "quality management curriculum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22038,
+            "url": "https://etu.ru/en/study/masters-degree/software-engineering",
+            "requests": [
+                "software engineering masters",
+                "masters degree software",
+                "09.04.04",
+                "software engineering program",
+                "master software engineering",
+                "industrial software production",
+                "information computing systems",
+                "study software engineering",
+                "programming evolution",
+                "graduate software engineering"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 28906,
+            "url": "https://etu.ru/en/research/race4scale",
+            "requests": [
+                "RACE4SCALE",
+                "Finnish-Russian automotive",
+                "motorsport industry",
+                "RDI opportunities",
+                "research project RACE4SCALE",
+                "automotive ecosystem",
+                "multidisciplinary education",
+                "business opportunities",
+                "Finnish Russian project",
+                "motorsport research"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 42267,
+            "url": "https://etu.ru/en/study/randd-programs",
+            "requests": [
+                "R&D programs",
+                "research and development programs",
+                "R&D magistracy",
+                "study R&D",
+                "programs research development",
+                "admission R&D",
+                "2020 R&D",
+                "R&D study programs",
+                "development programs",
+                "research programs"
+            ]
+        }
+    ]
+}
