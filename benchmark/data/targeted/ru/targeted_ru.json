@@ -1,0 +1,26 @@
+{
+    "title": "ПРИМЕР ФОРМАТА: Целевые запросы",
+    "items": [
+        {
+            "type": "document",
+            "id": 3909,
+            "url": "https://etu.ru/ru/vypusknikam/luchshie-vypuskniki",
+            "requests": [
+                "Лучшие выпускники",
+                "выпускники лучшие 2020 год"
+            ],
+            "comment": "Это необязательное служебное поле, в котором можно оставить какой-нибудь комментарий к данным при необходимости"
+        },
+        {
+            "type": "reference",
+            "id": 16228,
+            "url": "https://etu.ru/ru/abiturientam/preimushestva-spbgetu/granty-podderzhki",
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/#grants",
+            "requests": [
+                "гранты первокурсникам",
+                "студент 1 курса гранты"
+            ],
+            "comment": "Это необязательное служебное поле, в котором можно оставить какой-нибудь комментарий к данным при необходимости"
+        }
+    ]
+}
