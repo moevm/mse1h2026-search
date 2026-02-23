@@ -1,0 +1,70 @@
+{
+    "title": "Consultas dirigidas",
+    "items": [
+        {
+            "type": "document",
+            "id": 13300,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1",
+            "requests": [
+                "estudiantes internacionales",
+                "información extranjeros",
+                "alumnos internacionales",
+                "sección internacionales",
+                "vida estudiantil extranjeros",
+                "programas extranjeros",
+                "apoyo estudiantes internacionales",
+                "universidad para extranjeros"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12833,
+            "url": "https://etu.ru/sp/investigacion/colaboradores-en-investigacion/colaboradoes-en-industria",
+            "requests": [
+                "colaboradores industria",
+                "socios industria",
+                "investigación industria",
+                "proyectos industriales",
+                "colaboración industrial",
+                "empresas colaboradoras",
+                "desarrollo industria",
+                "cooperación industria",
+                "partners industria",
+                "investigación y desarrollo industrial"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12819,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/cursos-de-verano",
+            "requests": [
+                "cursos de verano",
+                "programas verano",
+                "verano estudiantes",
+                "escuela de verano",
+                "estudios de verano",
+                "cursos cortos",
+                "cursos intensivos",
+                "inscripción verano",
+                "oferta verano",
+                "summer courses"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12129,
+            "url": "https://etu.ru/sp/universidad/documentos-institucionales",
+            "requests": [
+                "documentos institucionales",
+                "documentos universidad",
+                "normativa institucional",
+                "reglamentos internos",
+                "políticas universitarias",
+                "estatutos",
+                "documentación oficial",
+                "información institucional",
+                "documentos oficiales"
+            ]
+        }
+    ]
+}

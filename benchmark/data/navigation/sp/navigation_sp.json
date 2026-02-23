@@ -1,0 +1,325 @@
+{
+    "title": "Consultas de navegación",
+    "items": [
+        {
+            "type": "document",
+            "id": 13303,
+            "url": "https://etu.ru/sp/estudios/facultades1",
+            "requests": [
+                "facultades",
+                "listado facultades",
+                "departamentos",
+                "escuelas",
+                "carreras por facultad",
+                "facultades estudios",
+                "areas de estudio",
+                "centros docentes"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12139,
+            "url": "https://etu.ru/sp/universidad/contacto",
+            "requests": [
+                "contacto",
+                "información contacto",
+                "dirección",
+                "teléfono",
+                "email",
+                "localización",
+                "cómo llegar",
+                "contactar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13302,
+            "url": "https://etu.ru/sp/universidad/programa-top-1001",
+            "requests": [
+                "Programa TOP 100",
+                "objetivos universidad",
+                "TOP 100 universidades",
+                "programa clasificación",
+                "lograr TOP 100",
+                "universidades líderes",
+                "plan estratégico",
+                "ranking mundial"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12451,
+            "url": "https://etu.ru/sp/universidad/novyy-resurs41",
+            "requests": [
+                "departamento preparatoria",
+                "preparatoria extranjeros",
+                "curso preparatorio ruso",
+                "estudiar ruso extranjeros",
+                "curso básico estudios",
+                "departamento para foráneos",
+                "preparación ingreso",
+                "estudios para extranjeros"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12461,
+            "url": "https://etu.ru/sp/universidad/escuelas-de-verano-de-lengua-rusa",
+            "requests": [
+                "escuelas verano ruso",
+                "cursos verano ruso",
+                "lengua rusa verano",
+                "intensivo ruso verano",
+                "estudiar ruso verano",
+                "programas verano ruso",
+                "ruso para extranjeros verano",
+                "escuela de verano idioma"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12989,
+            "url": "https://etu.ru/sp/universidad/escuelas-de-verano",
+            "requests": [
+                "escuelas de verano",
+                "cursos de verano",
+                "programas de verano",
+                "oferta verano",
+                "actividades verano",
+                "verano universidad",
+                "escuela estival",
+                "campamentos verano"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12131,
+            "url": "https://etu.ru/sp/universidad/administracion",
+            "requests": [
+                "administración",
+                "estructura administrativa",
+                "dirección universitaria",
+                "gestión",
+                "organigrama",
+                "personal administrativo",
+                "departamentos administración"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12831,
+            "url": "https://etu.ru/sp/estudios/biblioteca",
+            "requests": [
+                "biblioteca",
+                "servicios biblioteca",
+                "recursos biblioteca",
+                "horario biblioteca",
+                "información biblioteca",
+                "acceso biblioteca",
+                "sala de lectura",
+                "libros",
+                "buscar libros",
+                "bibliografía"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12840,
+            "url": "https://etu.ru/sp/vida/campus1/campus-mapa",
+            "requests": [
+                "mapa campus",
+                "mapa del campus",
+                "plano campus",
+                "ubicación edificios",
+                "dónde está",
+                "cómo llegar",
+                "dirección campus",
+                "mapa",
+                "recorrido campus",
+                "edificios campus"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12839,
+            "url": "https://etu.ru/sp/vida/campus1",
+            "requests": [
+                "campus",
+                "vida en campus",
+                "instalaciones campus",
+                "información campus",
+                "residencias",
+                "alojamiento",
+                "vida estudiantil",
+                "áreas campus",
+                "servicios campus",
+                "sobre campus"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12843,
+            "url": "https://etu.ru/sp/vida/catering1",
+            "requests": [
+                "catering",
+                "comida",
+                "restaurantes",
+                "cafeterías",
+                "dónde comer",
+                "alimentación",
+                "servicios de comida",
+                "opciones comida",
+                "menú",
+                "comedor"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12841,
+            "url": "https://etu.ru/sp/vida/centro-cultural",
+            "requests": [
+                "centro cultural",
+                "actividades culturales",
+                "eventos culturales",
+                "vida cultural",
+                "club cultural",
+                "ocio cultural",
+                "director cultural",
+                "sobre centro cultural",
+                "programación cultural",
+                "arte y cultura"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12809,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/departamento-de-preparatoria",
+            "requests": [
+                "departamento preparatoria",
+                "preparatoria internacional",
+                "departamento estudiantes internacionales",
+                "estudios preparatoria",
+                "facultad preparatoria",
+                "sección preparatoria",
+                "programa preparatorio",
+                "curso preparatorio"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12793,
+            "url": "https://etu.ru/sp/universidad/revistas-y-publicaciones/discourse1",
+            "requests": [
+                "Discourse",
+                "revista Discourse",
+                "publicación Discourse",
+                "journal Discourse",
+                "artículos Discourse",
+                "publicaciones científicas Discourse",
+                "revista de la universidad Discourse",
+                "Discourse revista"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12133,
+            "url": "https://etu.ru/sp/universidad/estructura-de-la-universidad",
+            "requests": [
+                "estructura universidad",
+                "organización interna",
+                "departamentos universidad",
+                "administración universidad",
+                "organigrama",
+                "estructura académica",
+                "unidades universitarias"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12849,
+            "url": "https://etu.ru/sp/graduados/etu-asociacion-de-antiguos-alumnos",
+            "requests": [
+                "asociación antiguos alumnos",
+                "antiguos alumnos",
+                "alumni",
+                "graduados",
+                "red de graduados",
+                "comunidad antiguos estudiantes",
+                "ex alumnos"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17174,
+            "url": "https://etu.ru/sp/estudios/facultades1/facultad-de-economia-y-gestion",
+            "requests": [
+                "Facultad Economía Gestión",
+                "Economía y Gestión",
+                "carreras economía",
+                "programas gestión",
+                "departamento economía",
+                "facultades",
+                "estudios económicos",
+                "gestión empresarial"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17170,
+            "url": "https://etu.ru/sp/estudios/facultades1/facultad-de-electronica",
+            "requests": [
+                "Facultad Electrónica",
+                "Electrónica",
+                "carreras electrónica",
+                "departamento electrónica",
+                "estudios electrónica",
+                "ingeniería electrónica",
+                "facultades"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17172,
+            "url": "https://etu.ru/sp/estudios/facultades1/facultad-de-electrotecnica-y-automatizacion",
+            "requests": [
+                "Facultad Electrotécnica automatización",
+                "Electrotécnica y automatización",
+                "carreras electrotécnica",
+                "automatización",
+                "ingeniería eléctrica",
+                "departamento electrotécnica",
+                "estudios automatización"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17175,
+            "url": "https://etu.ru/sp/estudios/facultades1/facultad-de-humanidades",
+            "requests": [
+                "Facultad Humanidades",
+                "Humanidades",
+                "carreras humanidades",
+                "estudios humanísticos",
+                "departamento humanidades",
+                "facultades",
+                "filología",
+                "ciencias sociales"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17171,
+            "url": "https://etu.ru/sp/estudios/facultades1/facultad-de-informatica-y-tecnologia-informatica",
+            "requests": [
+                "Facultad Informática",
+                "Informática y Tecnología",
+                "carreras informática",
+                "tecnología informática",
+                "departamento informática",
+                "ingeniería informática",
+                "estudios computación",
+                "facultades"
+            ]
+        }
+    ]
+}
