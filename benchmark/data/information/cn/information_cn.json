@@ -245,76 +245,6 @@
         },
         {
             "type": "reference",
-            "id": 14830,
-            "url": "https://etu.ru/cn/porque-leti1/62",
-            "requests": [
-                "主要事实和数据",
-                "关键数据",
-                "大学数据",
-                "主要信息",
-                "重要事实",
-                "学校概况",
-                "统计数据",
-                "基本信息",
-                "概况",
-                "数据信息"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14831,
-            "url": "https://etu.ru/cn/porque-leti1/63",
-            "requests": [
-                "成就",
-                "大学成就",
-                "学校成就",
-                "重要成就",
-                "历史成就",
-                "我们的成就"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14832,
-            "url": "https://etu.ru/cn/porque-leti1/64",
-            "requests": [
-                "文化资本",
-                "大学文化",
-                "校园文化",
-                "文化遗产",
-                "文化氛围",
-                "学校文化资本"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14834,
-            "url": "https://etu.ru/cn/study-cn/65",
-            "requests": [
-                "学年",
-                "学年安排",
-                "学年计划",
-                "学习年份",
-                "教学年份",
-                "学年信息"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14835,
-            "url": "https://etu.ru/cn/study-cn/66",
-            "requests": [
-                "专业和公共认证",
-                "专业认证",
-                "公共认证",
-                "课程认证",
-                "学历认证",
-                "认证信息",
-                "专业资格"
-            ]
-        },
-        {
-            "type": "reference",
             "id": 15370,
             "url": "https://etu.ru/cn/study-cn/67",
             "requests": [
@@ -325,7 +255,8 @@
                 "本科学习",
                 "学士项目",
                 "学位课程"
-            ]
+            ],
+            "final_url": "https://etu.ru/cn/leti/59"
         },
         {
             "type": "reference",
@@ -339,139 +270,8 @@
                 "硕士学习",
                 "硕士专业",
                 "学位项目"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14837,
-            "url": "https://etu.ru/cn/study-cn/56/69",
-            "requests": [
-                "全日制课程",
-                "全日制学习",
-                "全日制项目",
-                "全日制专业",
-                "全日制教育",
-                "日制课程",
-                "全日制学习方案"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14838,
-            "url": "https://etu.ru/cn/study-cn/56/70",
-            "requests": [
-                "应用",
-                "申请",
-                "入学申请",
-                "申请流程",
-                "如何申请",
-                "申请指南",
-                "申请信息",
-                "提交申请"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14873,
-            "url": "https://etu.ru/cn/investigacion1/73",
-            "requests": [
-                "行业合作伙伴",
-                "行业合作",
-                "合作伙伴",
-                "企业合作",
-                "合作企业",
-                "产业伙伴",
-                "合作单位"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14874,
-            "url": "https://etu.ru/cn/investigacion1/74",
-            "requests": [
-                "研究项目",
-                "科研项目",
-                "研究课题",
-                "科学研究",
-                "项目研究",
-                "研究方向",
-                "科研课题"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14879,
-            "url": "https://etu.ru/cn/vida2/78",
-            "requests": [
-                "运动",
-                "体育活动",
-                "运动设施",
-                "体育",
-                "健身",
-                "体育项目",
-                "学生运动",
-                "运动场所"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14880,
-            "url": "https://etu.ru/cn/vida2/79",
-            "requests": [
-                "餐饮",
-                "食堂",
-                "餐厅",
-                "用餐地点",
-                "食物",
-                "饮食",
-                "膳食",
-                "就餐"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14881,
-            "url": "https://etu.ru/cn/vida2/80",
-            "requests": [
-                "住宿",
-                "学生宿舍",
-                "宿舍",
-                "住房",
-                "居住",
-                "住处",
-                "留学生住宿",
-                "宿舍信息"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14884,
-            "url": "https://etu.ru/cn/27/82",
-            "requests": [
-                "外国毕业生名单",
-                "国际毕业生",
-                "毕业生名单",
-                "校友名录",
-                "留学生毕业",
-                "毕业生信息",
-                "外籍毕业生",
-                "毕业校友"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14885,
-            "url": "https://etu.ru/cn/27/83",
-            "requests": [
-                "校友的个人页面",
-                "校友主页",
-                "毕业生页面",
-                "校友信息",
-                "优秀校友",
-                "校友网络",
-                "查找校友",
-                "校友简介"
-            ]
+            ],
+            "final_url": "https://etu.ru/cn/leti/60"
         },
         {
             "type": "reference",
@@ -486,7 +286,8 @@
                 "研究生博士",
                 "博士学位",
                 "博士留学"
-            ]
+            ],
+            "final_url": "https://etu.ru/cn/leti/61"
         }
     ]
 }
