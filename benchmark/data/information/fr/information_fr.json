@@ -1,0 +1,378 @@
+{
+    "title": "Requêtes d'information",
+    "items": [
+        {
+            "type": "document",
+            "id": 13688,
+            "url": "https://etu.ru/fr/luniversite",
+            "requests": [
+                "à propos de nous",
+                "histoire université",
+                "fondation université",
+                "première électrotechnique",
+                "qui sommes nous",
+                "informations générales",
+                "présentation université"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13761,
+            "url": "https://etu.ru/fr/vie-des-etudiants",
+            "requests": [
+                "vie étudiante",
+                "sport campus",
+                "culture étudiants",
+                "activités étudiantes",
+                "campus vie",
+                "engagement étudiant",
+                "loisirs universitaires"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13723,
+            "url": "https://etu.ru/fr/education",
+            "requests": [
+                "étudier programmes",
+                "formation université",
+                "éducation internationale",
+                "programmes offerts",
+                "compétences pratiques",
+                "cursus études",
+                "enseignement supérieur"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13988,
+            "url": "https://etu.ru/fr/luniversite/luniversite1",
+            "requests": [
+                "université aujourd'hui",
+                "facultés formation",
+                "spécialisations actuelles",
+                "bacheliers maîtres spécialistes",
+                "description actuelle",
+                "nombre de facultés",
+                "formation actuelle"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13769,
+            "url": "https://etu.ru/fr/les-diplomes-etrangers",
+            "requests": [
+                "diplômés étrangers",
+                "anciens étudiants",
+                "réseau alumni",
+                "promotion diplômés",
+                "ex-étudiants",
+                "succès diplômés",
+                "histoire diplômés"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13719,
+            "url": "https://etu.ru/fr/pourquoi-nous",
+            "requests": [
+                "pourquoi choisir nous",
+                "avantages université",
+                "réputation université",
+                "choisir études",
+                "meilleure université",
+                "points forts",
+                "atouts formation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13753,
+            "url": "https://etu.ru/fr/recherche",
+            "requests": [
+                "recherche scientifique",
+                "science université",
+                "activités recherche",
+                "projets recherche",
+                "département recherche",
+                "laboratoires",
+                "innovation science"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13987,
+            "url": "https://etu.ru/fr/luniversite/le-but-etu-top-100",
+            "requests": [
+                "objectif top 100",
+                "classement universités",
+                "but top 100",
+                "stratégie classement",
+                "ambition université",
+                "plan développement",
+                "devenir top 100"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13989,
+            "url": "https://etu.ru/fr/luniversite/stratgie-et-message-de-chancelier-recteur-message",
+            "requests": [
+                "stratégie université",
+                "message recteur",
+                "chancelier recteur message",
+                "stratégie et message",
+                "devise université",
+                "professionnalisme sociabilité disponibilité",
+                "vision globale",
+                "université axée recherche"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13787,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/stages",
+            "requests": [
+                "stages",
+                "stages étudiants étrangers",
+                "internship",
+                "faire un stage",
+                "opportunités stages",
+                "stages pour étrangers",
+                "programme stages",
+                "stages université"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13786,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/departement-preparatoire",
+            "requests": [
+                "département préparatoire",
+                "formation préparatoire",
+                "étudier langue russe",
+                "cours de russe étrangers",
+                "programme pré-universitaire",
+                "préparation études",
+                "apprentissage russe",
+                "département formation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13782,
+            "url": "https://etu.ru/fr/education/programme-de-baccalaureat",
+            "requests": [
+                "programme baccalauréat",
+                "études licence",
+                "diplôme de baccalauréat",
+                "formation bachelor",
+                "cursus licence",
+                "premier cycle",
+                "baccalauréat",
+                "niveau licence"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13789,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/ecole-international-d-ete/les-ecoles-dete-dans-la-langue-russe",
+            "requests": [
+                "écoles d'été russe",
+                "langue russe été",
+                "cours intensifs russe",
+                "apprentissage russe été",
+                "école internationale été russe",
+                "programme été russe",
+                "formation langue étrangère",
+                "cours russe étrangers"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13990,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/bienvenue-a-etu-leti",
+            "requests": [
+                "bienvenue",
+                "accueil étudiants étrangers",
+                "informations pratiques étrangers",
+                "guide étrangers",
+                "visiter université",
+                "venir étudier",
+                "introduction étudiants",
+                "invitation étrangers"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13783,
+            "url": "https://etu.ru/fr/education/programme-de-maitrises",
+            "requests": [
+                "programme maîtrises",
+                "études master",
+                "diplôme de maîtrises",
+                "formation master",
+                "cursus master",
+                "deuxième cycle",
+                "master",
+                "niveau master"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13784,
+            "url": "https://etu.ru/fr/education/l-ecole-doctorale",
+            "requests": [
+                "école doctorale",
+                "programme doctoral",
+                "études doctorat",
+                "formation doctorale",
+                "recherche doctorat",
+                "PhD programme",
+                "cycle doctoral",
+                "thèse"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13788,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/ecole-international-d-ete",
+            "requests": [
+                "école internationale été",
+                "summer school",
+                "programmes d'été",
+                "formation été",
+                "visiter Saint-Pétersbourg été",
+                "cours d'été internationaux",
+                "opportunités été",
+                "école été"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13718,
+            "url": "https://etu.ru/fr/luniversite/bienvenue-a-etu-leti1",
+            "requests": [
+                "Bienvenue",
+                "présentation université",
+                "à propos de l'université",
+                "informations générales",
+                "découvrir l'université",
+                "page d'accueil",
+                "introduction université"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 23389,
+            "url": "https://etu.ru/fr/luniversite/activites-a-leti",
+            "requests": [
+                "Activités",
+                "vie étudiante",
+                "événements campus",
+                "loisirs étudiants",
+                "clubs et associations",
+                "activités sportives",
+                "vie associative"
+            ],
+            "final_url": "https://etu.ru/en/university/events/"
+        },
+        {
+            "type": "reference",
+            "id": 23380,
+            "url": "https://etu.ru/fr/luniversite/journals-et-publications",
+            "requests": [
+                "Journals et publications",
+                "publications universitaires",
+                "revues scientifiques",
+                "articles publications",
+                "recherche publications",
+                "éditions scientifiques",
+                "liste publications",
+                "documents publiés"
+            ],
+            "final_url": "https://etu.ru/en/university/academic-periodicals/"
+        },
+        {
+            "type": "reference",
+            "id": 23379,
+            "url": "https://etu.ru/fr/luniversite/les-documents-normatifs",
+            "requests": [
+                "Documents normatifs",
+                "règlements universitaires",
+                "textes officiels",
+                "politiques institutionnelles",
+                "charte documents",
+                "cadre réglementaire",
+                "directives administration",
+                "législation interne"
+            ],
+            "final_url": "https://etu.ru/en/university/normative-documents"
+        },
+        {
+            "type": "reference",
+            "id": 23388,
+            "url": "https://etu.ru/fr/luniversite/les-nouvelles",
+            "requests": [
+                "Les nouvelles",
+                "actualités",
+                "informations récentes",
+                "dernières nouvelles",
+                "événements",
+                "annonces",
+                "mises à jour",
+                "fil d'actualité"
+            ],
+            "final_url": "https://etu.ru/en/university/news/"
+        },
+        {
+            "type": "reference",
+            "id": 23381,
+            "url": "https://etu.ru/fr/luniversite/lhistoire-de-luniversite",
+            "requests": [
+                "Histoire de l'Université",
+                "histoire établissement",
+                "origine université",
+                "passé institution",
+                "fondation histoire",
+                "chronologie université",
+                "évolution institution",
+                "patrimoine historique"
+            ],
+            "final_url": "https://etu.ru/en/university/our-history/"
+        },
+        {
+            "type": "reference",
+            "id": 23384,
+            "url": "https://etu.ru/fr/luniversite/lhistoire-de-luniversite/scientifiques-eminents",
+            "requests": [
+                "Scientifiques Éminents",
+                "chercheurs célèbres",
+                "personnalités scientifiques",
+                "savants renommés",
+                "figures importantes science",
+                "professeurs célèbres",
+                "anciens élèves illustres",
+                "contribution scientifique"
+            ],
+            "final_url": "https://etu.ru/en/university/our-history/eminent-scientists/"
+        },
+        {
+            "type": "reference",
+            "id": 48870,
+            "url": "https://etu.ru/fr/luniversite/semaine-russe-des-sciences-au-senegal",
+            "requests": [
+                "Semaine russe des sciences Sénégal",
+                "sciences Sénégal",
+                "événement Sénégal",
+                "coopération Sénégal",
+                "conférence Sénégal",
+                "partenariat Sénégal",
+                "activités scientifiques Sénégal",
+                "programme Sénégal sciences",
+                "Russie Sénégal science"
+            ],
+            "final_url": "https://senegal.etu.ru/fr/home/"
+        }
+    ]
+}

@@ -1,0 +1,211 @@
+{
+    "title": "Requêtes de navigation",
+    "items": [
+        {
+            "type": "document",
+            "id": 13752,
+            "url": "https://etu.ru/fr/education/facultades",
+            "requests": [
+                "facultés",
+                "liste facultés",
+                "départements",
+                "organigramme facultés",
+                "structures académiques",
+                "unités enseignement",
+                "sections universitaires"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17208,
+            "url": "https://etu.ru/fr/luniversite/contacts",
+            "requests": [
+                "contacts",
+                "coordonnées",
+                "adresse université",
+                "téléphone campus",
+                "informations contact",
+                "nous contacter",
+                "plan accès"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13738,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers",
+            "requests": [
+                "étudiants étrangers",
+                "étrangers",
+                "information étudiants internationaux",
+                "admission étrangers",
+                "futurs étudiants étrangers",
+                "international",
+                "venir étudier étranger",
+                "candidats étrangers"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13790,
+            "url": "https://etu.ru/fr/education/etudiants-etrangers/ecole-international-d-ete/les-ecoles-professionnelles-dete",
+            "requests": [
+                "Ecoles Professionnelles d’été",
+                "école d'été professionnelle",
+                "programmes d'été",
+                "formation d'été",
+                "stages d'été",
+                "écoles internationales d'été",
+                "inscription école d'été"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 23228,
+            "url": "https://etu.ru/fr/luniversite/administration",
+            "requests": [
+                "Administration",
+                "contacts administration",
+                "services administratifs",
+                "organigramme",
+                "direction université",
+                "personnel administratif",
+                "bureaux administration"
+            ],
+            "final_url": "https://etu.ru/en/university/administration/"
+        },
+        {
+            "type": "reference",
+            "id": 17165,
+            "url": "https://etu.ru/fr/education/facultades/faculte-de-genie-electrique-et-de-lautomatisation",
+            "requests": [
+                "Génie Electrique",
+                "Automatisation",
+                "Faculté Génie Electrique",
+                "études électricité",
+                "filière automatisation",
+                "département électrique",
+                "formation génie électrique",
+                "spécialité automatisation"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17167,
+            "url": "https://etu.ru/fr/education/facultades/faculte-des-sciences-economiques-et-de-gestion",
+            "requests": [
+                "Sciences Economiques",
+                "Gestion",
+                "Faculté Economie",
+                "études gestion",
+                "économie et gestion",
+                "département économique",
+                "formation économie",
+                "filière gestion"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17168,
+            "url": "https://etu.ru/fr/education/facultades/faculte-des-sciences-humaines",
+            "requests": [
+                "Sciences Humaines",
+                "Faculté Humaines",
+                "études humaines",
+                "département SHS",
+                "formation sciences humaines",
+                "filière humanités",
+                "psychologie",
+                "sociologie"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17166,
+            "url": "https://etu.ru/fr/education/facultades/faculte-des-systemes-dinformation-et-de-mesure-biotechnique",
+            "requests": [
+                "Systèmes d'Information",
+                "Mesure Biotechnique",
+                "Faculté Biotechnique",
+                "ingénierie biomédicale",
+                "biotechnologie",
+                "systèmes information",
+                "formation biotechnique",
+                "département systèmes information"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17164,
+            "url": "https://etu.ru/fr/education/facultades/faculte-des-technologies-dordinateur-et-dinformatique",
+            "requests": [
+                "Technologies d'Ordinateur",
+                "Informatique",
+                "Faculté Informatique",
+                "génie logiciel",
+                "sciences informatiques",
+                "département info",
+                "formation informatique",
+                "filière technologies ordinateur"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17162,
+            "url": "https://etu.ru/fr/education/facultades/faculte-dingenierie-de-radio-et-telecommunication",
+            "requests": [
+                "Ingénierie Radio",
+                "Télécommunication",
+                "Faculté Radio",
+                "génie télécom",
+                "communication sans fil",
+                "département télécom",
+                "formation radiocommunication",
+                "filière télécommunications"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 17163,
+            "url": "https://etu.ru/fr/education/facultades/faculte-electronique",
+            "requests": [
+                "Faculté Electronique",
+                "Electronique faculté",
+                "département Electronique",
+                "section Electronique",
+                "études Electronique",
+                "formation Electronique",
+                "spécialité Electronique"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 13687,
+            "url": "https://etu.ru/fr",
+            "requests": [
+                "Français",
+                "version française",
+                "site en français",
+                "langue française",
+                "page d'accueil français",
+                "portail français",
+                "traduction français"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 23383,
+            "url": "https://etu.ru/fr/luniversite/lhistoire-de-luniversite/musee",
+            "requests": [
+                "Musée",
+                "musée universitaire",
+                "collection musée",
+                "exposition musée",
+                "histoire musée",
+                "visite musée",
+                "patrimoine musée",
+                "objets musée"
+            ],
+            "final_url": "https://etu.ru/en/university/our-history/museum"
+        }
+    ]
+}
