@@ -227,201 +227,6 @@
         },
         {
             "type": "reference",
-            "id": 12812,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/visado-seguro-registro",
-            "requests": [
-                "visado seguro registro",
-                "trámites visado",
-                "seguro médico estudiantes",
-                "registro migratorio",
-                "documentos extranjeros",
-                "visado para estudios",
-                "requisitos de entrada"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12806,
-            "url": "https://etu.ru/sp/estudios/acreditacion-profesional-y-publica",
-            "requests": [
-                "acreditación profesional",
-                "acreditación pública",
-                "certificación de calidad",
-                "reconocimiento de estudios",
-                "calidad académica",
-                "acreditaciones universitarias",
-                "profesional y pública"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12811,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/admision",
-            "requests": [
-                "admisión",
-                "proceso de admisión",
-                "requisitos de ingreso",
-                "solicitud de admisión",
-                "cómo aplicar",
-                "ingresar a la universidad",
-                "inscripción"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12814,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/al-llegar-registrar-al-estudiante-extranjero-en-el-servicio-federal-de-migracion",
-            "requests": [
-                "registro estudiante extranjero",
-                "servicio federal de migración",
-                "trámites al llegar",
-                "registro migratorio al llegar",
-                "documentos llegada extranjeros",
-                "procedimientos migratorios",
-                "al llegar estudiante"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12844,
-            "url": "https://etu.ru/sp/vida/alojamiento",
-            "requests": [
-                "alojamiento",
-                "residencia estudiantil",
-                "vivienda estudiantes",
-                "dormitorios",
-                "opciones de alojamiento",
-                "dónde vivir",
-                "alojamiento para estudiantes"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12805,
-            "url": "https://etu.ru/sp/estudios/ano-academico",
-            "requests": [
-                "año académico",
-                "calendario académico",
-                "estructura del año",
-                "fechas importantes",
-                "semestres",
-                "período de estudios",
-                "año escolar"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12813,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/antes-de-llegar",
-            "requests": [
-                "antes de llegar",
-                "preparativos para llegada",
-                "qué hacer antes de llegar",
-                "información previa llegada",
-                "consejos antes de viajar",
-                "documentos antes de viajar",
-                "preparación para estudiantes"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12816,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/antes-de-salir-de-san-petersburgo-salida-temporal",
-            "requests": [
-                "salida temporal",
-                "salir de San Petersburgo",
-                "estudiantes internacionales salida",
-                "antes de salir",
-                "requisitos salida temporal",
-                "información salida estudiantes",
-                "permiso de salida",
-                "temporal salida estudiantes",
-                "leaving Saint Petersburg",
-                "salida de la ciudad"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12801,
-            "url": "https://etu.ru/sp/por-que-leti/capital-cultural",
-            "requests": [
-                "capital cultural",
-                "ciudad cultural",
-                "ambiente cultural",
-                "vida cultural",
-                "cultura San Petersburgo",
-                "experiencia cultural",
-                "ventajas culturales",
-                "por qué estudiar",
-                "entorno cultural",
-                "oportunidades culturales"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12798,
-            "url": "https://etu.ru/sp/universidad/historia-de-la-universidad/cientificos-eminentes",
-            "requests": [
-                "científicos eminentes",
-                "figuras destacadas",
-                "científicos famosos",
-                "historia científicos",
-                "investigadores importantes",
-                "personalidades ciencia",
-                "grandes científicos",
-                "historia universidad",
-                "nombres científicos",
-                "científicos notables"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12842,
-            "url": "https://etu.ru/sp/vida/deporte",
-            "requests": [
-                "deporte",
-                "actividades deportivas",
-                "vida deportiva",
-                "clubes deportivos",
-                "instalaciones deportivas",
-                "deportes universitarios",
-                "participar deporte",
-                "secciones deportivas"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12817,
-            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/despues-de-la-graduacion",
-            "requests": [
-                "después graduación",
-                "vida después graduación",
-                "futuro graduados",
-                "oportunidades graduados",
-                "carrera después estudios",
-                "graduación y empleo",
-                "información post-graduación",
-                "qué hacer después graduarse"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12821,
-            "url": "https://etu.ru/sp/estudios/escuelas-internacionales-de-verano",
-            "requests": [
-                "escuelas verano",
-                "escuelas internacionales verano",
-                "programas verano",
-                "cursos verano internacionales",
-                "estudios verano",
-                "verano internacional",
-                "escuelas de verano para estudiantes extranjeros",
-                "verano académico",
-                "cursos cortos verano"
-            ]
-        },
-        {
-            "type": "reference",
             "id": 12990,
             "url": "https://etu.ru/sp/estudios/escuelas-internacionales-de-verano1",
             "requests": [
@@ -434,7 +239,8 @@
                 "escuelas de verano para estudiantes extranjeros",
                 "verano académico",
                 "cursos cortos verano"
-            ]
+            ],
+            "final_url": "https://etu.ru/sp/universidad/escuelas-de-verano"
         },
         {
             "type": "reference",
@@ -450,7 +256,8 @@
                 "opciones doctorado",
                 "posgrados doctorado",
                 "investigación doctorado"
-            ]
+            ],
+            "final_url": "https://etu.ru/sp/estudios/especialidades-de-doctorado1"
         },
         {
             "type": "reference",
@@ -466,7 +273,8 @@
                 "licenciaturas",
                 "titulaciones grado",
                 "estudios de pregrado"
-            ]
+            ],
+            "final_url": "https://etu.ru/sp/universidad/especialidades-de-grado"
         },
         {
             "type": "reference",
@@ -483,36 +291,8 @@
                 "posgrados máster",
                 "maestrías",
                 "estudios de posgrado máster"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12848,
-            "url": "https://etu.ru/sp/graduados/eventos",
-            "requests": [
-                "eventos",
-                "calendario eventos",
-                "próximos eventos",
-                "actividades",
-                "agenda",
-                "eventos actuales",
-                "fechas importantes"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12138,
-            "url": "https://etu.ru/sp/universidad/eventos-en-leti",
-            "requests": [
-                "eventos",
-                "calendario eventos",
-                "próximos eventos",
-                "actividades",
-                "agenda",
-                "eventos actuales",
-                "fechas importantes",
-                "eventos universidad"
-            ]
+            ],
+            "final_url": "https://etu.ru/sp/estudios/estudios-de-master"
         }
     ]
 }
