@@ -1380,19 +1380,6 @@
             ]
         },
         {
-            "type": "reference",
-            "id": 9720,
-            "url": "https://etu.ru/ru/universitet/zakupki/zakonodatelstvo-rf",
-            "requests": [
-                "законодательство РФ",
-                "законы России",
-                "нормативные акты",
-                "правовые документы",
-                "закупки законодательство",
-                "федеральные законы"
-            ]
-        },
-        {
             "type": "document",
             "id": 50411,
             "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov/vyhodnye-dni-v-aprele-i-mae-2024-goda",
@@ -1474,21 +1461,6 @@
                 "сертификат госуслуги",
                 "как получить сертификат",
                 "информация о вакцинации"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 41788,
-            "url": "https://etu.ru/ru/studentam/informaciya-dlya-pervokursnikov/kopiya-raspisanie-zanyatij",
-            "requests": [
-                "расписание занятий",
-                "расписание для студентов",
-                "расписание первокурсников",
-                "актуальное расписание",
-                "где расписание",
-                "расписание уроков",
-                "график занятий",
-                "студенческое расписание"
             ]
         },
         {

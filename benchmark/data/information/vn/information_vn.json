@@ -241,136 +241,6 @@
         },
         {
             "type": "reference",
-            "id": 14368,
-            "url": "https://etu.ru/vn/nghien-cu/tham-gia-vao-cac-chng-trinh-nghien-cu-ca-chau-au",
-            "requests": [
-                "Nghiên cứu châu Âu",
-                "Chương trình nghiên cứu châu Âu",
-                "Tham gia nghiên cứu",
-                "Hợp tác nghiên cứu châu Âu",
-                "Dự án châu Âu",
-                "Nghiên cứu quốc tế",
-                "Cơ hội nghiên cứu"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14355,
-            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/trc-khi-di-khi-stpetersburg-di-tm-thi",
-            "requests": [
-                "Rời St.Petersburg tạm thời",
-                "Hướng dẫn rời St.Petersburg",
-                "Sinh viên quốc tế rời đi",
-                "Thủ tục rời St.Petersburg",
-                "Trước khi rời đi",
-                "Đi tạm thời",
-                "Quy định rời St.Petersburg"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14352,
-            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/visa-bo-him-va-cac-giy-chng-nhn-khac",
-            "requests": [
-                "visa bảo hiểm",
-                "giấy chứng nhận sinh viên quốc tế",
-                "thủ tục visa",
-                "bảo hiểm y tế cho sinh viên",
-                "tài liệu cần thiết sinh viên",
-                "chứng nhận du học",
-                "giấy tờ nhập học",
-                "thông tin visa",
-                "bảo hiểm cho người nước ngoài",
-                "các giấy tờ khác"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14353,
-            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/before-arrival",
-            "requests": [
-                "trước khi đến",
-                "chuẩn bị đến",
-                "hướng dẫn nhập học",
-                "sinh viên nước ngoài chuẩn bị",
-                "thông tin trước khi nhập học",
-                "cần làm gì trước khi đến",
-                "lời khuyên trước khi đến",
-                "hướng dẫn cho sinh viên mới",
-                "nhập cảnh sinh viên",
-                "quy trình trước đến"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14336,
-            "url": "https://etu.ru/vn/dao-to/cac-chng-ch-chuyen-nganh",
-            "requests": [
-                "chứng chỉ chuyên ngành",
-                "khóa học chứng chỉ",
-                "chứng nhận chuyên môn",
-                "các loại chứng chỉ",
-                "chương trình chứng chỉ",
-                "đào tạo chứng chỉ",
-                "học chứng chỉ",
-                "lấy chứng chỉ",
-                "chuyên ngành chứng chỉ",
-                "chứng chỉ nghề nghiệp"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14560,
-            "url": "https://etu.ru/vn/dao-to/cac-chng-trinh-dao-to-tin-s1",
-            "requests": [
-                "chương trình tiến sĩ",
-                "đào tạo tiến sĩ",
-                "học tiến sĩ",
-                "nghiên cứu sinh",
-                "tuyển sinh tiến sĩ",
-                "bằng tiến sĩ",
-                "khóa học tiến sĩ",
-                "ngành tiến sĩ",
-                "thông tin tiến sĩ",
-                "quy trình tiến sĩ"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14348,
-            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/cac-chng-trinh-dao-to-toan-phn",
-            "requests": [
-                "chương trình toàn phần",
-                "đào tạo toàn thời gian",
-                "du học toàn phần",
-                "học tập toàn phần",
-                "chương trình học đầy đủ",
-                "khóa học toàn phần",
-                "sinh viên toàn phần",
-                "các chương trình đầy đủ",
-                "học tập đầy đủ",
-                "đào tạo chính quy"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14369,
-            "url": "https://etu.ru/vn/nghien-cu/cac-d-an-dang-nghien-cu",
-            "requests": [
-                "dự án nghiên cứu",
-                "nghiên cứu đang thực hiện",
-                "các dự án khoa học",
-                "hoạt động nghiên cứu",
-                "nghiên cứu hiện tại",
-                "dự án khoa học",
-                "công trình nghiên cứu",
-                "đề tài nghiên cứu",
-                "danh sách dự án",
-                "nghiên cứu mới"
-            ]
-        },
-        {
-            "type": "reference",
             "id": 14358,
             "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/cac-khoa-hc-mua-he",
             "requests": [
@@ -384,7 +254,8 @@
                 "học tập mùa hè",
                 "trại hè",
                 "khóa học ngắn hạn hè"
-            ]
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/lp-he-ting-nga"
         },
         {
             "type": "reference",
@@ -401,46 +272,8 @@
                 "thông tin thạc sĩ",
                 "quy trình thạc sĩ",
                 "chương trình cao học"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14330,
-            "url": "https://etu.ru/vn/ti-sao-leti/cac-thanh-tich-di-dc",
-            "requests": [
-                "thành tích",
-                "thành tích đạt được",
-                "giải thưởng",
-                "những thành tựu",
-                "thành tích nổi bật",
-                "thành quả đạt được"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14329,
-            "url": "https://etu.ru/vn/ti-sao-leti/cac-thong-tin-chinh-va-cac-s-liu",
-            "requests": [
-                "thông tin chính",
-                "số liệu",
-                "các số liệu",
-                "thông tin tổng quan",
-                "dữ liệu chính",
-                "thống kê"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14335,
-            "url": "https://etu.ru/vn/dao-to/chng-trinh-ca-mt-nam-hc",
-            "requests": [
-                "chương trình năm học",
-                "lịch trình năm học",
-                "kế hoạch học tập",
-                "một năm học",
-                "cấu trúc năm học",
-                "thời gian biểu học"
-            ]
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/cac-nganh-va-chuyen-nganh-dao-to-thc-si"
         },
         {
             "type": "reference",
@@ -453,7 +286,8 @@
                 "học cử nhân",
                 "chương trình học đại học",
                 "tuyển sinh cử nhân"
-            ]
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/especialidades-de-grado2"
         },
         {
             "type": "reference",
@@ -466,47 +300,8 @@
                 "sinh viên quốc tế thực tập",
                 "cơ hội thực tập",
                 "thực tập cho sinh viên nước ngoài"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14379,
-            "url": "https://etu.ru/vn/sinh-vien/danh-sach-sinh-vien-nc-ngoai-tt-nghip",
-            "requests": [
-                "sinh viên nước ngoài tốt nghiệp",
-                "danh sách tốt nghiệp quốc tế",
-                "cựu sinh viên quốc tế",
-                "tốt nghiệp nước ngoài",
-                "danh sách cựu sinh viên",
-                "sinh viên quốc tế đã tốt nghiệp"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14364,
-            "url": "https://etu.ru/vn/nghien-cu/di-tac-nghien-cu/di-tac-trong-linh-vc-cong-nghip",
-            "requests": [
-                "đối tác công nghiệp",
-                "hợp tác công nghiệp",
-                "công ty đối tác",
-                "quan hệ công nghiệp",
-                "đối tác nghiên cứu công nghiệp",
-                "đối tác lĩnh vực công nghiệp"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 14354,
-            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/khi-dn-lien-bang-nga-dang-k-ca-cong-dan-nc-ngoai-vi-c-quan-nhp-cnh-lien-ban",
-            "requests": [
-                "đăng ký công dân nước ngoài",
-                "đăng ký nhập cảnh",
-                "thủ tục đăng ký nước ngoài",
-                "sinh viên nước ngoài đăng ký",
-                "đăng ký khi đến Nga",
-                "cơ quan nhập cảnh",
-                "hướng dẫn đăng ký cư trú"
-            ]
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/chng-trinh-thc-tp-di-vi-cong-dan-nc-ngoai"
         },
         {
             "type": "reference",
@@ -520,7 +315,8 @@
                 "khóa học mùa hè",
                 "sinh viên nước ngoài khóa hè",
                 "khóa học quốc tế"
-            ]
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/khoa-hc-he-quc-t"
         }
     ]
 }

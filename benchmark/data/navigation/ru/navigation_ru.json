@@ -477,7 +477,8 @@
                 "администрация сайта",
                 "уит",
                 "информационные технологии контакты"
-            ]
+            ],
+            "final_url": "https://etu.ru/ru/upravlenie-cifrovizacii/direkciya-sajta/"
         },
         {
             "type": "document",
@@ -843,7 +844,8 @@
                 "информация о закупках",
                 "поставщикам закупки",
                 "отдел закупок"
-            ]
+            ],
+            "final_url": "https://etu.ru/ru/zakupki/"
         }
     ]
 }
