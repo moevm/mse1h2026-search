@@ -18,23 +18,6 @@
         },
         {
             "type": "reference",
-            "id": 12833,
-            "url": "https://etu.ru/sp/investigacion/colaboradores-en-investigacion/colaboradoes-en-industria",
-            "requests": [
-                "colaboradores industria",
-                "socios industria",
-                "investigación industria",
-                "proyectos industriales",
-                "colaboración industrial",
-                "empresas colaboradoras",
-                "desarrollo industria",
-                "cooperación industria",
-                "partners industria",
-                "investigación y desarrollo industrial"
-            ]
-        },
-        {
-            "type": "reference",
             "id": 12819,
             "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/cursos-de-verano",
             "requests": [
@@ -48,23 +31,8 @@
                 "inscripción verano",
                 "oferta verano",
                 "summer courses"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 12129,
-            "url": "https://etu.ru/sp/universidad/documentos-institucionales",
-            "requests": [
-                "documentos institucionales",
-                "documentos universidad",
-                "normativa institucional",
-                "reglamentos internos",
-                "políticas universitarias",
-                "estatutos",
-                "documentación oficial",
-                "información institucional",
-                "documentos oficiales"
-            ]
+            ],
+            "final_url": "https://etu.ru/sp/universidad/escuelas-de-verano"
         }
     ]
 }
