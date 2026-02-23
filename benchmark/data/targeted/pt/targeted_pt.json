@@ -15,36 +15,6 @@
                 "Estudar no estrangeiro",
                 "Vida estudante internacional"
             ]
-        },
-        {
-            "type": "reference",
-            "id": 13254,
-            "url": "https://etu.ru/pt/investigacao/projetos-de-investigacao",
-            "requests": [
-                "projetos investigação",
-                "investigação projetos",
-                "pesquisa projetos",
-                "projetos científicos",
-                "projetos de pesquisa",
-                "oportunidades investigação",
-                "linhas de pesquisa"
-            ]
-        },
-        {
-            "type": "reference",
-            "id": 23287,
-            "url": "https://etu.ru/pt/universidade/revistas-e-publicacoes",
-            "requests": [
-                "revistas",
-                "publicações",
-                "listagem revistas",
-                "periódicos",
-                "bibliografia",
-                "publicações científicas",
-                "acesso a revistas",
-                "artigos publicados"
-            ],
-            "final_url": "https://etu.ru/en/university/academic-periodicals/"
         }
     ]
 }
