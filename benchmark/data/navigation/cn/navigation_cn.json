@@ -1,0 +1,90 @@
+{
+    "title": "导航查询",
+    "items": [
+        {
+            "type": "document",
+            "id": 14810,
+            "url": "https://etu.ru/cn/leti",
+            "requests": [
+                "学校",
+                "关于我们",
+                "大学介绍",
+                "国际学生",
+                "奖学金",
+                "英语授课",
+                "硕士研究生部"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14829,
+            "url": "https://etu.ru/cn/porque-leti1",
+            "requests": [
+                "为什么选择",
+                "选择理由",
+                "大学优势",
+                "声誉",
+                "知名度",
+                "欧洲大学",
+                "电子大学"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14821,
+            "url": "https://etu.ru/cn/leti/24",
+            "requests": [
+                "校长的信息",
+                "校长致辞",
+                "校长欢迎辞",
+                "校长寄语",
+                "校长介绍",
+                "领导信息",
+                "校长的话"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14856,
+            "url": "https://etu.ru/cn/study-cn/57",
+            "requests": [
+                "学院",
+                "系所",
+                "院系设置",
+                "专业学院",
+                "学部",
+                "所有学院",
+                "教育学院"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14859,
+            "url": "https://etu.ru/cn/study-cn/56",
+            "requests": [
+                "外国学生",
+                "国际学生",
+                "留学生",
+                "国际招生",
+                "海外学生",
+                "留学信息",
+                "国际生"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14865,
+            "url": "https://etu.ru/cn/study-cn/56/etuleti",
+            "requests": [
+                "到达",
+                "如何到达",
+                "交通方式",
+                "前往路线",
+                "来校指南",
+                "位置信息",
+                "地址",
+                "交通路线"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,1500 @@
+{
+    "title": "Информационные запросы",
+    "items": [
+        {
+            "type": "document",
+            "id": 2,
+            "url": "https://etu.ru/ru/universitet",
+            "requests": [
+                "об университете",
+                "история",
+                "о нас",
+                "сведения об организации",
+                "общие сведения",
+                "краткая информация",
+                "миссия вуза"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 9737,
+            "url": "https://etu.ru/ru/endaument/o-fonde",
+            "requests": [
+                "эндаумент фонд",
+                "о фонде",
+                "целевой капитал",
+                "фонд развития",
+                "что такое эндаумент",
+                "фонд выпускников",
+                "помощь университету"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 307,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs",
+            "requests": [
+                "прием на первый курс",
+                "поступление на 1 курс",
+                "как поступить на первый курс",
+                "прием абитуриентов",
+                "условия приема",
+                "подача документов",
+                "набор на первый курс"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/"
+        },
+        {
+            "type": "document",
+            "id": 405,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/obshezhitiya",
+            "requests": [
+                "общежития",
+                "общежитие",
+                "проживание",
+                "места в общежитии",
+                "условия проживания",
+                "для иногородних",
+                "заселение в общежитие",
+                "студенческие общежития"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 299,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat",
+            "requests": [
+                "бакалавриат",
+                "специалитет",
+                "направления подготовки",
+                "программы бакалавриата",
+                "поступление бакалавриат",
+                "обучение бакалавриат",
+                "перечень специальностей",
+                "факультеты бакалавриат"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/"
+        },
+        {
+            "type": "document",
+            "id": 3064,
+            "url": "https://etu.ru/ru/mezhdunarodnaya-deyatelnost/dekanat-riu/rossiya-sankt-peterburg-leti",
+            "requests": [
+                "о городе",
+                "санкт-петербург",
+                "информация о городе",
+                "город санкт-петербург",
+                "жизнь в петербурге",
+                "спб информация",
+                "о санкт-петербурге"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19678,
+            "url": "https://etu.ru/ru/upravlenie-informacionnyh-tehnologiy/otdel-soprovozhdeniya-universitetskih-meropriyatiy/raspisanie-zanyatosti-zalov",
+            "requests": [
+                "расписание залов",
+                "занятость залов",
+                "бронирование залов",
+                "график залов",
+                "свободные залы",
+                "расписание мероприятий",
+                "залы",
+                "аудитории расписание"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 16088,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs/prohodnye-bally",
+            "requests": [
+                "проходной балл",
+                "баллы",
+                "проходные баллы",
+                "минимальный балл",
+                "баллы для поступления",
+                "вступительные баллы",
+                "сколько баллов",
+                "проходные"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/prohodnye-bally-proshlyh-let"
+        },
+        {
+            "type": "document",
+            "id": 2870,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/obshezhitiya/raspredelenie-studentov",
+            "requests": [
+                "расселение студентов",
+                "общежития",
+                "поселение в общежития",
+                "распределение мест общежития",
+                "студенческое общежитие",
+                "где жить студенту",
+                "правила расселения",
+                "заселение в общежитие"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21143,
+            "url": "https://etu.ru/ru/muzej/popov-izobretatel-radio",
+            "requests": [
+                "попов",
+                "изобретатель радио",
+                "а с попов",
+                "биография попова",
+                "история радио",
+                "музей попова",
+                "александр попов",
+                "попов ученый",
+                "о попове"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13902,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zashita-studentov-ot-vozdeystviya-terrorizma-ekstremizma/mezhdunarodnaya-organizaciya-islamskoe-gosudarstvo-iraka-i-levanta-igil",
+            "requests": [
+                "Международная террористическая организация",
+                "ИГИЛ",
+                "Терроризм",
+                "Экстремизм",
+                "Защита от терроризма",
+                "Борьба с экстремизмом",
+                "ИГИЛ информация",
+                "Опасность терроризма",
+                "Профилактика экстремизма"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 24111,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zdorove/chto-nuzhno-znat-o-flyuorografii",
+            "requests": [
+                "Туберкулез",
+                "Профилактика туберкулеза",
+                "Флюорография",
+                "Здоровье",
+                "Что нужно знать о флюорографии",
+                "Как предотвратить туберкулез",
+                "Информация о туберкулезе",
+                "Медицинские обследования"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19189,
+            "url": "https://etu.ru/ru/gazeta-elektrik/spec-proekty/vopros-nomera/kakoj-on-nastoyashhij-muzhchina-segodnya",
+            "requests": [
+                "Настоящий мужчина",
+                "Какой мужчина сегодня",
+                "Мужчина сегодня",
+                "Вопрос номера",
+                "Спецпроекты",
+                "Газета электрик",
+                "Статья о мужчинах",
+                "Современный мужчина"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23726,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zdorove/obshhaya-informaciya-o-spb-gbuz-gorodskaya-poliklinika-n76/vrach-otvechaet-na-vopros/chto-nuzhno-znat-o-tuberkuleze-dlya-lichnoj-bezopasnosti",
+            "requests": [
+                "Туберкулез личная безопасность",
+                "Что знать о туберкулезе",
+                "Безопасность туберкулез",
+                "Профилактика туберкулеза",
+                "Врач отвечает туберкулез",
+                "Здоровье туберкулез",
+                "Как защититься от туберкулеза",
+                "Информация о туберкулезе"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26938,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/patrioticheskoe-vospitanie/pamyatnye-i-znamenatelnye-daty-velikoj-otechestvennoj-vojny",
+            "requests": [
+                "Даты Великой Отечественной войны",
+                "Памятные даты ВОВ",
+                "Знаменательные даты войны",
+                "Великая Отечественная война",
+                "Патриотическое воспитание",
+                "История войны",
+                "Даты ВОВ",
+                "Памятные события войны"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 321,
+            "url": "https://etu.ru/ru/abiturientam/priem-v-magistraturu",
+            "requests": [
+                "прием магистратура",
+                "поступление магистратура",
+                "программы магистратуры",
+                "как поступить в магистратуру",
+                "магистратура условия",
+                "образовательные программы магистров",
+                "магистратура требования"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/magistratura/"
+        },
+        {
+            "type": "document",
+            "id": 13,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii",
+            "requests": [
+                "повышение квалификации",
+                "курсы повышения квалификации",
+                "дополнительное образование",
+                "институт непрерывного образования",
+                "учеба без отрыва от работы",
+                "программы для специалистов",
+                "профессиональное развитие"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 298,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki",
+            "requests": [
+                "направления подготовки",
+                "образовательные программы",
+                "специальности",
+                "программы обучения",
+                "бакалавриат магистратура аспирантура",
+                "факультеты специальности",
+                "выбор программы"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/"
+        },
+        {
+            "type": "reference",
+            "id": 5594,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/informatika-i-vychislitelnaya-tehnika",
+            "requests": [
+                "информатика и вычислительная техника",
+                "искусственный интеллект",
+                "направление 09.03.01",
+                "бакалавриат информатика",
+                "программа ИВТ",
+                "разработка информационных систем",
+                "системы управления ИИ",
+                "обучение ИИ"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/informatika-i-vychislitelnaya-tehnika-iskusstvennyj-intellekt"
+        },
+        {
+            "type": "document",
+            "id": 10,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost",
+            "requests": [
+                "научная деятельность",
+                "инновационная деятельность",
+                "наука и инновации",
+                "исследования",
+                "разработки",
+                "научные проекты",
+                "инновации",
+                "научная деятельность университета"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5595,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/informacionnye-sistemy-i-tehnologii",
+            "requests": [
+                "информационные системы и технологии",
+                "09.03.02",
+                "бакалавриат информационные системы",
+                "программа информационные технологии",
+                "специальность ИСИТ",
+                "разработка математических моделей",
+                "IT специалист обучение"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/informacionnye-sistemy-i-tehnologii"
+        },
+        {
+            "type": "document",
+            "id": 1372,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/obshezhitiya/obshezhitiya",
+            "requests": [
+                "общежития",
+                "список общежитий",
+                "проживание студентам",
+                "студенческое общежитие",
+                "условия общежития",
+                "поселение в общежитие",
+                "адреса общежитий"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 28932,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/09-03-01-informatika-i-vychislitelnaya-tehnika-kompyuternoe-modelirovanie-i-proektirovanie",
+            "requests": [
+                "информатика и вычислительная техника",
+                "компьютерное моделирование и проектирование",
+                "09.03.01",
+                "бакалавриат ИВТ",
+                "IT специалист моделирование",
+                "автоматизированное проектирование",
+                "программа ИВТ"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/informatika-i-vychislitelnaya-tehnika-kompyuternoe-modelirovanie-i-proektirovanie"
+        },
+        {
+            "type": "document",
+            "id": 11676,
+            "url": "https://etu.ru/ru/studentam/dokumenty-dlya-ucheby",
+            "requests": [
+                "документы для учебы",
+                "учебные документы",
+                "справки для студентов",
+                "формы документов студентам",
+                "бланки для обучения",
+                "образцы документов",
+                "необходимые документы студентам"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5590,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/upravlenie-v-tehnicheskih-sistemah",
+            "requests": [
+                "управление в технических системах",
+                "27.03.04",
+                "бакалавриат управление системами",
+                "проектирование систем управления",
+                "профессиональное программирование",
+                "теория управления",
+                "направление УТС"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/upravlenie-v-tehnicheskih-sistemah.-avtomatika-i-robototehnicheskie-sistemy"
+        },
+        {
+            "type": "reference",
+            "id": 5578,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/prikladnaya-matematika-i-informatika",
+            "requests": [
+                "прикладная математика",
+                "прикладная информатика",
+                "направление 01.03.02",
+                "бакалавриат математика",
+                "программа математика информатика",
+                "специальность 01.03.02",
+                "поступление прикладная математика",
+                "математические модели информационные технологии"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/prikladnaya-matematika-i-informatika"
+        },
+        {
+            "type": "document",
+            "id": 12,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya",
+            "requests": [
+                "воспитательная работа",
+                "социальная работа",
+                "студенческая жизнь",
+                "культурно-воспитательная работа",
+                "спортивно-оздоровительная работа",
+                "социальная поддержка студентов",
+                "развитие личности студентов"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5596,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/programmnaya-inzheneriya",
+            "requests": [
+                "программная инженерия",
+                "бакалавриат программная инженерия",
+                "направление 09.03.04",
+                "поступление программная инженерия",
+                "программирование обучение",
+                "индустрия программ",
+                "методы инструменты технологии"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/programmnaya-inzheneriya"
+        },
+        {
+            "type": "document",
+            "id": 44206,
+            "url": "https://etu.ru/ru/studentam/studencheskie-novosti/vozmozhnye-sposoby-denezhnyh-perevodov-v-rossiyu-iz-za-rubezha",
+            "requests": [
+                "денежные переводы",
+                "переводы из-за рубежа",
+                "иностранные студенты переводы",
+                "финансовая помощь студентам",
+                "способы перевода денег",
+                "деньги из-за границы",
+                "переводы студентам"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 1958,
+            "url": "https://etu.ru/ru/studentam/vasha-karera/praktiki-studentov",
+            "requests": [
+                "практика студентов",
+                "производственная практика",
+                "учебная практика",
+                "студенческая практика",
+                "карьера практика",
+                "научно-исследовательская работа студентов",
+                "прохождение практики"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 46945,
+            "url": "https://etu.ru/ru/studentam/studencheskie-novosti/vyhodnye-i-prazdnichnye-dni-v-fevrale-i-marte-2023-goda",
+            "requests": [
+                "выходные дни 2023",
+                "праздничные дни 2023",
+                "февраль март выходные",
+                "расписание праздников",
+                "приказ ректора выходные",
+                "нерабочие дни",
+                "календарь праздников",
+                "выходные в феврале марте"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26209,
+            "url": "https://etu.ru/ru/universitet/ostorozhno-koronavirus/rekomendacii-i-pravila/zashhitnye-maski-dlya-lica-i-organov-dyhaniya-mif-ili-realnost",
+            "requests": [
+                "защитные маски",
+                "маски для лица",
+                "коронавирус маски",
+                "миф или реальность маски",
+                "эффективность масок",
+                "виды масок",
+                "нужно ли носить маски",
+                "правила ношения масок"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23711,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zdorove/obshhaya-informaciya-o-spb-gbuz-gorodskaya-poliklinika-n76/vrach-otvechaet-na-vopros/chto-takoe-akademicheskij-otpusk",
+            "requests": [
+                "академический отпуск",
+                "что такое академический отпуск",
+                "как взять академический отпуск",
+                "отпуск студентам",
+                "отпуск по болезни",
+                "отпуск по семейным обстоятельствам",
+                "призыв в армию отпуск",
+                "условия академического отпуска"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5579,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/reklama-i-svyazi-s-obshestvennostyu",
+            "requests": [
+                "реклама и связи с общественностью",
+                "РСО",
+                "бакалавриат реклама",
+                "направление 42.03.01",
+                "обучение реклама",
+                "бизнес-коммуникации",
+                "кафедра связей с общественностью",
+                "поступление реклама"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/reklama-i-svyazi-s-obshhestvennostyu"
+        },
+        {
+            "type": "document",
+            "id": 7936,
+            "url": "https://etu.ru/ru/studentam/platnoe-obuchenie",
+            "requests": [
+                "платное обучение",
+                "стоимость обучения",
+                "коммерческое обучение",
+                "оплата обучения",
+                "договор на обучение",
+                "цены на обучение",
+                "условия платного обучения",
+                "образовательные услуги"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5582,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/elektroenergetika-i-elektrotehnika",
+            "requests": [
+                "электроэнергетика и электротехника",
+                "бакалавриат электротехника",
+                "направление 13.03.02",
+                "обучение электроэнергетика",
+                "специальность электротехника",
+                "профессии электроэнергетика",
+                "приборостроение",
+                "нефтегазовая промышленность"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/elektroenergetika-i-elektrotehnika"
+        },
+        {
+            "type": "reference",
+            "id": 5584,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/biotehnicheskie-sistemy-i-tehnologii",
+            "requests": [
+                "биотехнические системы",
+                "биотехнологии",
+                "направление биотехнические",
+                "специальность биотехнические",
+                "медицинские системы",
+                "приборы медицинского назначения",
+                "бакалавриат биотехника",
+                "поступление биотехнические",
+                "технологии медицина"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/biotehnicheskie-sistemy-i-tehnologii"
+        },
+        {
+            "type": "reference",
+            "id": 5580,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/lingvistika",
+            "requests": [
+                "лингвистика",
+                "направление лингвистика",
+                "специальность лингвистика",
+                "межкультурная коммуникация",
+                "бакалавриат лингвистика",
+                "поступление лингвистика",
+                "иностранные языки",
+                "филология"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/lingvistika"
+        },
+        {
+            "type": "reference",
+            "id": 5587,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/infokommunikacionnye-tehnologii-i-sistemy-svyazi",
+            "requests": [
+                "инфокоммуникационные технологии",
+                "системы связи",
+                "направление инфокоммуникации",
+                "специальность связь",
+                "информационные технологии",
+                "обработка информации",
+                "бакалавриат инфокоммуникации",
+                "поступление связь",
+                "телекоммуникации"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/infokommunikacionnye-tehnologii-i-sistemy-svyazi"
+        },
+        {
+            "type": "document",
+            "id": 215,
+            "url": "https://etu.ru/ru/universitet/nash-universitet",
+            "requests": [
+                "университет сегодня",
+                "история университета",
+                "об университете",
+                "информация о вузе",
+                "первый электротехнический",
+                "данные об университете",
+                "основание университета",
+                "важная информация"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 1898,
+            "url": "https://etu.ru/ru/studentam/stipendii-i-socialnaya-podderzhka",
+            "requests": [
+                "стипендии",
+                "социальная поддержка",
+                "виды стипендий",
+                "размеры стипендий",
+                "порядок назначения стипендий",
+                "поддержка студентов",
+                "финансовая помощь студентам",
+                "стипендии аспирантам",
+                "выплаты студентам"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17269,
+            "url": "https://etu.ru/ru/on-line-obuchenie/mooc",
+            "requests": [
+                "Что такое MOOC",
+                "MOOC курсы",
+                "Дистанционное обучение",
+                "Онлайн курсы",
+                "Электронные курсы",
+                "Массовые открытые онлайн курсы",
+                "Обучение онлайн",
+                "Форматы обучения",
+                "Дистанционные программы",
+                "Курсы MOOC"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 457,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost/obekty-intellektualnoy-sobstvennosti",
+            "requests": [
+                "Объекты интеллектуальной собственности",
+                "ОИС",
+                "Интеллектуальная собственность",
+                "Правовая охрана",
+                "Гражданский кодекс РФ часть 4",
+                "Результаты интеллектуальной деятельности",
+                "Защита интеллектуальной собственности",
+                "Патенты и авторские права",
+                "Охрана ОИС",
+                "Интеллектуальные права"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17876,
+            "url": "https://etu.ru/ru/universitet/firmennyj-stil",
+            "requests": [
+                "Фирменный стиль",
+                "Брендбук",
+                "Логотип",
+                "Корпоративный стиль",
+                "Использование логотипа",
+                "Гайдлайн",
+                "Элементы стиля",
+                "Правила оформления",
+                "Бренд университета",
+                "Айдентика"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 301,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/magistratura",
+            "requests": [
+                "магистратура",
+                "поступление в магистратуру",
+                "программы магистратуры",
+                "направления магистратура",
+                "второе высшее магистратура",
+                "магистратура условия",
+                "магистратура факультеты",
+                "магистратура специальности"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/magistratura/napravleniya-podgotovki/"
+        },
+        {
+            "type": "document",
+            "id": 29179,
+            "url": "https://etu.ru/ru/studentam/dokumenty-dlya-ucheby/blanki-zayavlenij-i-shablony-dlya-obuchayushhihsya",
+            "requests": [
+                "бланки заявлений",
+                "шаблоны заявлений",
+                "образцы заявлений",
+                "документы для студентов",
+                "заявления обучающимся",
+                "бланки студентам",
+                "шаблоны для учебы",
+                "формы документов"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14975,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/socialnaya-podderzhka-obuchayushihsya",
+            "requests": [
+                "социальная поддержка",
+                "поддержка студентов",
+                "помощь студентам",
+                "льготы обучающимся",
+                "социальные выплаты",
+                "студенческая поддержка",
+                "материальная помощь"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 418,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost/administrativnaya-struktura-nauchnogo-bloka",
+            "requests": [
+                "структура научного блока",
+                "администрация научного",
+                "научный блок",
+                "отделы науки",
+                "научная деятельность структура",
+                "инновационная деятельность",
+                "организация науки",
+                "руководство наукой"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 1254,
+            "url": "https://etu.ru/ru/sotrudnikam/upravlenie-po-rabote-s-personalom/otdel-kadrov/podrazdeleniya",
+            "requests": [
+                "подразделения",
+                "структурные подразделения",
+                "список подразделений",
+                "отделы",
+                "кадры подразделения",
+                "структура отделов",
+                "управление персоналом подразделения"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 3282,
+            "url": "https://etu.ru/ru/abiturientam/dni-otkrytyh-dverey",
+            "requests": [
+                "Дни открытых дверей",
+                "Когда день открытых дверей",
+                "Открытые двери для абитуриентов",
+                "Расписание дней открытых дверей",
+                "Мероприятия для абитуриентов",
+                "Информация для поступающих",
+                "Встречи со школьниками"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/dni-otkrytyh-dverej"
+        },
+        {
+            "type": "document",
+            "id": 25631,
+            "url": "https://etu.ru/ru/inmio/studencheskie-olimpiady/regionalnye-olimpiady",
+            "requests": [
+                "Региональные олимпиады",
+                "Студенческие олимпиады",
+                "Олимпиады для студентов",
+                "Участие в олимпиадах",
+                "Конкурсы для студентов",
+                "Олимпиады по регионам",
+                "Список олимпиад"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5589,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/sistemnyy-analiz-i-upravlenie",
+            "requests": [
+                "Системный анализ и управление",
+                "Направление 27.03.03",
+                "Бакалавриат системный анализ",
+                "Программа системный анализ",
+                "Интеллектуальные системы управления",
+                "Анализ и управление",
+                "Специальность системный анализ",
+                "Поступление системный анализ"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/sistemnyj-analiz-i-upravlenie"
+        },
+        {
+            "type": "document",
+            "id": 219,
+            "url": "https://etu.ru/ru/universitet/universitetskiy-gorodok",
+            "requests": [
+                "Университетский городок",
+                "Кампус университета",
+                "Расположение университета",
+                "Где находится университет",
+                "Адрес университета",
+                "Корпуса университета",
+                "Территория университета"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16822,
+            "url": "https://etu.ru/ru/on-line-obuchenie",
+            "requests": [
+                "Онлайн-обучение",
+                "Дистанционное обучение",
+                "Обучение онлайн",
+                "Формат онлайн",
+                "Удаленное обучение",
+                "Дистанционный формат",
+                "Электронное обучение"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18135,
+            "url": "https://etu.ru/ru/studentam/dokumenty-dlya-ucheby/dlya-podgotovki-vkr",
+            "requests": [
+                "Подготовка ВКР",
+                "Документы для ВКР",
+                "Требования к ВКР",
+                "Выпускная квалификационная работа",
+                "Правила оформления ВКР",
+                "Методичка ВКР",
+                "Защита ВКР"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 26646,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/mehatronika-i-robototehnika",
+            "requests": [
+                "Мехатроника и робототехника",
+                "Направление 15.03.06",
+                "Бакалавриат мехатроника",
+                "Робототехника обучение",
+                "Факультет электротехники робототехника",
+                "Специальность мехатроника",
+                "Программа робототехника"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/mehatronika-i-robototehnika"
+        },
+        {
+            "type": "document",
+            "id": 44055,
+            "url": "https://etu.ru/ru/mezhdunarodnaya-deyatelnost/dekanat-riu/pribytie-v-sankt-peterburg/prohozhdenie-obyazatelnoj-daktiloskopicheskoj-registracii-i-medicinskogo-osvidetelstvovaniya",
+            "requests": [
+                "Дактилоскопическая регистрация",
+                "Медицинское освидетельствование",
+                "Регистрация иностранных студентов",
+                "Обязательная регистрация",
+                "Прохождение дактилоскопии",
+                "Медицинский осмотр для студентов",
+                "Прибытие в Санкт-Петербург регистрация",
+                "Дактилоскопия иностранцы",
+                "Миграционная регистрация",
+                "Документы для регистрации"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 320,
+            "url": "https://etu.ru/ru/abiturientam/olimpiady-shkolnikov",
+            "requests": [
+                "Олимпиады для школьников",
+                "Школьные олимпиады",
+                "Олимпиады абитуриентам",
+                "Олимпиады поступление",
+                "Преимущества олимпиад",
+                "Участие в олимпиадах",
+                "Олимпиады старших классов"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26070,
+            "url": "https://etu.ru/ru/universitet/ostorozhno-koronavirus",
+            "requests": [
+                "коронавирус",
+                "меры безопасности",
+                "профилактика заболеваний",
+                "информация о здоровье",
+                "covid",
+                "эпидемиологическая ситуация",
+                "безопасность студентов"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 3546,
+            "url": "https://etu.ru/ru/universitet/vystavki-yarmarki",
+            "requests": [
+                "выставки",
+                "ярмарки",
+                "мероприятия",
+                "студенческие выставки",
+                "календарь событий",
+                "куда сходить",
+                "предстоящие ярмарки"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 390,
+            "url": "https://etu.ru/ru/obrazovatelnaya-deyatelnost/aspirantura-i-doktornatura",
+            "requests": [
+                "аспирантура",
+                "докторантура",
+                "поступление в аспирантуру",
+                "третье высшее образование",
+                "научно-педагогические кадры",
+                "защита диссертации",
+                "кандидат наук",
+                "программы аспирантуры"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5592,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/innovatika",
+            "requests": [
+                "инноватика",
+                "направление инноватика",
+                "бакалавриат инноватика",
+                "27.03.05",
+                "специальность инноватика",
+                "программа инноватика",
+                "инновационное развитие предприятий",
+                "управление проектами"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/innovatika"
+        },
+        {
+            "type": "document",
+            "id": 16234,
+            "url": "https://etu.ru/ru/abiturientam/preimushestva-spbgetu/obshhezhitiya",
+            "requests": [
+                "общежития",
+                "проживание студентов",
+                "студенческое общежитие",
+                "иногородним студентам",
+                "условия проживания",
+                "места в общежитии",
+                "заселение в общежитие",
+                "кампус общежития"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11197,
+            "url": "https://etu.ru/ru/universitet/izdatelstvo/zhurnal-diskurs",
+            "requests": [
+                "журнал дискурс",
+                "дискурс журнал",
+                "издательство журнал",
+                "научный журнал",
+                "история журнала",
+                "публикации",
+                "статьи журнал",
+                "редакция журнала"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 45680,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/novosti/socialno-psihologicheskoe-testirovanie-chto-eto-i-zachem-nuzhno",
+            "requests": [
+                "социально психологическое тестирование",
+                "психологическое тестирование",
+                "спт что это",
+                "тестирование студентов",
+                "зачем нужно тестирование",
+                "служба психологического сопровождения",
+                "елена строгецкая",
+                "тестирование несовершеннолетних",
+                "информация о тестировании",
+                "психологическая помощь студентам"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5588,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/konstruirovanie-i-tehnologiya-elektronnyh-sredstv",
+            "requests": [
+                "11.03.03",
+                "конструирование электронных средств",
+                "технология электронных средств",
+                "направление 11.03.03",
+                "бакалавриат электронные средства",
+                "проектирование электронных средств",
+                "электронные средства бакалавриат",
+                "контроль качества электроники",
+                "технологическая документация электроника",
+                "прием 11.03.03"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/konstruirovanie-i-tehnologiya-elektronnyh-sredstv"
+        },
+        {
+            "type": "document",
+            "id": 14717,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zdorove/profilaktika-vichspid/vopros-otvet",
+            "requests": [
+                "вич спид вопросы",
+                "профилактика вич",
+                "вопрос ответ вич",
+                "часто задаваемые вопросы вич",
+                "информация о вич",
+                "здоровье вич",
+                "вич спид faq",
+                "ответы вич",
+                "консультации вич",
+                "вопросы по вич"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5593,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/nanotehnologii-i-mikrosistemnaya-tehnika",
+            "requests": [
+                "28.03.01",
+                "нанотехнологии",
+                "микросистемная техника",
+                "направление 28.03.01",
+                "бакалавриат нанотехнологии",
+                "мировой рейтинг нанотехнологий",
+                "исследования нанотехнологии",
+                "поступление нанотехнологии",
+                "факультет нанотехнологий",
+                "микросистемы обучение"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/nanotehnologii-i-mikrosistemnaya-tehnika"
+        },
+        {
+            "type": "reference",
+            "id": 318,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs/celevoy-priem",
+            "requests": [
+                "целевое обучение",
+                "целевой прием",
+                "поступление целевое",
+                "целевой набор",
+                "договор целевое обучение",
+                "карьера целевое",
+                "работодатель целевое",
+                "приемная кампания целевое",
+                "условия целевого обучения",
+                "целевая подготовка"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/celevoe-obuchenie"
+        },
+        {
+            "type": "reference",
+            "id": 28679,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/radiotehnika/11-03-01-radiotehnika-sistemy-kompyuternogo-zreniya",
+            "requests": [
+                "Радиотехника",
+                "11.03.01",
+                "Системы компьютерного зрения",
+                "Бакалавриат радиотехника",
+                "Направление радиотехника",
+                "Программа компьютерное зрение",
+                "Поступление радиотехника",
+                "Описание программы радиотехника",
+                "Карьера радиотехника",
+                "Что изучать радиотехника"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/radiotehnika-sistemy-kompyuternogo-zreniya"
+        },
+        {
+            "type": "document",
+            "id": 17769,
+            "url": "https://etu.ru/ru/universitet/leti-v-smi",
+            "requests": [
+                "Университет в СМИ",
+                "Новости в прессе",
+                "Публикации о вузе",
+                "Упоминания в медиа",
+                "Пресса о университете",
+                "Новости СМИ",
+                "Вузовские новости в прессе"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 15683,
+            "url": "https://etu.ru/ru/abiturientam/priem-v-magistraturu/ezhegodnaya-olimpiada-dlya-postupayushih-v-magistraturu",
+            "requests": [
+                "Олимпиада магистратура",
+                "Поступление магистратура олимпиада",
+                "Магистратура олимпиада",
+                "Олимпиада для магистрантов",
+                "Ежегодная олимпиада магистратура",
+                "Участие в олимпиаде магистратура",
+                "Прием в магистратуру олимпиада"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/magistratura/olimpiada-dlya-postupayushhih-v-magistraturu"
+        },
+        {
+            "type": "reference",
+            "id": 18312,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs/chasto-zadavaemye-voprosy",
+            "requests": [
+                "Часто задаваемые вопросы",
+                "Вопросы поступление",
+                "Поступление вопросы",
+                "Ответы на вопросы абитуриентов",
+                "FAQ поступление",
+                "Общие вопросы абитуриентам",
+                "Вопросы для поступающих",
+                "Популярные вопросы"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/#answers"
+        },
+        {
+            "type": "document",
+            "id": 398,
+            "url": "https://etu.ru/ru/obrazovatelnaya-deyatelnost/novosti",
+            "requests": [
+                "Новости",
+                "Свежие новости",
+                "Последние новости",
+                "Объявления",
+                "Новости образовательной деятельности",
+                "Обновления",
+                "Актуальные события",
+                "События"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 41434,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/organizacionno-informacionnoe-obespechenie/rabochaya-programma-vospitaniya",
+            "requests": [
+                "рабочая программа воспитания",
+                "календарный план воспитательной работы",
+                "программа воспитания",
+                "план воспитательной работы",
+                "воспитательная программа",
+                "план работы воспитание",
+                "воспитательная деятельность программа",
+                "календарный план"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 16100,
+            "url": "https://etu.ru/ru/abiturientam/priem-v-aspiranturu",
+            "requests": [
+                "прием в аспирантуру",
+                "аспирантура",
+                "поступление в аспирантуру",
+                "документы для аспирантуры",
+                "как поступить в аспирантуру",
+                "обучение в аспирантуре",
+                "специальности аспирантура",
+                "ускоренное обучение аспирантура",
+                "очная аспирантура"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/aspirantura/"
+        },
+        {
+            "type": "document",
+            "id": 1325,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii/vydavaemye-dokumenty",
+            "requests": [
+                "выдаваемые документы",
+                "документы после обучения",
+                "повышение квалификации документы",
+                "переподготовка документы",
+                "документы об образовании",
+                "образцы документов",
+                "документы по окончании",
+                "сертификаты и дипломы",
+                "что выдают после курсов"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 46409,
+            "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov/vyhodnye-i-prazdnichnye-dni-v-dekabre-2022-i-yanvare-2023-g",
+            "requests": [
+                "выходные дни декабрь 2022",
+                "праздничные дни январь 2023",
+                "рабочие дни 2023",
+                "график работы декабрь январь",
+                "приказ о выходных днях",
+                "нерабочие дни",
+                "расписание праздников",
+                "выходные и праздники",
+                "декабрь январь график"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22387,
+            "url": "https://etu.ru/ru/upravlenie-informacionnyh-tehnologiy/chasto-zadavaemye-voprosy/podklyuchenie-korporativnoj-pochty-na-mobilnom-ustrojstve/podklyuchenie-k-mobilnym-ustrojstvam-na-os-android",
+            "requests": [
+                "подключение почты андроид",
+                "корпоративная почта андроид",
+                "почта на телефон андроид",
+                "настройка почты андроид",
+                "как подключить почту андроид",
+                "мобильная почта андроид",
+                "android почта",
+                "почта мобильное устройство",
+                "корпоративная почта телефон"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21149,
+            "url": "https://etu.ru/ru/muzej/istoriya-spbgetu",
+            "requests": [
+                "история",
+                "история вуза",
+                "история университета",
+                "музей история",
+                "история создания",
+                "становление вуза",
+                "история образования",
+                "история развития",
+                "вехи истории"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16325,
+            "url": "https://etu.ru/ru/fakultety/voennyj-centr/podgotovka-oficerov-zapasa",
+            "requests": [
+                "поступающим в вуц",
+                "военный учебный центр",
+                "вуц",
+                "военная кафедра",
+                "военная подготовка",
+                "офицеры запаса",
+                "прием в вуц",
+                "как поступить в вуц",
+                "военный центр абитуриентам"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10901,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/obshezhitiya/raspredelenie-studentov/chasto-zadavaemye-voprosy",
+            "requests": [
+                "Вопросы общежития",
+                "FAQ общежития",
+                "Поселение общежитие",
+                "Проживание общежития",
+                "Частые вопросы студенты",
+                "Общежития вопросы ответы",
+                "Правила проживания общежитие",
+                "Как заселиться в общежитие"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 21065,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/priborostroenie/informacionno-izmeritelnye-sistemy-i-tehnologii",
+            "requests": [
+                "Приборостроение 12.03.01",
+                "Информационно-измерительные системы",
+                "Направление ИИС",
+                "Бакалавриат приборостроение",
+                "Программа ИИС",
+                "Измерительные технологии",
+                "Поступление приборостроение",
+                "Специальность ИИС"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/priborostroenie-informacionno-izmeritelnaya-tehnika-i-tehnologii"
+        },
+        {
+            "type": "document",
+            "id": 44463,
+            "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov/vyhodnye-dni-v-mae-2022-goda",
+            "requests": [
+                "Выходные май 2022",
+                "Праздники май 2022",
+                "Рабочие дни май 2022",
+                "График работы май",
+                "Майские праздники",
+                "Приказ выходные май",
+                "Нерабочие дни май"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14715,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/zdorove/profilaktika-vichspid",
+            "requests": [
+                "Профилактика ВИЧ",
+                "ВИЧ СПИД информация",
+                "Здоровье ВИЧ",
+                "Предупреждение ВИЧ",
+                "Спид профилактика",
+                "Защита от ВИЧ",
+                "Как предотвратить ВИЧ"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18193,
+            "url": "https://etu.ru/ru/sotrudnikam/yuridicheskiy-otdel/yuridicheskaya-informaciya/razyasnenie-o-prave-aspiranta-na-trudovuyu-deyatelnost",
+            "requests": [
+                "Право аспиранта работа",
+                "Аспирант трудовая деятельность",
+                "Разъяснение аспиранты",
+                "Работа для аспирантов",
+                "Трудоустройство аспирантов",
+                "Юридическая информация аспирант",
+                "Занятость аспиранта",
+                "Можно ли работать аспиранту"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 24879,
+            "url": "https://etu.ru/ru/sotrudnikam/socialnaya-podderzhka-rabotnikov/edinovremennaya-materialnaya-pomoshh",
+            "requests": [
+                "материальная помощь",
+                "единовременная помощь",
+                "помощь сотрудникам",
+                "социальная поддержка работников",
+                "выплаты сотрудникам",
+                "финансовая помощь работникам",
+                "поддержка персонала"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5583,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/priborostroenie",
+            "requests": [
+                "приборостроение",
+                "бакалавриат приборостроение",
+                "направление приборостроение",
+                "профиль приборостроение",
+                "специальность приборостроение",
+                "12.03.01",
+                "измерительные системы",
+                "навигационные системы"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/priborostroenie.-intellektualnye-sistemy"
+        },
+        {
+            "type": "reference",
+            "id": 21066,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/priborostroenie/fizicheskie-metody-i-sistemy-navigacii-kontrolya-i-izmerenij",
+            "requests": [
+                "лазерные измерительные системы",
+                "навигационные системы приборостроение",
+                "приборостроение лазерные системы",
+                "физические методы навигации",
+                "12.03.01 лазерные системы",
+                "оптические сенсоры",
+                "измерительные системы приборостроение",
+                "разработка приборов навигации"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/priborostroenie-lazernye-izmeritelnye-i-navigacionnye-sistemy"
+        },
+        {
+            "type": "document",
+            "id": 41317,
+            "url": "https://etu.ru/ru/universitet/ostorozhno-koronavirus/vakcinaciya",
+            "requests": [
+                "вакцинация",
+                "прививки",
+                "коронавирус информация",
+                "здоровье",
+                "меры безопасности",
+                "профилактика заболеваний"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 50411,
+            "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov/vyhodnye-dni-v-aprele-i-mae-2024-goda",
+            "requests": [
+                "выходные дни апрель",
+                "выходные май 2024",
+                "праздники 2024",
+                "нерабочие дни",
+                "расписание выходных",
+                "график работы апрель май",
+                "приказ выходные"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20929,
+            "url": "https://etu.ru/ru/studentam/besplatno-dlya-studentov/matlab",
+            "requests": [
+                "MATLAB лицензия",
+                "Simulink",
+                "программное обеспечение",
+                "ПО для студентов",
+                "Матлаб",
+                "доступ к программам",
+                "лицензионное ПО"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 763,
+            "url": "https://etu.ru/ru/fakultety/fakultet-elektroniki/sostav-fakulteta/kafedra-mikroelektroniki/sostav-kafedry",
+            "requests": [
+                "состав кафедры микроэлектроники",
+                "сотрудники кафедры",
+                "преподаватели микроэлектроники",
+                "кафедра микроэлектроники",
+                "персонал кафедры",
+                "список сотрудников",
+                "контакты кафедры"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 297,
+            "url": "https://etu.ru/ru/abiturientam/preimushestva-spbgetu",
+            "requests": [
+                "преимущества",
+                "почему выбрать",
+                "рейтинг университета",
+                "качество образования",
+                "плюсы обучения",
+                "абитуриентам преимущества",
+                "достоинства обучения"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 807,
+            "url": "https://etu.ru/ru/fakultety/fkti/obshaya-informaciya",
+            "requests": [
+                "ФКТИ общая информация",
+                "факультет компьютерных технологий",
+                "информация о фкти",
+                "подготовка it-специалистов",
+                "компьютерные технологии факультет",
+                "о факультете фкти",
+                "IT факультет"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 30056,
+            "url": "https://etu.ru/ru/universitet/ostorozhno-koronavirus/raboty-po-preduprezhdeniyu/kak-poluchit-sertifikat-vakcinirovannogo-ot-covid-19",
+            "requests": [
+                "сертификат вакцинации",
+                "получить сертификат ковид",
+                "коронавирус сертификат",
+                "вакцинация covid",
+                "сертификат госуслуги",
+                "как получить сертификат",
+                "информация о вакцинации"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 48755,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/novosti/socialno-psihologicheskoe-testirovanie-chto-eto-i-zachem-nuzhno1",
+            "requests": [
+                "социально-психологическое тестирование",
+                "психологическое тестирование",
+                "тестирование что это",
+                "зачем нужно тестирование",
+                "психологическая поддержка",
+                "тестирование студентов",
+                "новости тестирование",
+                "центр психологической поддержки",
+                "социальная поддержка"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 1539,
+            "url": "https://etu.ru/ru/abiturientam/dovuzovskaya-podgotovka/podgotovitelnye-kursy",
+            "requests": [
+                "подготовительные курсы",
+                "курсы для абитуриентов",
+                "подготовка к егэ",
+                "довузовская подготовка",
+                "курсы егэ",
+                "курсы для школьников",
+                "подготовка к поступлению",
+                "курсы для старшеклассников",
+                "как поступить курсы"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/dovuzovskaya-podgotovka/podgotovitelnye-kursy/"
+        }
+    ]
+}

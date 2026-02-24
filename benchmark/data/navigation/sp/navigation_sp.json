@@ -1,0 +1,111 @@
+{
+    "title": "Consultas de navegación",
+    "items": [
+        {
+            "type": "document",
+            "id": 13303,
+            "url": "https://etu.ru/sp/estudios/facultades1",
+            "requests": [
+                "facultades",
+                "listado facultades",
+                "departamentos",
+                "escuelas",
+                "carreras por facultad",
+                "facultades estudios",
+                "areas de estudio",
+                "centros docentes"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12139,
+            "url": "https://etu.ru/sp/universidad/contacto",
+            "requests": [
+                "contacto",
+                "información contacto",
+                "dirección",
+                "teléfono",
+                "email",
+                "localización",
+                "cómo llegar",
+                "contactar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13302,
+            "url": "https://etu.ru/sp/universidad/programa-top-1001",
+            "requests": [
+                "Programa TOP 100",
+                "objetivos universidad",
+                "TOP 100 universidades",
+                "programa clasificación",
+                "lograr TOP 100",
+                "universidades líderes",
+                "plan estratégico",
+                "ranking mundial"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12451,
+            "url": "https://etu.ru/sp/universidad/novyy-resurs41",
+            "requests": [
+                "departamento preparatoria",
+                "preparatoria extranjeros",
+                "curso preparatorio ruso",
+                "estudiar ruso extranjeros",
+                "curso básico estudios",
+                "departamento para foráneos",
+                "preparación ingreso",
+                "estudios para extranjeros"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12461,
+            "url": "https://etu.ru/sp/universidad/escuelas-de-verano-de-lengua-rusa",
+            "requests": [
+                "escuelas verano ruso",
+                "cursos verano ruso",
+                "lengua rusa verano",
+                "intensivo ruso verano",
+                "estudiar ruso verano",
+                "programas verano ruso",
+                "ruso para extranjeros verano",
+                "escuela de verano idioma"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12989,
+            "url": "https://etu.ru/sp/universidad/escuelas-de-verano",
+            "requests": [
+                "escuelas de verano",
+                "cursos de verano",
+                "programas de verano",
+                "oferta verano",
+                "actividades verano",
+                "verano universidad",
+                "escuela estival",
+                "campamentos verano"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12809,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/departamento-de-preparatoria",
+            "requests": [
+                "departamento preparatoria",
+                "preparatoria internacional",
+                "departamento estudiantes internacionales",
+                "estudios preparatoria",
+                "facultad preparatoria",
+                "sección preparatoria",
+                "programa preparatorio",
+                "curso preparatorio"
+            ],
+            "final_url": "https://etu.ru/sp/universidad/novyy-resurs41"
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+{
+    "title": "Gezielte Anfragen",
+    "items": [
+        {
+            "type": "document",
+            "id": 23334,
+            "url": "https://etu.ru/de/universitaet/unsere-partner1/partner-im-ausland",
+            "requests": [
+                "Partner Hochschulen",
+                "Internationale Partner",
+                "Partner im Ausland",
+                "Ausländische Hochschulen",
+                "Kooperationen Ausland",
+                "Internationale Zusammenarbeit",
+                "Partneruniversitäten",
+                "Hochschulen Partner",
+                "Auslandspartner"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12494,
+            "url": "https://etu.ru/de/forschung/patente",
+            "requests": [
+                "Patente",
+                "Forschung Patente",
+                "Erfindungen",
+                "Patentliste",
+                "Schutzrechte",
+                "Innovationen Patente",
+                "neue Patente"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14019,
+            "url": "https://etu.ru/de/universitaet/aktuelles/internationaler-unido-wettbewerb",
+            "requests": [
+                "UNIDO Wettbewerb",
+                "Internationaler Wettbewerb",
+                "Wettbewerb industrielle Entwicklung",
+                "UNIDO Teilnahme",
+                "Jugendliche Wettbewerb Russland",
+                "Vereinte Nationen Wettbewerb",
+                "Kreative Jugendliche UNIDO"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21085,
+            "url": "https://etu.ru/de/universitaet/aktuelles/innovate-fpga-2018-wettbewerb-von-intel",
+            "requests": [
+                "Innovate FPGA 2018",
+                "Intel Wettbewerb",
+                "FPGA Wettbewerb",
+                "Intel Innovate FPGA",
+                "Alumni Wettbewerb Intel",
+                "Silbergewinner FPGA",
+                "Wettbewerb Intel 2018",
+                "Innovate FPGA Gewinner"
+            ]
+        }
+    ]
+}

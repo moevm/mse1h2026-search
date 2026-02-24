@@ -1,0 +1,94 @@
+{
+    "title": "Truy vấn điều hướng",
+    "items": [
+        {
+            "type": "document",
+            "id": 14318,
+            "url": "https://etu.ru/vn/di-hc/especialidades-de-grado2",
+            "requests": [
+                "Khoa Kỹ thuật Vô tuyến",
+                "Điện tử Viễn thông",
+                "Khoa Vô tuyến Điện tử",
+                "Ngành Vô tuyến",
+                "Ngành Điện tử Viễn thông",
+                "Khoa Viễn thông",
+                "Kỹ thuật Vô tuyến"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14324,
+            "url": "https://etu.ru/vn/di-hc/chin-lc-va-tm-nhin-lanh-do",
+            "requests": [
+                "Thư hiệu trưởng",
+                "Thông điệp hiệu trưởng",
+                "Hiệu trưởng phát biểu",
+                "Tầm nhìn hiệu trưởng",
+                "Đại học nghiên cứu",
+                "Tầm nhìn toàn cầu",
+                "Lãnh đạo trường"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14325,
+            "url": "https://etu.ru/vn/di-hc/hng-ti-mc-tieu-lt-vao-top-100-ca-th-gii-ca-trng-dhktth-din-xanh-petecbua",
+            "requests": [
+                "Chương trình TOP-100",
+                "Mục tiêu TOP-100",
+                "Xếp hạng đại học",
+                "Lọt top 100",
+                "Dự án 5-100",
+                "Chương trình phát triển",
+                "Mục tiêu toàn cầu"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14361,
+            "url": "https://etu.ru/vn/dao-to/khoa",
+            "requests": [
+                "Khoa",
+                "Danh sách khoa",
+                "Các khoa",
+                "Phòng ban",
+                "Khoa đào tạo",
+                "Tìm khoa",
+                "Chuyên ngành"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 14296,
+            "url": "https://etu.ru/vn",
+            "requests": [
+                "trang chủ tiếng Việt",
+                "phiên bản Việt Nam",
+                "trang Việt",
+                "thông tin Việt Nam",
+                "cổng thông tin Việt",
+                "website tiếng Việt",
+                "trang tiếng Việt",
+                "khu vực Việt Nam",
+                "thông tin cho người Việt",
+                "liên kết Việt Nam"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/"
+        },
+        {
+            "type": "reference",
+            "id": 14349,
+            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/khoa-d-b-ngon-ng",
+            "requests": [
+                "Khoa dự bị ngôn ngữ",
+                "dự bị ngôn ngữ",
+                "khoa tiếng Nga",
+                "chuẩn bị ngôn ngữ",
+                "khóa học tiếng Nga",
+                "ngành dự bị",
+                "học tiếng Nga"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/chng-trinh-d-b-di-vi-ngi-nc-ngoai-theo-hc"
+        }
+    ]
+}

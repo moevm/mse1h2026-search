@@ -1,0 +1,298 @@
+{
+    "title": "Consultas informativas",
+    "items": [
+        {
+            "type": "document",
+            "id": 12120,
+            "url": "https://etu.ru/sp/universidad",
+            "requests": [
+                "universidad",
+                "sobre nosotros",
+                "historia universidad",
+                "fundación universidad",
+                "primera institución eléctrica",
+                "ingeniería eléctrica historia",
+                "información general universidad"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12124,
+            "url": "https://etu.ru/sp/vida",
+            "requests": [
+                "vida estudiantil",
+                "deporte",
+                "cultura",
+                "vida universitaria",
+                "actividades estudiantes",
+                "comunidad universitaria",
+                "ocio estudiantes",
+                "participación estudiantes"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12122,
+            "url": "https://etu.ru/sp/estudios",
+            "requests": [
+                "estudiar",
+                "programas estudios",
+                "formación",
+                "enseñanza",
+                "escuelas científicas",
+                "habilidades prácticas",
+                "oferta académica",
+                "carreras",
+                "estudios universitarios"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12121,
+            "url": "https://etu.ru/sp/por-que-leti",
+            "requests": [
+                "por qué",
+                "reputación",
+                "ventajas estudiar",
+                "elegir universidad",
+                "razones estudiar",
+                "formación ingeniería",
+                "universidad antigua",
+                "beneficios estudiar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12123,
+            "url": "https://etu.ru/sp/investigacion",
+            "requests": [
+                "investigación",
+                "ciencia",
+                "proyectos investigación",
+                "colaboración industria",
+                "conocimientos básicos",
+                "problemas globales",
+                "investigación académica",
+                "empresas alta tecnología",
+                "áreas investigación"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12125,
+            "url": "https://etu.ru/sp/graduados",
+            "requests": [
+                "graduados",
+                "titulados",
+                "antiguos alumnos",
+                "estudiantes extranjeros graduados",
+                "primera graduación",
+                "alumni",
+                "exalumnos",
+                "historia graduados"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13301,
+            "url": "https://etu.ru/sp/universidad/estrategia-y-palabras-del-rector",
+            "requests": [
+                "estrategia",
+                "palabras rector",
+                "mensaje rector",
+                "visión universidad",
+                "lema universidad",
+                "objetivos estratégicos",
+                "rector",
+                "misión universidad"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13774,
+            "url": "https://etu.ru/sp/universidad/la-universidad-hoy1",
+            "requests": [
+                "universidad hoy",
+                "actualidad universidad",
+                "información actual",
+                "novedades universidad",
+                "estado actual",
+                "presente universidad",
+                "datos recientes",
+                "universidad hoy en día"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14559,
+            "url": "https://etu.ru/sp/estudios/especialidades-de-doctorado1",
+            "requests": [
+                "especialidades doctorado",
+                "programas doctorado",
+                "estudios doctorales",
+                "carreras doctorado",
+                "doctorado que ofrecen",
+                "investigación doctorado",
+                "opciones doctorado",
+                "cursos doctorado"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12804,
+            "url": "https://etu.ru/sp/estudios/estudios-de-master",
+            "requests": [
+                "estudios máster",
+                "programas máster",
+                "maestrías",
+                "cursos máster",
+                "oferta máster",
+                "posgrado máster",
+                "admisión máster",
+                "estudiar máster"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12803,
+            "url": "https://etu.ru/sp/estudios/especialidades-de-grado1",
+            "requests": [
+                "programas licenciatura",
+                "especialidades grado",
+                "estudios grado",
+                "carreras universitarias",
+                "oferta académica",
+                "licenciaturas",
+                "admisión grado",
+                "estudiar grado"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13304,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/llegada-a-la-etu-leti1",
+            "requests": [
+                "llegada estudiantes internacionales",
+                "información llegada",
+                "proceso llegada extranjeros",
+                "bienvenida estudiantes",
+                "primeros pasos extranjeros",
+                "llegar universidad",
+                "orientación estudiantes",
+                "llegada a Rusia"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12469,
+            "url": "https://etu.ru/sp/universidad/practicas-para-extranjeros",
+            "requests": [
+                "prácticas extranjeros",
+                "internships para foráneos",
+                "pasantías estudiantes internacionales",
+                "prácticas universitarias extranjeros",
+                "oportunidades prácticas",
+                "hacer prácticas",
+                "estudiantes extranjeros prácticas",
+                "programas de prácticas"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12471,
+            "url": "https://etu.ru/sp/universidad/escuelas-profesionales-de-verano",
+            "requests": [
+                "escuelas de verano",
+                "cursos de verano",
+                "programas profesionales de verano",
+                "escuelas profesionales",
+                "verano",
+                "estudios de verano",
+                "cursos intensivos verano"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12477,
+            "url": "https://etu.ru/sp/universidad/practicas-para-estudiantes-extranjeros",
+            "requests": [
+                "prácticas extranjeros",
+                "pasantías estudiantes internacionales",
+                "oportunidades prácticas",
+                "estudiantes externos prácticas",
+                "programas de prácticas",
+                "internships para extranjeros",
+                "prácticas universitarias"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12990,
+            "url": "https://etu.ru/sp/estudios/escuelas-internacionales-de-verano1",
+            "requests": [
+                "escuelas verano",
+                "escuelas internacionales verano",
+                "programas verano",
+                "cursos verano internacionales",
+                "estudios verano",
+                "verano internacional",
+                "escuelas de verano para estudiantes extranjeros",
+                "verano académico",
+                "cursos cortos verano"
+            ],
+            "final_url": "https://etu.ru/sp/universidad/escuelas-de-verano"
+        },
+        {
+            "type": "reference",
+            "id": 12475,
+            "url": "https://etu.ru/sp/universidad/especialidades-de-doctorado",
+            "requests": [
+                "especialidades doctorado",
+                "programas doctorado",
+                "estudios doctorado",
+                "doctorado",
+                "grados doctorado",
+                "carreras doctorado",
+                "opciones doctorado",
+                "posgrados doctorado",
+                "investigación doctorado"
+            ],
+            "final_url": "https://etu.ru/sp/estudios/especialidades-de-doctorado1"
+        },
+        {
+            "type": "reference",
+            "id": 12470,
+            "url": "https://etu.ru/sp/universidad/especialidades-de-grado",
+            "requests": [
+                "especialidades grado",
+                "programas grado",
+                "estudios grado",
+                "grados universitarios",
+                "carreras universitarias",
+                "opciones grado",
+                "licenciaturas",
+                "titulaciones grado",
+                "estudios de pregrado"
+            ],
+            "final_url": "https://etu.ru/sp/universidad/especialidades-de-grado"
+        },
+        {
+            "type": "reference",
+            "id": 12474,
+            "url": "https://etu.ru/sp/universidad/especialidades-y-programas-de-estudios-de-master",
+            "requests": [
+                "especialidades máster",
+                "programas máster",
+                "estudios máster",
+                "máster",
+                "grados máster",
+                "carreras máster",
+                "opciones máster",
+                "posgrados máster",
+                "maestrías",
+                "estudios de posgrado máster"
+            ],
+            "final_url": "https://etu.ru/sp/estudios/estudios-de-master"
+        }
+    ]
+}

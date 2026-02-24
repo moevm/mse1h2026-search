@@ -1,0 +1,245 @@
+{
+    "title": "Consultas informativas",
+    "items": [
+        {
+            "type": "document",
+            "id": 13182,
+            "url": "https://etu.ru/pt/universidade",
+            "requests": [
+                "sobre a instituição",
+                "história da universidade",
+                "primeira instituição eletrotécnica",
+                "engenharia eletrotécnica",
+                "informações sobre universidade",
+                "quem somos",
+                "fundação",
+                "perfil da instituição",
+                "radio eletricidade eletronica informatica",
+                "maiores do mundo"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13255,
+            "url": "https://etu.ru/pt/vida1",
+            "requests": [
+                "vida estudantil",
+                "desporto",
+                "cultura",
+                "atividades estudantis",
+                "vida no campus",
+                "comunidade universitária",
+                "esporte",
+                "lazer",
+                "eventos estudantis",
+                "rotina de estudantes"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13217,
+            "url": "https://etu.ru/pt/estudos",
+            "requests": [
+                "programas de estudo",
+                "educação",
+                "escolas científicas",
+                "habilidades práticas",
+                "nível mundial",
+                "ensino",
+                "formação",
+                "disciplinas",
+                "cursos",
+                "metodologia de ensino"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13213,
+            "url": "https://etu.ru/pt/porque-leti",
+            "requests": [
+                "porque escolher",
+                "vantagens da universidade",
+                "reputação",
+                "engenharia eletrotécnica europa",
+                "estudar aqui",
+                "benefícios",
+                "diferenciais",
+                "melhores motivos",
+                "o que oferece",
+                "antiga universidade"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13263,
+            "url": "https://etu.ru/pt/graduados1",
+            "requests": [
+                "ex-alunos",
+                "graduados estrangeiros",
+                "primeira graduação",
+                "diplomados",
+                "história de graduados",
+                "estudantes formados",
+                "sucesso de ex-alunos",
+                "quem se formou",
+                "alunos internacionais",
+                "formados 1952"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13247,
+            "url": "https://etu.ru/pt/investigacao",
+            "requests": [
+                "pesquisa",
+                "ciência",
+                "projetos de investigação",
+                "desenvolvimento tecnológico",
+                "colaboração industrial",
+                "institutos de pesquisa",
+                "problemas globais",
+                "pesquisa acadêmica",
+                "alta tecnologia",
+                "processo de investigação"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13333,
+            "url": "https://etu.ru/pt/universidade/universidade-hoja",
+            "requests": [
+                "universidade atualmente",
+                "hoje",
+                "oferta acadêmica",
+                "licenciatura mestrado pós-graduação",
+                "formação atual",
+                "cursos disponíveis",
+                "estrutura atual",
+                "o que é hoje",
+                "dados atuais",
+                "faculdades e cursos"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13336,
+            "url": "https://etu.ru/pt/universidade/top-100-programa",
+            "requests": [
+                "programa top 100",
+                "objetivo top 100",
+                "universidades líderes",
+                "meta global",
+                "estratégia top 100",
+                "programa de desenvolvimento",
+                "rankings universitários",
+                "posicionamento global",
+                "visão estratégica",
+                "melhores universidades"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13667,
+            "url": "https://etu.ru/pt/estudos/cursos-para-licenciatura",
+            "requests": [
+                "Bacharel",
+                "Cursos para licenciatura",
+                "Licenciatura",
+                "Programas de bacharelado",
+                "Estudos de graduação",
+                "Graduação",
+                "Admissão bacharel"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13659,
+            "url": "https://etu.ru/pt/estudos/estudiantes-internacionales/departamento-de-preparacao-para-estudantes-estrangeiros",
+            "requests": [
+                "Departamento de preparação",
+                "Preparação estudantes estrangeiros",
+                "Curso preparatório",
+                "Estudar russo",
+                "Idioma russo",
+                "Estudantes estrangeiros preparação",
+                "Preparatório estrangeiros",
+                "Curso básico preparação"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13666,
+            "url": "https://etu.ru/pt/estudos/estudiantes-internacionales/bem-vindo-ao-etu-leti",
+            "requests": [
+                "Caminho",
+                "Bem-vindo",
+                "Guia para estudantes",
+                "Primeiros passos",
+                "Chegada",
+                "Informação para recém-chegados",
+                "Novos estudantes",
+                "Estudantes internacionais guia"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13664,
+            "url": "https://etu.ru/pt/estudos/estudiantes-internacionales/estagio-de-cidadaos-estrangeiros",
+            "requests": [
+                "Estágio",
+                "Estágio cidadãos estrangeiros",
+                "Estágio para estrangeiros",
+                "Internship estrangeiros",
+                "Prática para estudantes internacionais",
+                "Oportunidades de estágio",
+                "Estagiários estrangeiros",
+                "Fazer estágio"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13668,
+            "url": "https://etu.ru/pt/estudos/mestrado",
+            "requests": [
+                "Mestrado",
+                "Cursos de mestrado",
+                "Programas de mestrado",
+                "Pós-graduação",
+                "Admissão mestrado",
+                "Estudar mestrado",
+                "Mestrados disponíveis"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13992,
+            "url": "https://etu.ru/pt/estudos/especialidades-para-doutoramento",
+            "requests": [
+                "Doutoramento",
+                "Especialidades doutoramento",
+                "Programas de doutoramento",
+                "PhD",
+                "Pós-doutoramento",
+                "Estudos de doutorado",
+                "Admissão doutoramento",
+                "Doutorado especialidades"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23298,
+            "url": "https://etu.ru/pt/estudos/estudiantes-internacionales/escolas-internacionais-de-verao-na-etu-leti",
+            "requests": [
+                "Escolas de verão",
+                "Escolas internacionais de verão",
+                "Verão",
+                "Cursos de verão",
+                "Programas de verão",
+                "Estudar no verão",
+                "Summer school",
+                "Escolas verão internacionais",
+                "Visitar São Petersburgo verão"
+            ]
+        }
+    ]
+}

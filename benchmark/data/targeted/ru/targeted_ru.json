@@ -1,0 +1,377 @@
+{
+    "title": "Целевые запросы",
+    "items": [
+        {
+            "type": "document",
+            "id": 342,
+            "url": "https://etu.ru/ru/studentam/raspisaniya-zanyatiy-i-ekzamenov",
+            "requests": [
+                "расписание занятий",
+                "расписание экзаменов",
+                "график учебы",
+                "учебное расписание",
+                "расписание сессии",
+                "пары",
+                "сессия",
+                "занятия"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 5,
+            "url": "https://etu.ru/ru/studentam",
+            "requests": [
+                "студентам",
+                "для студентов",
+                "студенческая жизнь",
+                "информация студентам",
+                "раздел студентам",
+                "студенческий портал",
+                "обучающимся"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 4,
+            "url": "https://etu.ru/ru/abiturientam",
+            "requests": [
+                "поступающим",
+                "абитуриентам",
+                "приемная кампания",
+                "поступление",
+                "как поступить",
+                "для абитуриентов",
+                "раздел абитуриентам"
+            ],
+            "final_url": "https://abit.etu.ru/"
+        },
+        {
+            "type": "document",
+            "id": 227,
+            "url": "https://etu.ru/ru/universitet/novosti-i-obyavleniya",
+            "requests": [
+                "новости",
+                "объявления",
+                "актуальные новости",
+                "последние новости",
+                "события",
+                "лента новостей",
+                "пресс-центр"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 52184,
+            "url": "https://etu.ru/ru/rezultaty-poiska-novostej",
+            "requests": [
+                "новости",
+                "свежие новости",
+                "все новости",
+                "архив новостей",
+                "лента новостей",
+                "новости сайта"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 2291,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii/programmy",
+            "requests": [
+                "повышение квалификации",
+                "курсы повышения квалификации",
+                "программы повышения",
+                "дополнительное образование",
+                "профпереподготовка",
+                "курсы",
+                "обучение для взрослых",
+                "непрерывное образование"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 47453,
+            "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov/vyhodnye-dni-v-mae-2023-goda",
+            "requests": [
+                "Выходные дни май 2023",
+                "Праздники май 2023",
+                "График работы май",
+                "Майские выходные",
+                "Выходные 2023",
+                "Рабочие дни май",
+                "Приказ о выходных май",
+                "Новости для сотрудников май"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18956,
+            "url": "https://etu.ru/ru/universitet/kontakty/priyom-obrashhenij",
+            "requests": [
+                "Прием обращений",
+                "Обращения граждан",
+                "Подать обращение",
+                "Контакты обращения",
+                "Отправить обращение",
+                "Жалоба",
+                "Форма обратной связи",
+                "Вопрос ректору"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 3543,
+            "url": "https://etu.ru/ru/universitet/konferencii-forumy-seminary",
+            "requests": [
+                "конференции",
+                "форумы",
+                "семинары",
+                "научные мероприятия",
+                "список конференций",
+                "предстоящие форумы",
+                "события",
+                "календарь мероприятий",
+                "конференции 2024"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 2054,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost/podgotovka-kadrov-vysshey-kvalifikacii/obyavleniya-o-zashitah-doktorskih-i-kandidatskih-dissertaciy",
+            "requests": [
+                "защиты диссертаций",
+                "докторские защиты 2025",
+                "кандидатские диссертации объявления",
+                "защиты 2025 год",
+                "объявления о защитах",
+                "диссертационные советы",
+                "научная деятельность защиты"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 355,
+            "url": "https://etu.ru/ru/studentam/studencheskie-novosti",
+            "requests": [
+                "новости студентам",
+                "студенческие новости",
+                "актуальное для студентов",
+                "события для студентов",
+                "объявления студентам",
+                "жизнь студентов",
+                "студенческая жизнь новости"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 16443,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs/kalkulyator-ege",
+            "requests": [
+                "Калькулятор ЕГЭ",
+                "Баллы ЕГЭ",
+                "Проходные баллы",
+                "Калькулятор поступления",
+                "Расчет баллов",
+                "Поступление баллы",
+                "Онлайн калькулятор ЕГЭ",
+                "Определить специальность",
+                "Баллы для поступления",
+                "ЕГЭ калькулятор"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/kalkulyator-ege"
+        },
+        {
+            "type": "document",
+            "id": 412,
+            "url": "https://etu.ru/ru/vospitatelnaya-i-socialnaya/novosti",
+            "requests": [
+                "новости",
+                "свежие новости",
+                "последние новости",
+                "новости воспитательная",
+                "новости социальная",
+                "анонсы событий",
+                "объявления"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 366,
+            "url": "https://etu.ru/ru/sotrudnikam/prikazy-i-rasporyazheniya",
+            "requests": [
+                "приказы",
+                "распоряжения",
+                "приказы ректора",
+                "документы сотрудников",
+                "официальные документы",
+                "нормативные акты",
+                "внутренние приказы",
+                "распорядительные документы",
+                "список приказов"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5591,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/bakalavriat/upravlenie-kachestvom",
+            "requests": [
+                "управление качеством",
+                "27.03.02",
+                "бакалавриат управление качеством",
+                "направление управление качеством",
+                "специальность управление качеством",
+                "обучение управление качеством",
+                "факультет управление качеством",
+                "кем работать управление качеством",
+                "программы бакалавриата"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/upravlenie-kachestvom"
+        },
+        {
+            "type": "document",
+            "id": 376,
+            "url": "https://etu.ru/ru/sotrudnikam/novosti-dlya-sotrudnikov",
+            "requests": [
+                "Новости сотрудников",
+                "Объявления сотрудникам",
+                "Информация для сотрудников",
+                "Сотрудники последние новости",
+                "Ведомости для сотрудников",
+                "Актуальное сотрудникам"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 9719,
+            "url": "https://etu.ru/ru/universitet/zakupki/plany-zakupok",
+            "requests": [
+                "планы закупок",
+                "реестр закупок",
+                "закупки",
+                "планирование закупок",
+                "информация о закупках",
+                "тендеры",
+                "конкурсы закупок"
+            ],
+            "final_url": "https://etu.ru/ru/zakupki/"
+        },
+        {
+            "type": "document",
+            "id": 471,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost/novosti1",
+            "requests": [
+                "научные новости",
+                "инновации новости",
+                "новости науки",
+                "новости инновационной деятельности",
+                "последние новости наука",
+                "научно-инновационные события",
+                "новости НИД"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 5599,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/specialitet/radioelektronnye-sistemy-i-kompleksy",
+            "requests": [
+                "11.05.01",
+                "радиоэлектронные системы",
+                "специальности радиоэлектроника",
+                "комплексы радиоэлектронные",
+                "радиолокация",
+                "радионавигация",
+                "специалитет радиоэлектроника",
+                "направления подготовки",
+                "цифровая обработка информации"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/radioelektronnye-sistemy-i-kompleksy"
+        },
+        {
+            "type": "document",
+            "id": 15512,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii/professionalnaya-perepodgotovka",
+            "requests": [
+                "профессиональная переподготовка",
+                "переподготовка",
+                "второе образование",
+                "курсы переподготовки",
+                "дополнительное образование",
+                "программы переподготовки",
+                "институт непрерывного образования"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 1378,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii/distancionnoe-kursy",
+            "requests": [
+                "дистанционные курсы",
+                "курсы онлайн",
+                "образовательные программы дистанционно",
+                "ИНО дистанционные курсы",
+                "курсы повышения квалификации дистанционно",
+                "онлайн обучение",
+                "дистанционное образование"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 8272,
+            "url": "https://etu.ru/ru/povyshenie-kvalifikacii/programmy/biomedicinskaya-inzheneriya-ekologiya-ergonomika/remont-i-tehnicheskoe-obsluzhivanie-medicinskih-izdeliy",
+            "requests": [
+                "техническое обслуживание медицинских изделий",
+                "повышение квалификации медицинские изделия",
+                "ремонт медицинских изделий",
+                "обслуживание медоборудования",
+                "курсы медицинские изделия",
+                "программа медицинских изделий",
+                "обучение ремонту медоборудования",
+                "медицинская инженерия повышение квалификации"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 3635,
+            "url": "https://etu.ru/ru/abiturientam/priem-v-magistraturu/programmy-vstupitelnyh-ispytaniy-v-magistraturu",
+            "requests": [
+                "вступительные испытания магистратура",
+                "программы вступительных экзаменов",
+                "магистратура экзамены",
+                "прием в магистратуру испытания",
+                "вступительные программы",
+                "экзамены для магистров",
+                "подготовка к магистратуре",
+                "испытания для поступления"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/magistratura/vstupitelnye-ispytaniya"
+        },
+        {
+            "type": "document",
+            "id": 300,
+            "url": "https://etu.ru/ru/abiturientam/napravleniya-podgotovki/specialitet",
+            "requests": [
+                "специалитет",
+                "направления специалитета",
+                "программы специалитета",
+                "поступление на специалитет",
+                "перечень специальностей",
+                "специальности для абитуриентов",
+                "обучение специалитет"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 472,
+            "url": "https://etu.ru/ru/nauchnaya-i-innovacionnaya-deyatelnost/konkursy-granty",
+            "requests": [
+                "конкурсы гранты",
+                "гранты для научных работ",
+                "научные конкурсы",
+                "исследовательские гранты",
+                "финансирование науки",
+                "гранты для ученых",
+                "поддержка научных исследований",
+                "научно-инновационная деятельность гранты"
+            ]
+        }
+    ]
+}

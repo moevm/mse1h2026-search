@@ -1,0 +1,492 @@
+{
+    "title": "Navigationsanfragen",
+    "items": [
+        {
+            "type": "document",
+            "id": 10687,
+            "url": "https://etu.ru/de/universitaet",
+            "requests": [
+                "universität",
+                "über die universität",
+                "allgemeine informationen",
+                "startseite universität",
+                "hochschule",
+                "elektrotechnische hochschule",
+                "gründung universität",
+                "popow erfinder radio"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11768,
+            "url": "https://etu.ru/de/studium/fakulteten",
+            "requests": [
+                "fakultäten",
+                "institute",
+                "liste fakultäten",
+                "studienbereiche",
+                "abteilungen",
+                "studiengänge fakultäten",
+                "hochschulinstitute",
+                "akademische einheiten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10694,
+            "url": "https://etu.ru/de/universitaet/etu-leti/struktur",
+            "requests": [
+                "struktur",
+                "universitätsstruktur",
+                "organisatorische struktur",
+                "aufbau der hochschule",
+                "verwaltungsstruktur",
+                "abteilungsstruktur",
+                "organigramm",
+                "einrichtungen struktur"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17276,
+            "url": "https://etu.ru/de/forschung/patente/erfindungen1",
+            "requests": [
+                "Erfindungen",
+                "Forschung Erfindungen",
+                "Patente Erfindungen",
+                "Neue Erfindungen",
+                "Erfindungen Patentschutz",
+                "Schutzrechte Erfindungen",
+                "Innovationen Forschung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17388,
+            "url": "https://etu.ru/de/forschung/struktur",
+            "requests": [
+                "Forschung Struktur",
+                "Struktur Forschung",
+                "Organisationsstruktur",
+                "Aufbau Forschung",
+                "Forschungsabteilungen",
+                "Organigramm Forschung",
+                "Wissenschaft Struktur"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17273,
+            "url": "https://etu.ru/de/forschung/patente/gebrauchsmuster",
+            "requests": [
+                "Gebrauchsmuster",
+                "Patente Gebrauchsmuster",
+                "Forschung Gebrauchsmuster",
+                "Schutz Gebrauchsmuster",
+                "Anmeldung Gebrauchsmuster",
+                "Kleiner Patent",
+                "Gebrauchsmusterschutz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17275,
+            "url": "https://etu.ru/de/forschung/patente/programme",
+            "requests": [
+                "Patente Programme",
+                "Forschung Programme",
+                "Programme Patente",
+                "Förderprogramme Patente",
+                "Patentprogramme",
+                "Unterstützung Patente",
+                "IP-Programme"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10693,
+            "url": "https://etu.ru/de/universitaet/rektorat",
+            "requests": [
+                "Rektorat",
+                "Universitätsleitung",
+                "Rektor",
+                "Prorektoren",
+                "Verwaltung Universität",
+                "Leitung Gremien",
+                "Hochschulleitung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11946,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-funktechnik-und-telekommunikation",
+            "requests": [
+                "Fakultät Funktechnik",
+                "Telekommunikation Fakultät",
+                "Funktechnik",
+                "Popow Fakultät",
+                "älteste Funkfakultät",
+                "Fakultät Funk",
+                "Funk",
+                "Telekommunikation"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13495,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-elektrotechnik-und-automatik",
+            "requests": [
+                "Fakultät Elektrotechnik",
+                "Elektrotechnik Automatik",
+                "Automatik Fakultät",
+                "Elektrotechnik",
+                "älteste Fakultäten",
+                "Fakultät 1920",
+                "Elektrotechnik Ausbildung",
+                "Fakultät Automatik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13496,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-informations-mess-und-biotechnische-systeme",
+            "requests": [
+                "Fakultät Informationssysteme",
+                "Mess- und biotechnische Systeme",
+                "Biotechnische Systeme",
+                "Informationssysteme Fakultät",
+                "Fakultät IMBiS",
+                "Gesundheitsschutz Technik",
+                "medizinisch-biologische Probleme",
+                "Fakultät 1999"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10699,
+            "url": "https://etu.ru/de/universitaet/kontakte",
+            "requests": [
+                "Kontakte",
+                "Kontaktinformationen",
+                "Anschrift",
+                "Telefonnummer",
+                "Adresse",
+                "Standort",
+                "Wegbeschreibung",
+                "Gebäude Universität",
+                "Sankt Petersburg Zentrum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12035,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-elektronik",
+            "requests": [
+                "Fakultät Elektronik",
+                "Elektronik Fakultät",
+                "Moderne Elektronik",
+                "Alfjorow Absolvent",
+                "Nobelpreisträger Fakultät",
+                "Ausbildungszentrum Elektronik",
+                "Elektronik Studium",
+                "Fakultät für Elektronik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12152,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-computertechnologie-und-informatik",
+            "requests": [
+                "Fakultät Computertechnologie",
+                "Informatik Fakultät",
+                "Computertechnologie",
+                "IT Fachkräfte",
+                "Innovationswirtschaft",
+                "Hochqualifizierte IT",
+                "Fakultät Computer",
+                "Computertechnologie Informatik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13498,
+            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-geisteswissenschaften",
+            "requests": [
+                "Institut soziale Bildung",
+                "Geisteswissenschaftliche Bildung",
+                "Wirtschaftliche Bildung Institut",
+                "Soziales Institut",
+                "Geisteswissenschaften Institut",
+                "Wirtschaft Institut",
+                "Bildung Forschung",
+                "soziale geisteswissenschaftliche",
+                "Institut für Bildung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16525,
+            "url": "https://etu.ru/de/studium/rugefak-spitse",
+            "requests": [
+                "RUGEFAK",
+                "SPITSE",
+                "Kooperation Ilmenau",
+                "Zusammenarbeit Ilmenau",
+                "TU Ilmenau",
+                "Partnerschaft Ilmenau",
+                "Studium Ilmenau"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23416,
+            "url": "https://etu.ru/de/universitaet/unsere-partner1",
+            "requests": [
+                "Unsere Partner",
+                "Partner Hochschulen",
+                "Kooperationen",
+                "Zusammenarbeit Universitäten",
+                "Ausländische Partner",
+                "Forschungspartner",
+                "Industriepartner",
+                "Partnerliste"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17387,
+            "url": "https://etu.ru/de/studium/fakulteten/institut-fer-grundlegende-ingenieurausbildung",
+            "requests": [
+                "Institut grundlegende Ingenieurausbildung",
+                "Ingenieurausbildung Institut",
+                "Grundlegende Ingenieurausbildung",
+                "Institut FGI",
+                "Fakultät Ingenieurausbildung",
+                "Studiengänge Ingenieur",
+                "Naturwissenschaftliche Fächer",
+                "Allgemeintechnische Fächer"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23308,
+            "url": "https://etu.ru/de/universitaet/rektorat/alexander-a-krylow",
+            "requests": [
+                "Alexander Krylow",
+                "Krylow",
+                "Prorektor Sicherheit",
+                "Prorektor Allgemeine Angelegenheiten",
+                "Rektorat Krylow",
+                "Kontakt Krylow",
+                "Verwaltung Krylow",
+                "Dr jur Krylow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 29659,
+            "url": "https://etu.ru/de/universitaet/rektorat/olga-w-iwanowa",
+            "requests": [
+                "Olga Iwanowa",
+                "Iwanowa Olga",
+                "Prorektorin Jugendpolitik",
+                "Jugendpolitik Prorektorin",
+                "Rektorat Iwanowa",
+                "Kontakt Olga Iwanowa",
+                "Abteilung Jugendpolitik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20951,
+            "url": "https://etu.ru/de/universitaet/rektorat/anastasija-a-minina1",
+            "requests": [
+                "Anastasija Minina",
+                "Minina Anastasija",
+                "Prorektorin Internationale Angelegenheiten",
+                "Internationale Angelegenheiten Prorektorin",
+                "Rektorat Minina",
+                "Kontakt Anastasija Minina",
+                "Dr.-Ing. Minina"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17151,
+            "url": "https://etu.ru/de/universitaet/rektorat/wladimir-m-kutusow",
+            "requests": [
+                "Wladimir Kutusow",
+                "Kutusow Wladimir",
+                "Berater Rektorat",
+                "Rektorat Berater",
+                "Professor Kutusow",
+                "Kontakt Wladimir Kutusow",
+                "Dr.-Ing. Kutusow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 46213,
+            "url": "https://etu.ru/de/universitaet/rektorat/alexander-a-semyonow",
+            "requests": [
+                "Alexander Semyonow",
+                "Semyonow Alexander",
+                "Prorektor Forschung",
+                "Semyonow Prorektor",
+                "Forschung und Innovation Prorektor",
+                "Kontakt Semyonow",
+                "Professor Semyonow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17161,
+            "url": "https://etu.ru/de/universitaet/rektorat/elena-b-soloveva",
+            "requests": [
+                "Jelena Solowjewa",
+                "Solowjewa Jelena",
+                "Sekretärin wissenschaftlicher Rat",
+                "Lehrstuhl Elektrotechnik",
+                "Solowjewa Elektrotechnik",
+                "Kontakt Solowjewa",
+                "Personal Solowjewa"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17157,
+            "url": "https://etu.ru/de/universitaet/rektorat/galunin",
+            "requests": [
+                "Sergei Galunin",
+                "Galunin Sergei",
+                "Prorektor Studienbetrieb",
+                "Lehrstuhl Umformtechnik",
+                "Galunin Prorektor",
+                "Kontakt Galunin",
+                "Personal Galunin"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17158,
+            "url": "https://etu.ru/de/universitaet/rektorat/wiktor-a-tupik",
+            "requests": [
+                "Wiktor Tupik",
+                "Tupik Wiktor",
+                "Prorektor Strategische Entwicklung",
+                "Tupik Prorektor",
+                "Strategische Entwicklung",
+                "Kontakt Tupik",
+                "Professor Tupik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17154,
+            "url": "https://etu.ru/de/universitaet/rektorat/michail-s-kuprijanow",
+            "requests": [
+                "Michail Kuprijanow",
+                "Kuprijanow Michail",
+                "Leiter Zukunftsweisende Projekte",
+                "Kuprijanow Projekte",
+                "Zukunftsweisende Projekte",
+                "Kontakt Kuprijanow",
+                "Professor Kuprijanow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17156,
+            "url": "https://etu.ru/de/universitaet/rektorat/taras-w-kustow",
+            "requests": [
+                "Taras Kustow",
+                "Kustow Taras",
+                "Prorektor Wirtschaft",
+                "Wirtschaftliche Angelegenheiten",
+                "Rechtliche Angelegenheiten",
+                "Dr.-Ing. Kustow",
+                "Rektorat Kustow",
+                "Kontakt Kustow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 24955,
+            "url": "https://etu.ru/de/universitaet/rektorat/wladimir-a-artyomow",
+            "requests": [
+                "Wladimir Artyomow",
+                "Artyomow Wladimir",
+                "Prorektor Verwaltung",
+                "Verwaltungsarbeit",
+                "Wirtschaftsarbeit",
+                "Rektorat Artyomow",
+                "Kontakt Artyomow",
+                "Person Artyomow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17153,
+            "url": "https://etu.ru/de/universitaet/rektorat/wiktor-n-scheludko",
+            "requests": [
+                "Wiktor Scheludko",
+                "Scheludko Rektor",
+                "Rektor Scheludko",
+                "Dr.-Ing. Scheludko",
+                "Rektorat Scheludko",
+                "Person Scheludko",
+                "Rektor Wiktor",
+                "Leitung Scheludko",
+                "Verwaltung Scheludko"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 45374,
+            "url": "https://etu.ru/de/universitaet/rektorat/jekaterina-s-filatowa",
+            "requests": [
+                "Jekaterina Filatowa",
+                "Filatowa Prorektorin",
+                "Prorektorin bildungsmethodische Arbeit",
+                "Kontakte Rektorat",
+                "Mitarbeiter Filatowa",
+                "Rektorat Filatowa",
+                "Ansprechpartner Bildung",
+                "Dr.-Ing. Filatowa",
+                "Prorektorin Bildung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10698,
+            "url": "https://etu.ru/de/universitaet/bilder-und-videos",
+            "requests": [
+                "Bilder",
+                "Videos",
+                "Fotos",
+                "Medien",
+                "Fotogalerie",
+                "Videogalerie",
+                "Universität Bilder",
+                "Medienarchiv",
+                "Visuelles Material"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 24954,
+            "url": "https://etu.ru/de/universitaet/rektorat/wiktor-b-bessonow",
+            "requests": [
+                "Wiktor Bessonow",
+                "Bessonow",
+                "Prorektor Bessonow",
+                "Leiter Ingenieurschule",
+                "Bessonow Prorektor",
+                "Dr.-Ing. Bessonow",
+                "Fortgeschrittenen Ingenieurschule Leiter",
+                "Bessonow Profil",
+                "Wiktor B. Bessonow"
+            ]
+        }
+    ]
+}

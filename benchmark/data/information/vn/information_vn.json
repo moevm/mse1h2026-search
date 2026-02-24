@@ -1,0 +1,322 @@
+{
+    "title": "Truy vấn thông tin",
+    "items": [
+        {
+            "type": "document",
+            "id": 14297,
+            "url": "https://etu.ru/vn/di-hc",
+            "requests": [
+                "Đại học",
+                "Về chúng tôi",
+                "Học thạc sỹ tiếng Anh",
+                "Học bổng quốc tế",
+                "Học tại Nga",
+                "Chương trình quốc tế",
+                "Cơ hội học tập"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14332,
+            "url": "https://etu.ru/vn/dao-to",
+            "requests": [
+                "Đào tạo",
+                "Chương trình đào tạo",
+                "Giáo dục",
+                "Khoa và chương trình",
+                "Môi trường khoa học",
+                "Kỹ năng thực tế",
+                "Chương trình học"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14370,
+            "url": "https://etu.ru/vn/di-sng",
+            "requests": [
+                "Đời sống sinh viên",
+                "Cuộc sống sinh viên",
+                "Sinh hoạt sinh viên",
+                "Hoạt động sinh viên",
+                "Cộng đồng đại học",
+                "Trải nghiệm sinh viên",
+                "Cuộc sống tại trường"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14328,
+            "url": "https://etu.ru/vn/ti-sao-leti",
+            "requests": [
+                "Tại sao chọn",
+                "Lý do chọn",
+                "Danh tiếng trường",
+                "Lợi thế",
+                "Ưu điểm",
+                "Về trường",
+                "Giá trị cốt lõi"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14378,
+            "url": "https://etu.ru/vn/sinh-vien",
+            "requests": [
+                "Sinh viên nước ngoài",
+                "Đào tạo sinh viên quốc tế",
+                "Cựu sinh viên nước ngoài",
+                "Hỗ trợ sinh viên quốc tế",
+                "Thông tin sinh viên",
+                "Sinh viên quốc tế",
+                "Tuyển sinh quốc tế"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14362,
+            "url": "https://etu.ru/vn/nghien-cu",
+            "requests": [
+                "Nghiên cứu",
+                "Nghiên cứu khoa học",
+                "Khoa học",
+                "Hoạt động nghiên cứu",
+                "Dự án nghiên cứu",
+                "Trung tâm nghiên cứu",
+                "Công bố khoa học"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14326,
+            "url": "https://etu.ru/vn/di-hc/di-hc-hom-nay",
+            "requests": [
+                "Đại học hôm nay",
+                "Lịch sử trường",
+                "Giới thiệu trường",
+                "Thông tin về trường",
+                "Trường kỹ thuật điện",
+                "Thành lập năm 1886",
+                "Cơ sở giáo dục điện đầu tiên"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14360,
+            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/khi-dn-di-hc-tng-hp-k-thut-din-leti",
+            "requests": [
+                "Khi đến đại học",
+                "Hướng dẫn sinh viên nước ngoài",
+                "Thông tin cho sinh viên mới",
+                "Đến trường lần đầu",
+                "Quy trình nhập học",
+                "Sinh viên quốc tế đến",
+                "Cần biết khi đến"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14319,
+            "url": "https://etu.ru/vn/di-hc/cac-nganh-va-chuyen-nganh-dao-to-thc-si",
+            "requests": [
+                "Đào tạo thạc sĩ",
+                "Các ngành thạc sĩ",
+                "Chuyên ngành thạc sĩ",
+                "Chương trình thạc sĩ",
+                "Học thạc sĩ",
+                "Tuyển sinh thạc sĩ",
+                "Ngành học cao học"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14317,
+            "url": "https://etu.ru/vn/di-hc/chng-trinh-thc-tp-di-vi-cong-dan-nc-ngoai",
+            "requests": [
+                "Chương trình thực tập",
+                "Thực tập nước ngoài",
+                "Thực tập công dân nước ngoài",
+                "Thực tập quốc tế",
+                "Cơ hội thực tập",
+                "Thực tập sinh",
+                "Thực tập cho sinh viên quốc tế"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14320,
+            "url": "https://etu.ru/vn/di-hc/cac-chng-trinh-dao-to-tin-s",
+            "requests": [
+                "Đào tạo tiến sỹ",
+                "Chương trình tiến sỹ",
+                "Học tiến sỹ",
+                "Các ngành tiến sỹ",
+                "Tiến sỹ",
+                "Tuyển sinh tiến sỹ",
+                "Nghiên cứu sinh"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14347,
+            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai",
+            "requests": [
+                "Sinh viên nước ngoài",
+                "Sinh viên quốc tế",
+                "Học sinh nước ngoài",
+                "Thông tin cho sinh viên quốc tế",
+                "Du học sinh",
+                "Hướng dẫn sinh viên nước ngoài",
+                "Hỗ trợ sinh viên nước ngoài"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14315,
+            "url": "https://etu.ru/vn/di-hc/chng-trinh-d-b-di-vi-ngi-nc-ngoai-theo-hc",
+            "requests": [
+                "Chương trình dự bị",
+                "Dự bị cho người nước ngoài",
+                "Khóa học dự bị",
+                "Học dự bị",
+                "Dự bị quốc tế",
+                "Chương trình tiền đại học",
+                "Chuẩn bị du học"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14323,
+            "url": "https://etu.ru/vn/di-hc/khoa-hc-he-quc-t",
+            "requests": [
+                "Khóa học hè",
+                "Khóa học mùa hè",
+                "Học hè cho người nước ngoài",
+                "Khóa học hè quốc tế",
+                "Chương trình hè",
+                "Học hè Sant-peterburg",
+                "Du học hè"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14316,
+            "url": "https://etu.ru/vn/di-hc/lp-he-ting-nga",
+            "requests": [
+                "Lớp hè tiếng Nga",
+                "Khóa học tiếng Nga hè",
+                "Tiếng Nga mùa hè",
+                "Học tiếng Nga hè",
+                "Lớp học tiếng Nga",
+                "Chương trình tiếng Nga",
+                "Tiếng Nga cho người nước ngoài"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14321,
+            "url": "https://etu.ru/vn/di-hc/trng-hc-he-chuyen-nghanh1",
+            "requests": [
+                "Trường học hè chuyên ngành",
+                "Học hè chuyên ngành",
+                "Khóa học hè chuyên sâu",
+                "Chương trình hè chuyên biệt",
+                "Trường hè kỹ thuật",
+                "Các chuyên ngành hè",
+                "Học hè chuyên môn"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23082,
+            "url": "https://etu.ru/vn/dao-to/khoa-hc-he-quc-t1/khoa-hc-trong-vic-bo-tn-di-sn-van-hoa-va-lch-s",
+            "requests": [
+                "Khoa học bảo tồn di sản",
+                "Khóa học di sản văn hóa",
+                "Bảo tồn văn hóa lịch sử",
+                "Chương trình khoa học di sản",
+                "Di sản văn hóa kỹ thuật",
+                "Khóa học liên ngành",
+                "Giáo dục di sản"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 14358,
+            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/cac-khoa-hc-mua-he",
+            "requests": [
+                "khóa học mùa hè",
+                "học hè",
+                "chương trình hè",
+                "trường học mùa hè",
+                "khóa hè",
+                "đào tạo mùa hè",
+                "lớp học hè",
+                "học tập mùa hè",
+                "trại hè",
+                "khóa học ngắn hạn hè"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/lp-he-ting-nga"
+        },
+        {
+            "type": "reference",
+            "id": 14334,
+            "url": "https://etu.ru/vn/dao-to/cac-nganh-va-chuyen-nganh-dao-to-thc-si1",
+            "requests": [
+                "chương trình thạc sĩ",
+                "đào tạo thạc sĩ",
+                "học thạc sĩ",
+                "bằng thạc sĩ",
+                "tuyển sinh thạc sĩ",
+                "khóa học thạc sĩ",
+                "ngành thạc sĩ",
+                "thông tin thạc sĩ",
+                "quy trình thạc sĩ",
+                "chương trình cao học"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/cac-nganh-va-chuyen-nganh-dao-to-thc-si"
+        },
+        {
+            "type": "reference",
+            "id": 14333,
+            "url": "https://etu.ru/vn/dao-to/chng-trinh-dao-to-c-nhan",
+            "requests": [
+                "chương trình cử nhân",
+                "đào tạo cử nhân",
+                "bằng cử nhân",
+                "học cử nhân",
+                "chương trình học đại học",
+                "tuyển sinh cử nhân"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/especialidades-de-grado2"
+        },
+        {
+            "type": "reference",
+            "id": 14350,
+            "url": "https://etu.ru/vn/dao-to/sinh-vien-nc-ngoai/chng-trinh-thc-tp-sinh-cho-sinh-vien-nc-ngoai",
+            "requests": [
+                "thực tập sinh nước ngoài",
+                "chương trình thực tập quốc tế",
+                "thực tập sinh",
+                "sinh viên quốc tế thực tập",
+                "cơ hội thực tập",
+                "thực tập cho sinh viên nước ngoài"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/chng-trinh-thc-tp-di-vi-cong-dan-nc-ngoai"
+        },
+        {
+            "type": "reference",
+            "id": 14561,
+            "url": "https://etu.ru/vn/dao-to/khoa-hc-he-quc-t1",
+            "requests": [
+                "khóa học hè",
+                "khóa học hè người nước ngoài",
+                "chương trình hè quốc tế",
+                "học hè cho sinh viên quốc tế",
+                "khóa học mùa hè",
+                "sinh viên nước ngoài khóa hè",
+                "khóa học quốc tế"
+            ],
+            "final_url": "https://etu.ru/vn/di-hc/khoa-hc-he-quc-t"
+        }
+    ]
+}

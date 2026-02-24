@@ -1,0 +1,293 @@
+{
+    "title": "信息查询",
+    "items": [
+        {
+            "type": "document",
+            "id": 14833,
+            "url": "https://etu.ru/cn/study-cn",
+            "requests": [
+                "教育",
+                "学习",
+                "院系",
+                "教育方针",
+                "基础教育",
+                "实践技能",
+                "大学教育"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14812,
+            "url": "https://etu.ru/cn/leti/escuelas-de-verano-de-lengua-rusa1",
+            "requests": [
+                "夏令营",
+                "国际夏令营",
+                "夏季学校",
+                "俄语夏令营",
+                "夏令营项目",
+                "圣彼得堡夏令营",
+                "短期学习"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14817,
+            "url": "https://etu.ru/cn/leti/61",
+            "requests": [
+                "博士",
+                "博士课程",
+                "博士申请",
+                "研究方向",
+                "博士专业",
+                "读博",
+                "博士学制"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14814,
+            "url": "https://etu.ru/cn/leti/59",
+            "requests": [
+                "学士",
+                "本科",
+                "本科生",
+                "培养计划",
+                "学士专业",
+                "本科课程",
+                "本科项目"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14867,
+            "url": "https://etu.ru/cn/investigacion1",
+            "requests": [
+                "研究",
+                "科研",
+                "科学",
+                "研究机构",
+                "高科技企业",
+                "基础知识",
+                "合作研究"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14816,
+            "url": "https://etu.ru/cn/leti/60",
+            "requests": [
+                "硕士",
+                "研究生",
+                "培养计划",
+                "硕士专业",
+                "硕士课程",
+                "研究生项目",
+                "申请硕士"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14883,
+            "url": "https://etu.ru/cn/27",
+            "requests": [
+                "毕业生",
+                "校友",
+                "外国毕业生",
+                "文凭",
+                "毕业统计",
+                "校友会",
+                "毕业历史"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14875,
+            "url": "https://etu.ru/cn/vida2",
+            "requests": [
+                "学生生活",
+                "校园生活",
+                "运动",
+                "文化",
+                "社团活动",
+                "课外活动",
+                "大学社区"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14823,
+            "url": "https://etu.ru/cn/leti/top-1002",
+            "requests": [
+                "TOP-100 计划",
+                "TOP-100",
+                "百强大学计划",
+                "世界百强大学",
+                "大学排名计划",
+                "俄罗斯大学排名",
+                "教育部竞争"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14819,
+            "url": "https://etu.ru/cn/leti/escuelas-de-verano1",
+            "requests": [
+                "国际夏季课程",
+                "夏季课程",
+                "暑期项目",
+                "圣彼得堡夏季",
+                "暑期学习",
+                "国际课程",
+                "短期课程"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14820,
+            "url": "https://etu.ru/cn/leti/25",
+            "requests": [
+                "今天大学",
+                "大学简介",
+                "大学历史",
+                "学校介绍",
+                "关于我们",
+                "高等教育",
+                "电力工程专业"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14811,
+            "url": "https://etu.ru/cn/leti/28",
+            "requests": [
+                "针对外国学生的预科部",
+                "外国学生预科",
+                "预科部",
+                "俄语预科",
+                "预备课程",
+                "国际学生预科",
+                "俄语学习"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14813,
+            "url": "https://etu.ru/cn/leti/58",
+            "requests": [
+                "外国公民实习",
+                "国际学生实习",
+                "实习项目",
+                "留学生实习",
+                "海外实习",
+                "实习机会",
+                "公民实习"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18321,
+            "url": "https://etu.ru/cn/leti/1",
+            "requests": [
+                "我们的合作伙伴",
+                "大学合作伙伴",
+                "合作院校",
+                "国际合作",
+                "中国合作伙伴",
+                "科研合作",
+                "教育合作"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15493,
+            "url": "https://etu.ru/cn/study-cn/summer-schools-cn/russian-lang-ss-cn",
+            "requests": [
+                "夏季俄语课程",
+                "俄语暑期培训",
+                "暑期俄语",
+                "俄语课程",
+                "夏季语言课程",
+                "俄语学习",
+                "语言培训"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15508,
+            "url": "https://etu.ru/cn/study-cn/56/prep-dep-cn",
+            "requests": [
+                "预科系",
+                "留学生预科",
+                "俄语预科",
+                "预科课程",
+                "国际学生预科",
+                "预备课程",
+                "俄语学习",
+                "预科申请",
+                "9个月课程"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15492,
+            "url": "https://etu.ru/cn/study-cn/summer-schools-cn",
+            "requests": [
+                "暑期课程",
+                "夏季学校",
+                "暑期项目",
+                "夏季课程",
+                "短期课程",
+                "圣彼得堡夏季",
+                "暑假学习",
+                "夏令营",
+                "暑期学习项目"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 15370,
+            "url": "https://etu.ru/cn/study-cn/67",
+            "requests": [
+                "学士学位",
+                "本科生",
+                "本科课程",
+                "学士课程",
+                "本科学习",
+                "学士项目",
+                "学位课程"
+            ],
+            "final_url": "https://etu.ru/cn/leti/59"
+        },
+        {
+            "type": "reference",
+            "id": 15371,
+            "url": "https://etu.ru/cn/study-cn/68",
+            "requests": [
+                "硕士学位",
+                "研究生",
+                "硕士课程",
+                "研究生项目",
+                "硕士学习",
+                "硕士专业",
+                "学位项目"
+            ],
+            "final_url": "https://etu.ru/cn/leti/60"
+        },
+        {
+            "type": "reference",
+            "id": 15490,
+            "url": "https://etu.ru/cn/study-cn/86",
+            "requests": [
+                "博士研究生",
+                "博士申请",
+                "博士项目",
+                "博士入学",
+                "攻读博士",
+                "研究生博士",
+                "博士学位",
+                "博士留学"
+            ],
+            "final_url": "https://etu.ru/cn/leti/61"
+        }
+    ]
+}

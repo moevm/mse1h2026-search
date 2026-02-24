@@ -1,0 +1,2121 @@
+{
+    "title": "Informationsanfragen",
+    "items": [
+        {
+            "type": "document",
+            "id": 10697,
+            "url": "https://etu.ru/de/universitaet/aktuelles",
+            "requests": [
+                "news",
+                "aktuelle nachrichten",
+                "neuigkeiten",
+                "aktuelles",
+                "pressemitteilungen",
+                "universität news",
+                "letzte nachrichten",
+                "neueste informationen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10692,
+            "url": "https://etu.ru/de/universitaet/etu-leti",
+            "requests": [
+                "universität heute",
+                "über die hochschule",
+                "aktuelle informationen universität",
+                "allgemeine beschreibung",
+                "profil der universität",
+                "gegenwart der hochschule",
+                "moderne universität",
+                "elektrotechnische universität"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17253,
+            "url": "https://etu.ru/de/universitaet/veranstaltungen1",
+            "requests": [
+                "veranstaltungen",
+                "termine",
+                "events",
+                "kalender veranstaltungen",
+                "kommende ereignisse",
+                "hochschulveranstaltungen",
+                "aktuelle events",
+                "universitätskalender",
+                "anstehende veranstaltungen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 47024,
+            "url": "https://etu.ru/de/universitaet/geschichte",
+            "requests": [
+                "geschichte",
+                "universitätsgeschichte",
+                "gründung",
+                "historische informationen",
+                "entstehung der hochschule",
+                "chronik",
+                "vergangenheit universität",
+                "seit 1886",
+                "älteste universität"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11878,
+            "url": "https://etu.ru/de/forschung/forschungsrichtungen",
+            "requests": [
+                "forschungsrichtungen",
+                "forschungsschwerpunkte",
+                "forschungsbereiche",
+                "schwerpunkte forschung",
+                "wissenschaftliche richtungen",
+                "forschungsthemen",
+                "forschungsaktivitäten",
+                "bereiche der forschung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 25230,
+            "url": "https://etu.ru/de/studium/sommerschulen",
+            "requests": [
+                "sommerschulen",
+                "sommerkurse",
+                "summer school",
+                "sommerschule englisch",
+                "sommerschule russisch",
+                "studium sommer",
+                "kurzprogramme sommer",
+                "internationale sommerschulen",
+                "anmeldung sommerschule"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 46645,
+            "url": "https://etu.ru/de/forschung/forschungsschulen",
+            "requests": [
+                "forschungsschulen",
+                "doktorandenschulen",
+                "forschungsprogramme",
+                "schulen forschung",
+                "wissenschaftliche schulen",
+                "promotionsschulen",
+                "ausbildung forschung",
+                "postgraduale forschung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11833,
+            "url": "https://etu.ru/de/studentenleben",
+            "requests": [
+                "Studentenleben",
+                "Freizeitaktivitäten Studenten",
+                "Studentische Aktivitäten",
+                "Leben als Student",
+                "Campusleben",
+                "Studentengemeinschaft",
+                "Freizeit Studenten",
+                "Aktivitäten für Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11826,
+            "url": "https://etu.ru/de/forschung",
+            "requests": [
+                "Forschung",
+                "Wissenschaft",
+                "Forschungsprojekte",
+                "Wissenschaftliche Arbeit",
+                "Forschung und Entwicklung",
+                "Globale Probleme Forschung",
+                "Industrie Zusammenarbeit Forschung",
+                "Forschungsschwerpunkte",
+                "Wissenschaftliche Forschung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11767,
+            "url": "https://etu.ru/de/studium",
+            "requests": [
+                "Studium",
+                "Fakultäten",
+                "Erstklassige Ausbildung",
+                "Wissenschaftliche Schulen Studium",
+                "Studienangebote",
+                "Akademische Ausbildung",
+                "Studiengänge",
+                "Lernen an der Universität",
+                "Studienmöglichkeiten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 25264,
+            "url": "https://etu.ru/de/studium/winterschulen",
+            "requests": [
+                "Winterschulen",
+                "Studium Winterschulen",
+                "Winterschulen Russisch",
+                "Winterschulen Englisch",
+                "St. Petersburg Winterschule",
+                "Wintermärchen Schule",
+                "Kurse Winter",
+                "Internationale Winterschulen",
+                "Studienprogramme Winter"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16426,
+            "url": "https://etu.ru/de/universitaet/etu-leti/presse-eber-uns",
+            "requests": [
+                "Presseartikel",
+                "Presseberichte",
+                "Medienberichte",
+                "Neuigkeiten Presse",
+                "Veröffentlichungen",
+                "Universität in den Medien",
+                "Presse",
+                "Artikel über Universität",
+                "Pressemitteilungen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13918,
+            "url": "https://etu.ru/de/universitaet/etu-leti/unsere-stadt1",
+            "requests": [
+                "St. Petersburg Informationen",
+                "Stadt Russland",
+                "Leben in St. Petersburg",
+                "Über St. Petersburg",
+                "Stadtbeschreibung",
+                "Millionenstadt St. Petersburg",
+                "Newa Stadt",
+                "Studieren in St. Petersburg",
+                "Wissenswertes St. Petersburg"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23337,
+            "url": "https://etu.ru/de/universitaet/unsere-partner1/unternehmen",
+            "requests": [
+                "Partnerunternehmen",
+                "Kooperationen Unternehmen",
+                "Unternehmenspartner",
+                "Industriepartner",
+                "Firmenpartnerschaften",
+                "Zusammenarbeit Unternehmen",
+                "Partnerfirmen",
+                "Unternehmen Liste",
+                "Wirtschaftspartner"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11809,
+            "url": "https://etu.ru/de/studium/bachelorstudium",
+            "requests": [
+                "Bachelor",
+                "Bachelor Studium",
+                "Studium Bachelor",
+                "Grundstudium",
+                "Studiengänge Bachelor",
+                "erste Studienphase",
+                "Bachelor Programme"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11810,
+            "url": "https://etu.ru/de/studium/masterstudium",
+            "requests": [
+                "Master",
+                "Master Studium",
+                "Studium Master",
+                "Aufbaustudium",
+                "Studiengänge Master",
+                "zweite Studienphase",
+                "Master Programme"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 47025,
+            "url": "https://etu.ru/de/universitaet/geschichte/zahlen-und-fakten",
+            "requests": [
+                "Zahlen Fakten",
+                "Fakten",
+                "Geschichte",
+                "Universitätsgeschichte",
+                "Statistiken",
+                "älteste Universität",
+                "elektrotechnische Universität",
+                "Ausbildung Ingenieurkenntnisse"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13919,
+            "url": "https://etu.ru/de/universitaet/etu-leti/unsere-leistungen1",
+            "requests": [
+                "Leistungen",
+                "Erfolge",
+                "Auszeichnungen",
+                "Wettbewerb Sieger",
+                "strategisches Programm",
+                "Entwicklungsprogramm",
+                "Bildungsausschuss",
+                "Errungenschaften"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22422,
+            "url": "https://etu.ru/de/universitaet/aktuelles/23.-februar-tag-des-verteidigers-des-vaterlandes1",
+            "requests": [
+                "23 Februar",
+                "Tag des Verteidigers",
+                "Verteidiger des Vaterlandes",
+                "Feiertag Russland",
+                "gesetzlicher Feiertag",
+                "Aktuelles Feiertag",
+                "Februar Feiertag"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10713,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-besuch-der-delegation-der-leibniz-universitet-hannover",
+            "requests": [
+                "Leibniz Universität",
+                "Hannover Besuch",
+                "Delegation Hannover",
+                "Besuch Leibniz",
+                "Kooperation Hannover",
+                "Partnerschaft Hannover",
+                "Aktuelles Leibniz",
+                "25 Mai 2015"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19109,
+            "url": "https://etu.ru/de/studentenleben/sportleben",
+            "requests": [
+                "Sportleben",
+                "Sport",
+                "Studenten Sport",
+                "Sport Aktivitäten",
+                "Freizeit Sport",
+                "studentisches Sportleben",
+                "Sportvereine",
+                "Sport für Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19108,
+            "url": "https://etu.ru/de/studentenleben/kunstleben",
+            "requests": [
+                "Kunstleben",
+                "Kunst",
+                "Studenten Kunst",
+                "Kulturelles Leben",
+                "studentische Kultur",
+                "Kultur Aktivitäten",
+                "Freizeit Kunst",
+                "Kunst für Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11979,
+            "url": "https://etu.ru/de/universitaet/aktuelles/25-januar-der-studententag-in-russland",
+            "requests": [
+                "Studententag Russland",
+                "25 Januar Studententag",
+                "Tag der Studenten",
+                "Studentenfeiertag",
+                "Feierlichkeiten Studenten",
+                "Veranstaltungen Studententag",
+                "Russischer Studententag"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22999,
+            "url": "https://etu.ru/de/universitaet/aktuelles/kooperation-mit-der-hochschule-ruhr-west",
+            "requests": [
+                "Kooperation Ruhr West",
+                "Hochschule Ruhr West",
+                "Besuch Hochschule Ruhr West",
+                "Partner Ruhr West",
+                "Zusammenarbeit Ruhr West",
+                "Delegation Ruhr West",
+                "Mülheim Hochschulbesuch"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23870,
+            "url": "https://etu.ru/de/universitaet/aktuelles/dreifacher-weltmeister-in-powerlifting",
+            "requests": [
+                "Powerlifting Weltmeister",
+                "Alexander Usynin Powerlifting",
+                "Weltmeister Absolvent",
+                "Sport Powerlifting",
+                "Erfolg Powerlifting",
+                "Usynin Weltmeister",
+                "Studenten Powerlifting",
+                "Dreifacher Weltmeister"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14504,
+            "url": "https://etu.ru/de/universitaet/aktuelles/daad-an-der-etu-leti",
+            "requests": [
+                "DAAD Besuch",
+                "Deutscher Akademischer Austauschdienst",
+                "Vertreter DAAD",
+                "DAAD Kooperation",
+                "Austauschdienst Besuch",
+                "DAAD Information",
+                "November DAAD"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19275,
+            "url": "https://etu.ru/de/universitaet/aktuelles/23.-februar-tag-des-verteidigers-des-vaterlandes",
+            "requests": [
+                "Tag des Vaterlandes",
+                "23 Februar Feiertag",
+                "Verteidiger des Vaterlandes",
+                "Russischer Feiertag Februar",
+                "Februar Feier",
+                "Nationaler Feiertag",
+                "Feiertag Russland"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26249,
+            "url": "https://etu.ru/de/universitaet/aktuelles/161-geburtstag-des-radio-erfinders-alexander-s-popow",
+            "requests": [
+                "Alexander Popow Geburtstag",
+                "Radio Erfinder Popow",
+                "Popow Funktechnik",
+                "Geburtstag Popow",
+                "Pionier Funktechnik",
+                "Alexander S Popow",
+                "Popow Erfinder",
+                "161 Geburtstag Popow"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12541,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-eiskunstlauftrainer-alexei-mischin-ist-70",
+            "requests": [
+                "Alexei Mischin",
+                "Eiskunstlauftrainer Mischin",
+                "Mischin Geburtstag",
+                "Absolvent Mischin",
+                "Russischer Eiskunstlauftrainer",
+                "Mischin 70",
+                "Alexei Nikolajewitsch Mischin"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16125,
+            "url": "https://etu.ru/de/universitaet/aktuelles/sportfest-an-der-etu-leti",
+            "requests": [
+                "Sportfest",
+                "Sportfest Rund um Fitness",
+                "Popgymnastik Sportfest",
+                "Fitness Fest",
+                "Veranstaltung Sport",
+                "Sportliche Aktivitäten",
+                "April Sportfest",
+                "Abteilung Popgymnastik"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18003,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neue-sporterfolge-der-leti-studenten",
+            "requests": [
+                "Neue Sporterfolge",
+                "Sporterfolge Studenten",
+                "Hanteldrücken Meisterschaft",
+                "Meisterschaft Russlands Studenten",
+                "Mannschaft Hanteldrücken",
+                "sportliche Erfolge",
+                "Erfolge Studenten Sport",
+                "Hanteldrücken Rückenlage",
+                "Sportnews",
+                "sportliche Leistungen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16287,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-neue-arm-lifting-rekord",
+            "requests": [
+                "Arm-Lifting Rekord",
+                "neuer Rekord Sport",
+                "Alexander Filimonow",
+                "Weltrekord Arm-Lifting",
+                "Armlifting Weltmeisterschaft",
+                "Rekord Filimonow",
+                "Sportrekord",
+                "Arm-Lifting Erfolge",
+                "Filimonow Weltrekord",
+                "Kraftsport Rekord"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17238,
+            "url": "https://etu.ru/de/universitaet/aktuelles/deutsch-russischer-studentenaustausch",
+            "requests": [
+                "Studentenaustausch",
+                "deutsch-russischer Austausch",
+                "Austauschprogramm Studenten",
+                "DAAD Unterstützung",
+                "Studenten Austausch",
+                "internationale Programme",
+                "Deutschland Russland Austausch",
+                "Jugend Austausch",
+                "Austausch Studierende",
+                "internationale Zusammenarbeit"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18972,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neujahrsfeier-fer-kinder",
+            "requests": [
+                "Neujahrsfeier Kinder",
+                "Feier für Kinder",
+                "Theater AG",
+                "Kinderveranstaltung",
+                "Neujahr Mitarbeiter Kinder",
+                "Natalia Loktionowa",
+                "Weihnachtsfeier Kinder",
+                "Kinderfeier",
+                "kulturelle Veranstaltungen",
+                "Kinderprogramm"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17211,
+            "url": "https://etu.ru/de/universitaet/aktuelles/sieger-des-powerlifting-weltpokals-unter-studenten",
+            "requests": [
+                "Powerlifting Weltpokal",
+                "Sieger Powerlifting",
+                "Powerlifting Studenten",
+                "Weltpokal Studenten",
+                "IPF Powerlifting",
+                "Sport Powerlifting",
+                "Powerlifting Wettkampf",
+                "Studenten Sport Erfolge",
+                "Potchefstroom Powerlifting",
+                "Weltpokal Ergebnisse"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20414,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neue-powerlifting-erfolge",
+            "requests": [
+                "Powerlifting Erfolge",
+                "neue Powerlifting",
+                "Alexander Usynin",
+                "Powerlifting Medaillen",
+                "Weltpokal Powerlifting",
+                "Usynin Champion",
+                "Sport Erfolge",
+                "Powerlifting Studenten",
+                "Medaillen Powerlifting",
+                "Powerlifting Weltpokal"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11761,
+            "url": "https://etu.ru/de/universitaet/aktuelles/kenstlereckchen-an-der-leti",
+            "requests": [
+                "Künstlereckchen",
+                "Kunstwerkstatt",
+                "Sergei Leonow",
+                "Malerei Zeichnen",
+                "Design Fotografieren",
+                "Kunst Kurse",
+                "Werkstatt Kunst",
+                "Kreativkurse",
+                "Leonow Kunst",
+                "Künstlerische Aktivitäten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13132,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-russische-hanteldreckenpokal",
+            "requests": [
+                "Russischer Hanteldrückenpokal",
+                "Hanteldrückenpokal",
+                "Dmitri Orel",
+                "Hanteldrücken Wettbewerb",
+                "Sport Lehrstuhl",
+                "Orel Hanteldrücken",
+                "Körpererziehung Sport",
+                "russischer Pokal Sport",
+                "Sport Ergebnisse",
+                "Hanteldrücken Ergebnisse"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21579,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neuer-arm-lifting-erfolg",
+            "requests": [
+                "Arm-Lifting Erfolg",
+                "neuer Arm-Lifting",
+                "Weltmeisterschaft Armlifting",
+                "Armlifting San Diego",
+                "Kraftsport Armlifting",
+                "Griffkraft Sport",
+                "Armlifting Ergebnisse",
+                "Sport Erfolg",
+                "Weltmeisterschaft Kraftsport",
+                "Armlifting Wettkampf"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13349,
+            "url": "https://etu.ru/de/universitaet/aktuelles/weltrekord-des-leti-studenten",
+            "requests": [
+                "Weltrekord Student",
+                "Alexander Filimonow",
+                "Arm-Lifting Weltrekord",
+                "Filimonow Arm-Lifting",
+                "Student Weltrekord",
+                "Fakultät Elektrotechnik",
+                "Automatik Student",
+                "Sport Weltrekord",
+                "Arm-Lifting Erfolge",
+                "Filimonow Rekord"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20248,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-studentenkabarett-team-der-etu-leti",
+            "requests": [
+                "Studentenkabarett",
+                "Team Elektroschok",
+                "KWN Finale",
+                "Studentenkabarett Team",
+                "Elektroschok",
+                "Kabarett",
+                "Studentenaktivitäten",
+                "Kultur Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13815,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neue-sportliche-leistungen",
+            "requests": [
+                "sportliche Leistungen",
+                "Alexander Filimonow",
+                "Arm-Lifting",
+                "Goldmedaille",
+                "Sport",
+                "Student Sport",
+                "Meisterschaft Arm-Lifting",
+                "Sport Erfolge"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17516,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-neue-studienjahr-hat-begonnen",
+            "requests": [
+                "neues Studienjahr",
+                "Studienbeginn",
+                "1. September",
+                "Tag des Wissens",
+                "Studienjahr Beginn",
+                "neue Studenten",
+                "Studienjahr News",
+                "Studienstart"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18672,
+            "url": "https://etu.ru/de/universitaet/aktuelles/ehren-elektroingenieur-der-etu-leti-werner-dietzsch",
+            "requests": [
+                "Werner Dietzsch",
+                "Ehren-Elektroingenieur",
+                "Alumni 1972",
+                "Auszeichnung Dietzsch",
+                "Ehreningenieur",
+                "Dietzsch Alumni",
+                "Titelverleihung",
+                "Ehrenmitglied"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19663,
+            "url": "https://etu.ru/de/universitaet/aktuelles/powerlifting-meisterschaft",
+            "requests": [
+                "Powerlifting Meisterschaft",
+                "Studenten Powerlifting",
+                "Rekorde Powerlifting",
+                "Sport St. Petersburg",
+                "Powerlifting Wettbewerb",
+                "Meisterschaft Kraftsport",
+                "Studenten Sport",
+                "Kraftsport"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11737,
+            "url": "https://etu.ru/de/universitaet/aktuelles/fakultet-fer-funktechnik-und-telekommunikation-ist-70",
+            "requests": [
+                "Fakultät Funktechnik",
+                "Geburtstag Funktechnik",
+                "70 Jahre Funktechnik",
+                "Telekommunikation Fakultät",
+                "Jubiläum Funktechnik",
+                "Feierstunde Funktechnik",
+                "Fakultät Jubiläum",
+                "Funktechnik Geschichte"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16021,
+            "url": "https://etu.ru/de/universitaet/aktuelles/schritt-auf-die-behne-9",
+            "requests": [
+                "Schritt auf die Bühne",
+                "Kunstfestival",
+                "Festival Bühne",
+                "Studenten Kunstfestival",
+                "Kulturfestival",
+                "Bühne Festival",
+                "Kunst Studenten",
+                "Festival April"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11853,
+            "url": "https://etu.ru/de/universitaet/aktuelles/keine-langeweile-an-der-etu-leti",
+            "requests": [
+                "Iwan Iljin",
+                "Comedy Battle",
+                "Stand-Up-Comedy",
+                "Student Elektronik",
+                "Iljin Comedy",
+                "Komödie Student",
+                "Studentenleben",
+                "Langeweile Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16630,
+            "url": "https://etu.ru/de/universitaet/aktuelles/zusammenarbeit-mit-daad",
+            "requests": [
+                "Zusammenarbeit DAAD",
+                "DAAD Kooperation",
+                "Deutscher Akademischer Austauschdienst",
+                "Austauschdienst DAAD",
+                "Internationale Zusammenarbeit",
+                "DAAD Partnerschaft",
+                "Partnerschaft DAAD",
+                "DAAD Programme"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19647,
+            "url": "https://etu.ru/de/universitaet/aktuelles/europeisches-alumni-forum-2018",
+            "requests": [
+                "Alumni-Forum 2018",
+                "Europäisches Alumni-Forum",
+                "Forum Energie Deutschland Russland",
+                "Alumni Berlin",
+                "Erfahrungsaustausch Energie",
+                "Zusammenarbeit Deutschland Russland Energie"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22158,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neujahrsfeier-fer-kinder1",
+            "requests": [
+                "Neujahrsfeier Kinder",
+                "Kinder Neujahrsfeier",
+                "Theater-AG Neujahrsfeier",
+                "Feier für Kinder",
+                "Weihnachtsfeier Kinder",
+                "Mitarbeiter Kinder Feier"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22754,
+            "url": "https://etu.ru/de/universitaet/aktuelles/160.-geburtstag-des-radio-erfinders-alexander-s.-popow",
+            "requests": [
+                "Popow Geburtstag",
+                "Alexander Popow",
+                "Radio Erfinder Popow",
+                "Jubiläumslesungen Popow",
+                "160. Geburtstag Popow",
+                "Popow Lesungen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21770,
+            "url": "https://etu.ru/de/universitaet/aktuelles/besuch-der-tu-ilmenau",
+            "requests": [
+                "Besuch TU Ilmenau",
+                "Ilmenau Zusammenarbeit",
+                "Technische Universität Ilmenau",
+                "Lehrstuhl biotechnische Systeme",
+                "Wissenschaftliche Zusammenarbeit Ilmenau",
+                "Partnerschaft Ilmenau"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21730,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-akademische-chor-der-etu-leti",
+            "requests": [
+                "Akademischer Chor",
+                "Chor Konzert",
+                "Chor Krylow",
+                "Alexander Krylow Chor",
+                "Universitätschor",
+                "Konzert Akademischer Chor"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23061,
+            "url": "https://etu.ru/de/universitaet/aktuelles/frehjahrsschule-an-der-hochschule-stralsund",
+            "requests": [
+                "Frühjahrsschule Stralsund",
+                "Hochschule Stralsund",
+                "Studenten Stralsund",
+                "Stralsund Frühjahrsschule",
+                "Partnerschaft Stralsund",
+                "Studenten Austausch Stralsund"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19315,
+            "url": "https://etu.ru/de/universitaet/aktuelles/keysight-technologies-und-die-etu-leti",
+            "requests": [
+                "Keysight Technologies",
+                "Keysight Zusammenarbeit",
+                "Partnerschaft Keysight",
+                "Unternehmensbesuch Keysight",
+                "Technologien Keysight",
+                "Zusammenarbeit Unternehmen Keysight"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22565,
+            "url": "https://etu.ru/de/universitaet/aktuelles/ehre-seinem-andenken",
+            "requests": [
+                "Schores Alfjorow",
+                "Tod Alfjorow",
+                "Nobelpreisträger Alfjorow",
+                "Nachruf Alfjorow",
+                "Andenken Alfjorow",
+                "Alumni Tod",
+                "Nachruf Nobelpreisträger"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11608,
+            "url": "https://etu.ru/de/universitaet/aktuelles/aus-ilmenau-nach-petersburg",
+            "requests": [
+                "Ilmenau Petersburg",
+                "Projekt RUGEFAK",
+                "Technische Universität Ilmenau",
+                "Blockvorlesung Ilmenau",
+                "Studierende Ilmenau",
+                "Zusammenarbeit Ilmenau",
+                "Nachrichten Ilmenau"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21258,
+            "url": "https://etu.ru/de/universitaet/aktuelles/eaie-conference-and-exhibition-2018",
+            "requests": [
+                "EAIE Konferenz 2018",
+                "EAIE Exhibition 2018",
+                "Konferenz Genf 2018",
+                "Internationale Ausbildung Konferenz",
+                "Europäische Vereinigung Ausbildung",
+                "EAIE Nachrichten",
+                "EAIE Bericht"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15609,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-europeische-alumni-forum2017",
+            "requests": [
+                "Europäisches Alumni Forum 2017",
+                "Alumni Forum Berlin",
+                "Vernetzte Welt Forum",
+                "Russisches Haus Berlin",
+                "Alumni Treffen 2017",
+                "Alumni Nachrichten",
+                "Forum Berlin 2017"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 22725,
+            "url": "https://etu.ru/de/universitaet/aktuelles/frehjahr-an-der-leti-2019",
+            "requests": [
+                "Frühjahr 2019",
+                "Festival intellektuelle Spiele",
+                "Intellektuelle Spiele 2019",
+                "Teams Russland Ausland",
+                "Frühjahrsfestival",
+                "Bericht Frühjahr 2019",
+                "Spiele Festival"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13827,
+            "url": "https://etu.ru/de/universitaet/aktuelles/webseitenverbesserung1",
+            "requests": [
+                "Webseitenverbesserung",
+                "Verbesserung Webseite",
+                "neue Inhalte",
+                "deutsche Webseite",
+                "Info Fakultäten",
+                "Fakultäten Info",
+                "Uni Internetseite",
+                "Neuer Inhalt deutsch",
+                "deutsche Version"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12095,
+            "url": "https://etu.ru/de/universitaet/aktuelles/8-februar-tag-der-russischen-wissenschaft",
+            "requests": [
+                "Tag der russischen Wissenschaft",
+                "8. Februar Wissenschaft",
+                "russische Wissenschaft Tag",
+                "Wissenschaft Tag",
+                "Feiertag Wissenschaft",
+                "Neuigkeiten Wissenschaft",
+                "Gratulation Wissenschaft"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 26367,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-der-kosmonauten",
+            "requests": [
+                "Tag der Kosmonauten",
+                "Kosmonauten Tag",
+                "Raumfahrt Tag",
+                "Raumschiffgeräte",
+                "Fernsehen Videotechnik",
+                "Lehrstuhl Fernsehen",
+                "Weltraumforschung",
+                "Mitarbeiter Raumfahrt"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18197,
+            "url": "https://etu.ru/de/universitaet/aktuelles/forschungsaufenthalt-fer-mitarbeiter-der-technischen-universitet-xuzhou",
+            "requests": [
+                "Forschungsaufenthalt Xúzhōu",
+                "TU Xúzhōu",
+                "Mitarbeiter Xúzhōu",
+                "Xúzhōu Forschung",
+                "Forschungsaustausch",
+                "ausländische Mitarbeiter",
+                "Gastwissenschaftler",
+                "Forschung November",
+                "internationale Zusammenarbeit"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18024,
+            "url": "https://etu.ru/de/universitaet/aktuelles/novyj-resurs1",
+            "requests": [
+                "IEEE Konferenz 2017",
+                "IT&QM&IS 2017",
+                "Konferenz Qualitätsmanagement",
+                "Verkehrs- und Informationssicherheit",
+                "IT Konferenz",
+                "internationale Konferenz",
+                "wissenschaftlich-technische Konferenz",
+                "September Konferenz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11609,
+            "url": "https://etu.ru/de/universitaet/bilder-und-videos/aus-ilmenau-nach-petersburg",
+            "requests": [
+                "Ilmenau Petersburg",
+                "TU Ilmenau",
+                "Projekt RUGEFAK",
+                "Blockvorlesung Studierende",
+                "Studierende Ilmenau",
+                "internationale Projekte",
+                "Zusammenarbeit Ilmenau",
+                "Vorlesung Oktober"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19055,
+            "url": "https://etu.ru/de/universitaet/aktuelles/daad-sommerseminar",
+            "requests": [
+                "DAAD Sommerseminar",
+                "Sommerseminar Medien",
+                "Universität Passau Seminar",
+                "Medien und Gesellschaft",
+                "west-östliche Perspektiven",
+                "DAAD Seminar",
+                "Juni Seminar",
+                "Seminar Passau"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14002,
+            "url": "https://etu.ru/de/universitaet/aktuelles/sommerschule-fer-russisch-an-der-etu-leti",
+            "requests": [
+                "Sommerschule Russisch",
+                "Russisch Sommerschule",
+                "Sommerschule Sprache",
+                "Sprachschule Russisch",
+                "Russischkurs Sommer",
+                "Studenten Russisch",
+                "internationale Studenten",
+                "Sommerprogramm Russisch"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19591,
+            "url": "https://etu.ru/de/universitaet/aktuelles/zeitschrift-der-etu-leti-in-der-top-100",
+            "requests": [
+                "Zeitschrift Radioelektronik",
+                "Radioelektronik TOP-100",
+                "wissenschaftliche Publikationen TOP-100",
+                "Förderung Zeitschrift",
+                "Ranking Radioelektronik",
+                "Auszeichnung Zeitschrift",
+                "TOP 100 Publikationen",
+                "wissenschaftliche Zeitschrift"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14086,
+            "url": "https://etu.ru/de/universitaet/aktuelles/doppeldiplom-etu-letitu-ilmenau",
+            "requests": [
+                "Doppeldiplom Ilmenau",
+                "TU Ilmenau Programm",
+                "Student Doppeldiplom",
+                "Austauschprogramm Ilmenau",
+                "Studium Ilmenau",
+                "Internationale Programme",
+                "Kooperation Ilmenau",
+                "Doppelabschluss",
+                "Ilmenau Student"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18186,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-konferenz-fer-steuerungsprobleme-in-technischen-systemen",
+            "requests": [
+                "Konferenz Steuerungsprobleme",
+                "Steuerungsprobleme Konferenz",
+                "technische Systeme Konferenz",
+                "wissenschaftliche Konferenz",
+                "Konferenz Oktober",
+                "internationale Konferenz",
+                "Steuerungssysteme Konferenz",
+                "Tagung Steuerungsprobleme"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11851,
+            "url": "https://etu.ru/de/universitaet/aktuelles/denis-s-prokuratorow-science-slam-sieger",
+            "requests": [
+                "Denis Prokuratorow",
+                "Prokuratorow Science Slam",
+                "Science Slam Sieger",
+                "Doktorand Prokuratorow",
+                "St. Petersburger Science Slam",
+                "Sieger Science Slam",
+                "Prokuratorow Auszeichnung",
+                "Wissenschafts-Slam"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15552,
+            "url": "https://etu.ru/de/universitaet/aktuelles/werth-elektronik-an-der-etu-leti",
+            "requests": [
+                "Würth Elektronik Seminar",
+                "Seminar Würth Elektronik",
+                "RS Components Seminar",
+                "Veranstaltung Würth Elektronik",
+                "Kooperation Würth",
+                "Unternehmen Seminar",
+                "März Seminar",
+                "Elektronik Seminar",
+                "Industrie Seminar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10714,
+            "url": "https://etu.ru/de/universitaet/aktuelles/modellierung-und-simulation-von-potenzialfeldern",
+            "requests": [
+                "Modellierung Potenzialfelder",
+                "Simulation Potenzialfelder",
+                "Potenzialfelder Vorlesung",
+                "Prof. Hannes Töpfer",
+                "TU Ilmenau Projekt",
+                "Blockvorlesung Töpfer",
+                "Theoretische Elektrotechnik",
+                "Informationstechnik Ilmenau",
+                "Vorlesung Potenzialfelder"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19164,
+            "url": "https://etu.ru/de/universitaet/aktuelles/europeisches-alumni-forum2018-energie",
+            "requests": [
+                "Alumni-Forum Energie",
+                "Europäisches Alumni-Forum",
+                "Alumni Forum 2018",
+                "Energie Forum Berlin",
+                "RHWK Berlin",
+                "Ressourcen Technologien",
+                "gesellschaftlicher Wandel",
+                "Alumni Veranstaltung",
+                "Forum Berlin"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13610,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-zeitkapsel",
+            "requests": [
+                "Zeitkapsel Popow",
+                "Popow Zeitkapsel",
+                "Legung Zeitkapsel",
+                "Gebäude 5 Zeitkapsel",
+                "Denkmal Popow",
+                "festliche Legung",
+                "Juni Zeitkapsel",
+                "Historisches Ereignis"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21299,
+            "url": "https://etu.ru/de/universitaet/aktuelles/qualitetsmanagement-verkehrs-und-informationssicherheit-informationstechnologie",
+            "requests": [
+                "Qualitätsmanagement Konferenz",
+                "Verkehrssicherheit Konferenz",
+                "Informationssicherheit Konferenz",
+                "Informationstechnologie Konferenz",
+                "Konferenz IT&MQ&IS",
+                "IT&MQ&IS 2018",
+                "Experten Qualitätsmanagement",
+                "Sicherheit Konferenz",
+                "Management Konferenz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12175,
+            "url": "https://etu.ru/de/universitaet/aktuelles/23-februar-tag-des-verteidigers-des-vaterlandes",
+            "requests": [
+                "23. Februar Feiertag",
+                "Tag des Verteidigers des Vaterlandes",
+                "Feiertag Russland 23 Februar",
+                "Verteidiger des Vaterlandes",
+                "23 Februar Feier",
+                "Nachrichten Feiertag",
+                "Aktuelles 23 Februar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15388,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-verteidigers-des-vaterlandes",
+            "requests": [
+                "Tag des Verteidigers Glückwünsche",
+                "Glückwünsche Herren",
+                "Wohlbefinden Erfolg",
+                "Feiertagsgrüße",
+                "Verteidiger des Vaterlandes Gruß",
+                "Aktuelles Feiertag",
+                "Nachricht Verteidiger"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20764,
+            "url": "https://etu.ru/de/universitaet/aktuelles/sommerschulen-fer-russisch-abschlussfeier",
+            "requests": [
+                "Russisch Sommerschule Abschluss",
+                "Abschlussfeier Sommerschulen",
+                "Sprachkurse Russisch Zeugnisse",
+                "Sommerschule August",
+                "Russische Sprache Sommerschule",
+                "Internationale Studenten Russisch",
+                "Abschlussfeier Sprachschule"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20952,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-alumni-aus-vietnam-besuchen-ihre-alma-mater",
+            "requests": [
+                "Alumni Vietnam Besuch",
+                "Absolventen Vietnam",
+                "Chuong Hung Besuch",
+                "Ehemalige Studenten Vietnam",
+                "Alumni Treffen",
+                "Elektronische medizinische Geräte Absolvent",
+                "Besuch Alma Mater"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16665,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-internationale-verband-fer-optik-und-photonik",
+            "requests": [
+                "Optik und Photonik Verband",
+                "SPIE Studentenabteilung",
+                "Internationaler Verband Optik",
+                "Abracham Eno Student",
+                "Photonik Verband",
+                "Neue Studentenabteilung",
+                "SPIE Gründung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23175,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-sieges1",
+            "requests": [
+                "Tag des Sieges Veranstaltung",
+                "Siegestag Feier",
+                "Veranstaltung 7. Mai",
+                "Aktuelles Siegestag",
+                "Gedenkfeier Tag des Sieges",
+                "Feier 9. Mai",
+                "Tag des Sieges Neuigkeiten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18974,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-blockadedurchbruchs-in-leningrad1",
+            "requests": [
+                "Blockadedurchbruch Leningrad",
+                "Tag des Blockadedurchbruchs",
+                "Leningrad Blockade",
+                "18. Januar Gedenktag",
+                "Durchbruch Leningrad",
+                "Schlacht an der Newa",
+                "Aktuelles Blockade"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19314,
+            "url": "https://etu.ru/de/universitaet/aktuelles/vorlesung-in-der-englischen-sprache",
+            "requests": [
+                "englische Vorlesung",
+                "Vorlesung Englisch",
+                "Tatjana Schmied-Wörle",
+                "Kunst und Finanzen Vorlesung",
+                "Vortrag englisch",
+                "Schmied-Wörle Vortrag",
+                "Aktuelles Vorlesung englisch"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19662,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-vi.-konferenz-wissenschaft-der-gegenwart-und-zukunft",
+            "requests": [
+                "Konferenz Wissenschaft Gegenwart Zukunft",
+                "Wissenschaft Gegenwart Zukunft",
+                "VI Konferenz",
+                "wissenschaftliche Konferenz",
+                "Konferenz junge Wissenschaftler",
+                "Wissenschaftler Konferenz",
+                "Vergangene Konferenzen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21096,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-in-times-higher-education-world-university-rankings-2019",
+            "requests": [
+                "Times Higher Education Ranking",
+                "World University Rankings 2019",
+                "Universitätsranking",
+                "Ranking 2019",
+                "Hochschulranking",
+                "Times Higher Education",
+                "Ranking führende Universitäten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 27786,
+            "url": "https://etu.ru/de/universitaet/aktuelles/1-september-der-tag-des-wissens",
+            "requests": [
+                "1 September",
+                "Tag des Wissens",
+                "September Tag",
+                "Wissens Tag",
+                "Beginn des Semesters",
+                "Studienbeginn",
+                "neue Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20636,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-der-marine-russlands",
+            "requests": [
+                "Tag der Marine",
+                "Marine Russlands",
+                "Russische Marine",
+                "Feiertag Marine",
+                "29 Juli Marine",
+                "Marine Feier",
+                "Militär Marine"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19772,
+            "url": "https://etu.ru/de/universitaet/aktuelles/mikrowellenelektronik-russische-wissenschaftler-fer-auslendische-studenten",
+            "requests": [
+                "Mikrowellenelektronik Buch",
+                "Fachbuch Mikrowellenelektronik",
+                "Buch für ausländische Studenten",
+                "Wissenschaftler Mikrowellenelektronik",
+                "englische Fachliteratur",
+                "Studienmaterial Mikrowelle",
+                "Elektronikbuch",
+                "Mikrowellenelektronik Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12501,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-leti-an-der-internationalen-ausstellung",
+            "requests": [
+                "Internationale Ausstellung",
+                "Ausstellung Technologie",
+                "Elektronik Ausstellung",
+                "Elektrotechnik Ausstellung",
+                "März Ausstellung",
+                "14 Internationale Ausstellung",
+                "Ausstellung Materialien"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20719,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-iii.-internationale-konferenz-ergo-2018",
+            "requests": [
+                "Konferenz ERGO 2018",
+                "ERGO 2018",
+                "III Internationale Konferenz",
+                "Menschlicher Faktor Konferenz",
+                "technische Systeme Konferenz",
+                "wissenschaftlich praktische Konferenz",
+                "Juli Konferenz",
+                "ERGO Konferenz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14059,
+            "url": "https://etu.ru/de/universitaet/aktuelles/vorlesungen-in-der-deutschen-sprache2",
+            "requests": [
+                "deutsche Vorlesungen",
+                "Vorlesungen Deutsch",
+                "Professor Ilmenau",
+                "Technische Universität Ilmenau",
+                "September Vorlesungen",
+                "Vorträge Deutsch",
+                "Vorlesungen Professor"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 10711,
+            "url": "https://etu.ru/de/universitaet/aktuelles/sense-enable-spitse-symposium",
+            "requests": [
+                "Sense Enable SPITSE",
+                "SPITSE Symposium",
+                "Symposium Sense Enable",
+                "wissenschaftliches Symposium",
+                "jährliches Symposium",
+                "hochrangiges Symposium",
+                "SPITSE Konferenz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18799,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neujahrsgrese-von-den-auslendischen-leti-studenten",
+            "requests": [
+                "Neujahrsgrüße",
+                "ausländische Studenten",
+                "Studenten Neujahr",
+                "Neujahrskonzert",
+                "Konzert ausländische Studenten",
+                "Veranstaltung Studenten",
+                "internationale Studenten Neujahr",
+                "Grüße von Studenten"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14231,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-leti-und-hanoi-open-university",
+            "requests": [
+                "Hanoi Open University",
+                "Zusammenarbeit Vietnam",
+                "Kooperation Hanoi",
+                "Besuch Hanoi",
+                "Partnerschaft Hanoi",
+                "internationale Zusammenarbeit",
+                "Vietnam Universität",
+                "Delegation Vietnam",
+                "Hochschulpartnerschaft"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17519,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-renovierte-gebeude-der-universitet",
+            "requests": [
+                "renoviertes Gebäude",
+                "Gebäude Nummer 6",
+                "Gebäude 6 Renovierung",
+                "wiederaufgebautes Gebäude",
+                "Architekt Tomischko",
+                "Geschichte Gebäude",
+                "Campus Renovierung",
+                "Neues Gebäude",
+                "Gebäudeeröffnung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13652,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-leti-ist-130-jahre-alt",
+            "requests": [
+                "130 Jahre alt",
+                "130 Geburtstag",
+                "Jubiläum Universität",
+                "Gründungsjahr",
+                "Geschichte Universität",
+                "älteste Hochschule",
+                "Elektrotechnik Jubiläum",
+                "Geburtstagsfeier",
+                "130-jähriges Bestehen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17252,
+            "url": "https://etu.ru/de/universitaet/aktuelles/kooperation-mit-der",
+            "requests": [
+                "Technische Universität Nanyang",
+                "Kooperation Nanyang",
+                "Zusammenarbeit Singapur",
+                "Partnerschaft Nanyang",
+                "internationale Zusammenarbeit",
+                "Singapur Universität",
+                "neue Partnerhochschule",
+                "Erweiterung Kooperation",
+                "Nanyang Tech"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12419,
+            "url": "https://etu.ru/de/universitaet/aktuelles/webseitenverbesserung",
+            "requests": [
+                "Webseitenverbesserung",
+                "Website Update",
+                "neuer Inhalt Website",
+                "deutsche Version Webseite",
+                "Internetseite Verbesserung",
+                "Fakultäten Webseite",
+                "Studiengänge Webseite",
+                "Webseite Informationen",
+                "Aktualisierung Webseite"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11631,
+            "url": "https://etu.ru/de/universitaet/aktuelles/lehrstuhl-fer-militerische-ausbildung-ist-70-jahre-alt",
+            "requests": [
+                "Lehrstuhl militärische Ausbildung",
+                "militärische Ausbildung",
+                "70 Jahre Lehrstuhl",
+                "Jubiläum militärische",
+                "Wehrdienst",
+                "militär Ausbildung",
+                "Lehrstuhl Jubiläum",
+                "70 Geburtstag Militär",
+                "Militärfachbereich"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20770,
+            "url": "https://etu.ru/de/universitaet/aktuelles/1.-september-der-tag-des-wissens",
+            "requests": [
+                "1 September",
+                "Tag des Wissens",
+                "Studienbeginn",
+                "neue Studenten",
+                "Erstsemester",
+                "Semesterstart",
+                "Immatrikulation",
+                "Begrüßung Studenten",
+                "Studienjahr Beginn"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13651,
+            "url": "https://etu.ru/de/universitaet/aktuelles/galerie-als-geschenk-fer-die-etu-leti",
+            "requests": [
+                "Galerie Geschenk",
+                "Geschenk 130 Geburtstag",
+                "Galerie Wissenschaftler",
+                "hervorragende Wissenschaftler",
+                "130 Jahre Geschenk",
+                "Wissenschaftler Galerie",
+                "neue Galerie",
+                "Dank an Spender",
+                "Kunstwerk Universität"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20651,
+            "url": "https://etu.ru/de/universitaet/aktuelles/an-der-leti-ohne-russischkenntnisse-studieren",
+            "requests": [
+                "Studieren ohne Russischkenntnisse",
+                "Englischsprachige Programme",
+                "Ausländische Studierende Englisch",
+                "Programme internationale Studenten",
+                "Studium Englisch",
+                "Internationale Programme",
+                "Sprachkenntnisse Studium"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18664,
+            "url": "https://etu.ru/de/universitaet/aktuelles/feiertage-im-dezember-2017-januar-2018",
+            "requests": [
+                "Feiertage Dezember 2017",
+                "Feiertage Januar 2018",
+                "Feste Dezember Januar",
+                "Freie Tage 2017 2018",
+                "Rektorenverfügung Feiertage",
+                "Dezember Januar Feiertage",
+                "Verfügung Feiertage"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 17237,
+            "url": "https://etu.ru/de/universitaet/aktuelles/top-10-der-rangliste-der-it-hochschulen",
+            "requests": [
+                "IT Hochschulen Ranking",
+                "Top 10 IT",
+                "Rangliste IT",
+                "Beste IT Hochschulen",
+                "IT Spezialisten Ausbildung",
+                "IT Ranking",
+                "Hochschulranking IT"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 12745,
+            "url": "https://etu.ru/de/universitaet/aktuelles/ergebnisse-der-powerlifting-meisterschaft",
+            "requests": [
+                "Powerlifting Meisterschaft Ergebnisse",
+                "Ergebnisse Powerlifting",
+                "Studenten Powerlifting",
+                "Meisterschaft St. Petersburg",
+                "Kraftdreikampf Ergebnisse",
+                "Sportwettkampf Powerlifting",
+                "Bildergalerie Powerlifting"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14963,
+            "url": "https://etu.ru/de/universitaet/aktuelles/europeische-alumni-forum2017",
+            "requests": [
+                "Europäisches Alumni Forum",
+                "Alumni Forum 2017",
+                "Forum Berlin",
+                "Russisches Haus Berlin",
+                "Alumni Treffen",
+                "Vernetzte Welt Forum",
+                "Absolventen Forum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14212,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-xiv-internationale-bald-konferenz",
+            "requests": [
+                "BALD Konferenz",
+                "Internationale BALD Konferenz",
+                "Atomlagenabscheidung Konferenz",
+                "Konferenz BALD 2016",
+                "Baltische Konferenz",
+                "XIV Konferenz",
+                "BALD Konferenz St. Petersburg"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13493,
+            "url": "https://etu.ru/de/universitaet/aktuelles/aus-der-leti-in-die-mannschaft-russlands",
+            "requests": [
+                "Alexander Filimonow",
+                "Mannschaft Russlands",
+                "Arm-Lifting Mannschaft",
+                "Studenten Sportler",
+                "Elektrotechnik Student Erfolg",
+                "Fakultät Elektrotechnik",
+                "Armlifting Russland"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15444,
+            "url": "https://etu.ru/de/universitaet/aktuelles/ekologische-eberwachung-der-luft",
+            "requests": [
+                "Ökologische Überwachung Luft",
+                "Seminar Luftüberwachung",
+                "Staatliche Luftüberwachung",
+                "Atmosphärenluft Überwachung",
+                "Russische europäische Erfahrung Luft",
+                "Ökologie Seminar",
+                "Umweltüberwachung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18001,
+            "url": "https://etu.ru/de/universitaet/aktuelles/projekte-sieger-des-programms-umnik",
+            "requests": [
+                "UMNIK Programm",
+                "Projekte Sieger UMNIK",
+                "Wissenschaftlicher Wettbewerb Jugendliche",
+                "Georgi Jefimenko Projekt",
+                "Wsewolod Simon Projekt",
+                "Innovativer Wettbewerb",
+                "UMNIK Gewinner"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 23680,
+            "url": "https://etu.ru/de/universitaet/aktuelles/studentenfusballliga-st.-petersburgs",
+            "requests": [
+                "Studentenfußballliga St. Petersburg",
+                "Fußballmannschaft Wolna",
+                "Fußballliga Studenten",
+                "Saison 2018/2019 Fußball",
+                "Studentenfußball",
+                "Wolna Fußball",
+                "Fußball St. Petersburg"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18384,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-festival-fer-vietnamesische-kultur",
+            "requests": [
+                "vietnamesische kultur festival",
+                "studentenfestival vietnam",
+                "kulturveranstaltung vietnam",
+                "vietnam studenten event",
+                "kulturfest vietnamesisch",
+                "festival kultur vietnam"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13494,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-finale-des-programms-umnik1",
+            "requests": [
+                "programm UMNIK finale",
+                "UMNIK sieger",
+                "junge wissenschaftler UMNIK",
+                "ergebnisse UMNIK",
+                "UMNIK programm abschluss",
+                "finale wissenschaftswettbewerb",
+                "innovativer wettbewerb UMNIK"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15382,
+            "url": "https://etu.ru/de/universitaet/aktuelles/erfolg-der-leti-studenten-in-der-powerlifting-meisterschaft",
+            "requests": [
+                "powerlifting meisterschaft",
+                "erfolg powerlifting",
+                "student powerlifting",
+                "russland powerlifting",
+                "kraftsport meisterschaft",
+                "powerlifting sieger",
+                "usynin powerlifting"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21176,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-iii.-japanisch-russische-mikrowellenseminar-an-der-etu-leti",
+            "requests": [
+                "japan russland mikrowellenseminar",
+                "mikrowellenseminar",
+                "japanisch russisches seminar",
+                "III seminar mikrowellen",
+                "wissenschaftliches seminar mikrowellen",
+                "forschungsseminar mikrowellen"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14157,
+            "url": "https://etu.ru/de/universitaet/aktuelles/neues-programm-mit-der-leibniz-uni-hannover",
+            "requests": [
+                "leibniz uni hannover programm",
+                "austauschprogramm hannover",
+                "erasmus leibniz",
+                "neues programm hannover",
+                "studentenaustausch hannover",
+                "hannover kooperation",
+                "internationales programm hannover"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15550,
+            "url": "https://etu.ru/de/universitaet/aktuelles/frehjahr-an-der-leti-2017",
+            "requests": [
+                "frühjahr 2017",
+                "festival frühjahr",
+                "intellektuelle spiele frühjahr",
+                "spiele festival 2017",
+                "frühjahrsfest 2017",
+                "intellektuelles spielefestival"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 13977,
+            "url": "https://etu.ru/de/universitaet/aktuelles/yee-young-entrepreneurs-in-new-europe",
+            "requests": [
+                "YEE projekt",
+                "young entrepreneurs",
+                "unternehmer europa",
+                "studenten projekt YEE",
+                "neues europa unternehmer",
+                "internationale projekte YEE"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19166,
+            "url": "https://etu.ru/de/universitaet/aktuelles/8.-februar-tag-der-russischen-wissenschaft",
+            "requests": [
+                "tag der russischen wissenschaft",
+                "8 februar wissenschaft",
+                "russische wissenschaft tag",
+                "wissenschaftsfeier",
+                "wissenschaftlicher feiertag",
+                "februar wissenschaft"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19553,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-69.-popows-lesungen-an-der-leti",
+            "requests": [
+                "popows lesungen",
+                "69 lesungen",
+                "wissenschaftliche lesungen popow",
+                "popow gedenkveranstaltung",
+                "lesungen radio erfinder",
+                "popow jubiläum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21177,
+            "url": "https://etu.ru/de/universitaet/aktuelles/zeugnisse-eber-den-abschluss-der-deutschkurse",
+            "requests": [
+                "deutschkurse zeugnisse",
+                "abschluss deutschkurse",
+                "zertifikate deutsch",
+                "technische universität ilmenau",
+                "deutschkurs studenten",
+                "ilmenau deutschkurse",
+                "deutschkurs abschluss",
+                "sprachkurs deutsch"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20639,
+            "url": "https://etu.ru/de/universitaet/aktuelles/ausbildung-in-russland",
+            "requests": [
+                "Ausbildung Russland",
+                "Studium Russland",
+                "internationale Studenten",
+                "Studieren im Ausland",
+                "Ausländer Diplome",
+                "Studienmöglichkeiten Russland",
+                "Abschluss Ausländer"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14408,
+            "url": "https://etu.ru/de/universitaet/aktuelles/das-6-st-petersburger-internationale-gasforum",
+            "requests": [
+                "Gasforum",
+                "St. Petersburger Gasforum",
+                "internationales Gasforum",
+                "Jugendtag Gasforum",
+                "Dialog der Generationen",
+                "Forum Oktober",
+                "Gasveranstaltung"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20720,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-alumni-aus-vietnam-versammeln-sich-in-hanoi",
+            "requests": [
+                "Alumni Vietnam",
+                "Treffen Hanoi",
+                "Absolventen Vietnam",
+                "Hanoi Alumni",
+                "Vietnam Treffen",
+                "Alumni August",
+                "Ehemalige Vietnam"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15562,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-leuft-ski",
+            "requests": [
+                "Ski laufen",
+                "Skiwettkämpfe",
+                "Studenten Ski",
+                "Sportwettkämpfe Februar",
+                "Ski Sport",
+                "Wintersport Studenten",
+                "Sport Februar"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14534,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-der-offenen-ter-an-der-etu-leti",
+            "requests": [
+                "Tag der offenen Tür",
+                "offene Tür",
+                "Information Universität",
+                "Besuch Universität",
+                "Veranstaltung November",
+                "Studieninformationstag",
+                "Infotag"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11931,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-blockadedurchbruchs-in-leningrad",
+            "requests": [
+                "Blockadedurchbruch",
+                "Leningrad Blockade",
+                "Tag des Durchbruchs",
+                "Januar 1943",
+                "Schlacht Newa",
+                "Gedenktag Leningrad",
+                "Blockade Jubiläum"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14061,
+            "url": "https://etu.ru/de/universitaet/aktuelles/die-40-konferenz-der-international-lung-sound-association",
+            "requests": [
+                "Lung Sound Association",
+                "ILSA Konferenz",
+                "internationale Konferenz",
+                "Konferenz Lunge",
+                "September Konferenz",
+                "40. Konferenz",
+                "Medizintechnik Konferenz"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 19915,
+            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-sieges",
+            "requests": [
+                "Tag des Sieges",
+                "Siegestag",
+                "Mai Veranstaltung",
+                "8. Mai",
+                "Gedenktag Mai",
+                "Feier Tag des Sieges",
+                "Veranstaltung Siegestag"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 20231,
+            "url": "https://etu.ru/de/universitaet/aktuelles/forschungsaufenthalt-der-studenten-von-der-al-farabi-universitet",
+            "requests": [
+                "Forschungsaufenthalt",
+                "Al-Farabi Universität",
+                "Studenten Kasachstan",
+                "Magister Forschungsaufenthalt",
+                "Kasachstan Studenten",
+                "Forschung Studenten",
+                "Juni Zeugnisse"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15553,
+            "url": "https://etu.ru/de/universitaet/aktuelles/auslendische-studenten-an-der-leti-indien",
+            "requests": [
+                "ausländische Studenten Indien",
+                "Studenten Indien",
+                "indische Studenten",
+                "Magister Indien",
+                "Bikram Baruti",
+                "Erfolge Studenten",
+                "internationale Studenten Indien"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14060,
+            "url": "https://etu.ru/de/universitaet/aktuelles/internationaler-ieee-tag-an-der-etu-leti",
+            "requests": [
+                "IEEE Tag",
+                "Internationaler IEEE",
+                "IEEE Veranstaltung",
+                "Institute Electrical Electronics Engineers",
+                "IEEE Oktober",
+                "Feierlicher IEEE Tag",
+                "Tag des IEEE"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18185,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-auf-der-senafor-konferenz",
+            "requests": [
+                "SENAFOR Konferenz",
+                "Konferenz Schmiedeprozesse",
+                "Internationale Konferenz SENAFOR",
+                "SENAFOR Porto Alegre",
+                "Schmiedeprozesse Konferenz",
+                "Konferenz Brasilien",
+                "21. Internationale Konferenz",
+                "SENAFOR Oktober"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 18973,
+            "url": "https://etu.ru/de/universitaet/aktuelles/25.-januar-der-studententag-in-russland",
+            "requests": [
+                "Studententag",
+                "25. Januar",
+                "Studententag Russland",
+                "Tag der Studenten",
+                "Glückwünsche Studenten",
+                "Studenten Feiertag",
+                "Januar Studenten",
+                "Russland Studententag"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11936,
+            "url": "https://etu.ru/de/universitaet/aktuelles/mitsubishi-electric-wissenschafts-und-bildungslabor",
+            "requests": [
+                "Mitsubishi Electric Labor",
+                "Wissenschaftslabor Mitsubishi",
+                "Bildungslabor Mitsubishi",
+                "Labor Automatisierung",
+                "Mitsubishi Labor Einweihung",
+                "Dynamische Objekte Automatisierung",
+                "Automatisierungslabor",
+                "Systeme Automatisierung",
+                "Mitsubishi Electric Wissenschaftslabor"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 15389,
+            "url": "https://etu.ru/de/universitaet/aktuelles/wintermerchen-an-der-leti",
+            "requests": [
+                "Wintermärchen",
+                "Konzert Wintermärchen",
+                "Erster Winter in Russland",
+                "Konzert Februar",
+                "Einzigartiges Konzert",
+                "Kulturveranstaltung Winter",
+                "Februar Konzert",
+                "Märchen Konzert",
+                "Wintermärchen Konzert"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 11628,
+            "url": "https://etu.ru/de/universitaet/aktuelles/kreative-tetigkeit-der-auslendischen-studenten-an-der-leti",
+            "requests": [
+                "Kreative Tätigkeit Studenten",
+                "Ausländische Studenten Kreativität",
+                "Studenten Vietnam Interview",
+                "Quynh Anh Dam",
+                "Interview Studentin Vietnam",
+                "Geisteswissenschaften Studentin",
+                "Internationale Studenten Aktivitäten",
+                "Kreativität ausländische Studenten",
+                "Ausländische Studenten Kunst"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 16621,
+            "url": "https://etu.ru/de/universitaet/aktuelles/halbleiterherstellungskonzept-minimal-fab",
+            "requests": [
+                "Minimal Fab",
+                "Halbleiterherstellung Konzept",
+                "Konzept Minimal Fab",
+                "Japanische Unternehmen Besuch",
+                "Tokyo Boeki",
+                "Litho Tech Japan",
+                "Yokogawa Besuch",
+                "Halbleiter Technologie",
+                "Minimal Fab Konzept"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 21429,
+            "url": "https://etu.ru/de/universitaet/aktuelles/fortgeschrittene-blutuntersuchungsmethode",
+            "requests": [
+                "Blutuntersuchungsmethode",
+                "Blutanalyse Methode",
+                "Zuckerkrankheit Blutanalyse",
+                "Fortgeschrittene Blutanalyse",
+                "Neue Blutuntersuchung",
+                "Forschung Blutanalyse",
+                "Diabetes Blutanalyse",
+                "Methode Zuckerkrankheit",
+                "Bluttest Methode"
+            ]
+        },
+        {
+            "type": "document",
+            "id": 14941,
+            "url": "https://etu.ru/de/universitaet/aktuelles/leti-absolventen-aus-vietnam",
+            "requests": [
+                "Alumni Vietnam",
+                "Vietnamesische Absolventen",
+                "Treffen Vietnam",
+                "Zusammenarbeit Vietnam",
+                "Absolventen Treffen",
+                "Internationale Zusammenarbeit Vietnam",
+                "Vietnam Alumni",
+                "Ehemalige Studenten Vietnam",
+                "Vietnamesische Studenten Alumni"
+            ]
+        }
+    ]
+}
