@@ -1,0 +1,38 @@
+{
+    "title": "Consultas dirigidas",
+    "items": [
+        {
+            "type": "document",
+            "id": 13300,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1",
+            "requests": [
+                "estudiantes internacionales",
+                "información extranjeros",
+                "alumnos internacionales",
+                "sección internacionales",
+                "vida estudiantil extranjeros",
+                "programas extranjeros",
+                "apoyo estudiantes internacionales",
+                "universidad para extranjeros"
+            ]
+        },
+        {
+            "type": "reference",
+            "id": 12819,
+            "url": "https://etu.ru/sp/estudios/estudiantes-internacionales1/cursos-de-verano",
+            "requests": [
+                "cursos de verano",
+                "programas verano",
+                "verano estudiantes",
+                "escuela de verano",
+                "estudios de verano",
+                "cursos cortos",
+                "cursos intensivos",
+                "inscripción verano",
+                "oferta verano",
+                "summer courses"
+            ],
+            "final_url": "https://etu.ru/sp/universidad/escuelas-de-verano"
+        }
+    ]
+}
