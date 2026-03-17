@@ -980,7 +980,28 @@
                 "направление 28.03.01",
                 "бакалавриат нанотехнологии",
                 "исследования нанотехнологии",
-                "поступление нано"
+                "поступление нано",
+                "поступление нанотехнологии",
+                "факультет нанотехнологий",
+                "микросистемы обучение"
+            ],
+            "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/napravleniya-podgotovki/nanotehnologii-i-mikrosistemnaya-tehnika"
+        },
+        {
+            "type": "reference",
+            "id": 318,
+            "url": "https://etu.ru/ru/abiturientam/priyom-na-1-y-kurs/celevoy-priem",
+            "requests": [
+                "целевое обучение",
+                "целевой прием",
+                "поступление целевое",
+                "целевой набор",
+                "договор целевое обучение",
+                "карьера целевое",
+                "работодатель целевое",
+                "приемная кампания целевое",
+                "условия целевого обучения",
+                "целевая подготовка"
             ],
             "final_url": "https://abit.etu.ru/ru/postupayushhim/bakalavriat-i-specialitet/celevoe-obuchenie"
         },
