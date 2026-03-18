@@ -6,12 +6,10 @@
             "id": 4022,
             "url": "https://etu.ru/en/university",
             "requests": [
-                "about us",
                 "general information",
                 "university overview",
                 "institution details",
                 "about the institution",
-                "history",
                 "facts and figures"
             ]
         },
@@ -51,7 +49,6 @@
                 "master's degree",
                 "graduate degree",
                 "master degree options",
-                "postgraduate studies",
                 "master's level education",
                 "advanced degrees",
                 "master's information"
@@ -67,7 +64,6 @@
                 "graduate programs",
                 "master's specializations",
                 "programs for master's",
-                "postgraduate programs list",
                 "master's curriculum",
                 "degree programs master"
             ]
@@ -93,7 +89,6 @@
             "url": "https://etu.ru/en/research",
             "requests": [
                 "university research",
-                "science activities",
                 "research projects",
                 "scientific research",
                 "research opportunities",
@@ -139,10 +134,9 @@
                 "conferences",
                 "scientific conferences",
                 "upcoming conferences",
-                "academic events",
                 "university conferences",
                 "research conferences",
-                "events schedule"
+                "conferences schedule"
             ]
         },
         {
@@ -201,7 +195,6 @@
                 "how grades work Russia",
                 "student grades Russia",
                 "grading scale",
-                "academic assessment Russia",
                 "grade conversion"
             ]
         },
@@ -214,11 +207,7 @@
                 "student life",
                 "student activities",
                 "university community",
-                "student events",
-                "what to do students",
-                "extracurricular activities",
-                "student experience",
-                "campus environment"
+                "extracurricular activities"
             ]
         },
         {
@@ -245,7 +234,6 @@
             "requests": [
                 "Cultural capital",
                 "Saint Petersburg location",
-                "University location",
                 "About Saint Petersburg",
                 "City information",
                 "Historic center",
@@ -266,7 +254,6 @@
                 "establishment year",
                 "college history",
                 "engineering college founding",
-                "our past",
                 "university origins"
             ]
         },
@@ -281,8 +268,7 @@
                 "university awards",
                 "distinctions and honors",
                 "awards and recognition",
-                "outstanding scientists titles",
-                "university distinctions"
+                "outstanding scientists titles"
             ]
         },
         {
@@ -342,8 +328,7 @@
                 "university ranking program",
                 "Ministry of Education competition",
                 "global university rankings",
-                "top universities initiative",
-                "Russian universities program"
+                "top universities initiative"
             ]
         },
         {
@@ -370,10 +355,7 @@
                 "mission statement",
                 "goals of university",
                 "university values",
-                "strategic goals",
-                "radio-electronic systems",
-                "information management systems",
-                "university vision"
+                "strategic goals"
             ]
         },
         {
@@ -415,7 +397,6 @@
                 "about university",
                 "current university status",
                 "university overview",
-                "history and present",
                 "electrical engineering institution",
                 "first electrical engineering university",
                 "current information"
@@ -491,7 +472,6 @@
                 "why study here",
                 "advantages",
                 "university reputation",
-                "oldest electrotechnical university",
                 "choose university"
             ]
         },
@@ -503,7 +483,6 @@
                 "winter schools",
                 "summer schools",
                 "international schools",
-                "short term programs",
                 "study abroad schools",
                 "St Petersburg schools",
                 "winter summer programs",
@@ -656,7 +635,6 @@
                 "Aptekarsky Island campus",
                 "Petrogradskaya metro campus",
                 "campus location",
-                "student life facilities",
                 "university grounds",
                 "campus description"
             ]
@@ -750,8 +728,7 @@
                 "awards and recognition",
                 "strategic development program",
                 "nanotechnological network",
-                "our accomplishments",
-                "university progress"
+                "our accomplishments"
             ]
         },
         {
@@ -807,7 +784,6 @@
                 "sports activities",
                 "physical education",
                 "recreational opportunities",
-                "athletics for students",
                 "department of sports",
                 "campus sports",
                 "student recreation"
@@ -850,9 +826,7 @@
                 "key facts",
                 "university figures",
                 "facts and figures",
-                "statistics about university",
                 "important facts",
-                "university data",
                 "overview figures"
             ]
         },
@@ -1192,7 +1166,6 @@
                 "honorary title",
                 "worker award",
                 "employee recognition",
-                "distinguished staff",
                 "university awards",
                 "staff honors"
             ]
@@ -1538,7 +1511,6 @@
                 "big city university",
                 "urban integration",
                 "university urban fabric",
-                "education business authorities",
                 "city integration",
                 "dialogue education business",
                 "university in city",
