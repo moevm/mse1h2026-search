@@ -61,20 +61,6 @@
         },
         {
             "type": "document",
-            "id": 4050,
-            "url": "https://etu.ru/en/search-results",
-            "requests": [
-                "search results",
-                "site search",
-                "search function",
-                "how to search",
-                "search page",
-                "find information",
-                "search tool"
-            ]
-        },
-        {
-            "type": "document",
             "id": 4188,
             "url": "https://etu.ru/en/study/faculties/faculty-of-electrical-engineering-and-automatics",
             "requests": [
@@ -109,7 +95,6 @@
                 "International Students Office",
                 "Dean's office international",
                 "Foreign students office",
-                "International department",
                 "Student support international",
                 "Office for international students",
                 "International student services",
@@ -125,7 +110,6 @@
                 "How to apply",
                 "Enrollment",
                 "Application process",
-                "Prospective students",
                 "Admissions requirements",
                 "Apply to university",
                 "International admission"
@@ -252,7 +236,6 @@
                 "legal documents",
                 "governing documents",
                 "internal regulations",
-                "university policies",
                 "document management"
             ]
         },
@@ -485,8 +468,7 @@
                 "international relations structure",
                 "structure international office",
                 "international division",
-                "overseas structure",
-                "international framework"
+                "overseas structure"
             ]
         },
         {
@@ -861,7 +843,6 @@
                 "Academic Council awards",
                 "Honorary titles",
                 "University awards",
-                "Pochetnyy doktor",
                 "Doctor of science award",
                 "Higher education contribution award"
             ]
@@ -873,7 +854,6 @@
             "requests": [
                 "Honored Professor",
                 "Professor title",
-                "Zasluzhennyy professor",
                 "Honorary titles professors",
                 "University authority enhancement",
                 "Development of science contribution",
