@@ -380,20 +380,7 @@
                 "Dreifacher Weltmeister"
             ]
         },
-        {
-            "type": "document",
-            "id": 14504,
-            "url": "https://etu.ru/de/universitaet/aktuelles/daad-an-der-etu-leti",
-            "requests": [
-                "DAAD Besuch",
-                "Deutscher Akademischer Austauschdienst",
-                "Vertreter DAAD",
-                "DAAD Kooperation",
-                "Austauschdienst Besuch",
-                "DAAD Information",
-                "November DAAD"
-            ]
-        },
+
         {
             "type": "document",
             "id": 19275,
@@ -520,23 +507,7 @@
                 "Kinderprogramm"
             ]
         },
-        {
-            "type": "document",
-            "id": 17211,
-            "url": "https://etu.ru/de/universitaet/aktuelles/sieger-des-powerlifting-weltpokals-unter-studenten",
-            "requests": [
-                "Powerlifting Weltpokal",
-                "Sieger Powerlifting",
-                "Powerlifting Studenten",
-                "Weltpokal Studenten",
-                "IPF Powerlifting",
-                "Sport Powerlifting",
-                "Powerlifting Wettkampf",
-                "Studenten Sport Erfolge",
-                "Potchefstroom Powerlifting",
-                "Weltpokal Ergebnisse"
-            ]
-        },
+
         {
             "type": "document",
             "id": 20414,
