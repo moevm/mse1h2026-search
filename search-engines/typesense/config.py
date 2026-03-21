@@ -29,7 +29,7 @@ MYSQL_WHERE = "published = 1 AND deleted = 0 AND searchable = 1"
 TYPESENSE_CONFIG = {
     "nodes": [{"host": "localhost", "port": "8108", "protocol": "http"}],
     "api_key": "xyz",
-    "connection_timeout_seconds": 10,
+    "connection_timeout_seconds": 120,
 }
 
 TYPESENSE_COLLECTION = "site_content"
@@ -56,14 +56,25 @@ COLLECTION_SCHEMA = {
         {"name": "template", "type": "int32", "index": True, "optional": True},
         {"name": "published", "type": "int32", "index": True},
         {"name": "deleted", "type": "int32", "index": True},
+        {
+            "name": "embedding",
+            "type": "float[]",
+            "embed": {
+                "from": ["pagetitle", "longtitle", "description", "introtext", "content"],
+                "model_config": {
+                    "model_name": "ts/multilingual-e5-small",
+                },
+            },
+        },
     ],
     "default_sorting_field": "",
     "token_separators": ["-", "/"],
 }
 
 SEARCH_PARAMS = {
-    "query_by": "pagetitle,longtitle,description,introtext,content",
-    "query_by_weights": "10,7,5,3,1",
+    "query_by": "pagetitle,longtitle,description,introtext,content,embedding",
+    "query_by_weights": "10,7,5,3,1,0",
+    "vector_query": "embedding:([], alpha: 0.3)",
     "num_typos": 1,
     "min_len_1typo": 4,
     "min_len_2typo": 7,
@@ -74,6 +85,8 @@ SEARCH_PARAMS = {
     "prioritize_exact_match": "true",
     "prioritize_token_position": "true",
     "split_join_tokens": "fallback",
+    "drop_tokens_threshold": 0,
+    "exclude_fields": "embedding",
 }
 
 METRICS_K_VALUES = [1, 3, 5, 10]
