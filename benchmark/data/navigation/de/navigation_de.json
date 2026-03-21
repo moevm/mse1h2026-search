@@ -209,22 +209,6 @@
         },
         {
             "type": "document",
-            "id": 13498,
-            "url": "https://etu.ru/de/studium/fakulteten/fakultet-fer-geisteswissenschaften",
-            "requests": [
-                "Institut soziale Bildung",
-                "Geisteswissenschaftliche Bildung",
-                "Wirtschaftliche Bildung Institut",
-                "Soziales Institut",
-                "Geisteswissenschaften Institut",
-                "Wirtschaft Institut",
-                "Bildung Forschung",
-                "soziale geisteswissenschaftliche",
-                "Institut für Bildung"
-            ]
-        },
-        {
-            "type": "document",
             "id": 16525,
             "url": "https://etu.ru/de/studium/rugefak-spitse",
             "requests": [
