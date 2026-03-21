@@ -1073,22 +1073,6 @@
         },
         {
             "type": "document",
-            "id": 15552,
-            "url": "https://etu.ru/de/universitaet/aktuelles/werth-elektronik-an-der-etu-leti",
-            "requests": [
-                "Würth Elektronik Seminar",
-                "Seminar Würth Elektronik",
-                "RS Components Seminar",
-                "Veranstaltung Würth Elektronik",
-                "Kooperation Würth",
-                "Unternehmen Seminar",
-                "März Seminar",
-                "Elektronik Seminar",
-                "Industrie Seminar"
-            ]
-        },
-        {
-            "type": "document",
             "id": 10714,
             "url": "https://etu.ru/de/universitaet/aktuelles/modellierung-und-simulation-von-potenzialfeldern",
             "requests": [
@@ -1162,20 +1146,6 @@
                 "23 Februar Feier",
                 "Nachrichten Feiertag",
                 "Aktuelles 23 Februar"
-            ]
-        },
-        {
-            "type": "document",
-            "id": 15388,
-            "url": "https://etu.ru/de/universitaet/aktuelles/der-tag-des-verteidigers-des-vaterlandes",
-            "requests": [
-                "Tag des Verteidigers Glückwünsche",
-                "Glückwünsche Herren",
-                "Wohlbefinden Erfolg",
-                "Feiertagsgrüße",
-                "Verteidiger des Vaterlandes Gruß",
-                "Aktuelles Feiertag",
-                "Nachricht Verteidiger"
             ]
         },
         {
