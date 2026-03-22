@@ -31,7 +31,7 @@ async def health_check() -> dict[str, str]:
 
 def main():
     uvicorn.run(
-        "main:app", host=_settings.HOST, port=_settings.PORT, reload=_settings.RELOAD
+        "main:app", host=_settings.HOST, port=_settings.PORT
     )
 
 
