@@ -7,22 +7,17 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            // Layout: which page to show
             inResults: false,
             isEmbed,
 
-            // Content state (relevant when inResults = true)
             resultStatus: 'loading', // 'loading' | 'ok' | 'empty' | 'error'
 
-            // Search input
             query: '',
             lastQuery: '',
 
-            // Dropdown state
             dropdownOpen: false,
             isTyping: false, // true = suggestions mode, false = recent searches mode
 
-            // Data
             results: [],
             suggestions: [],
             total: 0,
@@ -31,14 +26,12 @@ createApp({
                 catch { return []; }
             })(),
 
-            // Sidebar filters (UI only — filtering is server-side in a real impl)
             selectedLang: null,
             sortBy: 'relevance',
             dateFilter: null,
             fromDate: null,
             toDate: null,
 
-            // Config
             languages: ['RU', 'EN', 'DE', 'ES', 'FR', 'PT', 'ZH', 'VI'],
             dateOptions: [
                 { label: 'За последний месяц', value: 'month' },
@@ -51,7 +44,6 @@ createApp({
     },
 
     computed: {
-        // Show X and Поиск buttons: always in results, or when dropdown open on search page
         showButtons() {
             return this.inResults || this.dropdownOpen;
         },
