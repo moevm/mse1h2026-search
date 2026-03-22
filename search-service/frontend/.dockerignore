@@ -1,0 +1,15 @@
+# Git
+.git
+.gitignore
+
+# Environments
+.env
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# MacOS
+.DS_Store
