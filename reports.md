@@ -131,8 +131,11 @@ docker compose up --build -d
 
 ### Вики страницы
 [О проекте](https://github.com/moevm/mse1h2026-search/wiki/О-проекте)
+
 [Сценарии использования, схема системы и требования](https://github.com/moevm/mse1h2026-search/wiki/Сценарии-использования,-схема-системы-и-требования)
+
 [Макет UI](https://github.com/moevm/mse1h2026-search/wiki/Макет-UI)
+
 [Методология сбора данных](https://github.com/moevm/mse1h2026-search/wiki/Методология-сбора-данных)
 
 ### Командные созвоны
@@ -185,10 +188,11 @@ docker compose up --build -d
 
 ### Командные созвоны
 [Командный созвон №2](https://github.com/moevm/mse1h2026-search/blob/reports/team_sync/Созвон%20№2%20(13.03).md)
+
 [Командный созвон №3](https://github.com/moevm/mse1h2026-search/blob/reports/team_sync/Созвон%20№3%20(24.03).md)
 
 ### Скринкасты
-https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%202/iteration2.mp4
+[Скринкаст](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%202/iteration2.mp4)
 
 ### Запланированные задачи
 1. Описание методологии проверки средств реализации поиска;
