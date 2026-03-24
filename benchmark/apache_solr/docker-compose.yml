@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  solr-search:
+    image: solr:9
+    container_name: solr_etu
+    ports:
+      - "8983:8983"
+    command:
+      - solr-precreate
+      - etu_collection
+
+  db-etu:
+    image: mysql:8.0
+    container_name: mysql_etu
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: etu_db
+    ports:
+      - "3307:3307"
+    command: --max_allowed_packet=256M --net_read_timeout=1000 --net_write_timeout=1000
