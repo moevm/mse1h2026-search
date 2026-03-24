@@ -4,10 +4,11 @@
 Инструкции по установке и запуску проекта.
 
 ```bash
-cd search-service
+git clone https://github.com/moevm/mse1h2026-search.git
+cd mse1h2026-search/search-service/
 cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
-docker compose up --build
+docker compose up --build -d
 ```
 
 После запуска сервисы будут доступны по адресам(при конфиге из `.env.example`):
@@ -25,4 +26,4 @@ docker compose up --build
 - Проверьте `http://localhost:8000/api/health`, должен быть ответ `{"status":"ok"}`
 
 ## Дополнительная информация
-Любая информация, которую комакнда посчитает нужной разместить
+Любая информация, которую команда посчитает нужной разместить
