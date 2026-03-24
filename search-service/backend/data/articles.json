@@ -1,0 +1,153 @@
+[
+  {
+    "id": "1",
+    "title": "Квантовые вычисления в задачах оптимизации",
+    "authors": [
+      "Иванов А.А.",
+      "Петров В.В."
+    ],
+    "abstract": "В данной работе рассматривается применение квантовых алгоритмов для решения NP-трудных задач оптимизации...",
+    "keywords": [
+      "квантовые вычисления",
+      "оптимизация",
+      "алгоритмы"
+    ],
+    "date": "15-01-2023",
+    "lang": "RU",
+    "url": "https://etu.ru/publications/1"
+  },
+  {
+    "id": "2",
+    "title": "Машинное обучение в задачах распознавания образов",
+    "authors": [
+      "Смирнов С.С."
+    ],
+    "abstract": "Анализ применения сверточных нейронных сетей в задачах классификации изображений...",
+    "keywords": [
+      "машинное обучение",
+      "нейронные сети",
+      "cv",
+      "компьютерное зрение"
+    ],
+    "date": "20-05-2022",
+    "lang": "RU",
+    "url": "https://etu.ru/publications/2"
+  },
+  {
+    "id": "3",
+    "title": "Основы квантовой физики",
+    "authors": [
+      "Кузнецов К.К."
+    ],
+    "abstract": "Базовые принципы квантовой механики и физики...",
+    "keywords": [
+      "квантовая физика",
+      "механика",
+      "теория"
+    ],
+    "date": "10-09-2021",
+    "lang": "RU",
+    "url": "https://etu.ru/publications/3"
+  },
+  {
+    "id": "4",
+    "title": "Исследование производительности СУБД",
+    "authors": [
+      "Сидоров И.И."
+    ],
+    "abstract": "Сравнительный анализ производительности реляционных и NoSQL баз данных...",
+    "keywords": [
+      "субд",
+      "nosql",
+      "базы данных",
+      "postgresql"
+    ],
+    "date": "25-11-2023",
+    "lang": "RU",
+    "url": "https://etu.ru/publications/4"
+  },
+  {
+    "id": "5",
+    "title": "Архитектура высоконагруженных систем",
+    "authors": [
+      "Алексеев А.А.",
+      "Дмитриев Д.Д."
+    ],
+    "abstract": "Эффективные паттерны проектирования масштабируемых веб-приложений...",
+    "keywords": [
+      "архитектура",
+      "проектирование",
+      "highload",
+      "веб-приложения"
+    ],
+    "date": "28-02-2024",
+    "lang": "RU",
+    "url": "https://etu.ru/publications/5"
+  },
+  {
+    "id": "6",
+    "title": "Introduction to Quantum Computing",
+    "authors": [
+      "John Doe"
+    ],
+    "abstract": "A beginner-friendly guide to understanding quantum bits, gates, and algorithms...",
+    "keywords": [
+      "quantum computing",
+      "physics",
+      "computing"
+    ],
+    "date": "12-03-2024",
+    "lang": "EN",
+    "url": "https://etu.ru/publications/6"
+  },
+  {
+    "id": "7",
+    "title": "Machine Learning for Image Recognition: A Comprehensive Study",
+    "authors": [
+      "Smith J.J.",
+      "Doe J.A."
+    ],
+    "abstract": "This study explores the application of deep learning models for accurate image classification...",
+    "keywords": [
+      "machine learning",
+      "deep learning",
+      "computer vision"
+    ],
+    "date": "05-02-2024",
+    "lang": "EN",
+    "url": "https://etu.ru/publications/7"
+  },
+  {
+    "id": "8",
+    "title": "Die Zukunft der Künstlichen Intelligenz in der Medizin",
+    "authors": [
+      "Müller K."
+    ],
+    "abstract": "Ein Überblick über die Fortschritte der KI in der medizinischen Diagnostik und Behandlung...",
+    "keywords": [
+      "ki",
+      "medizin",
+      "diagnostik",
+      "gesundheitswesen"
+    ],
+    "date": "10-01-2024",
+    "lang": "DE",
+    "url": "https://etu.ru/publications/8"
+  },
+  {
+    "id": "9",
+    "title": "L'Intelligence Artificielle et le Développement Durable",
+    "authors": [
+      "Dupont L."
+    ],
+    "abstract": "Comment l'IA peut contribuer à atteindre les objectifs de développement durable des Nations Unies...",
+    "keywords": [
+      "intelligence artificielle",
+      "écologie",
+      "durabilité"
+    ],
+    "date": "22-11-2023",
+    "lang": "FR",
+    "url": "https://etu.ru/publications/9"
+  }
+]
