@@ -127,7 +127,7 @@ docker compose up --build -d
 ## Итерация №1
 
 ### Презентация
-[Презентация pdf](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%201.pdf)
+[Презентация pdf](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%201/Iteration%201.pdf)
 
 ### Запланированные задачи
 1. Организация проектной деятельности:
@@ -173,7 +173,7 @@ docker compose up --build -d
 ### Презентация
 
 ### Скринкасты
-[Скринкаст](https://github.com/moevm/mse1h2026-search/blob/reports/docs/iteration2.mp4)
+[Скринкаст](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%202/iteration2.mp4)
 ### Запланированные задачи
 1. Описание методологии проверки средств реализации поиска;
 2. Исследование средств реализации поиска:
