@@ -181,6 +181,7 @@ docker compose up --build -d
 ## Итерация №2
 
 ### Презентация
+[Презентация pdf](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%202/Iteration%202.pdf)
 
 ### Вики страницы
 [Методология проверки решений](https://github.com/moevm/mse1h2026-search/wiki/Методология-проверки-решений)
