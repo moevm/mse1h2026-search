@@ -172,8 +172,7 @@ docker compose up --build -d
     - https://solr.apache.org/
     - https://www.meilisearch.com/
     - https://typesense.org/
-    - https://manticoresearch.com/about/
-    - https://zincsearch-docs.zinc.dev/
+    - https://manticoresearch.com/
 3. Проведение оценки по бенчмарку DuckDuckGo, Yandex, Google;
 4. Сравнение решений и выбор лучшего:
     - Добавление на вики сводной таблицы со сравнением решений и существующих поисковых систем.
@@ -185,6 +184,8 @@ docker compose up --build -d
 
 ### Вики страницы
 [Методология проверки решений](https://github.com/moevm/mse1h2026-search/wiki/Методология-проверки-решений)
+
+[Результаты бенчмарка поисковых движков](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков)
 
 ### Командные созвоны
 [Командный созвон №2](https://github.com/moevm/mse1h2026-search/blob/reports/team_sync/Созвон%20№2%20(13.03).md)
@@ -200,15 +201,36 @@ docker compose up --build -d
     - https://solr.apache.org/
     - https://www.meilisearch.com/
     - https://typesense.org/
-    - https://manticoresearch.com/about/
-    - https://zincsearch-docs.zinc.dev/
+    - https://manticoresearch.com
 3. Проведение оценки по бенчмарку DuckDuckGo, Yandex, Google;
 4. Сравнение решений и выбор лучшего:
     - Добавление на вики сводной таблицы со сравнением решений и существующих поисковых систем.
 5. Разработка прототипа поискового сервиса.
 
 ### Выполненные задачи
+1. Проведена проверка корректности  поисковых запросов для русского, немецкого и английского языков;
+2. [Описана методология проверки средств реализации поиска;](https://github.com/moevm/mse1h2026-search/wiki/Методология-проверки-решений)
+3. Исследованы средства реализации поиска:
+    - https://solr.apache.org/ ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/apache_solr/README.md))
+    - https://www.meilisearch.com/ ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/meilisearch/README.md))
+    - https://typesense.org/ ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/typesense/README.md))
+    - https://manticoresearch.com/ ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/manticore/README.md))
+4. Проведение оценки по бенчмарку DuckDuckGo, Yandex, Google перенесено на итерацию 3;
+5. Проведено сравнение решений:
+    - [Добавлена сводная таблица со сравнением решений](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков)
+    - Принято решение исключить Apache Solr из дальнейшего рассмотрения.
+6. Разработан прототип поискового сервиса:
+    - [README.md](https://github.com/moevm/mse1h2026-search/blob/main/search-service/README.md) 
+    - [Скринкаст](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%202/iteration2.mp4)
 
 ### Задачи на следующую итерацию
-
-
+1. Проведение оценки по бенчмарку DuckDuckGo, Yandex, Google;
+2. Реализация UC-1: Поиск информации пользователем;
+3. Реализация UC-3: Фильтрация результатов;
+4. Реализация UC-4: Переиндексация данных (администратор);
+5. Файнтюн движков для улучшения качества поиска и релевантности результатов:
+    - Typesense
+    - Meilisearch 
+    - Manticore
+6. Проанализировать оптимизированные движки и выбрать лучший вариант для интеграции в систему;
+7. Протестировать различные модели эмбеддингов, чтобы определить оптимальное сочетание с движками для поиска.
