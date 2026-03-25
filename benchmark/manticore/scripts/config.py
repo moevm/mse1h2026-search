@@ -14,9 +14,9 @@ logger = logging.getLogger('etu_search')
 MYSQL_CONFIG = {
     'host': '127.0.0.1',
     'port': 3306,
-    'user': 'root',
-    'password': 'root',
-    'db': 'etu_modx',
+    'user': 'etu',
+    'password': 'dFwp9779',
+    'db': 'etu',
     'charset': 'utf8mb4',
     'cursorclass': pymysql.cursors.DictCursor
 }

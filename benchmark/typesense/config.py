@@ -1,9 +1,9 @@
 MYSQL_CONFIG = {
     "host": "localhost",
     "port": 3306,
-    "user": "root",
-    "password": "",
-    "database": "mysql",
+    "user": "etu",
+    "password": "dFwp9779",
+    "database": "etu",
     "charset": "utf8mb4",
 }
 
