@@ -16,6 +16,9 @@ class ManticoreEngine(BaseSearchEngine):
         scripts_dir = root / "manticore" / "scripts"
         sys.path.insert(0, str(scripts_dir))
         try:
+            # Both solr and manticore have their own local `config.py`.
+            # `import config` would otherwise resolve to the first one cached in sys.modules.
+            sys.modules.pop("config", None)
             import search_client  # type: ignore
         finally:
             # Keep modules in sys.modules, but avoid polluting sys.path for other adapters.

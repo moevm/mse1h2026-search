@@ -17,6 +17,8 @@ class ApacheSolrEngine(BaseSearchEngine):
         solr_dir = root / "apache_solr"
         sys.path.insert(0, str(solr_dir))
         try:
+            # Ensure we don't reuse a cached `config` from another adapter.
+            sys.modules.pop("config", None)
             import config as solr_config  # type: ignore
         finally:
             sys.path.pop(0)
