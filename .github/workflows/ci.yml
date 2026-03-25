@@ -1,0 +1,31 @@
+name: CI
+
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Copy env files
+        run: |
+          cp search-service/backend/.env.example search-service/backend/.env
+          cp search-service/frontend/.env.example search-service/frontend/.env
+
+      - name: Build docker-compose
+        run: |
+          cd search-service
+          docker compose build
+
+      - name: Run docker-compose
+        run: |
+          cd search-service
+          docker compose up -d
+          sleep 30
+
+      - name: Run tests
+        run: |
+          curl http://localhost:8000/api/health
+          curl http://localhost:80
