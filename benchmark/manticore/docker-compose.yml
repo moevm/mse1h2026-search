@@ -1,0 +1,12 @@
+services:
+  manticore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: manticore
+    ports:
+      - "9308:9308"
+    volumes:
+      - ./manticore_data:/var/lib/manticore
+      - ./wordforms.txt:/etc/wordforms.txt:ro
+    restart: unless-stopped

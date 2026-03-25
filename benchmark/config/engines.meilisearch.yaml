@@ -1,0 +1,12 @@
+engines:
+  - name: meilisearch-default
+    kind: meilisearch
+    enabled: true
+    timeout_seconds: 8
+    retries: 1
+    index_command: null
+    params:
+      host: http://localhost:7700
+      api_key: masterKey
+      index_name: site_content
+      post_index_wait_seconds: 0
