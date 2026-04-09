@@ -1,23 +1,29 @@
 import json
 import sys
-import time
 from dataclasses import dataclass, field
 
 import typesense
 from tqdm import tqdm
 
-from config import TYPESENSE_CONFIG, TYPESENSE_COLLECTION, SEARCH_PARAMS, METRICS_K_VALUES
+from config import (
+    METRICS_K_VALUES,
+    SEARCH_PARAMS,
+    TYPESENSE_COLLECTION,
+    TYPESENSE_CONFIG,
+)
+from lemmatizer import lemmatize_query
 
 
 @dataclass
 class QueryResult:
-    query:        str
-    expected_id:  int
+    query: str
+    query_lemm: str
+    expected_id: int
     expected_url: str
-    found_ids:    list[int]
-    hit_at_k:     dict[int, bool] = field(default_factory=dict)
-    rr:           float = 0.0
-    no_result:    bool = False
+    found_ids: list[int]
+    hit_at_k: dict[int, bool] = field(default_factory=dict)
+    rr: float = 0.0
+    no_result: bool = False
 
 
 def compute_rr(found_ids: list[int], expected_id: int) -> float:
@@ -27,13 +33,15 @@ def compute_rr(found_ids: list[int], expected_id: int) -> float:
     return 0.0
 
 
-def search(client: typesense.Client, query: str, top_k: int) -> list[int]:
-    params = {**SEARCH_PARAMS, "q": query, "per_page": top_k}
+def search(client: typesense.Client, query: str, top_k: int) -> tuple[list[int], str]:
+    lemm = lemmatize_query(query)
+    params = {**SEARCH_PARAMS, "q": lemm, "per_page": top_k}
     try:
         result = client.collections[TYPESENSE_COLLECTION].documents.search(params)
-        return [int(h["document"]["id"]) for h in result.get("hits", [])]
+        ids = [int(h["document"]["id"]) for h in result.get("hits", [])]
+        return ids, lemm
     except Exception:
-        return []
+        return [], lemm
 
 
 def evaluate_items(
@@ -42,16 +50,17 @@ def evaluate_items(
     top_k: int,
 ) -> list[QueryResult]:
     results = []
-    for item in tqdm(items, desc="Оценка", unit="док."):
-        expected_id  = item["id"]
+    for item in tqdm(items, desc="Оценка", unit="doc"):
+        expected_id = item["id"]
         expected_url = item.get("url", "")
         for query_text in item.get("requests", []):
-            found     = search(client, query_text, top_k)
+            found, query_lemm = search(client, query_text, top_k)
             no_result = len(found) == 0
-            rr        = compute_rr(found, expected_id)
+            rr = compute_rr(found, expected_id)
 
             qr = QueryResult(
                 query=query_text,
+                query_lemm=query_lemm,
                 expected_id=expected_id,
                 expected_url=expected_url,
                 found_ids=found,
@@ -74,13 +83,13 @@ def aggregate(results: list[QueryResult]) -> dict:
     m = {"total_queries": n}
     for k in METRICS_K_VALUES:
         m[f"hit_at_{k}"] = round(sum(r.hit_at_k.get(k, False) for r in results) / n, 4)
-    m["mrr"]            = round(sum(r.rr for r in results) / n, 4)
+    m["mrr"] = round(sum(r.rr for r in results) / n, 4)
     m["no_result_rate"] = round(sum(1 for r in results if r.no_result) / n, 4)
     return m
 
 
 def print_metrics(overall: dict) -> None:
-    ks  = METRICS_K_VALUES
+    ks = METRICS_K_VALUES
     k_s = "  ".join(f"Hit@{k}" for k in ks)
     print("\n" + "=" * 50)
     print("ИТОГОВЫЕ МЕТРИКИ")
@@ -88,7 +97,9 @@ def print_metrics(overall: dict) -> None:
     hits = "  ".join(f"{overall.get(f'hit_at_{k}', 0):>6.1%}" for k in ks)
     print(f"  {k_s}   MRR")
     print(f"  {hits}   {overall.get('mrr', 0):.4f}")
-    print(f"  Запросов: {overall.get('total_queries', 0)}  |  Без результатов: {overall.get('no_result_rate', 0):.1%}")
+    print(
+        f"  Запросов: {overall.get('total_queries', 0)}  |  Без результатов: {overall.get('no_result_rate', 0):.1%}"
+    )
     print("=" * 50)
 
 
@@ -99,6 +110,7 @@ def main():
     elif not sys.stdin.isatty():
         data = json.load(sys.stdin)
     else:
+        print("Использование: python evaluate_search.py queries.json")
         return
 
     top_k = max(METRICS_K_VALUES)

@@ -3,3 +3,5 @@ typesense>=2.0.0
 beautifulsoup4==4.14.3
 lxml==6.0.2
 tqdm==4.67.3
+pypl==3.8.14
+langdetect==1.0.9

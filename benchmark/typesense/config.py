@@ -51,6 +51,18 @@ COLLECTION_SCHEMA = {
             "optional": True,
             "store": False,
         },
+        {"name": "pagetitle_lemm", "type": "string", "index": True, "optional": True},
+        {"name": "longtitle_lemm", "type": "string", "index": True, "optional": True},
+        {"name": "description_lemm", "type": "string", "index": True, "optional": True},
+        {"name": "introtext_lemm", "type": "string", "index": True, "optional": True},
+        {
+            "name": "content_lemm",
+            "type": "string",
+            "index": True,
+            "optional": True,
+            "store": False,
+        },
+        {"name": "lang", "type": "string", "index": True, "optional": True},
         {"name": "alias", "type": "string", "index": False, "optional": True},
         {"name": "parent", "type": "int32", "index": True, "optional": True},
         {"name": "template", "type": "int32", "index": True, "optional": True},
@@ -78,7 +90,7 @@ COLLECTION_SCHEMA = {
 }
 
 SEARCH_PARAMS = {
-    "query_by": "pagetitle,longtitle,description,introtext,content,embedding",
+    "query_by": "pagetitle_lemm,longtitle_lemm,description_lemm,introtext_lemm,content_lemm,embedding",
     "query_by_weights": "10,7,5,4,3,0",
     "vector_query": "embedding:([], alpha: 0.55)",
     "num_typos": 1,
