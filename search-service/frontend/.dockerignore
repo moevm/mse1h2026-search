@@ -2,8 +2,13 @@
 .git
 .gitignore
 
+# Build output
+dist
+node_modules
+
 # Environments
 .env
+.env.local
 
 # Editor / IDE
 .vscode/

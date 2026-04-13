@@ -5,8 +5,6 @@ services:
       dockerfile: Dockerfile
     container_name: search_backend
     restart: unless-stopped
-    ports:
-      - "8000:8000"
     env_file:
       - ./backend/.env
     healthcheck:
@@ -24,10 +22,10 @@ services:
       dockerfile: Dockerfile
     container_name: search_frontend
     restart: unless-stopped
-    ports:
-      - "80:80"
     env_file:
       - ./frontend/.env
+    ports:
+      - "6767:80"
     depends_on:
       backend:
         condition: service_healthy
