@@ -1,9 +1,9 @@
 MYSQL_CONFIG = {
     "host": "localhost",
     "port": 3306,
-    "user": "etu",
-    "password": "dFwp9779",
-    "database": "etu",
+    "user": "admin",
+    "password": "your_password",
+    "database": "mysql",
     "charset": "utf8mb4",
 }
 
@@ -80,7 +80,7 @@ COLLECTION_SCHEMA = {
 SEARCH_PARAMS = {
     "query_by": "pagetitle,longtitle,description,introtext,content,embedding",
     "query_by_weights": "10,7,5,4,3,0",
-    "vector_query": "embedding:([], alpha: 0.55)",
+    "vector_query": "embedding:([], alpha: 0.80)",
     "num_typos": 1,
     "min_len_1typo": 4,
     "min_len_2typo": 7,
