@@ -8,13 +8,23 @@ from services.providers.base import BaseSearchProvider
 
 DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
-
 class MockProvider(BaseSearchProvider):
     def __init__(self) -> None:
         self.articles: list[dict] = []
         if DATA_FILE.exists():
             with open(DATA_FILE, encoding="utf-8") as f:
-                self.articles = json.load(f)
+                raw_articles = json.load(f)
+
+                for article in raw_articles:
+                    try:
+                        is_published = int(article.get("published", 1)) == 1
+                        is_deleted = int(article.get("deleted", 0)) == 1
+                        is_searchable = int(article.get("searchable", 1)) == 1
+
+                        if is_published and not is_deleted and is_searchable:
+                            self.articles.append(article)
+                    except (ValueError, TypeError):
+                        continue
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
@@ -36,15 +46,15 @@ class MockProvider(BaseSearchProvider):
         return score
 
     async def search(
-        self,
-        query: str,
-        page: int = 1,
-        page_size: int = 10,
-        lang: str | None = None,
-        sort_by: str = "relevance",
-        date_filter: str | None = None,
-        from_date: str | None = None,
-        to_date: str | None = None,
+            self,
+            query: str,
+            page: int = 1,
+            page_size: int = 10,
+            lang: str | None = None,
+            sort_by: str = "relevance",
+            date_filter: str | None = None,
+            from_date: str | None = None,
+            to_date: str | None = None,
     ) -> SearchResponse:
         filtered_articles = []
         for article in self.articles:
