@@ -1,13 +1,12 @@
-import requests
-import re
-
+from queries import MANTICORE_SEARCH_QUERY, MANTICORE_CHECK_CONNECTION
 from config import (
     MANTICORE_URL, MANTICORE_TABLE, SEARCH_PARAMS, logger,
-    EN_KBD, RU_KBD, TRANS_EN_TO_RU, TRANS_RU_TO_EN, TRANSLIT_RU_TO_EN,
-    STOP_WORDS, MANTICORE_ESCAPE_TABLE, SYNONYMS
+    MANTICORE_ESCAPE_TABLE, EMBEDDER_MODEL_NAME, KNN_EF_SEARCH,
+    RRF_K_CONSTANT, KNN_MAX_DISTANCE, MODEL_CACHE_DIR
 )
-from queries import MANTICORE_SEARCH_QUERY, MANTICORE_CHECK_CONNECTION
-
+from fastembed import TextEmbedding
+import requests
+import re
 
 REGEX = re.compile(r'[^\w\s\&\-\/№@\'`’\+#]')
 _weights = SEARCH_PARAMS.get('field_weights', {})
@@ -16,28 +15,15 @@ RANKER = SEARCH_PARAMS.get('ranker', 'bm25')
 
 http_session = requests.Session()
 
-
-def generate_fallbacks(query: str) -> list[str]:
-    fallbacks = []
-    q_lower = query.lower()
-
-    allowed_chars = set(EN_KBD + RU_KBD + "ё`")
-    if any(c not in allowed_chars for c in q_lower):
-        return fallbacks
-
-    ru_count = sum(1 for c in q_lower if c in RU_KBD)
-    en_count = sum(1 for c in q_lower if c in EN_KBD)
-    if ru_count > en_count:
-        fallbacks.append(q_lower.translate(TRANS_RU_TO_EN))
-        translit = "".join(TRANSLIT_RU_TO_EN.get(c, c) for c in q_lower)
-        if translit != q_lower:
-            fallbacks.append(translit)
-    else:
-        fallbacks.append(q_lower.translate(TRANS_EN_TO_RU))
-    return fallbacks
+logger.info(f"Загрузка модели {EMBEDDER_MODEL_NAME} для поисковых запросов...")
+embedder = TextEmbedding(
+    model_name=EMBEDDER_MODEL_NAME,
+    cache_dir=MODEL_CACHE_DIR
+)
 
 
-def _execute_manticore_sql(match_query: str, limit: int, original_query: str) -> list[int]:
+def _execute_lexical_search(match_query: str, limit: int, original_query: str) -> list[int]:
+    """Лексический поиск"""
     sql = MANTICORE_SEARCH_QUERY.format(
         table_name=MANTICORE_TABLE,
         query=match_query,
@@ -47,29 +33,58 @@ def _execute_manticore_sql(match_query: str, limit: int, original_query: str) ->
     )
 
     try:
+        # timeout=3
         response = http_session.post(
-            f"{MANTICORE_URL}/sql", data={'mode': 'raw', 'query': sql})
-
-        if response.status_code >= 400:
-            logger.error(
-                f"Сырой ответ Manticore (HTTP {response.status_code}): {response.text}")
-
+            f"{MANTICORE_URL}/sql", data={'mode': 'raw', 'query': sql}, timeout=3)
         response.raise_for_status()
         data = response.json()
 
         if isinstance(data, list) and len(data) > 0:
             if data[0].get('error'):
-                err_msg = data[0]['error']
                 logger.warning(
-                    f"Ошибка синтаксиса: {err_msg} (Запрос: {original_query})"
-                )
+                    f"Ошибка синтаксиса: {data[0]['error']} (Запрос: {original_query})")
                 return []
             if 'data' in data[0]:
                 return [int(row['id']) for row in data[0]['data']]
-        return []
     except Exception as e:
-        logger.error(f"Ошибка при выполнении поискового запроса: {e}")
-        return []
+        logger.error(f"Ошибка при выполнении лексического запроса: {e}")
+    return []
+
+
+def _execute_vector_search(query_vector: list[float], limit: int) -> list[tuple[int, float]]:
+    """Векторный поиск"""
+    payload = {
+        "table": MANTICORE_TABLE,
+        "knn": {
+            "field": "content_vector",
+            "query_vector": query_vector,
+            "k": limit,
+            "ef": KNN_EF_SEARCH
+        }
+    }
+    try:
+        # timeout=3
+        response = http_session.post(
+            f"{MANTICORE_URL}/search", json=payload, timeout=3)
+        response.raise_for_status()
+        data = response.json()
+
+        results = []
+        if 'hits' in data and 'hits' in data['hits']:
+            for hit in data['hits']['hits']:
+                doc_id = int(hit['_id'])
+                knn_dist = float(hit['_knn_dist'])
+                results.append((doc_id, knn_dist))
+        return results
+    except Exception as e:
+        logger.error(f"Ошибка векторного запроса: {e}")
+    return []
+
+
+def get_vector_for_text(text: str) -> list[float]:
+    e5_query = f"query: {text}"
+    vector_generator = embedder.embed([e5_query])
+    return list(vector_generator)[0].tolist()
 
 
 def search(query: str, top_k: int) -> list[int]:
@@ -77,85 +92,53 @@ def search(query: str, top_k: int) -> list[int]:
         return []
 
     safe_query = REGEX.sub(' ', query)
-    words = [w for w in safe_query.split() if w.lower() not in STOP_WORDS]
+    words = safe_query.split()
     if not words:
         return []
 
     clean_words = [w.translate(MANTICORE_ESCAPE_TABLE) for w in words]
     plain_query = " ".join(clean_words)
 
-    strict_expanded = []
-    prefix_expanded = []
+    search_limit = top_k * 2
 
-    for w in clean_words:
-        w_lower = w.lower()
-        w_prefix = f"{w}*" if len(w) >= 3 else w
+    lexical_results = _execute_lexical_search(
+        plain_query, search_limit, query)
 
-        if w_lower in SYNONYMS:
-            syn_str = " | ".join(SYNONYMS[w_lower])
-            strict_expanded.append(f"({w} | {syn_str})")
-            prefix_expanded.append(f"({w_prefix} | {syn_str})")
+    query_vector = get_vector_for_text(plain_query)
+    vector_raw_results = _execute_vector_search(query_vector, search_limit)
+
+    vector_results = []
+    for doc_id, dist in vector_raw_results:
+        if dist <= KNN_MAX_DISTANCE:
+            vector_results.append(doc_id)
         else:
-            strict_expanded.append(w)
-            prefix_expanded.append(w_prefix)
+            break
 
-    strict_query = " ".join(strict_expanded)
-    prefix_query = " ".join(prefix_expanded)
+    rrf_scores = {}
 
-    seen = set()
-    results = []
+    for rank, doc_id in enumerate(lexical_results):
+        rrf_scores[doc_id] = rrf_scores.get(
+            doc_id, 0.0) + (1.0 / (RRF_K_CONSTANT + rank + 1))
 
-    strict_results = _execute_manticore_sql(strict_query, top_k, query)
-    if strict_results:
-        results.extend(strict_results)
-        seen.update(strict_results)
+    for rank, doc_id in enumerate(vector_results):
+        rrf_scores[doc_id] = rrf_scores.get(
+            doc_id, 0.0) + (1.0 / (RRF_K_CONSTANT + rank + 1))
 
-    if len(results) < top_k and len(clean_words) > 0:
-        if prefix_query != strict_query:
-            prefix_results = _execute_manticore_sql(
-                prefix_query, top_k * 2, query)
-            for doc_id in prefix_results:
-                if doc_id not in seen:
-                    seen.add(doc_id)
-                    results.append(doc_id)
-                    if len(results) >= top_k:
-                        break
+    # сортируем документы по убыванию баллов
+    sorted_docs = sorted(
+        rrf_scores.keys(), key=lambda doc_id: rrf_scores[doc_id], reverse=True)
 
-    if len(results) < top_k and len(clean_words) > 1:
-        quorum_count = len(clean_words) // 2 + (len(clean_words) % 2)
-        quorum_query = f'"{plain_query}"/{quorum_count}'
-
-        if quorum_count < len(clean_words):
-            quorum_results = _execute_manticore_sql(
-                quorum_query, top_k * 2, query)
-            for doc_id in quorum_results:
-                if doc_id not in seen:
-                    seen.add(doc_id)
-                    results.append(doc_id)
-                    if len(results) >= top_k:
-                        break
-
-    if not results:
-        for fb_query in generate_fallbacks(plain_query):
-            fb_results = _execute_manticore_sql(fb_query, top_k, fb_query)
-            for doc_id in fb_results:
-                if doc_id not in seen:
-                    seen.add(doc_id)
-                    results.append(doc_id)
-                    if len(results) >= top_k:
-                        break
-            if results:
-                break
-
-    return results[:top_k]
+    return sorted_docs[:top_k]
 
 
 def check_connection() -> bool:
     try:
+        # timeout=1
         http_session.post(
             f"{MANTICORE_URL}/sql",
-            data={'mode': 'raw', 'query': MANTICORE_CHECK_CONNECTION}
+            data={'mode': 'raw', 'query': MANTICORE_CHECK_CONNECTION},
+            timeout=1
         )
         return True
-    except requests.exceptions.ConnectionError:
+    except requests.exceptions.RequestException:
         return False

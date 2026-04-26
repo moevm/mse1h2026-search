@@ -1,4 +1,5 @@
 import json
+import time
 import os
 import sys
 from dataclasses import dataclass, field
@@ -15,6 +16,7 @@ class QueryResult:
     expected_id:  int
     expected_url: str
     found_ids:    list[int]
+    latency_ms:   float = 0.0
     hit_at_k:     dict[int, bool] = field(default_factory=dict)
     rr:           float = 0.0
     no_result:    bool = False
@@ -36,7 +38,9 @@ def evaluate_items(items: list[dict], top_k: int) -> list[QueryResult]:
         expected_url = item.get("url", "")
 
         for query_text in item.get("requests", []):
+            start_time = time.perf_counter()
             found_ids = search(query_text, top_k)
+            latency = (time.perf_counter() - start_time) * 1000
             no_result = len(found_ids) == 0
             rr = compute_rr(found_ids, expected_id)
 
@@ -45,6 +49,7 @@ def evaluate_items(items: list[dict], top_k: int) -> list[QueryResult]:
                 expected_id=expected_id,
                 expected_url=expected_url,
                 found_ids=found_ids,
+                latency_ms=latency,
                 no_result=no_result,
                 rr=rr,
             )
@@ -69,6 +74,7 @@ def aggregate(results: list[QueryResult]) -> dict:
         )
     m["mrr"] = round(sum(r.rr for r in results) / n, 4)
     m["no_result_rate"] = round(sum(1 for r in results if r.no_result) / n, 4)
+    m["avg_latency"] = round(sum(r.latency_ms for r in results) / n, 2)
     return m
 
 
@@ -131,6 +137,7 @@ def print_metrics(overall: dict) -> None:
         f"  {k_s}   MRR\n  {hits}   {overall.get('mrr', 0):.4f}\n"
         f"  Запросов: {overall.get('total_queries', 0)}  |  "
         f"Без результатов: {overall.get('no_result_rate', 0):.1%}\n{'=' * 50}"
+        f"\nСр. время 1 запроса{overall.get('avg_latency', 0):>7} ms\n"
     )
     print(output)
 
