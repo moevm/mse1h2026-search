@@ -120,9 +120,10 @@ docker compose up --build -d
 
 После запуска сервисы будут доступны по адресам(при конфиге из `.env.example`):
 
-- Frontend: `http://localhost`
-- Backend API: `http://localhost:8000`
-- Swagger UI: `http://localhost:8000/docs`
+- Frontend: `http://localhost:6767/`
+- Backend API: скрыт за nginx, прямого доступа не имеет
+- Swagger UI: `http://localhost:6767/docs`
+- Backend Healthcheck: `http://localhost:6767/api/health`
 
 ## Итерация №1
 
