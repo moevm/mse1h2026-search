@@ -38,8 +38,12 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
     urlParams.set('q', term)
     if (isEmbed.value) urlParams.set('embed', 'true')
 
-    if (filters.selectedLang?.value) urlParams.set('lang', filters.selectedLang.value)
-    else urlParams.delete('lang')
+    if (filters.selectedLangs?.value?.length) {
+      urlParams.delete('lang')
+      filters.selectedLangs.value.forEach(l => urlParams.append('lang', l))
+    } else {
+      urlParams.delete('lang')
+    }
 
     if (filters.sortBy?.value && filters.sortBy.value !== 'relevance') urlParams.set('sort_by', filters.sortBy.value)
     else urlParams.delete('sort_by')
@@ -61,8 +65,10 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
     try {
       const searchParams = new URLSearchParams({ q: term, page: 1, page_size: 10 })
 
-      const { selectedLang, sortBy, dateFilter, fromDate, toDate } = filters
-      if (selectedLang?.value) searchParams.set('lang', selectedLang.value)
+      const { selectedLangs, sortBy, dateFilter, fromDate, toDate } = filters
+      if (selectedLangs?.value?.length) {
+        selectedLangs.value.forEach(l => searchParams.append('lang', l))
+      }
       if (sortBy?.value && sortBy.value !== 'relevance') searchParams.set('sort_by', sortBy.value)
       if (dateFilter?.value) {
         searchParams.set('date_filter', dateFilter.value)

@@ -1,6 +1,6 @@
 <script setup>
 const props = defineProps({
-  selectedLang: { type: String, default: null },
+  selectedLangs: { type: Array, default: () => [] },
   sortBy: { type: String, default: 'relevance' },
   dateFilter: { type: String, default: null },
   fromDate: { type: String, default: null },
@@ -8,7 +8,7 @@ const props = defineProps({
 })
 
 const emit = defineEmits([
-  'update:selectedLang',
+  'update:selectedLangs',
   'update:sortBy',
   'update:dateFilter',
   'update:fromDate',
@@ -24,7 +24,14 @@ const dateOptions = [
 ]
 
 function toggleLang(lang) {
-  emit('update:selectedLang', props.selectedLang === lang ? null : lang)
+  const newLangs = [...props.selectedLangs]
+  const idx = newLangs.indexOf(lang)
+  if (idx > -1) {
+    newLangs.splice(idx, 1)
+  } else {
+    newLangs.push(lang)
+  }
+  emit('update:selectedLangs', newLangs)
 }
 </script>
 
@@ -35,7 +42,7 @@ function toggleLang(lang) {
         v-for="lang in languages"
         :key="lang"
         class="lang-btn"
-        :class="{ active: selectedLang === lang }"
+        :class="{ active: selectedLangs.includes(lang) }"
         @click="toggleLang(lang)"
       >{{ lang }}</button>
     </div>
