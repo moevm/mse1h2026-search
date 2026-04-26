@@ -10,7 +10,7 @@ class BaseSearchProvider(ABC):
         query: str,
         page: int = 1,
         page_size: int = 10,
-        lang: str | None = None,
+        lang: list[str] | None = None,
         sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,

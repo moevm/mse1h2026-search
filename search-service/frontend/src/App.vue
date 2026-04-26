@@ -13,7 +13,7 @@ const dropdownOpen = ref(false)
 
 const { recentSearches, save: saveRecent } = useRecentSearches()
 const { suggestions, isTyping, onFocus: _onFocus, onInput: _onInput, clear: clearSuggestions } = useSuggestions()
-const { selectedLang, sortBy, dateFilter, fromDate, toDate, formatDateForQuery } = useFilters()
+const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery } = useFilters()
 const { query, lastQuery, results, total, resultStatus, inResults, doSearch: _doSearch, clearAll: _clearAll } = useSearch({ isEmbed, saveRecent, formatDateForQuery })
 
 provide('highlight', createHighlighter(lastQuery))
@@ -27,7 +27,7 @@ const dropdownItems = computed(() => {
 const dropdownMode = computed(() => isTyping.value ? 'suggestions' : 'recent')
 
 // --- Filter watchers: re-run search when filters change ---
-watch(selectedLang, () => { if (inResults.value) doSearch() })
+watch(selectedLangs, () => { if (inResults.value) doSearch() }, { deep: true })
 watch(sortBy, () => { if (inResults.value) doSearch() })
 watch(dateFilter, (val) => { if (inResults.value && val !== null) doSearch() })
 watch(fromDate, () => { dateFilter.value = null; if (inResults.value) doSearch() })
@@ -36,7 +36,7 @@ watch(toDate, () => { dateFilter.value = null; if (inResults.value) doSearch() }
 // --- Methods ---
 function doSearch(q) {
   dropdownOpen.value = false
-  _doSearch(q, { selectedLang, sortBy, dateFilter, fromDate, toDate })
+  _doSearch(q, { selectedLangs, sortBy, dateFilter, fromDate, toDate })
 }
 
 function clearAll() {
@@ -72,7 +72,7 @@ onMounted(() => {
   if (urlQ) {
     query.value = urlQ
 
-    selectedLang.value = urlParams.get('lang') || null
+    selectedLangs.value = urlParams.getAll('lang')
     sortBy.value = urlParams.get('sort_by') || 'relevance'
     dateFilter.value = urlParams.get('date_filter') || null
     fromDate.value = urlParams.get('from_date') || null
@@ -111,7 +111,7 @@ onMounted(() => {
     :dropdown-open="dropdownOpen"
     :dropdown-items="dropdownItems"
     :dropdown-mode="dropdownMode"
-    :selected-lang="selectedLang"
+    :selected-langs="selectedLangs"
     :sort-by="sortBy"
     :date-filter="dateFilter"
     :from-date="fromDate"
@@ -124,7 +124,7 @@ onMounted(() => {
     @clear="handleClear"
     @select-item="doSearch"
     @go-home="clearAll"
-    @update:selected-lang="selectedLang = $event"
+    @update:selected-langs="selectedLangs = $event"
     @update:sort-by="sortBy = $event"
     @update:date-filter="dateFilter = $event"
     @update:from-date="fromDate = $event"

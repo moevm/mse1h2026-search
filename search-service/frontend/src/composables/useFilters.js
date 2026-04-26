@@ -1,14 +1,19 @@
 import { ref } from 'vue'
 
 export function useFilters() {
-  const selectedLang = ref(null)
+  const selectedLangs = ref([])
   const sortBy = ref('relevance')
   const dateFilter = ref(null)
   const fromDate = ref(null)
   const toDate = ref(null)
 
   function toggleLang(lang) {
-    selectedLang.value = selectedLang.value === lang ? null : lang
+    const idx = selectedLangs.value.indexOf(lang)
+    if (idx > -1) {
+      selectedLangs.value.splice(idx, 1)
+    } else {
+      selectedLangs.value.push(lang)
+    }
   }
 
   /**
@@ -20,5 +25,5 @@ export function useFilters() {
     return `${d}-${m}-${y}`
   }
 
-  return { selectedLang, sortBy, dateFilter, fromDate, toDate, toggleLang, formatDateForQuery }
+  return { selectedLangs, sortBy, dateFilter, fromDate, toDate, toggleLang, formatDateForQuery }
 }
