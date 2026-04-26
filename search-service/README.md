@@ -21,6 +21,10 @@ docker compose up --build
 
 Конфигурация берётся из `backend/.env` и `frontend/.env`.
 
+- Frontend: `http://localhost:6767`
+- Backend API: `http://localhost:6767/api`
+- Swagger UI: `http://localhost:6767/docs`
+
 ---
 
 ## Локальная разработка
@@ -62,7 +66,6 @@ python -m http.server 3000
 
 | Переменная     | По умолчанию | Описание                   |
 |----------------|--------------|----------------------------|
-| `NGINX_PORT`   | `80`         | Порт Nginx                 |
 | `BACKEND_HOST` | `backend`    | Хост бэкенда               |
 | `BACKEND_PORT` | `8000`       | Порт бэкенда               |
 
