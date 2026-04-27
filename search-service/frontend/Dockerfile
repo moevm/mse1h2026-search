@@ -1,10 +1,14 @@
-FROM nginx:alpine
+# Stage 1: build
+FROM node:22.14.0-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
 
-# Remove default nginx config
+# Stage 2: serve
+FROM nginx:1.27.4-alpine
+
 RUN rm /etc/nginx/conf.d/default.conf
-
-# Add our config as a template — nginx will run envsubst on it at startup
 COPY nginx.conf /etc/nginx/templates/default.conf.template
-
-# Copy all frontend static files (index.html, css/, js/)
-COPY static/ /usr/share/nginx/html/
+COPY --from=builder /app/dist /usr/share/nginx/html

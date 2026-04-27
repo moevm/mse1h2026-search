@@ -7,7 +7,6 @@ class Settings(BaseSettings):
     HOST: str = "0.0.0.0"
     PORT: int = 8000
     SEARCH_PROVIDER: str = "mock"
-    CORS_ORIGINS: list[str] = ["http://localhost:3000"]
 
     DB_HOST: str = "127.0.0.1"
     DB_PORT: int = 3306
