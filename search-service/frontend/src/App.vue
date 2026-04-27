@@ -29,9 +29,21 @@ const dropdownMode = computed(() => isTyping.value ? 'suggestions' : 'recent')
 // --- Filter watchers: re-run search when filters change ---
 watch(selectedLangs, () => { if (inResults.value) doSearch() }, { deep: true })
 watch(sortBy, () => { if (inResults.value) doSearch() })
-watch(dateFilter, (val) => { if (inResults.value && val !== null) doSearch() })
-watch(fromDate, () => { dateFilter.value = null; if (inResults.value) doSearch() })
-watch(toDate, () => { dateFilter.value = null; if (inResults.value) doSearch() })
+watch(dateFilter, (val) => {
+  if (val) {
+    fromDate.value = null
+    toDate.value = null
+  }
+  if (inResults.value && (val !== null || (!fromDate.value && !toDate.value))) doSearch()
+})
+watch(fromDate, (val) => {
+  if (val) dateFilter.value = null
+  if (inResults.value && (val || !dateFilter.value)) doSearch()
+})
+watch(toDate, (val) => {
+  if (val) dateFilter.value = null
+  if (inResults.value && (val || !dateFilter.value)) doSearch()
+})
 
 // --- Methods ---
 function doSearch(q) {
