@@ -46,8 +46,24 @@ class QueryResult:
     rr:           float = 0.0
     no_result:    bool = False
 
+EMBEDDER_NAME = 'e5-small'
+SEMANTIC_RATIO = float(os.getenv('SEMANTIC_RATIO', '0.5'))
+
+_embedder_cache: dict[str, bool] = {}
+
+def _has_embedder(uid: str) -> bool:
+    if uid not in _embedder_cache:
+        try:
+            emb = client.index(uid).get_embedders()
+            _embedder_cache[uid] = emb is not None and EMBEDDER_NAME in emb.embedders
+        except Exception:
+            _embedder_cache[uid] = False
+    return _embedder_cache[uid]
+
+
 def search_meili(query: str, limit: int, use_multi: bool = False, lang: str = None) -> list[int]:
     """Выполняет поиск в Meilisearch и возвращает список ID найденных документов"""
+    hybrid = {'embedder': EMBEDDER_NAME, 'semanticRatio': SEMANTIC_RATIO}
     try:
         if use_multi:
             indexes_res = client.get_indexes()
@@ -57,22 +73,26 @@ def search_meili(query: str, limit: int, use_multi: bool = False, lang: str = No
                 all_uids = [idx.uid for idx in indexes_res['results']]
             else:
                 all_uids = [idx.uid for idx in indexes_res.results]
-            
+
             target_uids = [uid for uid in all_uids if uid.startswith('site_') and uid != 'site_content']
-            
+
             if not target_uids:
                 return []
-                
+
             queries = []
             for uid in target_uids:
                 l_code = uid.replace('site_', '')
                 locales = [LANG_TO_LOCALE.get(l_code)] if l_code in LANG_TO_LOCALE else None
-                
-                queries.append({
-                    'indexUid': uid, 
+
+                q_params = {
+                    'indexUid': uid,
                     'q': query,
-                    'locales': locales
-                })
+                    'locales': locales,
+                    'matchingStrategy': 'frequency',
+                }
+                if _has_embedder(uid):
+                    q_params['hybrid'] = hybrid
+                queries.append(q_params)
                 
             result = client.multi_search(queries, federation={'limit': limit})
             
@@ -87,7 +107,9 @@ def search_meili(query: str, limit: int, use_multi: bool = False, lang: str = No
             locales = [LANG_TO_LOCALE.get(lang)] if lang in LANG_TO_LOCALE else None
             results = index.search(query, {
                 'limit': limit,
-                'locales': locales
+                'locales': locales,
+                'matchingStrategy': 'frequency',
+                'hybrid': hybrid,
             })
             ids = []
             for hit in results.get('hits', []):
@@ -96,7 +118,10 @@ def search_meili(query: str, limit: int, use_multi: bool = False, lang: str = No
                 except (ValueError, KeyError, TypeError):
                     continue
             return ids
-    except Exception:
+    except Exception as e:
+        if not getattr(search_meili, '_warned', False):
+            print(f"\n[WARN] Поиск упал: {type(e).__name__}: {e}\n")
+            search_meili._warned = True
         return []
 
 def compute_rr(found_ids: list[int], expected_id: int) -> float:
