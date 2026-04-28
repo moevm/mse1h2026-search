@@ -149,5 +149,45 @@
     "date": "22-11-2023",
     "lang": "FR",
     "url": "https://etu.ru/publications/9"
+  },
+  {
+    "id": "11",
+    "title": "Обычная хорошая статья",
+    "abstract": "Это валидная статья, она должна найтись.",
+    "published": 1,
+    "deleted": 0,
+    "searchable": 1,
+    "url": "https://etu.ru/valid",
+    "keywords": ["проверка"]
+  },
+  {
+    "id": "12",
+    "title": "Удаленная статья",
+    "abstract": "Она удалена.",
+    "published": 1,
+    "deleted": 1,
+    "searchable": 1,
+    "url": "https://etu.ru/deleted",
+    "keywords": ["проверка"]
+  },
+  {
+    "id": "13",
+    "title": "Черновик",
+    "abstract": "Не опубликована.",
+    "published": 0,
+    "deleted": 0,
+    "searchable": 1,
+    "url": "https://etu.ru/draft",
+    "keywords": ["проверка"]
+  },
+  {
+    "id": "14",
+    "title": "Скрытая",
+    "abstract": "Поиск запрещен.",
+    "published": 1,
+    "deleted": 0,
+    "searchable": 0,
+    "url": "https://etu.ru/hidden",
+    "keywords": ["проверка"]
   }
 ]

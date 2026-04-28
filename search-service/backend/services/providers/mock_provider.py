@@ -8,13 +8,23 @@ from services.providers.base import BaseSearchProvider
 
 DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
-
 class MockProvider(BaseSearchProvider):
     def __init__(self) -> None:
         self.articles: list[dict] = []
         if DATA_FILE.exists():
             with open(DATA_FILE, encoding="utf-8") as f:
-                self.articles = json.load(f)
+                raw_articles = json.load(f)
+
+                for article in raw_articles:
+                    try:
+                        is_published = int(article.get("published", 1)) == 1
+                        is_deleted = int(article.get("deleted", 0)) == 1
+                        is_searchable = int(article.get("searchable", 1)) == 1
+
+                        if is_published and not is_deleted and is_searchable:
+                            self.articles.append(article)
+                    except (ValueError, TypeError):
+                        continue
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
