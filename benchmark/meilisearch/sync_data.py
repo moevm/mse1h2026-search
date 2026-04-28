@@ -1,7 +1,6 @@
 import pymysql
 import meilisearch
 import os
-import json
 import datetime
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup

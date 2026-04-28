@@ -16,7 +16,7 @@ def calculate_metrics(results):
     metrics = {
         "total": total,
         "no_results_rate": no_results / total,
-        "mrr": sum((1 / r["rank"] if r["rank"] > 0 else 0) for r in results) / total
+        "mrr": sum((1 / r["rank"] if r["rank"] > 0 else 0) for r in results) / total,
     }
     for k in K_VALUES:
         metrics[f"hit@{k}"] = sum(1 for r in results if 0 < r["rank"] <= k) / total
@@ -30,8 +30,18 @@ def print_markdown_table(title, rows):
     print(header)
     print(separator)
     for row in rows:
-        formatted_row = "| " + " | ".join([f"{v:.2%}" if isinstance(v, float) and "rate" in k or "hit" in k else (
-            f"{v:.4f}" if isinstance(v, float) else str(v)) for k, v in row.items()]) + " |"
+        formatted_row = (
+            "| "
+            + " | ".join(
+                [
+                    f"{v:.2%}"
+                    if isinstance(v, float) and "rate" in k or "hit" in k
+                    else (f"{v:.4f}" if isinstance(v, float) else str(v))
+                    for k, v in row.items()
+                ]
+            )
+            + " |"
+        )
         print(formatted_row)
 
 
@@ -51,7 +61,7 @@ def run_evaluation():
                 if lang not in lang_stats:
                     lang_stats[lang] = []
 
-                with open(os.path.join(root, file), 'r', encoding='utf-8') as f:
+                with open(os.path.join(root, file), "r", encoding="utf-8") as f:
                     data = json.load(f)
                     items = data.get("items", [])
                     for item in items:
@@ -59,7 +69,11 @@ def run_evaluation():
                         for query in item.get("requests", []):
                             results = solr.search(query, **SEARCH_PARAMS)
                             found_ids = [str(d["id"]) for d in results]
-                            rank = found_ids.index(expected_id) + 1 if expected_id in found_ids else 0
+                            rank = (
+                                found_ids.index(expected_id) + 1
+                                if expected_id in found_ids
+                                else 0
+                            )
 
                             res_obj = {"rank": rank}
                             lang_stats[lang].append(res_obj)
@@ -76,7 +90,7 @@ def run_evaluation():
             "Hit@10": overall_metrics["hit@10"],
             "MRR": overall_metrics["mrr"],
             "Запросов": overall_metrics["total"],
-            "Без результатов": overall_metrics["no_results_rate"]
+            "Без результатов": overall_metrics["no_results_rate"],
         }
         print_markdown_table("Результаты оценки", [method_row])
 
@@ -86,14 +100,16 @@ def run_evaluation():
     for lang in sorted(lang_stats.keys()):
         m = calculate_metrics(lang_stats[lang])
         if m:
-            lang_rows.append({
-                "Язык": lang.upper(),
-                "Hit@1": m["hit@1"],
-                "Hit@3": m["hit@3"],
-                "Hit@5": m["hit@5"],
-                "Hit@10": m["hit@10"],
-                "MRR": m["mrr"]
-            })
+            lang_rows.append(
+                {
+                    "Язык": lang.upper(),
+                    "Hit@1": m["hit@1"],
+                    "Hit@3": m["hit@3"],
+                    "Hit@5": m["hit@5"],
+                    "Hit@10": m["hit@10"],
+                    "MRR": m["mrr"],
+                }
+            )
 
     if lang_rows:
         print_markdown_table("Результаты оценки по языкам", lang_rows)

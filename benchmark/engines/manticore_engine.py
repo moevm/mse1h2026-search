@@ -42,4 +42,3 @@ class ManticoreEngine(BaseSearchEngine):
     def search(self, query: str, k: int) -> list[SearchResult]:
         ids = self._search_client.search(query, k)
         return [SearchResult(id=doc_id, url=None, raw={}) for doc_id in ids]
-

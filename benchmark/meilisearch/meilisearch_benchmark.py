@@ -10,46 +10,49 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-MEILI_URL = os.getenv('MEILI_URL', 'http://localhost:7700')
-MEILI_MASTER_KEY = os.getenv('MEILI_MASTER_KEY', '')
-DEFAULT_INDEX_NAME = 'site_content'
+MEILI_URL = os.getenv("MEILI_URL", "http://localhost:7700")
+MEILI_MASTER_KEY = os.getenv("MEILI_MASTER_KEY", "")
+DEFAULT_INDEX_NAME = "site_content"
 
 METRICS_K_VALUES = [1, 5, 10]
 BAD_RESULTS_METRIC_K = 1
 PATHS = {
-    'no_results_log': 'logs/meilisearch_no_results.txt',
-    'bad_results_log': 'logs/meilisearch_bad_results.txt'
+    "no_results_log": "logs/meilisearch_no_results.txt",
+    "bad_results_log": "logs/meilisearch_bad_results.txt",
 }
 
 LANG_TO_LOCALE = {
-    'ru': 'rus',
-    'en': 'eng',
-    'de': 'deu',
-    'sp': 'spa',
-    'pt': 'por',
-    'fr': 'fra',
-    'vn': 'vie',
-    'ar': 'ara',
-    'cn': 'zho'
+    "ru": "rus",
+    "en": "eng",
+    "de": "deu",
+    "sp": "spa",
+    "pt": "por",
+    "fr": "fra",
+    "vn": "vie",
+    "ar": "ara",
+    "cn": "zho",
 }
 
 client = meilisearch.Client(MEILI_URL, MEILI_MASTER_KEY)
 index = None
 
+
 @dataclass
 class QueryResult:
-    query:        str
-    expected_id:  int
+    query: str
+    expected_id: int
     expected_url: str
-    found_ids:    list[int]
-    hit_at_k:     dict[int, bool] = field(default_factory=dict)
-    rr:           float = 0.0
-    no_result:    bool = False
+    found_ids: list[int]
+    hit_at_k: dict[int, bool] = field(default_factory=dict)
+    rr: float = 0.0
+    no_result: bool = False
 
-EMBEDDER_NAME = 'e5-small'
-SEMANTIC_RATIO = float(os.getenv('SEMANTIC_RATIO', '0.5'))
+
+EMBEDDER_NAME = "e5-small"
+SEMANTIC_RATIO = float(os.getenv("SEMANTIC_RATIO", "0.5"))
 
 _embedder_cache: dict[str, bool] = {}
+
 
 def _has_embedder(uid: str) -> bool:
     if uid not in _embedder_cache:
@@ -61,68 +64,80 @@ def _has_embedder(uid: str) -> bool:
     return _embedder_cache[uid]
 
 
-def search_meili(query: str, limit: int, use_multi: bool = False, lang: str = None) -> list[int]:
+def search_meili(
+    query: str, limit: int, use_multi: bool = False, lang: str = None
+) -> list[int]:
     """Выполняет поиск в Meilisearch и возвращает список ID найденных документов"""
-    hybrid = {'embedder': EMBEDDER_NAME, 'semanticRatio': SEMANTIC_RATIO}
+    hybrid = {"embedder": EMBEDDER_NAME, "semanticRatio": SEMANTIC_RATIO}
     try:
         if use_multi:
             indexes_res = client.get_indexes()
             if isinstance(indexes_res, list):
                 all_uids = [idx.uid for idx in indexes_res]
-            elif isinstance(indexes_res, dict) and 'results' in indexes_res:
-                all_uids = [idx.uid for idx in indexes_res['results']]
+            elif isinstance(indexes_res, dict) and "results" in indexes_res:
+                all_uids = [idx.uid for idx in indexes_res["results"]]
             else:
                 all_uids = [idx.uid for idx in indexes_res.results]
 
-            target_uids = [uid for uid in all_uids if uid.startswith('site_') and uid != 'site_content']
+            target_uids = [
+                uid
+                for uid in all_uids
+                if uid.startswith("site_") and uid != "site_content"
+            ]
 
             if not target_uids:
                 return []
 
             queries = []
             for uid in target_uids:
-                l_code = uid.replace('site_', '')
-                locales = [LANG_TO_LOCALE.get(l_code)] if l_code in LANG_TO_LOCALE else None
+                l_code = uid.replace("site_", "")
+                locales = (
+                    [LANG_TO_LOCALE.get(l_code)] if l_code in LANG_TO_LOCALE else None
+                )
 
                 q_params = {
-                    'indexUid': uid,
-                    'q': query,
-                    'locales': locales,
-                    'matchingStrategy': 'frequency',
+                    "indexUid": uid,
+                    "q": query,
+                    "locales": locales,
+                    "matchingStrategy": "frequency",
                 }
                 if _has_embedder(uid):
-                    q_params['hybrid'] = hybrid
+                    q_params["hybrid"] = hybrid
                 queries.append(q_params)
-                
-            result = client.multi_search(queries, federation={'limit': limit})
-            
+
+            result = client.multi_search(queries, federation={"limit": limit})
+
             ids = []
-            for hit in result.get('hits', []):
+            for hit in result.get("hits", []):
                 try:
-                    ids.append(int(hit['id']))
+                    ids.append(int(hit["id"]))
                 except (ValueError, KeyError, TypeError):
                     continue
             return ids
         else:
             locales = [LANG_TO_LOCALE.get(lang)] if lang in LANG_TO_LOCALE else None
-            results = index.search(query, {
-                'limit': limit,
-                'locales': locales,
-                'matchingStrategy': 'frequency',
-                'hybrid': hybrid,
-            })
+            results = index.search(
+                query,
+                {
+                    "limit": limit,
+                    "locales": locales,
+                    "matchingStrategy": "frequency",
+                    "hybrid": hybrid,
+                },
+            )
             ids = []
-            for hit in results.get('hits', []):
+            for hit in results.get("hits", []):
                 try:
-                    ids.append(int(hit['id']))
+                    ids.append(int(hit["id"]))
                 except (ValueError, KeyError, TypeError):
                     continue
             return ids
     except Exception as e:
-        if not getattr(search_meili, '_warned', False):
+        if not getattr(search_meili, "_warned", False):
             print(f"\n[WARN] Поиск упал: {type(e).__name__}: {e}\n")
             search_meili._warned = True
         return []
+
 
 def compute_rr(found_ids: list[int], expected_id: int) -> float:
     """Вычисляет Reciprocal Rank (RR) для одного запроса"""
@@ -131,7 +146,10 @@ def compute_rr(found_ids: list[int], expected_id: int) -> float:
             return 1.0 / pos
     return 0.0
 
-def evaluate_items(items: list[dict], top_k: int, use_multi: bool = False, lang: str = None) -> list[QueryResult]:
+
+def evaluate_items(
+    items: list[dict], top_k: int, use_multi: bool = False, lang: str = None
+) -> list[QueryResult]:
     """Прогоняет все запросы через Meilisearch и собирает статистику"""
     results = []
     for item in tqdm(items, desc="Оценка Meilisearch", unit="док."):
@@ -158,6 +176,7 @@ def evaluate_items(items: list[dict], top_k: int, use_multi: bool = False, lang:
             results.append(qr)
     return results
 
+
 def aggregate(results: list[QueryResult]) -> dict:
     """Агрегирует результаты в итоговые метрики (Hit@K, MRR)"""
     n = len(results)
@@ -166,12 +185,11 @@ def aggregate(results: list[QueryResult]) -> dict:
 
     m = {"total_queries": n}
     for k in METRICS_K_VALUES:
-        m[f"hit_at_{k}"] = round(
-            sum(r.hit_at_k.get(k, False) for r in results) / n, 4
-        )
+        m[f"hit_at_{k}"] = round(sum(r.hit_at_k.get(k, False) for r in results) / n, 4)
     m["mrr"] = round(sum(r.rr for r in results) / n, 4)
     m["no_result_rate"] = round(sum(1 for r in results if r.no_result) / n, 4)
     return m
+
 
 def save_logs(results: list[QueryResult]):
     """Сохраняет логи ошибок и плохих результатов"""
@@ -179,26 +197,36 @@ def save_logs(results: list[QueryResult]):
         os.makedirs(os.path.dirname(path), exist_ok=True)
 
     no_results = [r for r in results if r.no_result]
-    with open(PATHS['no_results_log'], "w", encoding="utf-8") as f:
+    with open(PATHS["no_results_log"], "w", encoding="utf-8") as f:
         f.write(f"Запросы без результатов Meilisearch ({len(no_results)}):\n")
         f.write("=" * 60 + "\n")
         for r in no_results:
-            f.write(f"Запрос: {r.query}\nОжидаемый URL: {r.expected_url}\n" + "-"*60 + "\n")
+            f.write(
+                f"Запрос: {r.query}\nОжидаемый URL: {r.expected_url}\n"
+                + "-" * 60
+                + "\n"
+            )
 
     bad_results = []
     for r in results:
-        if r.no_result: continue
-        pos = int(1 / r.rr) if r.rr > 0 else float('inf')
+        if r.no_result:
+            continue
+        pos = int(1 / r.rr) if r.rr > 0 else float("inf")
         if pos > BAD_RESULTS_METRIC_K:
             bad_results.append((r, pos))
-    
+
     bad_results.sort(key=lambda x: x[1], reverse=True)
-    with open(PATHS['bad_results_log'], "w", encoding="utf-8") as f:
+    with open(PATHS["bad_results_log"], "w", encoding="utf-8") as f:
         f.write(f"Запросы с плохой позицией в Meilisearch ({len(bad_results)}):\n")
         f.write("=" * 60 + "\n")
         for r, pos in bad_results:
             f.write(f"Запрос: {r.query}\nОжидаемый URL: {r.expected_url}\n")
-            f.write(f"Результат: Позиция {pos} (ожидался ТОП-{BAD_RESULTS_METRIC_K})\n" + "-"*60 + "\n")
+            f.write(
+                f"Результат: Позиция {pos} (ожидался ТОП-{BAD_RESULTS_METRIC_K})\n"
+                + "-" * 60
+                + "\n"
+            )
+
 
 def print_metrics(overall: dict, index_name: str):
     ks = METRICS_K_VALUES
@@ -212,16 +240,28 @@ def print_metrics(overall: dict, index_name: str):
     )
     print(output)
 
+
 def main():
-    parser = argparse.ArgumentParser(description='Meilisearch Benchmark')
-    parser.add_argument('dataset', help='Путь к JSON файлу с датасетом')
-    parser.add_argument('--lang', help='Язык для индекса (например, ru, en). Если не указан, используется site_content.')
-    parser.add_argument('--multi', action='store_true', help='Использовать федеративный поиск по всем языковым индексам.')
+    parser = argparse.ArgumentParser(description="Meilisearch Benchmark")
+    parser.add_argument("dataset", help="Путь к JSON файлу с датасетом")
+    parser.add_argument(
+        "--lang",
+        help="Язык для индекса (например, ru, en). Если не указан, используется site_content.",
+    )
+    parser.add_argument(
+        "--multi",
+        action="store_true",
+        help="Использовать федеративный поиск по всем языковым индексам.",
+    )
     args = parser.parse_args()
 
     global index
-    index_name = "multi-index (federated)" if args.multi else (f'site_{args.lang}' if args.lang else DEFAULT_INDEX_NAME)
-    
+    index_name = (
+        "multi-index (federated)"
+        if args.multi
+        else (f"site_{args.lang}" if args.lang else DEFAULT_INDEX_NAME)
+    )
+
     if not args.multi:
         index = client.index(index_name)
 
@@ -236,7 +276,7 @@ def main():
     items = data.get("items", []) if isinstance(data, dict) else data
 
     top_k = max(METRICS_K_VALUES)
-    
+
     try:
         client.health()
     except Exception:
@@ -245,9 +285,10 @@ def main():
 
     all_results = evaluate_items(items, top_k, use_multi=args.multi, lang=args.lang)
     overall = aggregate(all_results)
-    
+
     save_logs(all_results)
     print_metrics(overall, index_name)
+
 
 if __name__ == "__main__":
     main()

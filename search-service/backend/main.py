@@ -21,9 +21,7 @@ async def health_check() -> dict[str, str]:
 
 
 def main():
-    uvicorn.run(
-        "main:app", host=_settings.HOST, port=_settings.PORT
-    )
+    uvicorn.run("main:app", host=_settings.HOST, port=_settings.PORT)
 
 
 if __name__ == "__main__":
