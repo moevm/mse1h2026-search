@@ -13,11 +13,10 @@ os.environ["HF_HUB_OFFLINE"] = "0"
 
 # логирование
 logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
 
-logger = logging.getLogger('etu_search')
+logger = logging.getLogger("etu_search")
 warnings.filterwarnings("ignore", category=UserWarning)
 warnings.filterwarnings("ignore", module="huggingface_hub")
 
@@ -26,41 +25,41 @@ logging.getLogger("huggingface_hub").setLevel(logging.ERROR)
 
 # настройки подключения к бд
 MYSQL_CONFIG = {
-    'host': '127.0.0.1',
-    'port': 3306,
-    'user': 'etu',
-    'password': 'dFwp9779',
-    'db': 'etu',
-    'charset': 'utf8mb4',
-    'cursorclass': pymysql.cursors.DictCursor
+    "host": "127.0.0.1",
+    "port": 3306,
+    "user": "user",
+    "password": "password",
+    "db": "db",
+    "charset": "utf8mb4",
+    "cursorclass": pymysql.cursors.DictCursor,
 }
 
-MANTICORE_URL = 'http://127.0.0.1:9308'
-MANTICORE_TABLE = 'etu_pages'
+MANTICORE_URL = "http://127.0.0.1:9308"
+MANTICORE_TABLE = "etu_pages"
 CHUNK_SIZE = 1000
 
 PATHS = {
-    'dataset': '../data/information/ru/information_ru.json',
-    'no_results_log': 'logs/no_results.log',
-    'bad_results_log': 'logs/bad_results.log',
+    "dataset": "../data/information/ru/information_ru.json",
+    "no_results_log": "logs/no_results.log",
+    "bad_results_log": "logs/bad_results.log",
 }
 
-MANTICORE_ESCAPE_TABLE = str.maketrans({c: f'\\{c}' for c in "&'-/@+"})
+MANTICORE_ESCAPE_TABLE = str.maketrans({c: f"\\{c}" for c in "&'-/@+"})
 
 METRICS_K_VALUES = [1, 3, 5, 10]
 BAD_RESULTS_METRIC_K = 3
 
 SEARCH_PARAMS = {
-    'ranker': 'sph04',
-    'field_weights': {
-        'pagetitle': 100,
-        'longtitle': 50,
-        'menutitle': 50,
-        'alias': 25,
-        'description': 15,
-        'introtext': 10,
-        'content': 5
-    }
+    "ranker": "sph04",
+    "field_weights": {
+        "pagetitle": 100,
+        "longtitle": 50,
+        "menutitle": 50,
+        "alias": 25,
+        "description": 15,
+        "introtext": 10,
+        "content": 5,
+    },
 }
 
 # параметры ml
@@ -78,7 +77,7 @@ try:
         normalization=True,
         sources=ModelSource(hf=EMBEDDER_MODEL_NAME),
         dim=384,
-        model_file="onnx/model.onnx"
+        model_file="onnx/model.onnx",
     )
 except ValueError:
     pass

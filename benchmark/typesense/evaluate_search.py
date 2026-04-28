@@ -1,23 +1,27 @@
 import json
 import sys
-import time
 from dataclasses import dataclass, field
 
 import typesense
 from tqdm import tqdm
 
-from config import TYPESENSE_CONFIG, TYPESENSE_COLLECTION, SEARCH_PARAMS, METRICS_K_VALUES
+from config import (
+    TYPESENSE_CONFIG,
+    TYPESENSE_COLLECTION,
+    SEARCH_PARAMS,
+    METRICS_K_VALUES,
+)
 
 
 @dataclass
 class QueryResult:
-    query:        str
-    expected_id:  int
+    query: str
+    expected_id: int
     expected_url: str
-    found_ids:    list[int]
-    hit_at_k:     dict[int, bool] = field(default_factory=dict)
-    rr:           float = 0.0
-    no_result:    bool = False
+    found_ids: list[int]
+    hit_at_k: dict[int, bool] = field(default_factory=dict)
+    rr: float = 0.0
+    no_result: bool = False
 
 
 def compute_rr(found_ids: list[int], expected_id: int) -> float:
@@ -43,12 +47,12 @@ def evaluate_items(
 ) -> list[QueryResult]:
     results = []
     for item in tqdm(items, desc="Оценка", unit="док."):
-        expected_id  = item["id"]
+        expected_id = item["id"]
         expected_url = item.get("url", "")
         for query_text in item.get("requests", []):
-            found     = search(client, query_text, top_k)
+            found = search(client, query_text, top_k)
             no_result = len(found) == 0
-            rr        = compute_rr(found, expected_id)
+            rr = compute_rr(found, expected_id)
 
             qr = QueryResult(
                 query=query_text,
@@ -74,13 +78,13 @@ def aggregate(results: list[QueryResult]) -> dict:
     m = {"total_queries": n}
     for k in METRICS_K_VALUES:
         m[f"hit_at_{k}"] = round(sum(r.hit_at_k.get(k, False) for r in results) / n, 4)
-    m["mrr"]            = round(sum(r.rr for r in results) / n, 4)
+    m["mrr"] = round(sum(r.rr for r in results) / n, 4)
     m["no_result_rate"] = round(sum(1 for r in results if r.no_result) / n, 4)
     return m
 
 
 def print_metrics(overall: dict) -> None:
-    ks  = METRICS_K_VALUES
+    ks = METRICS_K_VALUES
     k_s = "  ".join(f"Hit@{k}" for k in ks)
     print("\n" + "=" * 50)
     print("ИТОГОВЫЕ МЕТРИКИ")
@@ -88,7 +92,9 @@ def print_metrics(overall: dict) -> None:
     hits = "  ".join(f"{overall.get(f'hit_at_{k}', 0):>6.1%}" for k in ks)
     print(f"  {k_s}   MRR")
     print(f"  {hits}   {overall.get('mrr', 0):.4f}")
-    print(f"  Запросов: {overall.get('total_queries', 0)}  |  Без результатов: {overall.get('no_result_rate', 0):.1%}")
+    print(
+        f"  Запросов: {overall.get('total_queries', 0)}  |  Без результатов: {overall.get('no_result_rate', 0):.1%}"
+    )
     print("=" * 50)
 
 

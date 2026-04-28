@@ -50,7 +50,9 @@ def load_engine_configs(path: str) -> list[EngineConfig]:
 
 def make_engine(config: EngineConfig):
     module_name = f"engines.{config.kind}_engine"
-    class_name = "".join(part.capitalize() for part in config.kind.split("_")) + "Engine"
+    class_name = (
+        "".join(part.capitalize() for part in config.kind.split("_")) + "Engine"
+    )
     module = importlib.import_module(module_name)
     engine_cls = getattr(module, class_name)
     return engine_cls(config)
@@ -75,7 +77,9 @@ def evaluate_engine(engine, queries, ks: list[int]):
         if last_error is not None:
             raise last_error
 
-        ranked_doc_keys = [to_doc_key(result.id, result.url) for result in ranked_results]
+        ranked_doc_keys = [
+            to_doc_key(result.id, result.url) for result in ranked_results
+        ]
         ranked_doc_keys = [x for x in ranked_doc_keys if x]
 
         ranked_per_query.append(ranked_doc_keys)
@@ -160,7 +164,10 @@ def merge_query_sets(grouped_queries: list) -> list:
             merged.setdefault(item.query, set()).update(item.relevant_doc_keys)
     from core.types import QueryItem
 
-    return [QueryItem(query=query, relevant_doc_keys=doc_keys) for query, doc_keys in merged.items()]
+    return [
+        QueryItem(query=query, relevant_doc_keys=doc_keys)
+        for query, doc_keys in merged.items()
+    ]
 
 
 def main() -> None:
@@ -210,7 +217,9 @@ def main() -> None:
                 lang_queries_by_type.append(queries)
                 metrics_rows = evaluate_engine(engine, queries, ks)
                 per_type_metrics[request_type] = rows_to_k_arrays(metrics_rows, ks)
-                print_metrics_wide(metrics_rows, ks, f"{config.name} | {lang} | {request_type}")
+                print_metrics_wide(
+                    metrics_rows, ks, f"{config.name} | {lang} | {request_type}"
+                )
 
             lang_merged_queries = merge_query_sets(lang_queries_by_type)
             all_lang_queries.append(lang_merged_queries)
@@ -219,7 +228,9 @@ def main() -> None:
                 "by_type": per_type_metrics,
                 "language_average": rows_to_k_arrays(lang_avg_rows, ks),
             }
-            print_metrics_wide(lang_avg_rows, ks, f"{config.name} | {lang} | language_average")
+            print_metrics_wide(
+                lang_avg_rows, ks, f"{config.name} | {lang} | language_average"
+            )
 
         global_queries = merge_query_sets(all_lang_queries)
         global_avg_rows = evaluate_engine(engine, global_queries, ks)

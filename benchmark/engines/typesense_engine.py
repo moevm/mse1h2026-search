@@ -56,7 +56,9 @@ class TypesenseEngine(BaseSearchEngine):
             "per_page": k,
             **self.extra_search_params,
         }
-        response = self.client.collections[self.collection_name].documents.search(params)
+        response = self.client.collections[self.collection_name].documents.search(
+            params
+        )
         hits = response.get("hits", [])
         results: list[SearchResult] = []
         for hit in hits:
