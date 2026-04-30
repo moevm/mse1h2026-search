@@ -14,8 +14,15 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_NAME: str
 
-    model_config = SettingsConfigDict(
-        env_file=".env", env_file_encoding="utf-8")
+    # base for makeing urls
+    SITE_URL: str = "https://etu.ru"
+
+    MEILI_URL: str
+    MEILI_API_KEY: str
+    MEILI_INDEX: str
+    MEILI_SEMANTIC_RATIO: float
+
+    model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 
 @cache
