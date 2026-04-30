@@ -1,6 +1,7 @@
 import logging
 import sys
 from pathlib import Path
+
 import meilisearch
 
 from config import Settings

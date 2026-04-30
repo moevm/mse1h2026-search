@@ -63,18 +63,28 @@ class MeiliIndexer:
         self._last_sync_ts = int(datetime.now().timestamp())
         last_task = None
         for i in range(0, len(rows), batch_size):
-            batch = rows[i:i + batch_size]
+            batch = rows[i : i + batch_size]
             try:
                 last_task = self._index.add_documents(batch, primary_key="id")
-                logger.info("Enqueued batch %d-%d (task %d).", i, i + len(batch), last_task.task_uid)
+                logger.info(
+                    "Enqueued batch %d-%d (task %d).",
+                    i,
+                    i + len(batch),
+                    last_task.task_uid,
+                )
             except MeilisearchError as e:
                 logger.error("Failed to enqueue batch %d-%d: %s", i, i + len(batch), e)
                 raise
 
         if last_task:
-            logger.info("Waiting for indexing and embedding generation to complete (task %d)...", last_task.task_uid)
+            logger.info(
+                "Waiting for indexing and embedding generation to complete (task %d)...",
+                last_task.task_uid,
+            )
             try:
-                task_info = self._client.wait_for_task(last_task.task_uid, timeout_in_ms=14_400_000)
+                task_info = self._client.wait_for_task(
+                    last_task.task_uid, timeout_in_ms=14_400_000
+                )
                 logger.info(
                     "All indexing and embeddings complete. Last task duration: %s, status: %s.",
                     task_info.duration,
