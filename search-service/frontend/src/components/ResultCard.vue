@@ -20,7 +20,7 @@ const highlight = inject('highlight')
         v-html="highlight(item.title)"
       ></a>
       <span v-else class="result-title" v-html="highlight(item.title)"></span>
-      <span class="result-meta">{{ item.lang }} &middot; {{ item.date }}</span>
+      <span class="result-meta">{{ item.lang }}<template v-if="item.date"> &middot; {{ item.date }}</template></span>
     </div>
     <p v-if="item.abstract" class="result-abstract" v-html="highlight(item.abstract)"></p>
   </article>

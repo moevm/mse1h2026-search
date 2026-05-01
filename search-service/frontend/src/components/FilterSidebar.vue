@@ -18,20 +18,32 @@ const emit = defineEmits([
 const languages = ['RU', 'EN', 'DE', 'ES', 'FR', 'PT', 'ZH', 'VI']
 
 const dateOptions = [
+  { label: 'За все время', value: null },
   { label: 'За последний месяц', value: 'month' },
   { label: 'За год', value: 'year' },
   { label: 'За 3 года', value: '3years' },
 ]
 
-function toggleLang(lang) {
-  const newLangs = [...props.selectedLangs]
-  const idx = newLangs.indexOf(lang)
-  if (idx > -1) {
-    newLangs.splice(idx, 1)
-  } else {
-    newLangs.push(lang)
+function handleDateFilterChange(val) {
+  emit('update:dateFilter', val)
+  emit('update:fromDate', null)
+  emit('update:toDate', null)
+}
+
+function handleManualDateChange(type, val) {
+  if (type === 'from') emit('update:fromDate', val)
+  else emit('update:toDate', val)
+
+  if (val) {
+    emit('update:dateFilter', null)
   }
-  emit('update:selectedLangs', newLangs)
+}
+
+function isDateOptionChecked(optValue) {
+  if (optValue === null) {
+    return props.dateFilter === null && !props.fromDate && !props.toDate
+  }
+  return props.dateFilter === optValue
 }
 </script>
 
@@ -74,9 +86,9 @@ function toggleLang(lang) {
       <label v-for="opt in dateOptions" :key="opt.value" class="sidebar-option">
         <input
           type="radio"
-          :checked="dateFilter === opt.value"
+          :checked="isDateOptionChecked(opt.value)"
           :value="opt.value"
-          @change="emit('update:dateFilter', opt.value)"
+          @change="handleDateFilterChange(opt.value)"
         />
         <span>{{ opt.label }}</span>
       </label>
@@ -86,7 +98,7 @@ function toggleLang(lang) {
           <input
             type="date"
             :value="fromDate"
-            @change="emit('update:fromDate', $event.target.value)"
+            @change="handleManualDateChange('from', $event.target.value)"
           />
         </div>
         <div class="date-field">
@@ -94,7 +106,7 @@ function toggleLang(lang) {
           <input
             type="date"
             :value="toDate"
-            @change="emit('update:toDate', $event.target.value)"
+            @change="handleManualDateChange('to', $event.target.value)"
           />
         </div>
       </div>
