@@ -101,6 +101,7 @@ class MockProvider(BaseSearchProvider):
             filtered_articles.append((article, score))
 
         if sort_by == "date":
+
             def get_date(item):
                 try:
                     return datetime.strptime(

@@ -1,7 +1,13 @@
 from datetime import date, datetime
 from typing import Any
 
-from pydantic import BaseModel, HttpUrl, SerializationInfo, field_serializer, field_validator
+from pydantic import (
+    BaseModel,
+    HttpUrl,
+    SerializationInfo,
+    field_serializer,
+    field_validator,
+)
 
 
 class ArticleResult(BaseModel):
@@ -10,20 +16,22 @@ class ArticleResult(BaseModel):
     authors: list[str]
     abstract: str
     keywords: list[str]
-    date: date
+    date: date | None
     lang: str
     url: HttpUrl
 
     @field_validator("date", mode="before")
     @classmethod
-    def parse_date(cls, v: Any) -> date:
+    def parse_date(cls, v: Any) -> date | None:
+        if v is None:
+            return None
         if isinstance(v, str):
             return datetime.strptime(v, "%d-%m-%Y").date()
         return v
 
     @field_serializer("date")
-    def serialize_date(self, v: date, _info: SerializationInfo) -> str:
-        return v.strftime("%d-%m-%Y")
+    def serialize_date(self, v: date | None, _info: SerializationInfo) -> str | None:
+        return v.strftime("%d-%m-%Y") if v else None
 
 
 class SearchResponse(BaseModel):
