@@ -2,7 +2,6 @@ import { ref } from 'vue'
 
 export function useFilters() {
   const selectedLangs = ref([])
-  const sortBy = ref('relevance')
   const dateFilter = ref(null)
   const fromDate = ref(null)
   const toDate = ref(null)
@@ -25,5 +24,5 @@ export function useFilters() {
     return `${d}-${m}-${y}`
   }
 
-  return { selectedLangs, sortBy, dateFilter, fromDate, toDate, toggleLang, formatDateForQuery }
+  return { selectedLangs, dateFilter, fromDate, toDate, toggleLang, formatDateForQuery }
 }

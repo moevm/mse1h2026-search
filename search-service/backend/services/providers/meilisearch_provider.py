@@ -348,7 +348,7 @@ def apply_index_settings(meili_url: str, meili_api_key: str, meili_index: str) -
     client = meilisearch.Client(meili_url, meili_api_key or None)
     index = client.index(meili_index)
     task = index.update_settings(_INDEX_SETTINGS)
-    client.wait_for_task(task.task_uid, timeout_in_ms=60_000)
+    client.wait_for_task(task.task_uid, timeout_in_ms=600_000)
 
 
 class MeilisearchProvider(BaseSearchProvider):

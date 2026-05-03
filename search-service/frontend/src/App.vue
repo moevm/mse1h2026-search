@@ -13,7 +13,7 @@ const dropdownOpen = ref(false)
 
 const { recentSearches, save: saveRecent } = useRecentSearches()
 const { suggestions, isTyping, onFocus: _onFocus, onInput: _onInput, clear: clearSuggestions } = useSuggestions()
-const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery } = useFilters()
+const { selectedLangs, dateFilter, fromDate, toDate, formatDateForQuery } = useFilters()
 const { query, lastQuery, results, total, resultStatus, inResults, doSearch: _doSearch, clearAll: _clearAll } = useSearch({ isEmbed, saveRecent, formatDateForQuery })
 
 provide('highlight', createHighlighter(lastQuery))
@@ -28,7 +28,6 @@ const dropdownMode = computed(() => isTyping.value ? 'suggestions' : 'recent')
 
 // --- Filter watchers: re-run search when filters change ---
 watch(selectedLangs, () => { if (inResults.value) doSearch() }, { deep: true })
-watch(sortBy, () => { if (inResults.value) doSearch() })
 watch(dateFilter, (val) => {
   if (val) {
     fromDate.value = null
@@ -48,7 +47,7 @@ watch(toDate, (val) => {
 // --- Methods ---
 function doSearch(q) {
   dropdownOpen.value = false
-  _doSearch(q, { selectedLangs, sortBy, dateFilter, fromDate, toDate })
+  _doSearch(q, { selectedLangs, dateFilter, fromDate, toDate })
 }
 
 function clearAll() {
@@ -78,14 +77,13 @@ function handleClear() {
 }
 
 // --- Lifecycle ---
-onMounted(() => {
+  onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
   const urlQ = urlParams.get('q')
   if (urlQ) {
     query.value = urlQ
 
     selectedLangs.value = urlParams.getAll('lang')
-    sortBy.value = urlParams.get('sort_by') || 'relevance'
     dateFilter.value = urlParams.get('date_filter') || null
     fromDate.value = urlParams.get('from_date') || null
     toDate.value = urlParams.get('to_date') || null
@@ -124,7 +122,6 @@ onMounted(() => {
     :dropdown-items="dropdownItems"
     :dropdown-mode="dropdownMode"
     :selected-langs="selectedLangs"
-    :sort-by="sortBy"
     :date-filter="dateFilter"
     :from-date="fromDate"
     :to-date="toDate"
@@ -137,7 +134,6 @@ onMounted(() => {
     @select-item="doSearch"
     @go-home="clearAll"
     @update:selected-langs="selectedLangs = $event"
-    @update:sort-by="sortBy = $event"
     @update:date-filter="dateFilter = $event"
     @update:from-date="fromDate = $event"
     @update:to-date="toDate = $event"

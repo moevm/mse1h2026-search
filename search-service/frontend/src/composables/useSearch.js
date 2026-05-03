@@ -20,7 +20,7 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
 
   /**
    * @param {string|undefined} q       — search term; falls back to query.value when omitted
-   * @param {object}           filters — object of Refs: { selectedLang, sortBy, dateFilter, fromDate, toDate }
+   * @param {object}           filters — object of Refs: { selectedLang, dateFilter, fromDate, toDate }
    */
   async function doSearch(q, filters = {}) {
     const term = (q ?? query.value).trim()
@@ -45,9 +45,6 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
       urlParams.delete('lang')
     }
 
-    if (filters.sortBy?.value && filters.sortBy.value !== 'relevance') urlParams.set('sort_by', filters.sortBy.value)
-    else urlParams.delete('sort_by')
-
     if (filters.dateFilter?.value) urlParams.set('date_filter', filters.dateFilter.value)
     else urlParams.delete('date_filter')
 
@@ -65,11 +62,10 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
     try {
       const searchParams = new URLSearchParams({ q: term, page: 1, page_size: 10 })
 
-      const { selectedLangs, sortBy, dateFilter, fromDate, toDate } = filters
+      const { selectedLangs, dateFilter, fromDate, toDate } = filters
       if (selectedLangs?.value?.length) {
         selectedLangs.value.forEach(l => searchParams.append('lang', l))
       }
-      if (sortBy?.value && sortBy.value !== 'relevance') searchParams.set('sort_by', sortBy.value)
       if (dateFilter?.value) {
         searchParams.set('date_filter', dateFilter.value)
       } else {

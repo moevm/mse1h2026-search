@@ -14,7 +14,6 @@ defineProps({
   dropdownItems: { type: Array, default: () => [] },
   dropdownMode: { type: String, default: 'recent' },
   selectedLangs: { type: Array, default: () => [] },
-  sortBy: { type: String, default: 'relevance' },
   dateFilter: { type: String, default: null },
   fromDate: { type: String, default: null },
   toDate: { type: String, default: null },
@@ -30,7 +29,6 @@ const emit = defineEmits([
   'select-item',
   'go-home',
   'update:selectedLangs',
-  'update:sortBy',
   'update:dateFilter',
   'update:fromDate',
   'update:toDate',
@@ -101,12 +99,10 @@ const emit = defineEmits([
 
       <FilterSidebar
         :selected-langs="selectedLangs"
-        :sort-by="sortBy"
         :date-filter="dateFilter"
         :from-date="fromDate"
         :to-date="toDate"
         @update:selected-langs="emit('update:selectedLangs', $event)"
-        @update:sort-by="emit('update:sortBy', $event)"
         @update:date-filter="emit('update:dateFilter', $event)"
         @update:from-date="emit('update:fromDate', $event)"
         @update:to-date="emit('update:toDate', $event)"

@@ -1,13 +1,16 @@
 import logging
+import warnings
 from contextlib import closing
 from datetime import datetime
 
 import pymysql
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup, MarkupResemblesLocatorWarning
 
 from config import Settings
 
 from .exceptions import DatabaseExtractionError
+
+warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
