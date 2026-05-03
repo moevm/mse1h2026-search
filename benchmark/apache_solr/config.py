@@ -10,7 +10,7 @@ MYSQL_CONFIG = {
     "password": "root",
     "database": "etu_db",
     "use_pure": True,
-    "auth_plugin": "mysql_native_password"
+    "auth_plugin": "mysql_native_password",
 }
 
 SOLR_URL = "http://localhost:8983/solr/etu_collection"

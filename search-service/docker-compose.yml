@@ -1,20 +1,40 @@
 services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.42.1
+    container_name: search_meili
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    volumes:
+      - meili_data:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - search_network
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: search_backend
     restart: unless-stopped
-    ports:
-      - "8000:8000"
     env_file:
       - ./backend/.env
     healthcheck:
-      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')" ]
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')"]
       interval: 10s
       timeout: 5s
       retries: 5
       start_period: 5s
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      meilisearch:
+        condition: service_healthy
     networks:
       - search_network
 
@@ -24,10 +44,10 @@ services:
       dockerfile: Dockerfile
     container_name: search_frontend
     restart: unless-stopped
-    ports:
-      - "80:80"
     env_file:
       - ./frontend/.env
+    ports:
+      - "6767:80"
     depends_on:
       backend:
         condition: service_healthy
@@ -37,3 +57,6 @@ services:
 networks:
   search_network:
     driver: bridge
+
+volumes:
+  meili_data:

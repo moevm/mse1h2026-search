@@ -4,6 +4,7 @@ from fastapi import Depends
 
 from config import Settings, get_settings
 from services.providers.base import BaseSearchProvider
+from services.providers.meilisearch_provider import MeilisearchProvider
 from services.providers.mock_provider import MockProvider
 
 
@@ -12,9 +13,11 @@ def _get_cached_provider(provider_type: str) -> BaseSearchProvider:
     match provider_type:
         case "mock":
             return MockProvider()
+        case "meilisearch":
+            return MeilisearchProvider()
         case _:
             raise ValueError(
-                f"Unknown SEARCH_PROVIDER: {provider_type!r}. Expected: 'mock'"
+                f"Unknown SEARCH_PROVIDER: {provider_type!r}. Expected: 'mock' or 'meilisearch'"
             )
 
 

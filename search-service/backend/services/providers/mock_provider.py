@@ -40,19 +40,19 @@ class MockProvider(BaseSearchProvider):
         return score
 
     async def search(
-            self,
-            query: str,
-            page: int = 1,
-            page_size: int = 10,
-            lang: str | None = None,
-            sort_by: str = "relevance",
-            date_filter: str | None = None,
-            from_date: str | None = None,
-            to_date: str | None = None,
+        self,
+        query: str,
+        page: int = 1,
+        page_size: int = 10,
+        lang: list[str] | None = None,
+        sort_by: str = "relevance",
+        date_filter: str | None = None,
+        from_date: str | None = None,
+        to_date: str | None = None,
     ) -> SearchResponse:
         filtered_articles = []
         for article in self.articles:
-            if lang and article.get("lang") != lang:
+            if lang and article.get("lang") not in lang:
                 continue
 
             try:
@@ -105,6 +105,7 @@ class MockProvider(BaseSearchProvider):
             filtered_articles.append((article, score))
 
         if sort_by == "date":
+
             def get_date(item):
                 try:
                     return datetime.strptime(

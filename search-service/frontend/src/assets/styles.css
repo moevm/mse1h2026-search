@@ -1,0 +1,33 @@
+/* Global design tokens */
+:root {
+    --blue: #003087;
+    --blue-hover: #00236b;
+    --blue-light: #e8eef7;
+    --link: #0052a5;
+    --link-hover: #003a7a;
+    --text: #1a1a1a;
+    --text-muted: #5a5a6a;
+    --border: #d8dde6;
+    --bg: #ffffff;
+    --bg-sidebar: #f7f8fa;
+    --radius: 6px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, .08);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, .12);
+    --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
+
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font);
+    color: var(--text);
+    background: var(--bg);
+    min-height: 100vh;
+}

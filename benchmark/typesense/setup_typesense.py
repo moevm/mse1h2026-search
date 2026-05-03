@@ -11,8 +11,13 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from config import (
-    MYSQL_CONFIG, MYSQL_TABLE, MYSQL_COLUMNS, MYSQL_WHERE,
-    TYPESENSE_CONFIG, TYPESENSE_COLLECTION, COLLECTION_SCHEMA,
+    MYSQL_CONFIG,
+    MYSQL_TABLE,
+    MYSQL_COLUMNS,
+    MYSQL_WHERE,
+    TYPESENSE_CONFIG,
+    TYPESENSE_COLLECTION,
+    COLLECTION_SCHEMA,
     IMPORT_BATCH_SIZE,
 )
 
@@ -29,33 +34,33 @@ def truncate(text: str, max_chars: int = 50_000) -> str:
 
 
 def clean_document(row: dict) -> dict:
-    pagetitle   = (row["pagetitle"]   or "").strip()
-    longtitle   = (row["longtitle"]   or "").strip()
+    pagetitle = (row["pagetitle"] or "").strip()
+    longtitle = (row["longtitle"] or "").strip()
     description = (row["description"] or "").strip()
-    introtext   = truncate(strip_html(row.get("introtext")))
-    content     = truncate(strip_html(row.get("content")))
+    introtext = truncate(strip_html(row.get("introtext")))
+    content = truncate(strip_html(row.get("content")))
 
     return {
-        "id":          str(row["id"]),
-        "pagetitle":   pagetitle,
-        "longtitle":   longtitle,
+        "id": str(row["id"]),
+        "pagetitle": pagetitle,
+        "longtitle": longtitle,
         "description": description,
-        "introtext":   introtext,
-        "content":     content,
-        "alias":       (row.get("alias") or "").strip(),
-        "parent":      int(row.get("parent")   or 0),
-        "template":    int(row.get("template") or 0),
-        "published":   int(row.get("published") or 0),
-        "deleted":     int(row.get("deleted")   or 0),
+        "introtext": introtext,
+        "content": content,
+        "alias": (row.get("alias") or "").strip(),
+        "parent": int(row.get("parent") or 0),
+        "template": int(row.get("template") or 0),
+        "published": int(row.get("published") or 0),
+        "deleted": int(row.get("deleted") or 0),
     }
 
 
 def fetch_from_mysql() -> list[dict]:
     print("Подключение к MySQL...")
-    conn   = mysql.connector.connect(**MYSQL_CONFIG)
+    conn = mysql.connector.connect(**MYSQL_CONFIG)
     cursor = conn.cursor(dictionary=True)
     columns = ", ".join(MYSQL_COLUMNS)
-    query   = f"SELECT {columns} FROM {MYSQL_TABLE} WHERE {MYSQL_WHERE}"
+    query = f"SELECT {columns} FROM {MYSQL_TABLE} WHERE {MYSQL_WHERE}"
     print(f"SQL: {query}")
     cursor.execute(query)
     rows = cursor.fetchall()
@@ -90,10 +95,15 @@ def create_collection(client: typesense.Client, recreate: bool) -> None:
 
 def import_documents(client: typesense.Client, rows: list[dict]) -> None:
     print(f"\nИндексируем {len(rows)} документов...")
-    documents = [clean_document(row) for row in tqdm(rows, desc="Подготовка", unit="doc")]
+    documents = [
+        clean_document(row) for row in tqdm(rows, desc="Подготовка", unit="doc")
+    ]
 
-    errors  = []
-    batches = [documents[i: i + IMPORT_BATCH_SIZE] for i in range(0, len(documents), IMPORT_BATCH_SIZE)]
+    errors = []
+    batches = [
+        documents[i : i + IMPORT_BATCH_SIZE]
+        for i in range(0, len(documents), IMPORT_BATCH_SIZE)
+    ]
 
     for batch in tqdm(batches, desc="Импорт", unit="батч"):
         results = client.collections[TYPESENSE_COLLECTION].documents.import_(
@@ -109,9 +119,6 @@ def import_documents(client: typesense.Client, rows: list[dict]) -> None:
             print(f"  {e}")
     else:
         print("Импорт завершён без ошибок.")
-
-
-
 
 
 def main():

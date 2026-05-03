@@ -13,7 +13,7 @@ async def search(
     q: str = Query(..., description="Search query"),
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(10, ge=1, le=100, description="Items per page"),
-    lang: str | None = Query(None, description="Language filter"),
+    lang: list[str] | None = Query(None, description="Language filter"),
     sort_by: str = Query(
         "relevance", pattern="^(relevance|date)$", description="Sort criteria"
     ),

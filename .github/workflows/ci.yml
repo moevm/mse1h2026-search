@@ -27,5 +27,5 @@ jobs:
 
       - name: Run tests
         run: |
-          curl http://localhost:8000/api/health
-          curl http://localhost:80
+          curl http://localhost:6767/api/health
+          curl http://localhost:6767/
