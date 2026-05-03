@@ -83,7 +83,7 @@ onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
   const urlQ = urlParams.get('q')
 
-  useFiltersInstance.restoreFromUrl() // используй переменную из useFilters()
+  useFiltersInstance.restoreFromUrl()
 
   if (urlQ) {
     query.value = urlQ
