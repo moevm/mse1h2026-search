@@ -20,7 +20,6 @@ class Settings(BaseSettings):
     MEILI_URL: str
     MEILI_API_KEY: str
     MEILI_INDEX: str
-    MEILI_NO_ANALYTICS: bool = True
     MEILI_SEMANTIC_RATIO: float
 
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
