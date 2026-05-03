@@ -6,6 +6,8 @@ from models.schemas import ArticleResult, SearchResponse
 from services.exceptions import InvalidParameterError
 from services.providers.base import BaseSearchProvider
 
+from indexer.filters import filter_valid_documents
+
 DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
 class MockProvider(BaseSearchProvider):
@@ -15,16 +17,8 @@ class MockProvider(BaseSearchProvider):
             with open(DATA_FILE, encoding="utf-8") as f:
                 raw_articles = json.load(f)
 
-                for article in raw_articles:
-                    try:
-                        is_published = int(article.get("published", 1)) == 1
-                        is_deleted = int(article.get("deleted", 0)) == 1
-                        is_searchable = int(article.get("searchable", 1)) == 1
-
-                        if is_published and not is_deleted and is_searchable:
-                            self.articles.append(article)
-                    except (ValueError, TypeError):
-                        continue
+                # Пропускаем все статьи через внешний фильтр
+                self.articles = filter_valid_documents(raw_articles)
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
