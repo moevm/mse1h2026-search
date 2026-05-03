@@ -87,20 +87,26 @@ def _get_breadcrumbs(doc_id: int, parent_map: dict, title_map: dict) -> list[str
     return breadcrumbs[::-1]
 
 
-def _get_url_path(doc_id: int, parent_map: dict, alias_map: dict) -> str:
+def _get_url_path(doc_id: int, parent_map: dict, alias_map: dict, alias_visible_map: dict) -> str:
     parts = []
     current_id = doc_id
     for _ in range(20):
         if not current_id or current_id == 0:
             break
+
         alias = alias_map.get(current_id, "")
-        if alias:
+        is_visible = alias_visible_map.get(current_id, 1)
+
+        if alias and is_visible == 1:
             parts.append(alias)
+
         if current_id in LANG_ROOTS:
             break
+
         current_id = parent_map.get(current_id, 0)
+
     parts.reverse()
-    return "/".join(parts) + "/"
+    return "/".join(parts)
 
 
 class CMSExtractor:
@@ -127,28 +133,30 @@ class CMSExtractor:
         try:
             with closing(pymysql.connect(**self.db_config)) as conn:
                 with conn.cursor() as cursor:
-                    parent_map, title_map, alias_map = self._fetch_hierarchy(cursor)
+                    parent_map, title_map, alias_map, alias_visible_map = self._fetch_hierarchy(cursor)
                     rows = self._fetch_content(cursor, since_ts)
                     tv_map = self._fetch_tv_values(cursor)
 
-            return self._process(rows, parent_map, title_map, alias_map, tv_map)
+            return self._process(rows, parent_map, title_map, alias_map, alias_visible_map, tv_map)
 
         except pymysql.MySQLError as e:
             raise DatabaseExtractionError(
                 f"Failed to extract data from {self.table_name}"
             ) from e
 
-    def _fetch_hierarchy(self, cursor) -> tuple[dict, dict, dict]:
+    def _fetch_hierarchy(self, cursor) -> tuple[dict, dict, dict, dict]:
         cursor.execute(
-            f"SELECT id, parent, pagetitle, alias FROM {self.table_name} "
+            f"SELECT id, parent, pagetitle, alias, alias_visible FROM {self.table_name} "
             "WHERE deleted = 0 AND published = 1"
         )
         rows = cursor.fetchall()
         parent_map = {row["id"]: row["parent"] for row in rows}
         title_map = {row["id"]: row["pagetitle"] for row in rows}
         alias_map = {row["id"]: row["alias"] for row in rows}
+        alias_visible_map = {row["id"]: row["alias_visible"] for row in rows}
+
         logger.info("Loaded hierarchy: %d documents.", len(rows))
-        return parent_map, title_map, alias_map
+        return parent_map, title_map, alias_map, alias_visible_map
 
     def _fetch_content(self, cursor, since_ts: int | None = None) -> list[dict]:
         where = "WHERE deleted = 0 AND published = 1 AND searchable = 1"
@@ -201,12 +209,13 @@ class CMSExtractor:
         return tv_map
 
     def _process(
-        self,
-        rows: list[dict],
-        parent_map: dict,
-        title_map: dict,
-        alias_map: dict,
-        tv_map: dict,
+            self,
+            rows: list[dict],
+            parent_map: dict,
+            title_map: dict,
+            alias_map: dict,
+            alias_visible_map: dict,
+            tv_map: dict,
     ) -> list[dict]:
         result = []
         for row in rows:
@@ -217,7 +226,9 @@ class CMSExtractor:
             row["parent_title"] = title_map.get(row["parent"], "")
             row["breadcrumbs"] = _get_breadcrumbs(row["id"], parent_map, title_map)
             row["breadcrumbs_str"] = " › ".join(row["breadcrumbs"])
-            row["url_path"] = _get_url_path(row["id"], parent_map, alias_map)
+
+            row["url_path"] = _get_url_path(row["id"], parent_map, alias_map, alias_visible_map)
+
             if row["id"] in LANG_ROOTS:
                 continue
             lang = _get_language(row["id"], parent_map)
