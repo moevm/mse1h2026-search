@@ -55,6 +55,7 @@ function clearAll() {
   clearSuggestions()
   dropdownOpen.value = false
   _clearAll()
+  resetFilters()
 }
 
 function onFocus() {
@@ -81,15 +82,11 @@ function handleClear() {
 onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
   const urlQ = urlParams.get('q')
+
+  useFiltersInstance.restoreFromUrl() // используй переменную из useFilters()
+
   if (urlQ) {
     query.value = urlQ
-
-    selectedLangs.value = urlParams.getAll('lang')
-    sortBy.value = urlParams.get('sort_by') || 'relevance'
-    dateFilter.value = urlParams.get('date_filter') || null
-    fromDate.value = urlParams.get('from_date') || null
-    toDate.value = urlParams.get('to_date') || null
-
     doSearch(urlQ)
   }
 })

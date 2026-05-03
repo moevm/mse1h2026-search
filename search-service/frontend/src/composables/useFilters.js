@@ -16,14 +16,31 @@ export function useFilters() {
     }
   }
 
-  /**
-   * Converts yyyy-mm-dd (HTML date input format) to dd-mm-yyyy (API format).
-   */
+  function restoreFromUrl() {
+    const params = new URLSearchParams(window.location.search)
+    selectedLangs.value = params.getAll('lang')
+    sortBy.value = params.get('sort_by') || 'relevance'
+    dateFilter.value = params.get('date_filter') || null
+    fromDate.value = params.get('from_date') || null
+    toDate.value = params.get('to_date') || null
+  }
+
+  function resetFilters() {
+    selectedLangs.value = []
+    sortBy.value = 'relevance'
+    dateFilter.value = null
+    fromDate.value = null
+    toDate.value = null
+  }
+
   function formatDateForQuery(dateStr) {
     if (!dateStr) return null
     const [y, m, d] = dateStr.split('-')
     return `${d}-${m}-${y}`
   }
 
-  return { selectedLangs, sortBy, dateFilter, fromDate, toDate, toggleLang, formatDateForQuery }
+  return {
+    selectedLangs, sortBy, dateFilter, fromDate, toDate,
+    toggleLang, formatDateForQuery, restoreFromUrl, resetFilters
+  }
 }
