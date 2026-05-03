@@ -1,6 +1,6 @@
 import asyncio
 import logging
-from contextlib import asynccontextmanager, suppress
+from contextlib import asynccontextmanager
 
 import uvicorn
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
@@ -10,7 +10,7 @@ from fastapi import FastAPI
 from config import get_settings
 from indexer.meili_indexer import MeiliIndexer
 from routers import indexer, search
-from services.indexing_service import run_sync_task
+from services.indexing_service import run_full_sync_task, run_incremental_sync_task
 from services.providers.meilisearch_provider import apply_index_settings
 
 logging.basicConfig(
@@ -22,36 +22,25 @@ logger = logging.getLogger(__name__)
 _settings = get_settings()
 scheduler = AsyncIOScheduler()
 
-
-async def _indexing_loop(indexer: MeiliIndexer) -> None:
-    try:
-        if await asyncio.to_thread(indexer.is_empty):
-            logger.info("Index is empty, running full sync...")
-            await asyncio.to_thread(indexer.full_sync)
-        else:
-            logger.info("Index already has documents, skipping full sync.")
-
-        while True:
-            await asyncio.sleep(3600)
-            await asyncio.to_thread(indexer.incremental_sync)
-    except asyncio.CancelledError:
-        raise
-    except Exception:
-        logger.exception("Indexing loop crashed:")
-
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     scheduler.add_job(
-        run_sync_task,
-        CronTrigger.from_crontab("0 3 * * *"),
-        id="daily_cms_sync",
+        run_incremental_sync_task,
+        CronTrigger.from_crontab("0 * * * *"),
+        id="hourly_incremental_sync",
         replace_existing=True,
     )
+
+    scheduler.add_job(
+        run_full_sync_task,
+        CronTrigger.from_crontab("0 3 * * 0"),
+        id="weekly_full_sync",
+        replace_existing=True,
+    )
+
     scheduler.start()
     logger.info("Task scheduler started.")
 
-    task = None
     if _settings.SEARCH_PROVIDER == "meilisearch":
         logger.info("Applying Meilisearch index settings...")
         await asyncio.to_thread(
@@ -63,14 +52,11 @@ async def lifespan(app: FastAPI):
         logger.info("Meilisearch index settings applied.")
 
         indexer_instance = MeiliIndexer(_settings)
-        task = asyncio.create_task(_indexing_loop(indexer_instance))
+        if await asyncio.to_thread(indexer_instance.is_empty):
+            logger.info("Index is empty, scheduling initial full sync...")
+            scheduler.add_job(run_full_sync_task, id="initial_startup_sync")
 
     yield
-
-    if task:
-        task.cancel()
-        with suppress(asyncio.CancelledError):
-            await task
 
     scheduler.shutdown()
 
