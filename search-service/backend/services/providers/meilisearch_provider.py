@@ -303,9 +303,6 @@ _INDEX_SETTINGS = {
         "lang",
     ],
     "sortableAttributes": [
-        "publishedon",
-        "createdon",
-        "editedon",
         "menuindex",
         "hitcount",
         "published_year",
@@ -316,9 +313,7 @@ _INDEX_SETTINGS = {
         "exactness",
         "attribute",
         "proximity",
-        "sort",
         "hitcount:desc",
-        "publishedon:desc",
     ],
     "stopWords": _STOP_WORDS,
     "synonyms": _RU_SYNONYMS,
@@ -348,7 +343,7 @@ def apply_index_settings(meili_url: str, meili_api_key: str, meili_index: str) -
     client = meilisearch.Client(meili_url, meili_api_key or None)
     index = client.index(meili_index)
     task = index.update_settings(_INDEX_SETTINGS)
-    client.wait_for_task(task.task_uid, timeout_in_ms=60_000)
+    client.wait_for_task(task.task_uid, timeout_in_ms=600_000, interval_in_ms=1000)
 
 
 class MeilisearchProvider(BaseSearchProvider):
@@ -366,7 +361,6 @@ class MeilisearchProvider(BaseSearchProvider):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
@@ -386,8 +380,6 @@ class MeilisearchProvider(BaseSearchProvider):
         }
         if combined:
             opt_params["filter"] = combined
-        if sort_by == "date":
-            opt_params["sort"] = ["publishedon:desc"]
 
         normalized_query = (query or "").strip().lower()
 

@@ -13,7 +13,7 @@ const dropdownOpen = ref(false)
 
 const { recentSearches, save: saveRecent } = useRecentSearches()
 const { suggestions, isTyping, onFocus: _onFocus, onInput: _onInput, clear: clearSuggestions } = useSuggestions()
-const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery, restoreFromUrl, resetFilters } = useFilters()
+const { selectedLangs, dateFilter, fromDate, toDate, formatDateForQuery, restoreFromUrl, resetFilters } = useFilters()
 const { query, lastQuery, results, total, resultStatus, inResults, doSearch: _doSearch, clearAll: _clearAll } = useSearch({ isEmbed, saveRecent, formatDateForQuery })
 
 provide('highlight', createHighlighter(lastQuery))
@@ -28,7 +28,6 @@ const dropdownMode = computed(() => isTyping.value ? 'suggestions' : 'recent')
 
 // --- Filter watchers: re-run search when filters change ---
 watch(selectedLangs, () => { if (inResults.value) doSearch() }, { deep: true })
-watch(sortBy, () => { if (inResults.value) doSearch() })
 watch(dateFilter, (val) => {
   if (val) {
     fromDate.value = null
@@ -51,7 +50,7 @@ function doSearch(q) {
   if (q !== undefined && q.trim() !== lastQuery.value && inResults.value) {
     resetFilters()
   }
-  _doSearch(q, { selectedLangs, sortBy, dateFilter, fromDate, toDate })
+  _doSearch(q, { selectedLangs, dateFilter, fromDate, toDate })
 }
 
 function clearAll() {
@@ -124,7 +123,6 @@ onMounted(() => {
     :dropdown-items="dropdownItems"
     :dropdown-mode="dropdownMode"
     :selected-langs="selectedLangs"
-    :sort-by="sortBy"
     :date-filter="dateFilter"
     :from-date="fromDate"
     :to-date="toDate"
@@ -137,7 +135,6 @@ onMounted(() => {
     @select-item="doSearch"
     @go-home="clearAll"
     @update:selected-langs="selectedLangs = $event"
-    @update:sort-by="sortBy = $event"
     @update:date-filter="dateFilter = $event"
     @update:from-date="fromDate = $event"
     @update:to-date="toDate = $event"

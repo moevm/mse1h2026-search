@@ -1,7 +1,8 @@
 <script setup>
+import { computed } from 'vue'
+
 const props = defineProps({
   selectedLangs: { type: Array, default: () => [] },
-  sortBy: { type: String, default: 'relevance' },
   dateFilter: { type: String, default: null },
   fromDate: { type: String, default: null },
   toDate: { type: String, default: null },
@@ -9,13 +10,12 @@ const props = defineProps({
 
 const emit = defineEmits([
   'update:selectedLangs',
-  'update:sortBy',
   'update:dateFilter',
   'update:fromDate',
   'update:toDate',
 ])
 
-const languages = ['RU', 'EN', 'DE', 'ES', 'FR', 'PT', 'ZH', 'VI']
+const languages = ['RU', 'EN', 'DE', 'SP', 'VN', 'CN', 'AR', 'PT', 'FR']
 
 const dateOptions = [
   { label: 'За все время', value: null },
@@ -23,6 +23,17 @@ const dateOptions = [
   { label: 'За год', value: 'year' },
   { label: 'За 3 года', value: '3years' },
 ]
+
+function toggleLang(lang) {
+  const newLangs = [...props.selectedLangs]
+  const idx = newLangs.indexOf(lang)
+  if (idx > -1) {
+    newLangs.splice(idx, 1)
+  } else {
+    newLangs.push(lang)
+  }
+  emit('update:selectedLangs', newLangs)
+}
 
 function handleDateFilterChange(val) {
   emit('update:dateFilter', val)
@@ -45,73 +56,82 @@ function isDateOptionChecked(optValue) {
   }
   return props.dateFilter === optValue
 }
+
+const hasActiveFilters = computed(() => {
+  return props.selectedLangs.length > 0 ||
+         props.dateFilter !== null ||
+         !!props.fromDate ||
+         !!props.toDate
+})
+
+function resetFilters() {
+  if (!hasActiveFilters.value) return
+  emit('update:selectedLangs', [])
+  emit('update:dateFilter', null)
+  emit('update:fromDate', null)
+  emit('update:toDate', null)
+}
 </script>
 
 <template>
-  <aside class="results-sidebar">
-    <div class="sidebar-block sidebar-langs">
-      <button
-        v-for="lang in languages"
-        :key="lang"
-        class="lang-btn"
-        :class="{ active: selectedLangs.includes(lang) }"
-        @click="toggleLang(lang)"
-      >{{ lang }}</button>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="sidebar-label">Сортировка</div>
-      <label class="sidebar-option">
-        <input
-          type="radio"
-          :checked="sortBy === 'relevance'"
-          value="relevance"
-          @change="emit('update:sortBy', 'relevance')"
-        />
-        <span>По релевантности</span>
-      </label>
-      <label class="sidebar-option">
-        <input
-          type="radio"
-          :checked="sortBy === 'date'"
-          value="date"
-          @change="emit('update:sortBy', 'date')"
-        />
-        <span>По дате</span>
-      </label>
-    </div>
-
-    <div class="sidebar-block">
-      <div class="sidebar-label">Период</div>
-      <label v-for="opt in dateOptions" :key="opt.value" class="sidebar-option">
-        <input
-          type="radio"
-          :checked="isDateOptionChecked(opt.value)"
-          :value="opt.value"
-          @change="handleDateFilterChange(opt.value)"
-        />
-        <span>{{ opt.label }}</span>
-      </label>
-      <div class="date-range-inputs">
-        <div class="date-field">
-          <span>От</span>
-          <input
-            type="date"
-            :value="fromDate"
-            @change="handleManualDateChange('from', $event.target.value)"
-          />
+    <aside class="results-sidebar">
+        <div class="sidebar-block sidebar-langs">
+            <button
+                v-for="lang in languages"
+                :key="lang"
+                class="lang-btn"
+                :class="{ active: selectedLangs.includes(lang) }"
+                @click="toggleLang(lang)"
+            >
+                {{ lang }}
+            </button>
         </div>
-        <div class="date-field">
-          <span>До</span>
-          <input
-            type="date"
-            :value="toDate"
-            @change="handleManualDateChange('to', $event.target.value)"
-          />
+
+        <div class="sidebar-block">
+            <div class="sidebar-label">Период</div>
+            <label
+                v-for="opt in dateOptions"
+                :key="opt.value"
+                class="sidebar-option"
+            >
+                <input
+                    type="radio"
+                    :checked="isDateOptionChecked(opt.value)"
+                    :value="opt.value"
+                    @change="handleDateFilterChange(opt.value)"
+                />
+                <span>{{ opt.label }}</span>
+            </label>
+            <div class="date-range-inputs">
+                <div class="date-field">
+                    <span>От</span>
+                    <input
+                        type="date"
+                        :value="fromDate"
+                        @change="
+                            handleManualDateChange('from', $event.target.value)
+                        "
+                    />
+                </div>
+                <div class="date-field">
+                    <span>До</span>
+                    <input
+                        type="date"
+                        :value="toDate"
+                        @change="
+                            handleManualDateChange('to', $event.target.value)
+                        "
+                    />
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </aside>
+
+        <div class="sidebar-block reset-block" v-if="hasActiveFilters">
+            <button class="reset-btn" @click="resetFilters">
+                Сбросить фильтры
+            </button>
+        </div>
+    </aside>
 </template>
 
 <style scoped>
@@ -143,7 +163,7 @@ function isDateOptionChecked(optValue) {
     font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: .05em;
+    letter-spacing: 0.05em;
     color: var(--text-muted);
     margin-bottom: 8px;
 }
@@ -166,7 +186,10 @@ function isDateOptionChecked(optValue) {
     color: var(--text-muted);
     background: var(--bg);
     cursor: pointer;
-    transition: border-color .12s, color .12s, background .12s;
+    transition:
+        border-color 0.12s,
+        color 0.12s,
+        background 0.12s;
 }
 
 .lang-btn:hover {
@@ -231,6 +254,34 @@ function isDateOptionChecked(optValue) {
 
 .date-field input[type="date"]:focus {
     border-color: var(--blue);
+}
+
+.reset-block {
+    border-bottom: none;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    margin-top: 16px;
+}
+
+.reset-btn {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--bg);
+    cursor: pointer;
+    transition:
+        border-color 0.12s,
+        color 0.12s,
+        background 0.12s;
+}
+
+.reset-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
 }
 
 @media (max-width: 700px) {
