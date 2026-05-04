@@ -8,6 +8,7 @@ from bs4 import BeautifulSoup
 from config import Settings
 
 from .exceptions import DatabaseExtractionError
+from .filters import filter_valid_documents
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
@@ -208,6 +209,7 @@ class CMSExtractor:
         alias_map: dict,
         tv_map: dict,
     ) -> list[dict]:
+        rows = filter_valid_documents(rows)
         result = []
         for row in rows:
             row["content"] = _clean_html(row["content"])
