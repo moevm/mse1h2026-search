@@ -13,7 +13,7 @@ const dropdownOpen = ref(false)
 
 const { recentSearches, save: saveRecent } = useRecentSearches()
 const { suggestions, isTyping, onFocus: _onFocus, onInput: _onInput, clear: clearSuggestions } = useSuggestions()
-const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery } = useFilters()
+const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery, restoreFromUrl, resetFilters } = useFilters()
 const { query, lastQuery, results, total, resultStatus, inResults, doSearch: _doSearch, clearAll: _clearAll } = useSearch({ isEmbed, saveRecent, formatDateForQuery })
 
 provide('highlight', createHighlighter(lastQuery))
@@ -48,6 +48,9 @@ watch(toDate, (val) => {
 // --- Methods ---
 function doSearch(q) {
   dropdownOpen.value = false
+  if (q !== undefined && q.trim() !== lastQuery.value && inResults.value) {
+    resetFilters()
+  }
   _doSearch(q, { selectedLangs, sortBy, dateFilter, fromDate, toDate })
 }
 
@@ -55,6 +58,7 @@ function clearAll() {
   clearSuggestions()
   dropdownOpen.value = false
   _clearAll()
+  resetFilters()
 }
 
 function onFocus() {
@@ -81,15 +85,11 @@ function handleClear() {
 onMounted(() => {
   const urlParams = new URLSearchParams(window.location.search)
   const urlQ = urlParams.get('q')
+
+  restoreFromUrl()
+
   if (urlQ) {
     query.value = urlQ
-
-    selectedLangs.value = urlParams.getAll('lang')
-    sortBy.value = urlParams.get('sort_by') || 'relevance'
-    dateFilter.value = urlParams.get('date_filter') || null
-    fromDate.value = urlParams.get('from_date') || null
-    toDate.value = urlParams.get('to_date') || null
-
     doSearch(urlQ)
   }
 })

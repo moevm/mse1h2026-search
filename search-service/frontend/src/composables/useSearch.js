@@ -99,9 +99,10 @@ export function useSearch({ isEmbed, saveRecent, formatDateForQuery }) {
     inResults.value = false
     resultStatus.value = 'loading'
 
-    const urlParams = new URLSearchParams(window.location.search)
-    urlParams.delete('q')
-    const qs = urlParams.toString()
+    const newParams = new URLSearchParams()
+    if (isEmbed.value) newParams.set('embed', 'true')
+
+    const qs = newParams.toString()
     window.history.replaceState({}, '', qs ? `?${qs}` : window.location.pathname)
   }
 
