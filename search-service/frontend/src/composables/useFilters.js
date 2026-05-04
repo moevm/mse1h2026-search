@@ -2,7 +2,6 @@ import { ref } from 'vue'
 
 export function useFilters() {
   const selectedLangs = ref([])
-  const sortBy = ref('relevance')
   const dateFilter = ref(null)
   const fromDate = ref(null)
   const toDate = ref(null)
@@ -19,7 +18,6 @@ export function useFilters() {
   function restoreFromUrl() {
     const params = new URLSearchParams(window.location.search)
     selectedLangs.value = params.getAll('lang')
-    sortBy.value = params.get('sort_by') || 'relevance'
     dateFilter.value = params.get('date_filter') || null
     fromDate.value = params.get('from_date') || null
     toDate.value = params.get('to_date') || null
@@ -27,7 +25,6 @@ export function useFilters() {
 
   function resetFilters() {
     selectedLangs.value = []
-    sortBy.value = 'relevance'
     dateFilter.value = null
     fromDate.value = null
     toDate.value = null
@@ -40,7 +37,7 @@ export function useFilters() {
   }
 
   return {
-    selectedLangs, sortBy, dateFilter, fromDate, toDate,
+    selectedLangs, dateFilter, fromDate, toDate,
     toggleLang, formatDateForQuery, restoreFromUrl, resetFilters
   }
 }

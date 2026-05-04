@@ -13,7 +13,7 @@ const dropdownOpen = ref(false)
 
 const { recentSearches, save: saveRecent } = useRecentSearches()
 const { suggestions, isTyping, onFocus: _onFocus, onInput: _onInput, clear: clearSuggestions } = useSuggestions()
-const { selectedLangs, sortBy, dateFilter, fromDate, toDate, formatDateForQuery, restoreFromUrl, resetFilters } = useFilters()
+const { selectedLangs, dateFilter, fromDate, toDate, formatDateForQuery, restoreFromUrl, resetFilters } = useFilters()
 const { query, lastQuery, results, total, resultStatus, inResults, doSearch: _doSearch, clearAll: _clearAll } = useSearch({ isEmbed, saveRecent, formatDateForQuery })
 
 provide('highlight', createHighlighter(lastQuery))
@@ -50,7 +50,7 @@ function doSearch(q) {
   if (q !== undefined && q.trim() !== lastQuery.value && inResults.value) {
     resetFilters()
   }
-  _doSearch(q, { selectedLangs, sortBy, dateFilter, fromDate, toDate })
+  _doSearch(q, { selectedLangs, dateFilter, fromDate, toDate })
 }
 
 function clearAll() {
