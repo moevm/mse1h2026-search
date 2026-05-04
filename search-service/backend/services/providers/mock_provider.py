@@ -41,7 +41,6 @@ class MockProvider(BaseSearchProvider):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
@@ -100,19 +99,7 @@ class MockProvider(BaseSearchProvider):
 
             filtered_articles.append((article, score))
 
-        if sort_by == "date":
-
-            def get_date(item):
-                try:
-                    return datetime.strptime(
-                        item[0].get("date", "01-01-2000"), "%d-%m-%Y"
-                    )
-                except ValueError:
-                    return datetime.min
-
-            filtered_articles.sort(key=get_date, reverse=True)
-        else:
-            filtered_articles.sort(key=lambda x: x[1], reverse=True)
+        filtered_articles.sort(key=lambda x: x[1], reverse=True)
 
         total = len(filtered_articles)
 

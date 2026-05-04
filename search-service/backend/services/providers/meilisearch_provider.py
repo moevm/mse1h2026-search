@@ -303,9 +303,6 @@ _INDEX_SETTINGS = {
         "lang",
     ],
     "sortableAttributes": [
-        "publishedon",
-        "createdon",
-        "editedon",
         "menuindex",
         "hitcount",
         "published_year",
@@ -316,9 +313,7 @@ _INDEX_SETTINGS = {
         "exactness",
         "attribute",
         "proximity",
-        "sort",
         "hitcount:desc",
-        "publishedon:desc",
     ],
     "stopWords": _STOP_WORDS,
     "synonyms": _RU_SYNONYMS,
@@ -366,7 +361,6 @@ class MeilisearchProvider(BaseSearchProvider):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
@@ -386,8 +380,6 @@ class MeilisearchProvider(BaseSearchProvider):
         }
         if combined:
             opt_params["filter"] = combined
-        if sort_by == "date":
-            opt_params["sort"] = ["publishedon:desc"]
 
         normalized_query = (query or "").strip().lower()
 
