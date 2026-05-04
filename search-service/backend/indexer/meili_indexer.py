@@ -77,7 +77,7 @@ class MeiliIndexer:
 
             is_swap_pending = True
             self._client.wait_for_task(
-                swap_task.task_uid, timeout_in_ms=14_400_000)
+                swap_task.task_uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
             is_swap_pending = False
 
             logger.info(
@@ -139,7 +139,7 @@ class MeiliIndexer:
             try:
                 for uid in task_uids:
                     task_info = self._client.wait_for_task(
-                        uid, timeout_in_ms=14_400_000)
+                        uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
 
                     if task_info.status != "succeeded":
                         logger.error(
