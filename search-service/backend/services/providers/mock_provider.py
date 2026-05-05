@@ -6,15 +6,19 @@ from models.schemas import ArticleResult, SearchResponse
 from services.exceptions import InvalidParameterError
 from services.providers.base import BaseSearchProvider
 
-DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
+from indexer.filters import filter_valid_documents
 
+DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
 class MockProvider(BaseSearchProvider):
     def __init__(self) -> None:
         self.articles: list[dict] = []
         if DATA_FILE.exists():
             with open(DATA_FILE, encoding="utf-8") as f:
-                self.articles = json.load(f)
+                raw_articles = json.load(f)
+
+                # Пропускаем все статьи через внешний фильтр
+                self.articles = filter_valid_documents(raw_articles)
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
@@ -41,7 +45,6 @@ class MockProvider(BaseSearchProvider):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
@@ -100,19 +103,7 @@ class MockProvider(BaseSearchProvider):
 
             filtered_articles.append((article, score))
 
-        if sort_by == "date":
-
-            def get_date(item):
-                try:
-                    return datetime.strptime(
-                        item[0].get("date", "01-01-2000"), "%d-%m-%Y"
-                    )
-                except ValueError:
-                    return datetime.min
-
-            filtered_articles.sort(key=get_date, reverse=True)
-        else:
-            filtered_articles.sort(key=lambda x: x[1], reverse=True)
+        filtered_articles.sort(key=lambda x: x[1], reverse=True)
 
         total = len(filtered_articles)
 

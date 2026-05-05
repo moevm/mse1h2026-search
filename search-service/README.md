@@ -80,7 +80,7 @@ python -m http.server 3000
 | GET   | `/api/health`  | Health-check                                        |
 | GET   | `/docs`        | Swagger UI                                          |
 
-Дополнительные параметры `/api/search`: `lang`, `sort_by` (`relevance`/`date`), `date_filter` (`month`/`year`/`3years`), `from_date`/`to_date` (формат `DD-MM-YYYY`). В будущем могут меняться в соответствии с требованиями.
+Дополнительные параметры `/api/search`: `lang`, `date_filter` (`month`/`year`/`3years`), `from_date`/`to_date` (формат `DD-MM-YYYY`). В будущем могут меняться в соответствии с требованиями.
 
 ---
 

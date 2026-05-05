@@ -7,6 +7,7 @@ from meilisearch.errors import MeilisearchError
 from config import Settings
 from indexer.cms_sync import CMSExtractor
 from indexer.exceptions import DatabaseExtractionError
+from services.providers.meilisearch_provider import apply_index_settings
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
@@ -21,6 +22,8 @@ class MeiliIndexer:
         )
         self._index = self._client.index(settings.MEILI_INDEX)
         self._last_sync_ts: int = 0
+        self._url = settings.MEILI_URL
+        self._api_key = settings.MEILI_API_KEY
 
     def is_empty(self) -> bool:
         try:
@@ -44,6 +47,56 @@ class MeiliIndexer:
         self._push(rows)
         logger.info("Full sync complete: %d documents indexed.", len(rows))
 
+    def rebuild_index(self) -> None:
+        """Пересоздание индекса"""
+        logger.info("Starting index rebuild...")
+        try:
+            rows = self._extractor.extract_data()
+        except DatabaseExtractionError as e:
+            logger.error("Rebuild failed during extraction: %s", e)
+            return
+
+        if not rows:
+            logger.info("No documents to index during rebuild.")
+            return
+
+        temp_name = f"{self._index.uid}_temp"
+        temp_index = self._client.index(temp_name)
+        is_swap_pending = False
+
+        try:
+            logger.info("Applying settings to temporary index: %s", temp_name)
+            apply_index_settings(self._url, self._api_key, temp_name)
+
+            self._push(rows, target_index=temp_index)
+
+            logger.info("Swapping indexes...")
+            swap_task = self._client.swap_indexes([
+                {"indexes": [self._index.uid, temp_name]}
+            ])
+
+            is_swap_pending = True
+            self._client.wait_for_task(
+                swap_task.task_uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
+            is_swap_pending = False
+
+            logger.info(
+                "Index rebuild complete: %d documents indexed.", len(rows))
+
+        except Exception as e:
+            logger.error("Failed during rebuild procedure: %s", e)
+        finally:
+            if not is_swap_pending:
+                try:
+                    temp_index.delete()
+                    logger.info("Temporary index %s cleaned up.", temp_name)
+                except MeilisearchError as e:
+                    logger.warning(
+                        "Failed to delete temp index %s: %s", temp_name, e)
+            else:
+                logger.warning(
+                    "Swap task timed out or failed locally. Temp index %s left intact for Meilisearch to complete the swap in the background.", temp_name)
+
     def incremental_sync(self) -> None:
         logger.info("Starting incremental sync since ts=%d...", self._last_sync_ts)
         new_sync_ts = int(datetime.now().timestamp())
@@ -65,32 +118,41 @@ class MeiliIndexer:
     def _push(self, rows: list[dict], batch_size: int = 5000) -> None:
         last_task = None
         for i in range(0, len(rows), batch_size):
-            batch = rows[i : i + batch_size]
+            batch = rows[i: i + batch_size]
             try:
-                last_task = self._index.add_documents(batch, primary_key="id")
+                task = idx.add_documents(batch, primary_key="id")
+                task_uids.append(task.task_uid)
                 logger.info(
-                    "Enqueued batch %d-%d (task %d).",
-                    i,
-                    i + len(batch),
-                    last_task.task_uid,
+                    "Enqueued batch %d-%d (task %d).", i, i +
+                    len(batch), task.task_uid
                 )
             except MeilisearchError as e:
-                logger.error("Failed to enqueue batch %d-%d: %s", i, i + len(batch), e)
+                logger.error("Failed to enqueue batch %d-%d: %s",
+                             i, i + len(batch), e)
                 raise
 
-        if last_task:
+        if task_uids:
             logger.info(
-                "Waiting for indexing and embedding generation to complete (task %d)...",
-                last_task.task_uid,
-            )
+                "Waiting for %d indexing tasks to complete...", len(task_uids))
             try:
-                task_info = self._client.wait_for_task(
-                    last_task.task_uid, timeout_in_ms=14_400_000
-                )
-                logger.info(
-                    "All indexing and embeddings complete. Last task duration: %s, status: %s.",
-                    task_info.duration,
-                    task_info.status,
-                )
+                for uid in task_uids:
+                    task_info = self._client.wait_for_task(
+                        uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
+
+                    if task_info.status != "succeeded":
+                        logger.error(
+                            "Batch task %d failed inside Meilisearch. Status: %s",
+                            uid, task_info.status
+                        )
+                        raise MeilisearchError(
+                            f"Task {uid} failed with status: {task_info.status}"
+                        )
+
+                logger.info("All %d batches indexed successfully.",
+                            len(task_uids))
+                self._last_sync_ts = new_sync_ts
+
             except MeilisearchError as e:
-                logger.warning("Timeout waiting for last indexing task: %s", e)
+                logger.error(
+                    "Error or timeout waiting for indexing tasks: %s", e)
+                raise

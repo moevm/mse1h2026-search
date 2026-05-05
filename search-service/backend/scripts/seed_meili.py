@@ -41,7 +41,7 @@ def main() -> None:
         )
 
     if last_task:
-        client.wait_for_task(last_task.task_uid, timeout_in_ms=120_000)
+        client.wait_for_task(last_task.task_uid, timeout_in_ms=120_000, interval_in_ms=1000)
 
     logger.info("Done. Stats: %s", index.get_stats())
 
