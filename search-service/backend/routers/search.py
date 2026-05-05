@@ -14,6 +14,9 @@ async def search(
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(10, ge=1, le=100, description="Items per page"),
     lang: list[str] | None = Query(None, description="Language filter"),
+    sort_by: str = Query(
+        "relevance", pattern="^(relevance|date)$", description="Sort criteria"
+    ),
     date_filter: str | None = Query(
         None, pattern="^(month|year|3years)$", description="Date period filter"
     ),
@@ -27,6 +30,7 @@ async def search(
             page=page,
             page_size=page_size,
             lang=lang,
+            sort_by=sort_by,
             date_filter=date_filter,
             from_date=from_date,
             to_date=to_date,
