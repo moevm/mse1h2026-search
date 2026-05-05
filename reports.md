@@ -279,7 +279,7 @@ docker compose up --build -d
 7. Протестировать различные модели эмбеддингов, чтобы определить оптимальное сочетание с движками для поиска.
 
 ### Выполненные задачи
-1. Проведена оценка по бенчмарку Yandex;
+1. [Проведена оценка по бенчмарку Yandex;](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков#дополнение-yandex-search-api-language_average--global_average)
 2. Реализован UC-1: Поиск информации пользователем:
     - Интегрирован поисковый движок
     - Добавлено логирование кликов
@@ -298,10 +298,10 @@ docker compose up --build -d
     - Реализованы режимы индексации (full / incremental)
 6. Протестирован процесс индексации на тестовых данных
 7. Проведен файнтюн движков для улучшения качества поиска и релевантности результатов, а так же рассмотрены сочетания с различными моделями эмбеддингов :
-    - Typesense
-    - Meilisearch 
-    - Manticore
-8. Проведено сравнение оптимизированных движков и выбран лучший вариант для интеграции в систему - Meilisearch 
+    - [Typesense](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/typesense/README.md)
+    - [Meilisearch](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/meilisearch/README.md) 
+    - [Manticore](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/manticore/README.md)
+8. [Проведено сравнение оптимизированных движков и выбран лучший вариант для интеграции в систему - Meilisearch](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков#интерпретация-и-практический-вывод) 
 
 
 ### Задачи на следующую итерацию
