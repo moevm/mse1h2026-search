@@ -17,7 +17,6 @@ class MockProvider(BaseSearchProvider):
             with open(DATA_FILE, encoding="utf-8") as f:
                 raw_articles = json.load(f)
 
-                # Пропускаем все статьи через внешний фильтр
                 self.articles = filter_valid_documents(raw_articles)
 
     def _score_article(self, article: dict, query: str) -> int:
@@ -45,7 +44,6 @@ class MockProvider(BaseSearchProvider):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
@@ -62,7 +60,6 @@ class MockProvider(BaseSearchProvider):
             except ValueError:
                 article_date = datetime.min.date()
 
-            # Fixed period filters
             if date_filter:
                 today = datetime.now().date()
                 if date_filter == "month":
@@ -73,19 +70,16 @@ class MockProvider(BaseSearchProvider):
                     start_date = today - timedelta(days=365 * 3)
                 else:
                     start_date = datetime.min.date()
-
                 if article_date < start_date:
                     continue
 
-            # Custom date range
             if from_date:
                 try:
                     f_date = datetime.strptime(from_date, "%d-%m-%Y").date()
                     if article_date < f_date:
                         continue
                 except ValueError as e:
-                    msg = f"Invalid from_date format: {from_date or 'null'}. Expected DD-MM-YYYY."
-                    raise InvalidParameterError(msg) from e
+                    raise InvalidParameterError(f"Invalid from_date format: {from_date or 'null'}. Expected DD-MM-YYYY.") from e
 
             if to_date:
                 try:
@@ -93,8 +87,7 @@ class MockProvider(BaseSearchProvider):
                     if article_date > t_date:
                         continue
                 except ValueError as e:
-                    msg = f"Invalid to_date format: {to_date or 'null'}. Expected DD-MM-YYYY."
-                    raise InvalidParameterError(msg) from e
+                    raise InvalidParameterError(f"Invalid to_date format: {to_date or 'null'}. Expected DD-MM-YYYY.") from e
 
             score = 1
             if query:
@@ -107,10 +100,8 @@ class MockProvider(BaseSearchProvider):
         filtered_articles.sort(key=lambda x: x[1], reverse=True)
 
         total = len(filtered_articles)
-
         start_idx = (page - 1) * page_size
-        end_idx = start_idx + page_size
-        paginated = filtered_articles[start_idx:end_idx]
+        paginated = filtered_articles[start_idx : start_idx + page_size]
 
         article_results = [
             ArticleResult(
@@ -127,11 +118,7 @@ class MockProvider(BaseSearchProvider):
         ]
 
         return SearchResponse(
-            total=total,
-            page=page,
-            page_size=page_size,
-            query=query,
-            results=article_results,
+            total=total, page=page, page_size=page_size, query=query, results=article_results
         )
 
     async def suggest(self, query: str) -> list[str]:

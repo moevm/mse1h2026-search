@@ -1,7 +1,5 @@
 from abc import ABC, abstractmethod
-
 from models.schemas import SearchResponse
-
 
 class BaseSearchProvider(ABC):
     @abstractmethod
@@ -11,7 +9,6 @@ class BaseSearchProvider(ABC):
         page: int = 1,
         page_size: int = 10,
         lang: list[str] | None = None,
-        sort_by: str = "relevance",
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
