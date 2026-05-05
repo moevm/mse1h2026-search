@@ -46,6 +46,7 @@ class MeiliIndexer:
 
     def incremental_sync(self) -> None:
         logger.info("Starting incremental sync since ts=%d...", self._last_sync_ts)
+        new_sync_ts = int(datetime.now().timestamp())
         try:
             rows = self._extractor.extract_since(self._last_sync_ts)
         except DatabaseExtractionError as e:
@@ -54,13 +55,14 @@ class MeiliIndexer:
 
         if not rows:
             logger.info("No new or updated documents.")
+            self._last_sync_ts = new_sync_ts
             return
 
         self._push(rows)
+        self._last_sync_ts = new_sync_ts
         logger.info("Incremental sync complete: %d documents indexed.", len(rows))
 
     def _push(self, rows: list[dict], batch_size: int = 5000) -> None:
-        self._last_sync_ts = int(datetime.now().timestamp())
         last_task = None
         for i in range(0, len(rows), batch_size):
             batch = rows[i : i + batch_size]
