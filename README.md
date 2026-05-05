@@ -23,6 +23,16 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
+Копируем конфиг базы данных:
+```bash
+cp db/.env.example db/.env
+```
+
+Запускаем базу данных (при первом запуске автоматически скачивается дамп):
+```bash
+cd db && docker compose up -d && cd ..
+```
+
 Запускаем сервис через docker compose:
 ```bash
 docker compose up --build -d
