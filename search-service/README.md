@@ -8,6 +8,7 @@
 search-service/
 ├── backend/            — FastAPI, Uvicorn, Pydantic, uv
 ├── frontend/           — Vue 3 (CDN), Nginx
+├── db/                 — MySQL + автозагрузка дампа
 └── docker-compose.yml
 ```
 
@@ -15,6 +16,12 @@ search-service/
 
 ## Запуск через Docker Compose
 
+Запуск базы данных (при первом запуске автоматически скачивается дамп):
+```bash
+cd db && docker compose up -d && cd ..
+```
+
+Запуск остальных сервисов:
 ```bash
 docker compose up --build
 ```
