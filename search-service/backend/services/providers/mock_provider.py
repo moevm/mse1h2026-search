@@ -6,15 +6,19 @@ from models.schemas import ArticleResult, SearchResponse
 from services.exceptions import InvalidParameterError
 from services.providers.base import BaseSearchProvider
 
-DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
+from indexer.filters import filter_valid_documents
 
+DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
 class MockProvider(BaseSearchProvider):
     def __init__(self) -> None:
         self.articles: list[dict] = []
         if DATA_FILE.exists():
             with open(DATA_FILE, encoding="utf-8") as f:
-                self.articles = json.load(f)
+                raw_articles = json.load(f)
+
+                # Пропускаем все статьи через внешний фильтр
+                self.articles = filter_valid_documents(raw_articles)
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
