@@ -32,6 +32,7 @@ uv run playwright install --with-deps chromium
 
 *   `pytest.ini` — базовые настройки фреймворка pytest.
 *   `conftest.py` — глобальные фикстуры и конфигурация инициализации браузера.
+*   Директория `indexing_tests/` — проверка фильтрации записей CMS и построения URL на тестовом дампе.
 *   Директория `pages/` — включает базовый класс с универсальными ожиданиям(`base_page.py`) и класс страницы поиска с локаторами и методами взаимодействия (`search_page.py`).
 *   Директория `ui_tests/` — модуль тестов пользовательского интерфейса.
 
@@ -57,4 +58,13 @@ uv run pytest ui_tests/test_search_filters_complex.py --headed --slowmo=2000
 4. Изолированный запуск конкретного теста:
 ```bash
 uv run pytest ui_tests/test_search_filters_complex.py::test_filters_language_combinations_and_reset
+```
+
+## Проверка подготовки данных
+
+Тесты используют настройки из `../backend/.env`, проверяют фильтрацию
+невалидных CMS-записей и построение `url_path`:
+
+```bash
+uv run pytest indexing_tests -o log_cli=true --log-cli-level=INFO
 ```

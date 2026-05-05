@@ -62,6 +62,16 @@ uv run ruff check .
 uv run ruff format .
 ```
 
+#### Проверка подготовки данных для индексации
+
+Pytest-проверки на базе с тестовым дампом валидируют фильтрацию невалидных
+записей и построение `url_path`:
+
+```bash
+cd tests
+uv run pytest indexing_tests -o log_cli=true --log-cli-level=INFO
+```
+
 ### Frontend
 
 ```bash
