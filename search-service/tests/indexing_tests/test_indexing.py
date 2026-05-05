@@ -2,13 +2,11 @@ import logging
 import os
 import re
 import sys
-import warnings
 from contextlib import closing
 from pathlib import Path
 
 import pymysql
 import pytest
-from bs4 import MarkupResemblesLocatorWarning
 from dotenv import dotenv_values
 
 BACKEND_DIR = Path(__file__).resolve().parents[2] / "backend"
@@ -23,13 +21,10 @@ from indexer.cms_sync import (
     _get_url_path,
 )
 
-
 logger = logging.getLogger(__name__)
 TABLE_NAME = "modx_site_content"
 SAMPLE_SIZE = int(os.getenv("INDEXING_CHECK_SAMPLE_SIZE", "10"))
 LOG_SAMPLE_SIZE = min(SAMPLE_SIZE, 2)
-
-warnings.filterwarnings("ignore", category=MarkupResemblesLocatorWarning)
 
 
 @pytest.fixture(scope="session")
@@ -136,6 +131,7 @@ def test_invalid_records_are_filtered(
 
     logger.info("ожидаемо валидных записей: %d", len(expected_valid_ids))
     logger.info("отфильтровано невалидных записей: %d", len(invalid_reasons))
+    
     for doc_id, reasons in list(invalid_reasons.items())[:LOG_SAMPLE_SIZE]:
         logger.debug("невалидная запись отклонена: id=%s reasons=%s", doc_id, reasons)
 
@@ -175,6 +171,7 @@ def test_url_paths_are_built_from_hierarchy(
             mismatches.append((doc["id"], doc.get("url_path"), expected_path))
 
     logger.info("проверено URL: %d", len(extracted_documents))
+    
     for doc in extracted_documents[:LOG_SAMPLE_SIZE]:
         logger.debug(
             "url построен: id=%s lang=%s title=%r url=%s",
