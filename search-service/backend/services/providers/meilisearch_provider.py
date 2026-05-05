@@ -405,9 +405,7 @@ class MeilisearchProvider(BaseSearchProvider):
                     authors=[],
                     abstract=h.get("introtext") or h.get("description", ""),
                     keywords=[],
-                    date=_ts_to_date_str(h["publishedon"])
-                    if h.get("publishedon")
-                    else None,
+                    date=_ts_to_date_str(h["publishedon"]) if h.get("publishedon") else None,
                     lang=h.get("lang") or "RU",
                     url=f"{self._settings.SITE_URL}/{h.get('url_path') or h.get('alias', h['id'])}",
                 )

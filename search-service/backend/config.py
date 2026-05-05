@@ -22,6 +22,8 @@ class Settings(BaseSettings):
     MEILI_INDEX: str
     MEILI_SEMANTIC_RATIO: float
 
+    SYNC_TOKEN: str = ""
+
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
 

@@ -7,7 +7,6 @@ from services.search_service import get_provider
 
 router = APIRouter(prefix="/api", tags=["search"])
 
-
 @router.get("/search", response_model=SearchResponse)
 async def search(
     q: str = Query(..., description="Search query"),
@@ -34,7 +33,6 @@ async def search(
     except InvalidParameterError as e:
         raise HTTPException(status_code=400, detail=str(e)) from e
     return response
-
 
 @router.get("/suggest", response_model=SuggestResponse)
 async def suggest(
