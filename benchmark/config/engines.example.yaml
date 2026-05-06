@@ -53,3 +53,34 @@ engines:
     timeout_seconds: 20
     retries: 1
     index_command: null
+
+  - name: yandex-default
+    kind: yandex
+    enabled: false
+    timeout_seconds: 12
+    retries: 2
+    index_command: null
+    params:
+      request_mode: sync
+      base_url: https://searchapi.api.cloud.yandex.net/v2/web/search
+      operations_base_url: https://operation.api.cloud.yandex.net/operations
+      # Обязательно:
+      folder_id: "YOUR_FOLDER_ID"
+      # Один из способов авторизации (предпочтительно IAM token):
+      iam_token: ""
+      oauth_token: ""
+      api_key: ""
+      # или env: YANDEX_FOLDER_ID + (YANDEX_IAM_TOKEN | YANDEX_OAUTH_TOKEN | YANDEX_API_KEY)
+      search_type: SEARCH_TYPE_RU
+      family_mode: FAMILY_MODE_MODERATE
+      l10n: LOCALIZATION_RU
+      response_format: FORMAT_XML
+      region: "225"
+      group_mode: GROUP_MODE_FLAT
+      docs_in_group: 1
+      groups_on_page: 20
+      max_poll_seconds: 30
+      poll_interval_seconds: 1
+      sleep_seconds: 0.0
+      retry_backoff_seconds: 1.0
+      rate_limit_backoff_seconds: 2.0
