@@ -1,6 +1,7 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 
 from models.schemas import SearchResponse, SuggestResponse
+from routers.click import wrap_results_with_click_links
 from services.exceptions import InvalidParameterError
 from services.providers.base import BaseSearchProvider
 from services.search_service import get_provider
@@ -9,6 +10,7 @@ router = APIRouter(prefix="/api", tags=["search"])
 
 @router.get("/search", response_model=SearchResponse)
 async def search(
+    request: Request,
     q: str = Query(..., description="Search query"),
     page: int = Query(1, ge=1, description="Page number"),
     page_size: int = Query(10, ge=1, le=100, description="Items per page"),
@@ -32,7 +34,9 @@ async def search(
         )
     except InvalidParameterError as e:
         raise HTTPException(status_code=400, detail=str(e)) from e
-    return response
+    return response.model_copy(
+        update={"results": wrap_results_with_click_links(request, q, response.results)}
+    )
 
 @router.get("/suggest", response_model=SuggestResponse)
 async def suggest(

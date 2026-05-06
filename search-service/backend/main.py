@@ -7,9 +7,10 @@ from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from apscheduler.triggers.cron import CronTrigger
 from fastapi import FastAPI
 
+from click_log_db import ClickLogRepository
 from config import get_settings
 from indexer.meili_indexer import MeiliIndexer
-from routers import indexer, search
+from routers import click, indexer, search
 from services.indexing_service import run_full_sync_task, run_incremental_sync_task
 from services.providers.meilisearch_provider import apply_index_settings
 
@@ -24,6 +25,10 @@ scheduler = AsyncIOScheduler()
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    click_log_repository = ClickLogRepository(_settings)
+    await asyncio.to_thread(click_log_repository.init_schema)
+    logger.info("Click log schema initialized.")
+
     scheduler.add_job(
         run_incremental_sync_task,
         CronTrigger.from_crontab("0 * * * *"),
@@ -70,6 +75,7 @@ app = FastAPI(
 
 app.include_router(search.router)
 app.include_router(indexer.router)
+app.include_router(click.router)
 
 
 @app.get("/api/health", tags=["health"])
