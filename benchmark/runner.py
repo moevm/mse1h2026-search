@@ -10,6 +10,7 @@ from core.dataset_loader import load_dataset
 from core.metrics import aggregate_metrics
 from core.normalization import to_doc_key
 from core.types import EngineConfig
+from tqdm.auto import tqdm
 
 
 DEFAULT_KS = [1, 3, 5, 10]
@@ -58,11 +59,17 @@ def make_engine(config: EngineConfig):
     return engine_cls(config)
 
 
-def evaluate_engine(engine, queries, ks: list[int]):
+def evaluate_engine(engine, queries, ks: list[int], progress_desc: str | None = None):
     ranked_per_query: list[list[str]] = []
     expected_per_query: list[set[str]] = []
 
-    for query_item in queries:
+    iterator = tqdm(
+        queries,
+        desc=progress_desc or f"{engine.config.name} queries",
+        unit="query",
+        leave=False,
+    )
+    for query_item in iterator:
         ranked_results = []
         last_error = None
         for attempt in range(max(1, engine.config.retries)):
@@ -198,9 +205,8 @@ def main() -> None:
     configs = load_engine_configs(args.engines_config)
     full_report: dict[str, object] = {"engines": {}}
 
-    for config in configs:
-        if not config.enabled:
-            continue
+    enabled_configs = [config for config in configs if config.enabled]
+    for config in tqdm(enabled_configs, desc="Engines", unit="engine"):
         engine = make_engine(config)
         engine.healthcheck()
         engine.index(args.data_dir)
@@ -208,14 +214,29 @@ def main() -> None:
         per_lang_report: dict[str, object] = {}
         all_lang_queries = []
 
-        for lang, datasets_by_type in sorted(datasets.items()):
+        for lang, datasets_by_type in tqdm(
+            sorted(datasets.items()),
+            desc=f"{config.name}: languages",
+            unit="lang",
+            leave=False,
+        ):
             per_type_metrics: dict[str, object] = {}
             lang_queries_by_type = []
 
-            for request_type, dataset_path in sorted(datasets_by_type.items()):
+            for request_type, dataset_path in tqdm(
+                sorted(datasets_by_type.items()),
+                desc=f"{config.name}/{lang}: datasets",
+                unit="dataset",
+                leave=False,
+            ):
                 queries = load_dataset(dataset_path)
                 lang_queries_by_type.append(queries)
-                metrics_rows = evaluate_engine(engine, queries, ks)
+                metrics_rows = evaluate_engine(
+                    engine,
+                    queries,
+                    ks,
+                    progress_desc=f"{config.name}/{lang}/{request_type}",
+                )
                 per_type_metrics[request_type] = rows_to_k_arrays(metrics_rows, ks)
                 print_metrics_wide(
                     metrics_rows, ks, f"{config.name} | {lang} | {request_type}"
@@ -223,7 +244,12 @@ def main() -> None:
 
             lang_merged_queries = merge_query_sets(lang_queries_by_type)
             all_lang_queries.append(lang_merged_queries)
-            lang_avg_rows = evaluate_engine(engine, lang_merged_queries, ks)
+            lang_avg_rows = evaluate_engine(
+                engine,
+                lang_merged_queries,
+                ks,
+                progress_desc=f"{config.name}/{lang}/language_average",
+            )
             per_lang_report[lang] = {
                 "by_type": per_type_metrics,
                 "language_average": rows_to_k_arrays(lang_avg_rows, ks),
@@ -233,7 +259,12 @@ def main() -> None:
             )
 
         global_queries = merge_query_sets(all_lang_queries)
-        global_avg_rows = evaluate_engine(engine, global_queries, ks)
+        global_avg_rows = evaluate_engine(
+            engine,
+            global_queries,
+            ks,
+            progress_desc=f"{config.name}/global_average",
+        )
         print_metrics_wide(global_avg_rows, ks, f"{config.name} | global_average")
 
         full_report["engines"][config.name] = {
