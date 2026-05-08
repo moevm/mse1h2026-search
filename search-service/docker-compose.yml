@@ -1,4 +1,24 @@
 services:
+  click-db:
+    image: postgres:17-alpine
+    container_name: search_click_db
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      POSTGRES_USER: ${CLICK_DB_USER:-click_user}
+      POSTGRES_PASSWORD: ${CLICK_DB_PASSWORD:-click_password}
+      POSTGRES_DB: ${CLICK_DB_NAME:-clicks}
+    volumes:
+      - click_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${CLICK_DB_USER:-click_user} -d ${CLICK_DB_NAME:-clicks}"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - search_network
+
   meilisearch:
     image: getmeili/meilisearch:v1.42.1
     container_name: search_meili
@@ -33,6 +53,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     depends_on:
+      click-db:
+        condition: service_healthy
       meilisearch:
         condition: service_healthy
     networks:
@@ -60,3 +82,4 @@ networks:
 
 volumes:
   meili_data:
+  click_db_data:

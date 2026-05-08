@@ -14,6 +14,12 @@ class Settings(BaseSettings):
     DB_PASSWORD: str
     DB_NAME: str
 
+    CLICK_DB_HOST: str = "127.0.0.1"
+    CLICK_DB_PORT: int = 5432
+    CLICK_DB_USER: str
+    CLICK_DB_PASSWORD: str
+    CLICK_DB_NAME: str
+
     # base for makeing urls
     SITE_URL: str = "https://etu.ru"
 

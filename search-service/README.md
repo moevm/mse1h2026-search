@@ -94,10 +94,22 @@ python -m http.server 3000
 |-------|----------------|-----------------------------------------------------|
 | GET   | `/api/search`  | Поиск: `?q=...&page=1&page_size=10`                 |
 | GET   | `/api/suggest` | Подсказки: `?q=...`                                 |
+| GET   | `/api/click`   | Лог клика + редирект: `?target=...&query=...&position=...` |
 | GET   | `/api/health`  | Health-check                                        |
 | GET   | `/docs`        | Swagger UI                                          |
 
 Дополнительные параметры `/api/search`: `lang`, `date_filter` (`month`/`year`/`3years`), `from_date`/`to_date` (формат `DD-MM-YYYY`). В будущем могут меняться в соответствии с требованиями.
+
+---
+
+## Логирование кликов
+
+Клики пишутся в PostgreSQL-контейнер `click-db` (в Docker: `search_click_db`), таблица `click_log`.
+
+Быстрая проверка последних записей:
+```bash
+docker exec -it search_click_db psql -U click_user -d clicks -c "SELECT record_id, timestamp, query, position, link FROM click_log ORDER BY record_id DESC LIMIT 20;"
+```
 
 ---
 
