@@ -251,7 +251,7 @@ docker compose up --build -d
 ## Итерация №3
 
 ### Презентация
-[Презентация pdf]()
+[Презентация pdf](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%203/Iteration%203.pdf)
 
 ### Вики страницы
 [Результаты бенчмарка поисковых движков](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков)
@@ -279,9 +279,10 @@ docker compose up --build -d
 7. Протестировать различные модели эмбеддингов, чтобы определить оптимальное сочетание с движками для поиска.
 
 ### Выполненные задачи
-1. [Проведена оценка по бенчмарку Yandex;](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков#дополнение-yandex-search-api-language_average--global_average)
+1. [Проведена оценка по бенчмарку Yandex;](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков#дополнение-yandex-search-api-language_average--global_average) ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/README.md#yandex-search-api-kind-yandex))
 2. Реализован UC-1: Поиск информации пользователем:
     - Интегрирован поисковый движок
+    - [Добавлено логирование кликов](https://github.com/moevm/mse1h2026-search/blob/main/search-service/README.md#логирование-кликов)
 3. Реализован UC-2: Поиск с подсказками (данная функциональность поддерживается «из коробки» выбранным поисковым движком);
 4. Реализован UC-3: Фильтрация результатов:
     - Добавлено сохранение и восстановление фильтров при обновлении страницы
@@ -295,13 +296,14 @@ docker compose up --build -d
     - Реализована фильтрация невалидных записей
     - Реализовано построение URL для страниц
     - Реализованы режимы индексации (full / incremental)
-6. Протестирован процесс индексации на тестовых данных
+6. [Настроена базовая инфраструктура автоматизированного тестирования (pytest, Playwright, uv):](https://github.com/moevm/mse1h2026-search/blob/main/search-service/tests/README.md)
+    - Реализованы UI-тесты для проверки пользовательского интерфейса
+    - Добавлены тесты подготовки данных (проверена фильтрация невалидных CMS-записей и корректность построения URL)
 7. Проведен файнтюн движков для улучшения качества поиска и релевантности результатов, а так же рассмотрены сочетания с различными моделями эмбеддингов :
     - [Typesense](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/typesense/README.md)
     - [Meilisearch](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/meilisearch/README.md) 
     - [Manticore](https://github.com/moevm/mse1h2026-search/blob/main/benchmark/manticore/README.md)
 8. [Проведено сравнение оптимизированных движков и выбран лучший вариант для интеграции в систему - Meilisearch](https://github.com/moevm/mse1h2026-search/wiki/Результаты-бенчмарка-поисковых-движков#интерпретация-и-практический-вывод) 
-
 
 ### Задачи на следующую итерацию
 1. Развернуть решение на тестовом стенде с новым дампом данных;
