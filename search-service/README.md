@@ -86,6 +86,50 @@ python -m http.server 3000
 | `BACKEND_HOST` | `backend`    | Хост бэкенда               |
 | `BACKEND_PORT` | `8000`       | Порт бэкенда               |
 
+### Web Component поискового поля
+
+Standalone-компонент `<etu-search-input>` собирается отдельно от Vue-приложения:
+
+```bash
+cd frontend
+npm run build:component
+```
+
+При запуске через `docker compose up --build` этот файл также собирается и
+попадает в nginx-контейнер фронтенда. Для ручной проверки доступна демо-страница:
+`http://localhost:6767/etu-search-input-demo.html`.
+
+После сборки файл доступен как `frontend/dist/etu-search-input.js` и может быть
+подключён на старом сайте, новом сайте или в CMS обычным script-тегом:
+
+```html
+<script src="/path/to/etu-search-input.js"></script>
+
+<form class="header__search-form" action="/rezultaty-poiska" method="GET">
+  <etu-search-input
+    name="search"
+    query-param="search"
+    api-base="https://search.etu.ru"
+    results-url="https://etu.ru/rezultaty-poiska"
+    languages="RU,EN,DE,SP,VN,CN,AR,PT,FR"
+    submit-mode="navigate"
+  ></etu-search-input>
+  <button type="submit" aria-label="Найти">Найти</button>
+</form>
+```
+
+Для текущей Vue-страницы результатов используйте `query-param="q"`. В режиме
+`submit-mode="navigate"` компонент по умолчанию открывает страницу результатов
+в новой вкладке; для открытия в текущей вкладке передайте `target="_self"`.
+В режиме `submit-mode="event"` компонент не открывает страницу сам, а отправляет событие
+`search-submit` с `query`, `lang`, `langs`, `mode` и собранным `url`.
+Режимы поиска по подразделениям и персоналиям поддержаны только как
+конфигурация компонента; backend-endpoint'ы для них в текущей версии не
+реализованы.
+
+Подробный контракт компонента, входы, выходы, события и сценарии интеграции
+описаны в `frontend/src/web-components/README.md`.
+
 ---
 
 ## API
