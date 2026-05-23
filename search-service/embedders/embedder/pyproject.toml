@@ -1,0 +1,22 @@
+[project]
+name = "embedder"
+version = "0.1.0"
+description = "Local sentence-transformers embedding service for Meilisearch (rubert-tiny2)"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.136.1",
+    "uvicorn[standard]==0.46.0",
+    "sentence-transformers[onnx]==5.4.1",
+    "transformers==4.57.3",
+    "torch==2.11.0",
+    "pydantic==2.13.3",
+    "orjson==3.11.5",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true

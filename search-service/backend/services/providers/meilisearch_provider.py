@@ -65,21 +65,6 @@ def _combine_filters(*parts: str | None) -> str | None:
 
 
 _EMBEDDER_NAME = "e5-small"
-_EMBEDDER_CONFIG = {
-    "source": "huggingFace",
-    "model": "intfloat/multilingual-e5-small",
-    "documentTemplate": (
-        "passage: {{doc.pagetitle}}. "
-        "{% if doc.parent_title %}Раздел: {{doc.parent_title}}. {% endif %}"
-        "{% if doc.breadcrumbs_str %}Путь: {{doc.breadcrumbs_str}}. {% endif %}"
-        "{% if doc.tv_meta_keywords %}Ключевые слова: {{doc.tv_meta_keywords}}. {% endif %}"
-        "{% if doc.longtitle %}{{doc.longtitle}}. {% endif %}"
-        "{% if doc.tv_persons %}Персоны: {{doc.tv_persons}}. {% endif %}"
-        "{% if doc.description %}{{doc.description}} {% endif %}"
-        "{{doc.introtext}}"
-    ),
-    "documentTemplateMaxBytes": 2500,
-}
 
 _RU_SYNONYMS = {
     "лэти": ["спбгэту", "электротехнический университет"],
@@ -335,14 +320,54 @@ _INDEX_SETTINGS = {
         "publishedon",
         "lang",
     ],
-    "embedders": {_EMBEDDER_NAME: _EMBEDDER_CONFIG},
 }
 
 
 def apply_index_settings(meili_url: str, meili_api_key: str, meili_index: str) -> None:
+    settings = get_settings()
+    document_template = (
+        f"{settings.MEILI_EMBEDDER_PREFIX}{{doc.pagetitle}}. "
+        "{% if doc.parent_title %}Раздел: {{doc.parent_title}}. {% endif %}"
+        "{% if doc.breadcrumbs_str %}Путь: {{doc.breadcrumbs_str}}. {% endif %}"
+        "{% if doc.tv_meta_keywords %}"
+        "Ключевые слова: {{doc.tv_meta_keywords}}. "
+        "{% endif %}"
+        "{% if doc.longtitle %}{{doc.longtitle}}. {% endif %}"
+        "{% if doc.tv_persons %}Персоны: {{doc.tv_persons}}. {% endif %}"
+        "{% if doc.description %}{{doc.description}} {% endif %}"
+        "{{doc.introtext}}"
+    )
+
+    if settings.MEILI_EMBEDDER_TYPE == "huggingface":
+        embedder_config = {
+            "source": "huggingFace",
+            "model": settings.MEILI_EMBEDDER_MODEL,
+            "documentTemplate": document_template,
+            "documentTemplateMaxBytes": settings.MEILI_EMBEDDER_MAX_BYTES,
+        }
+    elif settings.MEILI_EMBEDDER_TYPE == "rest":
+        embedder_config = {
+            "source": "rest",
+            "url": settings.MEILI_EMBEDDER_URL,
+            "dimensions": settings.MEILI_EMBEDDER_DIMENSIONS,
+            "request": {
+                "inputs": ["{{text}}", "{{..}}"]
+            },
+            "response": {
+                "embeddings": ["{{embedding}}", "{{..}}"]
+            },
+            "documentTemplate": document_template,
+            "documentTemplateMaxBytes": settings.MEILI_EMBEDDER_MAX_BYTES,
+        }
+    else:
+        raise ValueError(f"Unknown MEILI_EMBEDDER_TYPE: {settings.MEILI_EMBEDDER_TYPE}")
+
+    index_settings = _INDEX_SETTINGS.copy()
+    index_settings["embedders"] = {_EMBEDDER_NAME: embedder_config}
+
     client = meilisearch.Client(meili_url, meili_api_key or None)
     index = client.index(meili_index)
-    task = index.update_settings(_INDEX_SETTINGS)
+    task = index.update_settings(index_settings)
     client.wait_for_task(task.task_uid, timeout_in_ms=600_000, interval_in_ms=1000)
 
 
