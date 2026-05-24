@@ -27,6 +27,12 @@ class Settings(BaseSettings):
     MEILI_API_KEY: str
     MEILI_INDEX: str
     MEILI_SEMANTIC_RATIO: float
+    MEILI_EMBEDDER_TYPE: str
+    MEILI_EMBEDDER_URL: str
+    MEILI_EMBEDDER_MODEL: str
+    MEILI_EMBEDDER_PREFIX: str = ""
+    MEILI_EMBEDDER_MAX_BYTES: int = 2500
+    MEILI_EMBEDDER_DIMENSIONS: int
 
     SYNC_TOKEN: str = ""
 
