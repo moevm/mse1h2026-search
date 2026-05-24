@@ -1,0 +1,41 @@
+services:
+  locust-master:
+    image: locustio/locust
+    ports:
+      - "8089:8089"
+      - "5557:5557"
+    volumes:
+      - ./:/mnt/locust
+    environment:
+      - LOCUST_TERMS_FILE=/mnt/locust/search_terms.txt
+      - LOCUST_MIN_WAIT=${MIN_WAIT:-1.0}
+      - LOCUST_MAX_WAIT=${MAX_WAIT:-3.0}
+      - LOCUST_API_ENDPOINT=${API_ENDPOINT:-/api/search}
+      - LOCUST_RUN_SYNC=${LOCUST_RUN_SYNC:-false}
+      - INDEXER_TOKEN=${INDEXER_TOKEN}
+    command: >
+      -f /mnt/locust/search_stress.py
+      --master
+      --headless
+      -u ${USERS:-50}
+      -r ${SPAWN:-10}
+      --run-time ${TIME:-1m}
+      --host ${HOST:-https://search.etudevs.ru}
+      --html /mnt/locust/reports/${REPORT_FILE:-local_test_report.html}
+
+  locust-worker:
+    image: locustio/locust
+    volumes:
+      - ./:/mnt/locust
+    environment:
+      - LOCUST_TERMS_FILE=/mnt/locust/search_terms.txt
+      - LOCUST_MIN_WAIT=${MIN_WAIT:-1.0}
+      - LOCUST_MAX_WAIT=${MAX_WAIT:-3.0}
+      - LOCUST_API_ENDPOINT=${API_ENDPOINT:-/api/search}
+    depends_on:
+      - locust-master
+    command: >
+      -f /mnt/locust/search_stress.py
+      --worker
+      --master-host locust-master
+
