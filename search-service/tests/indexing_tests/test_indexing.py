@@ -43,7 +43,7 @@ def backend_settings() -> Settings:
 
 @pytest.fixture(scope="session")
 def cms_extractor(backend_settings: Settings) -> CMSExtractor:
-    return CMSExtractor(backend_settings, table_name=TABLE_NAME)
+    return CMSExtractor(backend_settings)
 
 
 @pytest.fixture(scope="session")
@@ -64,11 +64,12 @@ def db_connection(backend_settings: Settings):
 @pytest.fixture(scope="session")
 def hierarchy(cms_extractor: CMSExtractor, db_connection) -> dict:
     with db_connection.cursor() as cursor:
-        parent_map, title_map, alias_map = cms_extractor._fetch_hierarchy(cursor)
+        parent_map, title_map, alias_map, alias_visible_map = cms_extractor._fetch_hierarchy(cursor)
     return {
         "parent_map": parent_map,
         "title_map": title_map,
         "alias_map": alias_map,
+        "alias_visible_map": alias_visible_map,
     }
 
 
@@ -166,6 +167,7 @@ def test_url_paths_are_built_from_hierarchy(
             doc["id"],
             hierarchy["parent_map"],
             hierarchy["alias_map"],
+            hierarchy["alias_visible_map"],
         )
         if doc.get("url_path") != expected_path:
             mismatches.append((doc["id"], doc.get("url_path"), expected_path))

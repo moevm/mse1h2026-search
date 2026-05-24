@@ -26,6 +26,7 @@ class MeiliIndexer:
         self._api_key = settings.MEILI_API_KEY
         self._task_timeout_ms = settings.MEILI_TASK_TIMEOUT_MS
         self._task_interval_ms = settings.MEILI_TASK_INTERVAL_MS
+        self._settings_timeout_ms = settings.MEILI_SETTINGS_TIMEOUT_MS
 
     def is_empty(self) -> bool:
         try:
@@ -67,7 +68,13 @@ class MeiliIndexer:
 
         try:
             logger.info("Applying settings to temporary index: %s", temp_name)
-            apply_index_settings(self._url, self._api_key, temp_name)
+            apply_index_settings(
+                self._url,
+                self._api_key,
+                temp_name,
+                timeout_ms=self._settings_timeout_ms,
+                interval_ms=self._task_interval_ms,
+            )
 
             self._push(rows, target_index=temp_index)
 

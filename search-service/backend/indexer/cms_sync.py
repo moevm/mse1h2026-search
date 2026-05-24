@@ -186,13 +186,13 @@ class CMSExtractor:
         return tv_map
 
     def _process(
-            self,
-            rows: list[dict],
-            parent_map: dict,
-            title_map: dict,
-            alias_map: dict,
-            alias_visible_map: dict,
-            tv_map: dict,
+        self,
+        rows: list[dict],
+        parent_map: dict,
+        title_map: dict,
+        alias_map: dict,
+        alias_visible_map: dict,
+        tv_map: dict,
     ) -> list[dict]:
         result = []
         for row in rows:
@@ -206,10 +206,12 @@ class CMSExtractor:
 
             row["url_path"] = _get_url_path(row["id"], parent_map, alias_map, alias_visible_map)
 
-            if row["id"] not in LANG_ROOTS:
-                lang = _get_language(row["id"], parent_map)
-                if lang is not None:
-                    row["lang"] = lang
+            if row["id"] in LANG_ROOTS:
+                continue
+            lang = _get_language(row["id"], parent_map)
+            if lang is None:
+                continue
+            row["lang"] = lang
 
             if row.get("publishedon"):
                 row["published_year"] = str(
