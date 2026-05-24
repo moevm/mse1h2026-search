@@ -31,14 +31,14 @@ async def lifespan(app: FastAPI):
 
     scheduler.add_job(
         run_incremental_sync_task,
-        CronTrigger.from_crontab("0 * * * *"),
+        CronTrigger.from_crontab(_settings.SYNC_CRON_INCREMENTAL),
         id="hourly_incremental_sync",
         replace_existing=True,
     )
 
     scheduler.add_job(
         run_full_sync_task,
-        CronTrigger.from_crontab("0 3 * * 0"),
+        CronTrigger.from_crontab(_settings.SYNC_CRON_FULL),
         id="weekly_full_sync",
         replace_existing=True,
     )
@@ -53,6 +53,8 @@ async def lifespan(app: FastAPI):
             _settings.MEILI_URL,
             _settings.MEILI_API_KEY,
             _settings.MEILI_INDEX,
+            _settings.MEILI_SETTINGS_TIMEOUT_MS,
+            _settings.MEILI_TASK_INTERVAL_MS,
         )
         logger.info("Meilisearch index settings applied.")
 

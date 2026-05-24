@@ -339,11 +339,17 @@ _INDEX_SETTINGS = {
 }
 
 
-def apply_index_settings(meili_url: str, meili_api_key: str, meili_index: str) -> None:
+def apply_index_settings(
+    meili_url: str,
+    meili_api_key: str,
+    meili_index: str,
+    timeout_ms: int = 600_000,
+    interval_ms: int = 1000,
+) -> None:
     client = meilisearch.Client(meili_url, meili_api_key or None)
     index = client.index(meili_index)
     task = index.update_settings(_INDEX_SETTINGS)
-    client.wait_for_task(task.task_uid, timeout_in_ms=600_000, interval_in_ms=1000)
+    client.wait_for_task(task.task_uid, timeout_in_ms=timeout_ms, interval_in_ms=interval_ms)
 
 
 class MeilisearchProvider(BaseSearchProvider):

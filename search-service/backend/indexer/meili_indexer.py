@@ -24,6 +24,8 @@ class MeiliIndexer:
         self._last_sync_ts: int = 0
         self._url = settings.MEILI_URL
         self._api_key = settings.MEILI_API_KEY
+        self._task_timeout_ms = settings.MEILI_TASK_TIMEOUT_MS
+        self._task_interval_ms = settings.MEILI_TASK_INTERVAL_MS
 
     def is_empty(self) -> bool:
         try:
@@ -76,7 +78,10 @@ class MeiliIndexer:
 
             is_swap_pending = True
             self._client.wait_for_task(
-                swap_task.task_uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
+                swap_task.task_uid,
+                timeout_in_ms=self._task_timeout_ms,
+                interval_in_ms=self._task_interval_ms,
+            )
             is_swap_pending = False
 
             logger.info("Index rebuild complete: %d documents indexed.", len(rows))
@@ -131,7 +136,10 @@ class MeiliIndexer:
             try:
                 for uid in task_uids:
                     task_info = self._client.wait_for_task(
-                        uid, timeout_in_ms=14_400_000, interval_in_ms=1000)
+                        uid,
+                        timeout_in_ms=self._task_timeout_ms,
+                        interval_in_ms=self._task_interval_ms,
+                    )
 
                     if task_info.status != "succeeded":
                         logger.error("Batch task %d failed. Status: %s", uid, task_info.status)
