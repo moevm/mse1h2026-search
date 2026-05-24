@@ -1,0 +1,13 @@
+[project]
+name = "onnx-embedder"
+version = "0.1.0"
+description = "FastAPI ONNX/FastEmbed embedding service for Meilisearch"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi==0.136.1",
+    "uvicorn[standard]==0.46.0",
+    "fastembed==0.8.0",
+    "huggingface-hub==1.2.3",
+    "orjson==3.11.5",
+    "pydantic==2.13.3",
+]

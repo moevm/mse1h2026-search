@@ -1,4 +1,5 @@
 from functools import cache
+
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 class Settings(BaseSettings):
@@ -35,6 +36,12 @@ class Settings(BaseSettings):
     MEILI_TASK_TIMEOUT_MS: int = 14_400_000
     MEILI_TASK_INTERVAL_MS: int = 1000
     MEILI_SETTINGS_TIMEOUT_MS: int = 600_000
+    MEILI_EMBEDDER_TYPE: str
+    MEILI_EMBEDDER_URL: str
+    MEILI_EMBEDDER_MODEL: str
+    MEILI_EMBEDDER_PREFIX: str = ""
+    MEILI_EMBEDDER_MAX_BYTES: int = 2500
+    MEILI_EMBEDDER_DIMENSIONS: int
 
     SYNC_TOKEN: str = ""
 
