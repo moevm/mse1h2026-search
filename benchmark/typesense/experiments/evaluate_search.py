@@ -6,16 +6,18 @@ import typesense
 from tqdm import tqdm
 
 from config import (
-    TYPESENSE_CONFIG,
-    TYPESENSE_COLLECTION,
-    SEARCH_PARAMS,
     METRICS_K_VALUES,
+    SEARCH_PARAMS,
+    TYPESENSE_COLLECTION,
+    TYPESENSE_CONFIG,
 )
+from lemmatizer import lemmatize_query
 
 
 @dataclass
 class QueryResult:
     query: str
+    query_lemm: str
     expected_id: int
     expected_url: str
     found_ids: list[int]
@@ -48,11 +50,11 @@ def evaluate_items(
     top_k: int,
 ) -> list[QueryResult]:
     results = []
-    for item in tqdm(items, desc="Оценка", unit="док."):
+    for item in tqdm(items, desc="Оценка", unit="doc"):
         expected_id = item["id"]
         expected_url = item.get("url", "")
         for query_text in item.get("requests", []):
-            found = search(client, query_text, top_k)
+            found, query_lemm = search(client, query_text, top_k)
             no_result = len(found) == 0
             rr = compute_rr(found, expected_id)
 

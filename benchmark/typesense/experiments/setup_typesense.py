@@ -12,12 +12,6 @@ from bs4 import BeautifulSoup
 from tqdm import tqdm
 
 from config import (
-    MYSQL_CONFIG,
-    MYSQL_TABLE,
-    MYSQL_COLUMNS,
-    MYSQL_WHERE,
-    TYPESENSE_CONFIG,
-    TYPESENSE_COLLECTION,
     COLLECTION_SCHEMA,
     IMPORT_BATCH_SIZE,
     MYSQL_COLUMNS,
@@ -42,20 +36,35 @@ def truncate(text: str, max_chars: int = 50_000) -> str:
 
 
 def clean_document(row: dict) -> dict:
+    # Оригинальные поля (для эмбеддингов)
     pagetitle = (row["pagetitle"] or "").strip()
     longtitle = (row["longtitle"] or "").strip()
     description = (row["description"] or "").strip()
     introtext = truncate(strip_html(row.get("introtext")))
     content = truncate(strip_html(row.get("content")))
+    alias = (row.get("alias") or "").strip()
 
-    return {
+    # Лемматизированные поля
+    lemm_fields = lemmatize_document(
+        pagetitle=pagetitle,
+        longtitle=longtitle,
+        description=description,
+        introtext=introtext,
+        content=content,
+        alias=alias,
+    )
+    # lemm_fields содержит:
+    #   pagetitle_lemm, longtitle_lemm, description_lemm,
+    #   introtext_lemm, content_lemm, lang
+
+    doc = {
         "id": str(row["id"]),
         "pagetitle": pagetitle,
         "longtitle": longtitle,
         "description": description,
         "introtext": introtext,
         "content": content,
-        "alias": (row.get("alias") or "").strip(),
+        "alias": alias,
         "parent": int(row.get("parent") or 0),
         "template": int(row.get("template") or 0),
         "published": int(row.get("published") or 0),
@@ -105,10 +114,21 @@ def create_collection(client: typesense.Client, recreate: bool) -> None:
 
 
 def import_documents(client: typesense.Client, rows: list[dict]) -> None:
-    print(f"\nИндексируем {len(rows)} документов...")
-    documents = [
-        clean_document(row) for row in tqdm(rows, desc="Подготовка", unit="doc")
-    ]
+    print(f"\nПодготовка и лемматизация {len(rows)} документов...")
+    print(
+        "(spaCy загружает модели при первом вызове — это может занять несколько секунд)\n"
+    )
+
+    documents = []
+    for row in tqdm(rows, desc="Лемматизация", unit="doc"):
+        documents.append(clean_document(row))
+
+    # Статистика по языкам
+    lang_counts: dict[str, int] = {}
+    for doc in documents:
+        lang = doc.get("lang", "?")
+        lang_counts[lang] = lang_counts.get(lang, 0) + 1
+    print(f"\nОпределённые языки: { {k: v for k, v in sorted(lang_counts.items())} }")
 
     errors = []
     batches = [
@@ -116,7 +136,7 @@ def import_documents(client: typesense.Client, rows: list[dict]) -> None:
         for i in range(0, len(documents), IMPORT_BATCH_SIZE)
     ]
 
-    for batch in tqdm(batches, desc="Импорт", unit="батч"):
+    for batch in tqdm(batches, desc="Импорт в Typesense", unit="батч"):
         results = client.collections[TYPESENSE_COLLECTION].documents.import_(
             batch, {"action": "upsert"}
         )
