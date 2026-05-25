@@ -1,0 +1,15 @@
+[project]
+name = "onnx-embedder"
+version = "0.1.0"
+description = "FastAPI ONNXRuntime embedding service for pooled sentence embedding models"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "onnxruntime",
+    "transformers",
+    "huggingface-hub",
+    "numpy",
+    "pydantic",
+    "orjson",
+]

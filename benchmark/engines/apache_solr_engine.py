@@ -54,4 +54,3 @@ class ApacheSolrEngine(BaseSearchEngine):
             doc_id = doc.get("id") if hasattr(doc, "get") else getattr(doc, "id", None)
             ranked.append(SearchResult(id=doc_id, url=None, raw=dict(doc)))
         return ranked
-

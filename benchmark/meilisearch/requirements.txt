@@ -2,9 +2,12 @@ annotated-types==0.7.0
 beautifulsoup4==4.14.3
 camel-converter==5.1.0
 certifi==2026.2.25
+cffi==2.0.0
 charset-normalizer==3.4.6
+cryptography==46.0.7
 idna==3.11
 meilisearch==0.40.0
+pycparser==3.0
 pydantic==2.12.5
 pydantic-core==2.41.5
 pymysql==1.1.2

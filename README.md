@@ -23,24 +23,35 @@ cp backend/.env.example backend/.env
 cp frontend/.env.example frontend/.env
 ```
 
+Копируем конфиг базы данных:
+```bash
+cp db/.env.example db/.env
+```
+
+Запускаем базу данных (при первом запуске автоматически скачивается дамп):
+```bash
+cd db && docker compose up -d && cd ..
+```
+
 Запускаем сервис через docker compose:
 ```bash
 docker compose up --build -d
 ```
 
-После запуска сервисы будут доступны по адресам(при конфиге из `.env.example`):
+После запуска сервисы будут доступны по адресам (при конфиге из `.env.example`):
 
-- Frontend: `http://localhost`
-- Backend API: `http://localhost:8000`
-- Swagger UI: `http://localhost:8000/docs`
+- Frontend: `http://localhost:6767`
+- Backend API: `http://localhost:6767/api`
+- Swagger UI: `http://localhost:6767/docs`
 
 ## Проверка работоспособности
 Инструкции по проверке работоспособности проекта (основной функциональности и результатов).
 
 Для проверки `search-service`:
 
-- Откройте `http://localhost`, должна появиться поисковая страница с mock данными.
-- Проверьте `http://localhost:8000/api/health`, должен быть ответ `{"status":"ok"}`
+- Откройте `http://localhost:6767`, должна появиться поисковая страница с mock данными.
+- Проверьте `http://localhost:6767/api/health`, должен быть ответ `{"status":"ok"}`
 
 ## Дополнительная информация
-Любая информация, которую команда посчитает нужной разместить
+
+Тестовый стенд https://search.etudevs.ru/

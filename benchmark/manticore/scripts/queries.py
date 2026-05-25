@@ -1,14 +1,14 @@
 # Запрос создания индекса в manticore
 MANTICORE_CREATE_TABLE = (
-    "CREATE TABLE IF NOT EXISTS {table_name} "
+    "CREATE TABLE {table_name} "
     "(pagetitle text, longtitle text, menutitle text, description text, "
-    "introtext text, content text, url string, lang string, alias text, parent int) "
+    "introtext text, content text, url string, lang string, alias string, parent integer, "
+    "content_vector float_vector knn_type='hnsw' knn_dims='384' hnsw_similarity='cosine') "
     "morphology='lemmatize_en, lemmatize_ru, lemmatize_de, libstemmer_fr, "
     "libstemmer_pt, libstemmer_es, libstemmer_ar' ngram_len='1' ngram_chars='cjk' "
     "blend_chars='-, /, &, +, #, @, U+2116, U+0027, U+0060, U+2019' "
-    "min_prefix_len='3' "
     "index_exact_words='1' "
-    "wordforms='/etc/wordforms.txt' "
+    "wordforms='/etc/wordforms.txt'"
 )
 
 # Запрос для выгрузки данных из mysql
@@ -21,7 +21,7 @@ MYSQL_SELECT_DOCUMENTS = """
 
 MANTICORE_DROP_TABLE = "DROP TABLE IF EXISTS {table_name}"
 
-# основной запрос поиска
+# основной запрос поиска (лекс.)
 MANTICORE_SEARCH_QUERY = """
     SELECT id FROM {table_name}
     WHERE MATCH('{query}')

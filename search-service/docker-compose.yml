@@ -1,20 +1,74 @@
 services:
+  click-db:
+    image: postgres:17-alpine
+    container_name: search_click_db
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      POSTGRES_USER: ${CLICK_DB_USER:-click_user}
+      POSTGRES_PASSWORD: ${CLICK_DB_PASSWORD:-click_password}
+      POSTGRES_DB: ${CLICK_DB_NAME:-clicks}
+    volumes:
+      - click_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "pg_isready -U ${CLICK_DB_USER:-click_user} -d ${CLICK_DB_NAME:-clicks}",
+        ]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - search_network
+
+  meilisearch:
+    image: getmeili/meilisearch:v1.42.1
+    container_name: search_meili
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env
+    environment:
+      - MEILI_EXPERIMENTAL_ALLOWED_IP_NETWORKS=any
+    volumes:
+      - meili_data:/meili_data
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7700/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - search_network
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     container_name: search_backend
     restart: unless-stopped
-    ports:
-      - "8000:8000"
     env_file:
       - ./backend/.env
     healthcheck:
-      test: [ "CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')" ]
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')",
+        ]
       interval: 10s
-      timeout: 5s
-      retries: 5
-      start_period: 5s
+      timeout: 10s
+      retries: 60
+      start_period: 10s
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    depends_on:
+      click-db:
+        condition: service_healthy
+      meilisearch:
+        condition: service_healthy
     networks:
       - search_network
 
@@ -24,16 +78,77 @@ services:
       dockerfile: Dockerfile
     container_name: search_frontend
     restart: unless-stopped
-    ports:
-      - "80:80"
     env_file:
       - ./frontend/.env
+    ports:
+      - "6767:80"
     depends_on:
       backend:
         condition: service_healthy
     networks:
       - search_network
 
+  #  embedder-regular:
+  #    build:
+  #      context: ./embedders/embedder
+  #      dockerfile: Dockerfile
+  #    container_name: search_embedder_regular
+  #    restart: unless-stopped
+  #    environment:
+  #      MODEL_ID: intfloat/multilingual-e5-small
+  #      INFERENCE_BACKEND: torch # torch | onnx | openvino
+  #      MODEL_FILE_NAME: ""
+  #      QUERY_PREFIX: "query: "
+  #      DOCUMENT_PREFIX: "passage: "
+  #      QUERY_PROMPT_NAME: ""
+  #      DEVICE: cpu
+  #      TORCH_THREADS: 4
+  #      BATCH_SIZE: 16
+  #    networks:
+  #      - search_network
+  #
+  #  embedder-onnx:
+  #    build:
+  #      context: ./embedders/onnx_embedder
+  #      dockerfile: Dockerfile
+  #    container_name: search_embedder_onnx
+  #    restart: unless-stopped
+  #    environment:
+  #      MODEL_ID: intfloat/multilingual-e5-small
+  #      MODEL_FILE_NAME: onnx/model_O4.onnx
+  #      QUERY_PREFIX: "query: "
+  #      DOCUMENT_PREFIX: "passage: "
+  #      DEVICE: cpu
+  #      ORT_INTRA_OP_NUM_THREADS: 4
+  #      ORT_INTER_OP_NUM_THREADS: 0
+  #      BATCH_SIZE: 16
+  #      MAX_LENGTH: 512
+  #      EMBEDDING_OUTPUT_NAME: sentence_embedding
+  #    networks:
+  #      - search_network
+  #
+  # embedder-fast:
+  #   build:
+  #     context: ./embedders/fast_embedder
+  #     dockerfile: Dockerfile
+  #   container_name: search_embedder_fast
+  #   restart: unless-stopped
+  #   environment:
+  #     MODEL_ID: intfloat/multilingual-e5-small
+  #     MODEL_SOURCE: intfloat/multilingual-e5-small
+  #     MODEL_FILE: onnx/model.onnx
+  #     MODEL_DIM: 384
+  #     QUERY_PREFIX: "query: "
+  #     DOCUMENT_PREFIX: "passage: "
+  #     ONNX_THREADS: 4
+  #     BATCH_SIZE: 16
+  #   networks:
+  #     - search_network
+
 networks:
   search_network:
     driver: bridge
+
+volumes:
+  meili_data:
+  click_db_data:

@@ -10,6 +10,7 @@ from core.dataset_loader import load_dataset
 from core.metrics import aggregate_metrics
 from core.normalization import to_doc_key
 from core.types import EngineConfig
+from tqdm.auto import tqdm
 
 
 DEFAULT_KS = [1, 3, 5, 10]
@@ -50,17 +51,25 @@ def load_engine_configs(path: str) -> list[EngineConfig]:
 
 def make_engine(config: EngineConfig):
     module_name = f"engines.{config.kind}_engine"
-    class_name = "".join(part.capitalize() for part in config.kind.split("_")) + "Engine"
+    class_name = (
+        "".join(part.capitalize() for part in config.kind.split("_")) + "Engine"
+    )
     module = importlib.import_module(module_name)
     engine_cls = getattr(module, class_name)
     return engine_cls(config)
 
 
-def evaluate_engine(engine, queries, ks: list[int]):
+def evaluate_engine(engine, queries, ks: list[int], progress_desc: str | None = None):
     ranked_per_query: list[list[str]] = []
     expected_per_query: list[set[str]] = []
 
-    for query_item in queries:
+    iterator = tqdm(
+        queries,
+        desc=progress_desc or f"{engine.config.name} queries",
+        unit="query",
+        leave=False,
+    )
+    for query_item in iterator:
         ranked_results = []
         last_error = None
         for attempt in range(max(1, engine.config.retries)):
@@ -75,7 +84,9 @@ def evaluate_engine(engine, queries, ks: list[int]):
         if last_error is not None:
             raise last_error
 
-        ranked_doc_keys = [to_doc_key(result.id, result.url) for result in ranked_results]
+        ranked_doc_keys = [
+            to_doc_key(result.id, result.url) for result in ranked_results
+        ]
         ranked_doc_keys = [x for x in ranked_doc_keys if x]
 
         ranked_per_query.append(ranked_doc_keys)
@@ -160,7 +171,10 @@ def merge_query_sets(grouped_queries: list) -> list:
             merged.setdefault(item.query, set()).update(item.relevant_doc_keys)
     from core.types import QueryItem
 
-    return [QueryItem(query=query, relevant_doc_keys=doc_keys) for query, doc_keys in merged.items()]
+    return [
+        QueryItem(query=query, relevant_doc_keys=doc_keys)
+        for query, doc_keys in merged.items()
+    ]
 
 
 def main() -> None:
@@ -191,9 +205,8 @@ def main() -> None:
     configs = load_engine_configs(args.engines_config)
     full_report: dict[str, object] = {"engines": {}}
 
-    for config in configs:
-        if not config.enabled:
-            continue
+    enabled_configs = [config for config in configs if config.enabled]
+    for config in tqdm(enabled_configs, desc="Engines", unit="engine"):
         engine = make_engine(config)
         engine.healthcheck()
         engine.index(args.data_dir)
@@ -201,28 +214,57 @@ def main() -> None:
         per_lang_report: dict[str, object] = {}
         all_lang_queries = []
 
-        for lang, datasets_by_type in sorted(datasets.items()):
+        for lang, datasets_by_type in tqdm(
+            sorted(datasets.items()),
+            desc=f"{config.name}: languages",
+            unit="lang",
+            leave=False,
+        ):
             per_type_metrics: dict[str, object] = {}
             lang_queries_by_type = []
 
-            for request_type, dataset_path in sorted(datasets_by_type.items()):
+            for request_type, dataset_path in tqdm(
+                sorted(datasets_by_type.items()),
+                desc=f"{config.name}/{lang}: datasets",
+                unit="dataset",
+                leave=False,
+            ):
                 queries = load_dataset(dataset_path)
                 lang_queries_by_type.append(queries)
-                metrics_rows = evaluate_engine(engine, queries, ks)
+                metrics_rows = evaluate_engine(
+                    engine,
+                    queries,
+                    ks,
+                    progress_desc=f"{config.name}/{lang}/{request_type}",
+                )
                 per_type_metrics[request_type] = rows_to_k_arrays(metrics_rows, ks)
-                print_metrics_wide(metrics_rows, ks, f"{config.name} | {lang} | {request_type}")
+                print_metrics_wide(
+                    metrics_rows, ks, f"{config.name} | {lang} | {request_type}"
+                )
 
             lang_merged_queries = merge_query_sets(lang_queries_by_type)
             all_lang_queries.append(lang_merged_queries)
-            lang_avg_rows = evaluate_engine(engine, lang_merged_queries, ks)
+            lang_avg_rows = evaluate_engine(
+                engine,
+                lang_merged_queries,
+                ks,
+                progress_desc=f"{config.name}/{lang}/language_average",
+            )
             per_lang_report[lang] = {
                 "by_type": per_type_metrics,
                 "language_average": rows_to_k_arrays(lang_avg_rows, ks),
             }
-            print_metrics_wide(lang_avg_rows, ks, f"{config.name} | {lang} | language_average")
+            print_metrics_wide(
+                lang_avg_rows, ks, f"{config.name} | {lang} | language_average"
+            )
 
         global_queries = merge_query_sets(all_lang_queries)
-        global_avg_rows = evaluate_engine(engine, global_queries, ks)
+        global_avg_rows = evaluate_engine(
+            engine,
+            global_queries,
+            ks,
+            progress_desc=f"{config.name}/global_average",
+        )
         print_metrics_wide(global_avg_rows, ks, f"{config.name} | global_average")
 
         full_report["engines"][config.name] = {

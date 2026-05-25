@@ -6,15 +6,18 @@ from models.schemas import ArticleResult, SearchResponse
 from services.exceptions import InvalidParameterError
 from services.providers.base import BaseSearchProvider
 
-DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
+from indexer.filters import filter_valid_documents
 
+DATA_FILE = Path(__file__).parent.parent.parent / "data" / "articles.json"
 
 class MockProvider(BaseSearchProvider):
     def __init__(self) -> None:
         self.articles: list[dict] = []
         if DATA_FILE.exists():
             with open(DATA_FILE, encoding="utf-8") as f:
-                self.articles = json.load(f)
+                raw_articles = json.load(f)
+
+                self.articles = filter_valid_documents(raw_articles)
 
     def _score_article(self, article: dict, query: str) -> int:
         query_lower = query.lower()
@@ -40,15 +43,14 @@ class MockProvider(BaseSearchProvider):
         query: str,
         page: int = 1,
         page_size: int = 10,
-        lang: str | None = None,
-        sort_by: str = "relevance",
+        lang: list[str] | None = None,
         date_filter: str | None = None,
         from_date: str | None = None,
         to_date: str | None = None,
     ) -> SearchResponse:
         filtered_articles = []
         for article in self.articles:
-            if lang and article.get("lang") != lang:
+            if lang and article.get("lang") not in lang:
                 continue
 
             try:
@@ -58,7 +60,6 @@ class MockProvider(BaseSearchProvider):
             except ValueError:
                 article_date = datetime.min.date()
 
-            # Fixed period filters
             if date_filter:
                 today = datetime.now().date()
                 if date_filter == "month":
@@ -69,19 +70,16 @@ class MockProvider(BaseSearchProvider):
                     start_date = today - timedelta(days=365 * 3)
                 else:
                     start_date = datetime.min.date()
-
                 if article_date < start_date:
                     continue
 
-            # Custom date range
             if from_date:
                 try:
                     f_date = datetime.strptime(from_date, "%d-%m-%Y").date()
                     if article_date < f_date:
                         continue
                 except ValueError as e:
-                    msg = f"Invalid from_date format: {from_date or 'null'}. Expected DD-MM-YYYY."
-                    raise InvalidParameterError(msg) from e
+                    raise InvalidParameterError(f"Invalid from_date format: {from_date or 'null'}. Expected DD-MM-YYYY.") from e
 
             if to_date:
                 try:
@@ -89,8 +87,7 @@ class MockProvider(BaseSearchProvider):
                     if article_date > t_date:
                         continue
                 except ValueError as e:
-                    msg = f"Invalid to_date format: {to_date or 'null'}. Expected DD-MM-YYYY."
-                    raise InvalidParameterError(msg) from e
+                    raise InvalidParameterError(f"Invalid to_date format: {to_date or 'null'}. Expected DD-MM-YYYY.") from e
 
             score = 1
             if query:
@@ -100,24 +97,11 @@ class MockProvider(BaseSearchProvider):
 
             filtered_articles.append((article, score))
 
-        if sort_by == "date":
-            def get_date(item):
-                try:
-                    return datetime.strptime(
-                        item[0].get("date", "01-01-2000"), "%d-%m-%Y"
-                    )
-                except ValueError:
-                    return datetime.min
-
-            filtered_articles.sort(key=get_date, reverse=True)
-        else:
-            filtered_articles.sort(key=lambda x: x[1], reverse=True)
+        filtered_articles.sort(key=lambda x: x[1], reverse=True)
 
         total = len(filtered_articles)
-
         start_idx = (page - 1) * page_size
-        end_idx = start_idx + page_size
-        paginated = filtered_articles[start_idx:end_idx]
+        paginated = filtered_articles[start_idx : start_idx + page_size]
 
         article_results = [
             ArticleResult(
@@ -134,11 +118,7 @@ class MockProvider(BaseSearchProvider):
         ]
 
         return SearchResponse(
-            total=total,
-            page=page,
-            page_size=page_size,
-            query=query,
-            results=article_results,
+            total=total, page=page, page_size=page_size, query=query, results=article_results
         )
 
     async def suggest(self, query: str) -> list[str]:

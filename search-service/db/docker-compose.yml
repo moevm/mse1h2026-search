@@ -1,0 +1,26 @@
+services:
+  db-init:
+    image: alpine:3.21
+    env_file: .env
+    volumes:
+      - db_init:/init
+    command: >
+      sh -c "wget -qO /init/dump.sql \"$DUMP_URL\""
+
+  db:
+    image: mysql:8.0
+    container_name: unidb-mysql
+    restart: unless-stopped
+    depends_on:
+      db-init:
+        condition: service_completed_successfully
+    env_file: .env
+    ports:
+      - "6768:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - db_init:/docker-entrypoint-initdb.d
+
+volumes:
+  mysql_data:
+  db_init:
