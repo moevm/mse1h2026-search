@@ -154,21 +154,3 @@ npm run build:component
 ```bash
 docker exec -it search_click_db psql -U click_user -d clicks -c "SELECT record_id, timestamp, query, position, link FROM click_log ORDER BY record_id DESC LIMIT 20;"
 ```
-
----
-
-## Embed-режим
-
-Добавьте `?embed=true` к URL — пока скрывается только шапка, данный пункт все еще на уточнении.
-
----
-
-## Архитектура провайдеров
-
-Поисковый движок подключается через абстракцию `BaseSearchProvider` (Ports & Adapters):
-
-```env
-SEARCH_PROVIDER=mock        # встроенный поиск по JSON-данным
-SEARCH_PROVIDER=meilisearch # (не реализован)
-SEARCH_PROVIDER=typesense   # (не реализован)
-```
