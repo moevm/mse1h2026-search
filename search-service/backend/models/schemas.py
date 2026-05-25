@@ -18,7 +18,15 @@ class ArticleResult(BaseModel):
     keywords: list[str]
     date: date | None
     lang: str
-    url: HttpUrl
+    url: str
+
+    @field_validator("url", mode="before")
+    @classmethod
+    def validate_url(cls, v: Any) -> str:
+        s = str(v)
+        if s.startswith("/"):
+            return s
+        return str(HttpUrl(s))
 
     @field_validator("date", mode="before")
     @classmethod
