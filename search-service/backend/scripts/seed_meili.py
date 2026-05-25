@@ -4,7 +4,7 @@ from pathlib import Path
 
 import meilisearch
 
-from config import Settings
+from config import get_settings
 from indexer.cms_sync import CMSExtractor
 from indexer.exceptions import DatabaseExtractionError
 
@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 
 def main() -> None:
-    settings = Settings()
+    settings = get_settings()
     client = meilisearch.Client(settings.MEILI_URL, settings.MEILI_API_KEY or None)
     index = client.index(settings.MEILI_INDEX)
 
@@ -41,7 +41,11 @@ def main() -> None:
         )
 
     if last_task:
-        client.wait_for_task(last_task.task_uid, timeout_in_ms=120_000, interval_in_ms=1000)
+        client.wait_for_task(
+            last_task.task_uid,
+            timeout_in_ms=settings.MEILI_TASK_TIMEOUT_MS,
+            interval_in_ms=settings.MEILI_TASK_INTERVAL_MS
+        )
 
     logger.info("Done. Stats: %s", index.get_stats())
 

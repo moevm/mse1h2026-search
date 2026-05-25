@@ -90,24 +90,28 @@ def _get_breadcrumbs(doc_id: int, parent_map: dict, title_map: dict) -> list[str
     return breadcrumbs[::-1]
 
 
-def _get_url_path(doc_id: int, parent_map: dict, alias_map: dict) -> str:
+def _get_url_path(doc_id: int, parent_map: dict, alias_map: dict, alias_visible_map: dict) -> str:
     parts = []
     current_id = doc_id
     for _ in range(20):
         if not current_id or current_id == 0:
             break
+
         alias = alias_map.get(current_id, "")
-        if alias:
+        is_visible = alias_visible_map.get(current_id, 1)
+
+        if alias and is_visible == 1:
             parts.append(alias)
+
         if current_id in LANG_ROOTS:
             break
         current_id = parent_map.get(current_id, 0)
     parts.reverse()
-    return "/".join(parts) + "/"
+    return "/".join(parts)
 
 
 class CMSExtractor:
-    def __init__(self, settings: Settings, table_name: str = "modx_site_content"):
+    def __init__(self, settings: Settings):
         self.db_config = {
             "host": settings.DB_HOST,
             "port": settings.DB_PORT,
@@ -117,7 +121,7 @@ class CMSExtractor:
             "charset": "utf8mb4",
             "cursorclass": pymysql.cursors.DictCursor,
         }
-        self.table_name = table_name
+        self._s = settings
 
     def extract_data(self) -> list[dict]:
         return self._extract()
@@ -130,77 +134,55 @@ class CMSExtractor:
         try:
             with closing(pymysql.connect(**self.db_config)) as conn:
                 with conn.cursor() as cursor:
-                    parent_map, title_map, alias_map = self._fetch_hierarchy(cursor)
+                    parent_map, title_map, alias_map, alias_visible_map = self._fetch_hierarchy(cursor)
                     rows = self._fetch_content(cursor, since_ts)
                     tv_map = self._fetch_tv_values(cursor)
 
-            return self._process(rows, parent_map, title_map, alias_map, tv_map)
+            return self._process(rows, parent_map, title_map, alias_map, alias_visible_map, tv_map)
 
         except pymysql.MySQLError as e:
-            raise DatabaseExtractionError(
-                f"Failed to extract data from {self.table_name}"
-            ) from e
+            raise DatabaseExtractionError("Failed to extract data from CMS") from e
 
-    def _fetch_hierarchy(self, cursor) -> tuple[dict, dict, dict]:
-        cursor.execute(
-            f"SELECT id, parent, pagetitle, alias FROM {self.table_name} "
-            "WHERE deleted = 0 AND published = 1"
-        )
+    def _fetch_hierarchy(self, cursor) -> tuple[dict, dict, dict, dict]:
+        cursor.execute(self._s.DB_QUERY_HIERARCHY)
         rows = cursor.fetchall()
         parent_map = {row["id"]: row["parent"] for row in rows}
         title_map = {row["id"]: row["pagetitle"] for row in rows}
         alias_map = {row["id"]: row["alias"] for row in rows}
+        alias_visible_map = {row["id"]: row.get("alias_visible", 1) for row in rows}
         logger.info("Loaded hierarchy: %d documents.", len(rows))
-        return parent_map, title_map, alias_map
+        return parent_map, title_map, alias_map, alias_visible_map
 
     def _fetch_content(self, cursor, since_ts: int | None = None) -> list[dict]:
-        where = "WHERE deleted = 0 AND published = 1 AND searchable = 1"
         params: list = []
         if since_ts is not None:
-            where += " AND (editedon > %s OR createdon > %s)"
+            query = self._s.DB_QUERY_CONTENT_INC
             params.extend([since_ts, since_ts])
+        else:
+            query = self._s.DB_QUERY_CONTENT
 
-        cursor.execute(
-            f"""
-            SELECT
-                id, pagetitle, longtitle, description,
-                introtext, content, alias, menutitle,
-                published, deleted, parent, template,
-                isfolder, searchable, hidemenu,
-                publishedon, createdon, editedon, menuindex, hitcount
-            FROM {self.table_name}
-            {where}
-            """,
-            params or None,
-        )
+        cursor.execute(query, params or None)
         rows = cursor.fetchall()
         logger.info("Fetched %d content rows.", len(rows))
         return rows
 
     def _fetch_tv_values(self, cursor) -> dict:
         placeholders = ",".join(["%s"] * len(TV_IDS))
-        cursor.execute(
-            f"""
-            SELECT contentid, tmplvarid, value
-            FROM modx_site_tmplvar_contentvalues
-            WHERE tmplvarid IN ({placeholders})
-              AND value IS NOT NULL AND value != ''
-            """,
-            list(TV_IDS.keys()),
-        )
+        query = self._s.DB_QUERY_TVS.format(placeholders=placeholders)
+        cursor.execute(query, list(TV_IDS.keys()))
         tv_rows = cursor.fetchall()
         logger.info("Loaded %d TV values.", len(tv_rows))
 
         tv_map: dict = {}
         for row in tv_rows:
-            field = TV_IDS.get(row["tmplvarid"])
+            field = TV_IDS.get(row["tv_id"])
             if not field:
                 continue
             val = (
-                _parse_persons(row["value"]) if field == "tv_persons" else row["value"]
+                _parse_persons(row["tv_value"]) if field == "tv_persons" else row["tv_value"]
             )
             if val:
-                tv_map.setdefault(row["contentid"], {})[field] = val
+                tv_map.setdefault(row["id"], {})[field] = val
         return tv_map
 
     def _process(
@@ -209,6 +191,7 @@ class CMSExtractor:
         parent_map: dict,
         title_map: dict,
         alias_map: dict,
+        alias_visible_map: dict,
         tv_map: dict,
     ) -> list[dict]:
         result = []
@@ -220,7 +203,9 @@ class CMSExtractor:
             row["parent_title"] = title_map.get(row["parent"], "")
             row["breadcrumbs"] = _get_breadcrumbs(row["id"], parent_map, title_map)
             row["breadcrumbs_str"] = " › ".join(row["breadcrumbs"])
-            row["url_path"] = _get_url_path(row["id"], parent_map, alias_map)
+
+            row["url_path"] = _get_url_path(row["id"], parent_map, alias_map, alias_visible_map)
+
             if row["id"] in LANG_ROOTS:
                 continue
             lang = _get_language(row["id"], parent_map)
