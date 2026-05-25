@@ -93,6 +93,8 @@
 
 ### Инструкция по запуску
 
+Разработка и тестирование проводились на `Docker version 29.4.0` и `Docker Compose version v5.1.2`. Сборка должна работать и на других версиях, но гарантируется совместимость с указанными.
+
 Клонируем репозиторий:
 ```bash
 git clone https://github.com/moevm/mse1h2026-search.git
@@ -134,6 +136,10 @@ docker compose up --build -d
 - Backend API: скрыт за nginx, прямого доступа не имеет
 - Swagger UI: `http://localhost:6767/docs`
 - Backend Healthcheck: `http://localhost:6767/api/health`
+
+### Дополнительная информация
+
+Тестовый стенд https://search.etudevs.ru/
 
 ## Итерация №1
 
@@ -310,3 +316,30 @@ docker compose up --build -d
 2. Провести стресс-тестирование системы;
 3. Изменить логику генерации моделей со встроенной в Meilisearch на кастомный rest сервис;
 4. Начать работу над разработкой веб-компонентов;
+
+## Итерация №4
+
+### Презентация
+[Презентация pdf](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%204/Iteration%204.pdf)
+
+### Вики страницы
+[Результаты стресс‐тестирования системы](https://github.com/moevm/mse1h2026-search/wiki/Результаты-стресс‐тестирования-системы)
+
+### Командные созвоны
+[Командный созвон №7](https://github.com/moevm/mse1h2026-search/blob/reports/customer_sync/Созвон%20№7%20(19.05).md)
+
+### Скринкасты
+[Скринкаст](https://github.com/moevm/mse1h2026-search/blob/reports/docs/Iteration%204/iteration4.mp4)
+
+### Запланированные задачи
+1. Развернуть решение на тестовом стенде с новым дампом данных;
+2. Провести стресс-тестирование системы;
+3. Изменить логику генерации моделей со встроенной в Meilisearch на кастомный rest сервис;
+4. Начать работу над разработкой веб-компонентов;
+
+### Выполненные задачи
+1. [Решение развернуто на тестовом стенде с новым дампом данных;](https://search.etudevs.ru/)
+2. [Проведено стресс-тестирование системы](https://github.com/moevm/mse1h2026-search/wiki/Результаты-стресс‐тестирования-системы) ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/search-service/tests/stress_tests/README.md));
+3. [Выполнены и протестированы три альтернативные реализации микросервиса генерации эмбеддингов;](https://github.com/moevm/mse1h2026-search/blob/main/search-service/embedders/README.md)
+4. [Разработан веб-компонент для последующей интеграция решения](https://github.com/moevm/mse1h2026-search/blob/main/search-service/README.md#web-component-поискового-поля) ([README.md](https://github.com/moevm/mse1h2026-search/blob/main/search-service/frontend/src/web-components/README.md));
+5. Для дальнейшего удобства настройки SQL-запросов, времени индексации и SITE_URL вынесены в конфигурационный файл.
